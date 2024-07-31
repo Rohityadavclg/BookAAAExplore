@@ -12460,3 +12460,114 @@ body.visible-cart-bar{
 .ui-datepicker td span, .ui-datepicker td a{
 	text-align:center;
 }
+/*** 
+
+====================================================================
+  youtube video   
+====================================================================
+
+***/
+ 
+     
+.youtube-container {
+    margin-top: 40px;
+}
+
+.youtube-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.youtube-title h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.youtube-title p {
+    font-size: 16px;
+    color: #666;
+}
+
+.youtube-videos {
+    display: flex;
+    gap: 20px;
+}
+
+.video-main {
+    flex: 2;
+    position: relative;
+}
+
+.video-main iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+}
+
+.video-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.video-sidebar {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 400px;
+    padding-left: 10px;
+}
+
+.video-sidebar-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.video-sidebar-item {
+    position: relative;
+}
+
+.video-sidebar-item iframe {
+    width: 100%;
+    height: 130px;
+    border: none;
+}
+
+.sidebar-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px;
+    font-size: 12px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Scrollbar styling */
+.video-sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.video-sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.video-sidebar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.video-sidebar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+    
