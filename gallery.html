@@ -1,8 +1,9 @@
+<!-- task is pending /staggered-gridview-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Treker - Gallery</title>
+<title>BookAndExplore Gallery</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -33,9 +34,8 @@
                       <div class="top-left clearfix">
                           <ul class="info clearfix">
                               <li><i class="icon fa fa-envelope"></i> <a href="mailto:bookandexplore@gmail.com">bookandexplore@gmail.com</a></li>
-                              <li><i class="icon fa fa-phone-circle"></i> <a href="tel:+91 8888840295">+91 8888840295</a>Pune Region</li>
-                              <li><i class="icon fa fa-phone-circle"></i> <a href="tel:+91 7038859121">+91 7038859121</a>Mumbai Region</li>
-                          </ul>
+                              <li><i class="icon fa fa-phone-circle"></i> <a href="tel:+91 8888840295">+91 8888840295</a></li>
+                              </ul>
                       </div>
                       <div class="top-right clearfix">
                           <div class="lang-box">
@@ -86,7 +86,7 @@
                                       </ul>
                                       
                                       </li>
-                                      <li class="dropdown"><a href="trekking.html">Trek</a>
+                                      <li class="dropdown"><a href="trekking.html">Treks</a>
                                           
                                       </li>
                                       <li class="dropdown"><a href="booking.html">Booking Pages</a>
@@ -178,7 +178,7 @@
                            </ul>
                            
                            </li>
-                           <li class="dropdown"><a href="trekking.html">Trek</a>
+                           <li class="dropdown"><a href="trekking.html">Treks</a>
                                 
                            </li>
                        <li class="dropdown"><a href="booking.html">Booking Pages</a>
@@ -211,9 +211,7 @@
            
            </div><!-- / Hidden Bar Wrapper -->
        </section>
-       <!-- / Hidden Bar -->  
-      
-      <!--End Main Header --> 
+     
     <!-- / Hidden Bar and end main here-->
 
     
@@ -247,21 +245,23 @@
         </div>
             <!--MixitUp Galery-->
         <div class="mixitup-gallery">
+            
             <div class="auto-container">
                 <!--Filter-->
                 <div class="gallery-filters centered clearfix">
                     <ul class="filter-tabs filter-btns clearfix">
                         <li class="active filter" data-role="button" data-filter="all">All</li>
-                        <li class="filter" data-role="button" data-filter=".activity">Summer</li>
-                        <li class="filter" data-role="button" data-filter=".destination">Winter</li>
-                        <li class="filter" data-role="button" data-filter=".tours">Mansoon</li>
+                        <li class="filter" data-role="button" data-filter=".activity">Forts</li>
+                        <li class="filter" data-role="button" data-filter=".destination">Jungle</li>
+                        <li class="filter" data-role="button" data-filter=".tours">Waterfall</li>
                     </ul>
                 </div>
             </div>
             <div class="outer-container">
-                <div class="filter-list row clearfix">
+                
+                <div class="filter-list row clearfix" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); grid-gap: 20px;">
                     <!--Block-->
-                    <div class="gallery-block mix tours col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="gallery-block mix tours">
                         <div class="inner-box">
                             <div class="image-box">
                                 <div class="image"><img src="images/resource/gallery-10.jpg" alt="" title=""></div>
@@ -269,9 +269,9 @@
                             <a href="images/resource/gallery-10.jpg" class="lightbox-image zoom-btn" data-fancybox="gallery"><span class="icon"><img src="images/icons/zoom-icon.svg" alt="" title=""></span></a>
                         </div>
                     </div>
-
+            
                     <!--Block-->
-                    <div class="gallery-block mix destination col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="gallery-block mix destination">
                         <div class="inner-box">
                             <div class="image-box">
                                 <div class="image"><img src="images/resource/gallery-11.jpg" alt="" title=""></div>
@@ -279,9 +279,9 @@
                             <a href="images/resource/gallery-11.jpg" class="lightbox-image zoom-btn" data-fancybox="gallery"><span class="icon"><img src="images/icons/zoom-icon.svg" alt="" title=""></span></a>
                         </div>
                     </div>
-
+            
                     <!--Block-->
-                    <div class="gallery-block mix activity col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="gallery-block mix activity">
                         <div class="inner-box">
                             <div class="image-box">
                                 <div class="image"><img src="images/resource/gallery-12.jpg" alt="" title=""></div>
@@ -289,9 +289,9 @@
                             <a href="images/resource/gallery-12.jpg" class="lightbox-image zoom-btn" data-fancybox="gallery"><span class="icon"><img src="images/icons/zoom-icon.svg" alt="" title=""></span></a>
                         </div>
                     </div>
-
+            
                     <!--Block-->
-                    <div class="gallery-block mix activity tours col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="gallery-block mix activity tours">
                         <div class="inner-box">
                             <div class="image-box">
                                 <div class="image"><img src="images/resource/gallery-13.jpg" alt="" title=""></div>
@@ -299,9 +299,9 @@
                             <a href="images/resource/gallery-13.jpg" class="lightbox-image zoom-btn" data-fancybox="gallery"><span class="icon"><img src="images/icons/zoom-icon.svg" alt="" title=""></span></a>
                         </div>
                     </div>
-
+            
                     <!--Block-->
-                    <div class="gallery-block mix activity destination col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="gallery-block mix activity destination">
                         <div class="inner-box">
                             <div class="image-box">
                                 <div class="image"><img src="images/resource/gallery-14.jpg" alt="" title=""></div>
@@ -309,9 +309,9 @@
                             <a href="images/resource/gallery-14.jpg" class="lightbox-image zoom-btn" data-fancybox="gallery"><span class="icon"><img src="images/icons/zoom-icon.svg" alt="" title=""></span></a>
                         </div>
                     </div>
-
+            
                     <!--Block-->
-                    <div class="gallery-block mix destination tours col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="gallery-block mix destination tours">
                         <div class="inner-box">
                             <div class="image-box">
                                 <div class="image"><img src="images/resource/gallery-15.jpg" alt="" title=""></div>
@@ -319,9 +319,9 @@
                             <a href="images/resource/gallery-15.jpg" class="lightbox-image zoom-btn" data-fancybox="gallery"><span class="icon"><img src="images/icons/zoom-icon.svg" alt="" title=""></span></a>
                         </div>
                     </div>
-
+            
                     <!--Block-->
-                    <div class="gallery-block mix activity destination col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="gallery-block mix activity destination">
                         <div class="inner-box">
                             <div class="image-box">
                                 <div class="image"><img src="images/resource/gallery-16.jpg" alt="" title=""></div>
@@ -329,9 +329,9 @@
                             <a href="images/resource/gallery-16.jpg" class="lightbox-image zoom-btn" data-fancybox="gallery"><span class="icon"><img src="images/icons/zoom-icon.svg" alt="" title=""></span></a>
                         </div>
                     </div>
-
+            
                     <!--Block-->
-                    <div class="gallery-block mix activity tours col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="gallery-block mix activity tours">
                         <div class="inner-box">
                             <div class="image-box">
                                 <div class="image"><img src="images/resource/gallery-17.jpg" alt="" title=""></div>
@@ -339,9 +339,9 @@
                             <a href="images/resource/gallery-17.jpg" class="lightbox-image zoom-btn" data-fancybox="gallery"><span class="icon"><img src="images/icons/zoom-icon.svg" alt="" title=""></span></a>
                         </div>
                     </div>
-
+            
                     <!--Block-->
-                    <div class="gallery-block mix destination tours col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="gallery-block mix destination tours">
                         <div class="inner-box">
                             <div class="image-box">
                                 <div class="image"><img src="images/resource/gallery-18.jpg" alt="" title=""></div>
@@ -349,9 +349,9 @@
                             <a href="images/resource/gallery-18.jpg" class="lightbox-image zoom-btn" data-fancybox="gallery"><span class="icon"><img src="images/icons/zoom-icon.svg" alt="" title=""></span></a>
                         </div>
                     </div>
-
+            
                     <!--Block-->
-                    <div class="gallery-block mix activity destination col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="gallery-block mix activity destination">
                         <div class="inner-box">
                             <div class="image-box">
                                 <div class="image"><img src="images/resource/gallery-19.jpg" alt="" title=""></div>
@@ -359,9 +359,9 @@
                             <a href="images/resource/gallery-19.jpg" class="lightbox-image zoom-btn" data-fancybox="gallery"><span class="icon"><img src="images/icons/zoom-icon.svg" alt="" title=""></span></a>
                         </div>
                     </div>
-
+            
                     <!--Block-->
-                    <div class="gallery-block mix activity tours col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="gallery-block mix activity tours">
                         <div class="inner-box">
                             <div class="image-box">
                                 <div class="image"><img src="images/resource/gallery-20.jpg" alt="" title=""></div>
@@ -369,9 +369,9 @@
                             <a href="images/resource/gallery-20.jpg" class="lightbox-image zoom-btn" data-fancybox="gallery"><span class="icon"><img src="images/icons/zoom-icon.svg" alt="" title=""></span></a>
                         </div>
                     </div>
-
+            
                     <!--Block-->
-                    <div class="gallery-block mix destination tours col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="gallery-block mix destination tours">
                         <div class="inner-box">
                             <div class="image-box">
                                 <div class="image"><img src="images/resource/gallery-21.jpg" alt="" title=""></div>
@@ -379,79 +379,15 @@
                             <a href="images/resource/gallery-21.jpg" class="lightbox-image zoom-btn" data-fancybox="gallery"><span class="icon"><img src="images/icons/zoom-icon.svg" alt="" title=""></span></a>
                         </div>
                     </div>
-
                 </div>
-
                 <div class="load-more"><a href="#" class="theme-btn btn-style-one"><span>Load More......</span></a></div>
             </div>
+            
         </div>
     </section>
 
     <!--Sponsors Section-->
-    <section class="sponsors-one">
-        <div class="auto-container">
-            <div class="carousel-box">
-                <div class="sponsors-carousel owl-theme owl-carousel">
-                    <!--Block-->
-                    <div class="sponsor-block">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/sponsor-1.png" alt=""></a></div>
-                        </div>
-                    </div>
-
-                    <!--Block-->
-                    <div class="sponsor-block">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/sponsor-2.png" alt=""></a></div>
-                        </div>
-                    </div>
-
-                    <!--Block-->
-                    <div class="sponsor-block">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/sponsor-3.png" alt=""></a></div>
-                        </div>
-                    </div>
-
-                    <!--Block-->
-                    <div class="sponsor-block">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/sponsor-4.png" alt=""></a></div>
-                        </div>
-                    </div>
-
-                    <!--Block-->
-                    <div class="sponsor-block">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/sponsor-1.png" alt=""></a></div>
-                        </div>
-                    </div>
-
-                    <!--Block-->
-                    <div class="sponsor-block">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/sponsor-2.png" alt=""></a></div>
-                        </div>
-                    </div>
-
-                    <!--Block-->
-                    <div class="sponsor-block">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/sponsor-3.png" alt=""></a></div>
-                        </div>
-                    </div>
-
-                    <!--Block-->
-                    <div class="sponsor-block">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/sponsor-4.png" alt=""></a></div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
+   
 
     <!--Main Footer-->
      <div id="footer"></div>
