@@ -14,6 +14,73 @@
 <link href="css/responsive.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]--> 
 
+<!-- testominal -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- testominal testing temporary start -->
+    <style>
+        .container{
+            max-width:1200px;
+            width:100%;
+            position:relative;
+            margin:0 auto;
+        }
+        .mySwiper{
+            max-width: 1100px;
+            height: auto;
+            display: flex;
+            align-items: center;
+        }
+        body{
+            background-color: #cccccc;
+            font-family: "Open Sans";
+        }
+        .card{
+            text-align: center;
+            background-color: #ffffff;
+            padding:20px 30px;
+            border-radius: 10px;
+            box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+        }
+        .swiper-slide{
+            display:flex;
+            align-items:center;
+        }
+        .card img{
+            width: 130px;
+            border-radius: 50%;
+            margin-top:-70px;
+        }
+        h3, h4{
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+        p{
+            font-size:15px;
+            line-height:20px;
+            color:#222222;
+        }
+        .read-more {
+            color: #0096FF;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .swiper-button-next, .swiper-rtl .swiper-button-prev{
+            color:#0096FF;
+        }
+        .swiper-button-next:after, .swiper-button-prev:after{
+            font-size:32px;
+        }
+        .review i{
+            color:orange;
+        }
+        </style>
+        <!-- testominal testing temporary end  -->
+
 </head>
 
 <body>
@@ -37,30 +104,31 @@
                     </div>
                     <div class="top-right clearfix">
                         <div class="lang-box">
-                            <div class="lang-btn clearfix"><span class="img far fa-globe-americas"></span><span class="txt">EngLish</span><span class="icon far fa-angle-down"></span></div>
-                            
+                            <div class="lang-btn clearfix"><span class="img far fa-globe-americas"></span><span class="txt">EngLish</span><span class="icon far fa-angle-down"></span></div>                            
                         </div>
                         <div class="login"><i class="icon fa fa-user"></i> <a href="login.html">SIGN IN</a></div>
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- Header Upper -->
         <div class="header-upper">        
             <div class="auto-container">
                 <!-- Main Box -->
-                <div class="main-box clearfix">
+                <div class="main-box clearfix" >
                     <!--Logo-->
                     <div class="logo-box">
                          <div class="logo"><a href="index.html" title="Treker"><img src="images/logo.svg" alt="" title="Treker"></a></div>
                     </div>
 
-                    <div class="nav-box clearfix">
+                    <div class="nav-box clearfix" >
                         <!--Nav Outer-->
                         <div class="nav-outer clearfix">         
                             <nav class="main-menu">
                                 <ul class="navigation clearfix">
-                                    <li ><a href="index.html">Home</a>                                       
+                                    <li></li>
+                                    <li><a href="index.html">Home</a>                                       
                                     </li>
                                     <li class="dropdown"><a href="about.html">About Us</a>
                                         <ul>
@@ -99,15 +167,16 @@
                         </div>
                         <!--Nav Outer End-->
 
-                        <div class="links-box clearfix">
-                            <div class="link search-btn search-toggle"><span class="icon far fa-search"></span></div>
-                           </div>
 
                         <!-- Hidden Nav Toggler -->
                         <div class="nav-toggler">
                             <button class="hidden-bar-opener"><span class="icon"><img src="images/icons/menu-icon.svg" alt=""></span></button>
                         </div>
 
+                    </div>
+
+                    <div class="links-box clearfix">
+                        <div class="link search-btn search-toggle"><span class="icon far fa-search"></span></div>
                     </div>
 
                     <!-- End Header Upper -->
@@ -131,6 +200,7 @@
             </div>
         </div>
     </header>
+
      <!--Search Backdrop-->
      <div class="search-backdrop"></div>
 		
@@ -148,9 +218,7 @@
              <!-- .Side-menu -->
              <div class="side-menu">
                   <ul class="navigation clearfix">
-                     <li><a href="index.html">Home</a>
-                        
-                     </li>
+                     <li><a href="index.html">Home</a></li>
                      <li class="dropdown"><a href="about.html">About Us</a>
                          <ul>
                              <li><a href="team.html">Our Teams</a></li>
@@ -162,7 +230,7 @@
                      
                      <li class="dropdown" ><a href="destinations.html">Tours</a>
                         <ul>
-                            <li><a href="#">East Tour</a></li>
+                                <li><a href="#">East Tour</a></li>
                                 <li><a href="#">West Tour</a></li>
                                 <li><a href="#">North Tour</a></li>
                                 <li><a href="#">South Tour</a></li> 
@@ -210,11 +278,20 @@
      
 
     <!-- Banner Section -->
+    <!--homeBanner-->
     <section class="banner-section">
+        <div class="banner-container">
+            <div class="banner-slider-box">           
+                    <div id="homeBanner"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="banner-section">
         
         <div class="banner-container">
             <div class="banner-slider-box">
-                <!--Slide Item-->
+                
                 <div class="slide-item">
                     <div class="auto-container">
                       <div class="content-box">
@@ -244,16 +321,16 @@
 
             </div>
         </div>
-    </section>
+    </section> -->
     <!--End Banner Section -->
 
     <!--About Us Section-->
-    <section class="about-us">
+    <!-- <section class="about-us">
         <div class="floated-icon right"><img src="images/resource/about-stone-right.svg" alt="" title=""></div>
         <div class="auto-container">
             <div class="row clearfix">
                 <!--Text Col-->
-                <div class="text-col col-lg-6 col-md-12 col-sm-12">
+                <!-- <div class="text-col col-lg-6 col-md-12 col-sm-12">
                     <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <div class="title-box">
                             <div class="subtitle">About bookandexplore</div>
@@ -276,9 +353,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!--Image Col-->
-                <div class="image-col col-lg-6 col-md-12 col-sm-12">
+                <!-- <div class="image-col col-lg-6 col-md-12 col-sm-12">
                     <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <div class="bg-image">
                             <img src="images/resource/about-vector-1.png" alt="" title="">
@@ -287,28 +364,25 @@
                             <img src="images/resource/about-image-1.svg" alt="" title="">
                         </div>
                     </div>
-                </div>
-            </div>
+                </div> -->
+            <!-- </div>
              
         </div>
 
-    </section>
+    </section> -->
 
     <!--Popular Section-->
     <section class="popular-section">
-        <div class="bg-layer" style="background-image: url(images/background/image-1.jpg);"></div>
         <div class="auto-container">
             <div class="title-box centered">
                 <div class="subtitle">Modern & Beautiful</div>
                 <h2><i class="bg-vector"></i><span style="white-space: nowrap; position: relative; z-index: 1; padding: 0 15px; background: #bcb8b8;">Our Most Popular Treks</span></h2>
             </div>
             
-             
-             
             <div class="carousel-box">
                 <div class="popular-carousel owl-theme owl-carousel">
-                    <div class="trek-block-one">
-                        <div class="inner-box">
+                    <div class="trek-block-one" >
+                        <div class="inner-box" >
                             <div class="image-box">
                                 <div class="image"><a href="#"><img src="images/resource/f-image-1.jpg" alt="" title=""></a></div>
                                 <div class="info">
@@ -316,11 +390,10 @@
                                 </div>
                             </div>
                             <div class="lower-content">
-                                <h4><a href="#">Aadrai Jungle Trek & Kalu Waterfall View from Top</a></h4>                             
+                                <h4 class="link"><a href="#">Aadrai Jungle Trek & Kalu Waterfall View from Top</a></h4>                            
                             </div>
                             <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="packages.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
+                                <div class="more-link"><a href="packages.html" class="theme-btn"><span>View Details </span></a></div>
                             </div>
                         </div>
                     </div>
@@ -336,15 +409,10 @@
                                 </div>
                             </div>
                             <div class="lower-content">
-                                <h4><a href="#"> Andharban Trek</a></h4>
-                                <div class="ratings clearfix">
-                                   
-                                </div>
-                                
+                                <h4 class="link"><a href="#">Aadrai Jungle Trek & Kalu Waterfall View from Top</a></h4>                            
                             </div>
                             <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="andhaban_Trek.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
+                                <div class="more-link"><a href="andhaban_Trek.html" class="theme-btn"><span>View Details </span></a></div>
                             </div>
                         </div>
                     </div>
@@ -360,13 +428,10 @@
                                 </div>
                             </div>
                             <div class="lower-content">
-                                <h4><a href="bhorgir.html"> Bhimashankar to Bhorgiri Trek</a></h4>
-                                
-                                 
+                                <h4 class="link"><a href="bhorgir.html"> Bhimashankar to Bhorgiri Trek</a></h4> 
                             </div>
                             <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="bhorgir.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
+                                <div class="more-link"><a href="bhorgir.html" class="theme-btn"><span>View Details</span></a></div>
                             </div>
                         </div>
                     </div>
@@ -382,13 +447,12 @@
                                 </div>
                             </div>
                             <div class="lower-content">
-                                <h4><a href="devkund.html"> Devkund Waterfall Trek</a></h4>
-                               
-                                 
+                                <h4 class="link"><a href="devkund.html"> Devkund Waterfall Trek</a></h4>
+                                
                             </div>
                             <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="devkund.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
+                                <div class="more-link"><a href="devkund.html" class="theme-btn"><span>View Details </span></a></div>
+                                
                             </div>
                         </div>
                     </div>
@@ -403,12 +467,11 @@
                                 </div>
                             </div>
                             <div class="lower-content">
-                                <h4><a href="Harishchandragad.html">Harishchandragad Trek</a></h4>
+                                <h4 class="link"><a href="Harishchandragad.html">Harishchandragad Trek</a></h4>
                                                               
                             </div>
                             <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="Harishchandragad.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
+                                <div class="more-link"><a href="Harishchandragad.html" class="theme-btn"><span>View Details </span></a></div>
                             </div>
                         </div>
                     </div>
@@ -424,13 +487,11 @@
                                 </div>
                             </div>
                             <div class="lower-content">
-                                <h4><a href="Kalsubai_trek.html"> Kalsubai Trek</a></h4>
-                                 
+                                <h4 class="link"><a href="Kalsubai_trek.html"> Kalsubai Trek</a></h4>
                                  
                             </div>
                             <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="Kalsubai_trek.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
+                                <div class="more-link"><a href="Kalsubai_trek.html" class="theme-btn"><span>View Details </span></a></div>
                             </div>
                         </div>
                     </div>
@@ -439,6 +500,7 @@
             
         </div>
     </section>
+
  <!-- youtube-container -->
 <div class="auto-container">
  <!-- youtube video section -->
@@ -469,7 +531,7 @@
 </div>
 </div>
     <!--Why Section-->
-    <section class="why-section">
+    <!-- <section class="why-section">
         <div class="floated-icon left"><img src="images/resource/stones-left.svg" alt="" title=""></div>
         <div class="floated-icon right"><img src="images/resource/stones-right.svg" alt="" title=""></div>
         <div class="auto-container">
@@ -540,7 +602,7 @@
 
             </div>
         </div>
-    </section>
+    </section> -->
 
      <!--News Section-->
      <section class="news-section">
@@ -648,7 +710,7 @@
                             <div class="hvr-box">
                                 <div class="cap-box">
                                     <div class="cap-inner clearfix">
-                                        <h4><a href="tours.html">Mumbai</a></h4>
+                                        <h4><a href="tours.html">Kerala</a></h4>
                                         <div class="tour-count"><span>15 Tours</span></div>
                                     </div>
                                 </div>
@@ -710,14 +772,14 @@
      
 
     <!--Group Travel Section-->
-    <section class="group-travel">
+    <!-- <section class="group-travel">
         <div class="bg-layer" style="background-image: url(images/background/image-2.jpg);"></div>
         <div class="auto-container">
             <div class="content-box">
                 <div class="row clearfix">
                     
                      <!--Block-->
-<div class="travel-block-one col-lg-6 col-md-12 col-sm-12">
+<!-- <div class="travel-block-one col-lg-6 col-md-12 col-sm-12">
     <div class="inner-box">
         <div class="title"><h4>Group Travel to Mumbai</h4></div>
         <div class="content">
@@ -729,10 +791,10 @@
             <div class="link-box"><a href="trekking.html" class="theme-btn btn-style-one"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt="" title=""></i></span></a></div>
         </div>
     </div>
-</div>
+</div> -->
 
 <!--Block-->
-<div class="travel-block-one alternate col-lg-6 col-md-12 col-sm-12">
+<!-- <div class="travel-block-one alternate col-lg-6 col-md-12 col-sm-12">
     <div class="inner-box">
         <div class="title"><h4>Group Travel to Pune</h4></div>
         <div class="content">
@@ -744,13 +806,13 @@
             <div class="link-box"><a href="trekking.html" class="theme-btn btn-style-one"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt="" title=""></i></span></a></div>
         </div>
     </div>
-</div>
+</div> -->
 
 
-                </div>
+                <!-- </div>
             </div>
         </div>
-    </section>
+    </section>  -->
 
    
     
@@ -760,8 +822,7 @@
     
     <!--Subscribe Section-->
       <!--Testimonials Section-->
-      <section class="testimonials-one">
-        <div class="bg-layer" style="background-image: url(images/background/image-3.jpg);"></div>
+      <!-- <section class="testimonials-one">
         <div class="auto-container">
             <div class="title-box centered">
                 <div class="subtitle">Review & Testimonial</div>
@@ -769,7 +830,7 @@
             </div>
             <div class="carousel-box">
                 <div class="testi-carousel owl-theme owl-carousel">
-                    <!--Testi Block-->
+                    
                     <div class="testi-block">
                         <div class="inner-box">
                             <div class="icon"><img src="images/icons/quotes-1.svg" alt=""></div>
@@ -785,7 +846,7 @@
                         </div>
                     </div>
     
-                    <!--Testi Block-->
+                    
                     <div class="testi-block">
                         <div class="inner-box">
                             <div class="icon"><img src="images/icons/quotes-1.svg" alt=""></div>
@@ -801,7 +862,7 @@
                         </div>
                     </div>
     
-                    <!--Testi Block-->
+                   
                     <div class="testi-block alternate">
                         <div class="inner-box">
                             <div class="image-layer" style="background-image: url(images/background/testi-image-1.jpg);"></div>
@@ -811,7 +872,7 @@
                         </div>
                     </div>
     
-                    <!--Testi Block-->
+                    
                     <div class="testi-block">
                         <div class="inner-box">
                             <div class="icon"><img src="images/icons/quotes-1.svg" alt=""></div>
@@ -827,7 +888,7 @@
                         </div>
                     </div>
     
-                    <!--Testi Block-->
+                    
                     <div class="testi-block">
                         <div class="inner-box">
                             <div class="icon"><img src="images/icons/quotes-1.svg" alt=""></div>
@@ -843,7 +904,7 @@
                         </div>
                     </div>
     
-                    <!--Testi Block-->
+                    
                     <div class="testi-block alternate">
                         <div class="inner-box">
                             <div class="image-layer" style="background-image: url(images/background/testi-image-1.jpg);"></div>
@@ -856,7 +917,175 @@
                 </div>
             </div>
         </div>
-    </section>
+        </section> -->
+
+        <section class="testimonials-one">
+            <div class="auto-container">
+                <div class="title-box centered">
+                    <div class="subtitle">Review & Testimonial</div>
+                    <h2><i class="bg-vector"></i><span>Top Reviews for bookandexplore</span></h2>
+                </div>
+                   <section>
+                    <div class="container">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <img src="https://placehold.co/400" alt="">
+                                        <div class="review">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <p class="testimonial-text" 
+                                        data-full="I recently completed my trek to Harishchandragad with Book and Explore, and it was an amazing experience! The entire trek was well-organized, and the team guided us exceptionally well. From the planning to the execution, everything was smooth and enjoyable.
+                                        The food provided was delicious and much-needed after the trek. A special mention to Mahesh Shinde—his knowledge about the place, history, and trekking tips made the experience even more enriching.
+                                        Overall, I highly recommend Book and Explore for trekking enthusiasts. Looking forward to more adventures with them!">
+                                        I recently completed my trek to Harishchandragad with Book and Explore,... 
+                                        <span class="read-more">Read More</span></p>
+                                        <h3>Nikhil Jadhav</h3>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <img src="https://placehold.co/400" alt="">
+                                        <div class="review">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half"></i>
+                                        </div>
+                                        <p class="testimonial-text" 
+                                        data-full="'Book & Explore' truly lives up to its name! Having done more than 5 treks with them, I can confidently say that each journey has been an unforgettable adventure. Whether it's a long-route trek or a weekend escape, their planning, time management, and overall execution are simply top-notch. ⏳✨
+                                        From the very first trek to the latest one, I've always felt at home with the team and fellow trekkers. Each trip has introduced me to incredible people who started as strangers but became lifelong friends by the end. ❤️🏕️
+                                        The food, safety measures, and medical assistance are well taken care of, making sure everyone has an enjoyable experience without worries. Their guidelines are clear, ensuring equal treatment and a stress-free adventure. 🏞️💯">
+                                        'Book & Explore' truly lives up to its name! Having done more than 5 treks with... 
+                                        <span class="read-more">Read More</span></p>
+                                        <h3>Nitin Kanhurkar</h3>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <img src="https://placehold.co/400" alt="">
+                                        <div class="review">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half"></i>
+                                        </div>
+                                        <p class="testimonial-text" 
+                                        data-full="This was my first trek with Book and Explore, and I honestly didn’t expect it to be such an overwhelming and amazing experience. It turned out to be one of the most memorable treks for me!
+                                        Our trek leaders, Kadambari and Kaustubh, were both incredibly friendly,
+                                        knowledgeable, and supportive. They made sure we were well-prepared and guided us every step of the way to ensure a safe and successful trek.
+                                        I had an absolute blast, made a bunch of wonderful new friends, and returned with a treasure trove of memories. I already miss everyone and can’t wait to plan more adventures with Book and Explore!
+                                        I highly recommend Book and Explore to anyone looking for a well-organized and enjoyable trekking experience. The trek leaders are simply amazing, and the overall vibe is unmatched!♥️♥️♥️">
+                                        This was my first trek with Book and Explore, and I honestly... 
+                                        <span class="read-more">Read More</span></p>
+                                        <h3>Mansi Shivbhakta</h3>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <img src="https://placehold.co/400" alt="">
+                                        <div class="review">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half"></i>
+                                        </div>
+                                        <p class="testimonial-text" 
+                                        data-full="went for harishchandragad Trek with book n explore. It was my first grp Trek. I was not sure that I would enjoy it or not...but honestly speaking there was not a single moment when I got bore. All members of book n explore family are too good. mayuresh sir and pradeep are such kind n calm personalities.
+
+                                        I miss u all guys...n will definitely plan more n more adventures with book n explore family.
+                                        
+                                        Thanks mayuresh and  pradeep n all my frnds for being a part of this unforgettable Trek!  ♥️♥️♥️.">
+                                        went for harishchandragad Trek with book n explore. It was my first grp Trek. I was not ... 
+                                        <span class="read-more">Read More</span></p>
+                                        <h3>SANGRAM JAMGE</h3>
+                                        
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <img src="https://placehold.co/400" alt="">
+                                        <div class="review">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half"></i>
+                                        </div>
+                                        <p class="testimonial-text" data-full="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque reiciendis aliquam est, ut libero doloribus.">Lorem ipsum dolor sit amet consectetur... <span class="read-more">Read More</span></p>
+                                        <h3>Safra Catz</h3>
+                                        
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <img src="https://placehold.co/400" alt="">
+                                        <div class="review">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <p class="testimonial-text" data-full="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque reiciendis aliquam est, ut libero doloribus.">Lorem ipsum dolor sit amet consectetur... <span class="read-more">Read More</span></p>
+                                        <h3>Mark Zuckerberg</h3>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                
+                    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+                    <script>
+                        var slider = new Swiper(".mySwiper", {
+                            slidesPerView: 1,
+                            spaceBetween: 30,
+                            slidesPerGroup: 1,
+                            loop: true,
+                            breakpoints: {
+                    '480': { slidesPerView: 2, spaceBetween: 20 }, // Tablets
+                    '768': { slidesPerView: 3, spaceBetween: 30 }, // Small screens
+                     '1024': { slidesPerView: 4, spaceBetween: 40 } // Large screens (4 cards)
+    },
+                            navigation: {
+                                nextEl: ".swiper-button-next",
+                                prevEl: ".swiper-button-prev",
+                            },
+                            autoplay: { delay: 20000 }
+                        });
+                        
+                        document.querySelectorAll('.testimonial-text').forEach(function(el) {
+                            let fullText = el.getAttribute('data-full');
+                            let shortText = fullText.substring(0, 50) + '... ';
+                            el.innerHTML = shortText + '<span class="read-more">Read More</span>';
+                
+                            el.querySelector('.read-more').addEventListener('click', function() {
+                                if (this.textContent === "Read More") {
+                                    el.innerHTML = fullText + ' <span class="read-more">Read Less</span>';
+                                } else {
+                                    el.innerHTML = shortText + '<span class="read-more">Read More</span>';
+                                }
+                                el.querySelector('.read-more').addEventListener('click', arguments.callee);
+                            });
+                        });
+                    </script>
+                    </section>
+            </div>
+        </section> 
+
+
     <!--Main Footer-->
     <div id="footer"></div>
 
@@ -864,8 +1093,11 @@
 <!--End pagewrapper--> 
 
 <!--Scroll to top-->
-<div class="scroll-to-top scroll-to-target" data-target="html"><span class="icon"><img src="images/icons/arrow-up.svg" alt="" title="Go To Top"></span></div>
-
+<div class="scroll-to-top scroll-to-target d-flex align-items-center justify-content-center rounded-circle bg-dark p-2 shadow" data-target="html" style="width: 50px; height: 50px;">
+    <span class="icon">
+        <img src="images/icons/arrow-up.svg" alt="" title="Go To Top" class="img-fluid">
+    </span>
+  </div>
 <script src="js/jquery.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -884,7 +1116,9 @@
 <script> 
 $(function(){
   $("#header").load("header.html"); 
-  $("#footer").load("footer.html"); 
+  $("#footer").load("footer.html");
+  $("#homeBanner").load("homebanner.html");
+  $("#Reviewtestominal").load("Reviewtestominal.html");
 });
 </script>
 <script>

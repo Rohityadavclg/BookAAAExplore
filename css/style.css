@@ -1075,7 +1075,8 @@ form label.error{
   left: 0;
   top: 40px;
   width: 100%;
-  background: none;
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+  backdrop-filter: blur(20px); /* Blur effect */
   padding: 0 0;
   border-bottom: 1px solid rgba(0,0,0,0.0);
   transition: all 300ms ease;
@@ -1083,6 +1084,7 @@ form label.error{
   -webkit-transition: all 300ms ease;
   -ms-transition: all 300ms ease;
   -o-transition: all 300ms ease;
+  
 }
 
 .header-style-two .header-upper{
@@ -1120,48 +1122,55 @@ form label.error{
   position: relative;
   display: block;
   float: left;
-  padding: 15px 0px;
+  padding: 5px 0px;
   transition: all 300ms ease;
   -moz-transition: all 300ms ease;
   -webkit-transition: all 300ms ease;
   -ms-transition: all 300ms ease;
   -o-transition: all 300ms ease;
   z-index: 5;
+
 }
 
-.fixed-header .main-box .logo-box{
-  
-}
+
 
 .main-header .main-box .logo-box .logo{
     position: relative;
     display: block;
+    
 }
 
 .main-header .main-box .logo-box .logo img {
   position: relative;
   display: block;
   /* changes done  */
-  height: 50px;
+  height: 70px;
   z-index: 4;
 }
 
-.main-header .nav-box{
+.main-header .nav-box {
   position: relative;
-  float: right;
+  float: left; /* Default: Left side */
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+  .main-header .nav-box {
+    float: right; /* Move to the right side on smaller screens */
+  }
 }
 
 .main-header .header-upper .links-box{
   position: relative;
-  float: left;
-  padding-top: 41px;
-  margin-left: 60px;
+  float: right;
+  padding-top: 20px;
+  margin-right: 40px;
 }
 
 .main-header .header-upper .links-box .link{
   position: relative;
   float: left;
-  margin-left: 40px;
+  margin-left: 60px;
 }
 
 .main-header .search-btn{
@@ -1169,15 +1178,17 @@ form label.error{
     cursor: pointer;
     font-size: 18px;
     line-height: 44px;
+    float: right;
 }
 
 .main-header .search-btn:hover{
-  color: #1DC5CE;
+  color: #ecefef;
 }
 
 .main-header .fav-btn{
     position: relative;
     padding-top: 7px;
+   
 }
 
 .main-header .fav-btn a{
@@ -1266,8 +1277,8 @@ form label.error{
 
 .main-header .nav-toggler{
   position: relative;
-  float: left;
-  left: 0;
+  float: right;
+  right:  0 ;
   top: 0;
   padding: 14px 0px 0;
   margin-top: 15px;
@@ -1317,13 +1328,14 @@ form label.error{
 .main-menu .navigation{
   position:relative;
   z-index: 1;
+  margin-left: 20px;
 }
 
 .main-menu .navigation > li{
   position:relative;
   display: block;
   float: left;
-  padding:30px 0px;
+  padding:5px 0px;
   margin-right: 40px;
   -webkit-transition:all 300ms ease;
   -moz-transition:all 300ms ease;
@@ -2534,6 +2546,7 @@ body.visible-sidebar{
 .popular-section{
   position: relative;
   padding: 120px 0px;
+  background-color: #fafcff;
 }
 
 .popular-section .bg-layer{
@@ -2584,14 +2597,23 @@ body.visible-sidebar{
   position: relative;
   display: block;
   background: #ffffff;
-  padding: 30px 30px 30px;
+  padding: 0 0 30px;
   border: 1px solid #DEDEDE;
-  border-radius: 8px;
+  border-radius: 25px;
+}
+
+/* Hover Effect */
+.trek-block-one .inner-box:hover {
+  transform: translateY(-5px); /* Lifts the card slightly */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); /* Adds a soft shadow */
+  border-color: #CCCCCC; /* Slightly darker border */
+  border-radius: 25px;
 }
 
 .trek-block-one .image-box{
   position: relative;
   margin-bottom: 30px;
+  border-radius: 25px;
 }
 
 .trek-block-one .image-box .price{
@@ -2604,13 +2626,13 @@ body.visible-sidebar{
   color: #ffffff;
   font-size: 20px;
   font-weight: 600;
-  border-radius: 5px;
+  border-radius: 25px;
 }
 
 .trek-block-one .image-box .image{
   position: relative;
   background: #101010;
-  border-radius: 8px;
+  border-radius: 25px 25px 0 0;
   overflow: hidden;
 }
 
@@ -2702,19 +2724,26 @@ body.visible-sidebar{
 
 .trek-block-one .lower-content .text{
   position: relative;
-  padding-top: 30px;
+  padding-top: 10px;
+}
+
+.trek-block-one .lower-content .link{
+  position: relative;
+  padding-top: 10px;
+  margin-left: 30px;
 }
 
 .trek-block-one .bottom-box{
   position: relative;
-  padding-top: 28px;
-  margin-top: 30px;
+  padding-top: 10px;
+  margin-top: 10px;
   border-top: 1px dashed #CFCFCF;
 }
 
 .trek-block-one .bottom-box .more-link{
   position: relative;
-  float: left;
+  float:inline-start;
+  margin-left: 30px;
 }
 
 .trek-block-one .bottom-box .more-link a{
@@ -3635,10 +3664,11 @@ body.visible-sidebar{
 ====================================================================
 
 ***/
-
+/* background changed */
 .testimonials-one{
   position: relative;
   padding: 120px 0px;
+  background-color: #ebecf5; 
 }
 
 .testimonials-one .floated-icon{
@@ -4508,6 +4538,7 @@ body.visible-sidebar{
 
 .main-footer .social-links ul{
   position: relative;
+  margin-top: 10px;
 }
 
 .main-footer .social-links li{
