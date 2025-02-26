@@ -1,0 +1,120 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+} */
+
+/* Section Styling */
+.popular-section {
+    position: relative;
+    padding: 80px 0;
+    text-align: center;
+    background-color: #f9f9f9; /* Light background for visibility */
+}
+
+/* Title Box */
+.title-box {
+    margin-bottom: 30px;
+   
+}
+
+.title-box h2 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* Trek Card */
+.trek-block-one {
+    background: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trek-block-one:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Box */
+.image-box img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.image-box img:hover {
+    transform: scale(1.05);
+}
+
+/* Info Box */
+.info {
+    font-size: 14px;
+    font-weight: 500;
+    color: #505050;
+    background: #eaf6f6;
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+/* Title & Button */
+.lower-content h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 15px 0;
+    color: #10221B;
+}
+
+.theme-btn {
+    background: #1DC5CE;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.theme-btn:hover {
+    background: #10221B;
+}
+
+/* Owl Carousel Controls */
+.owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.owl-prev, .owl-next {
+    background: rgba(0, 0, 0, 0.3) !important;
+    color: white !important;
+    padding: 10px !important;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.owl-prev:hover, .owl-next:hover {
+    background: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .image-box img {
+        height: 180px;
+    }
+    .theme-btn {
+        font-size: 14px;
+    }
+}

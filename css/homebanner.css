@@ -11,17 +11,40 @@
 /* Slider Container */
 .carousel {
     width: 100%;
-    max-height: 900px;
+    height: 90vh; /* Full height */
     overflow: hidden;
 }
 
 /* Slider Images */
 .slider-img {
     width: 100%;
-    height: 600px;
+    height: 100vh;
     object-fit: cover;
-    filter: blur(5px);
-    transition: filter 1s ease-in-out;
+    transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {  /* For medium screens */
+    .slider-img {
+        height: 80vh; /* Adjust height to 80% of the screen */
+    }
+}
+
+@media (max-width: 768px) {  /* For tablets */
+    .slider-img {
+        height: 70vh; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {  /* For mobile screens */
+    .slider-img {
+        height: 50vh; /* Reduce height further for small screens */
+    }
+}
+
+/* Smooth Fade Transition */
+.carousel-item {
+    transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
 }
 
 /* Remove Blur Effect on Active Slide */
@@ -36,7 +59,7 @@
     height: 50px;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 50%;
-    transition: 0.3s;
+    transition: 0.1s;
 }
 
 .carousel-control-prev:hover, 
@@ -53,13 +76,13 @@
 
 /* Social Media Overlay */
 .social-overlay {
-    position: absolute;
-    top: 30%;
-    right: 20px;
-    padding: 20px;
+     position: absolute;
+    bottom: 60px;
+    right: 0%;
+    transform: translateX(-50%);
     text-align: center;
-    color: #fff;
     z-index: 10;
+    border-radius: 10px;
 }
 
 .social-overlay p {
@@ -68,21 +91,37 @@
 
 .social-icons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
 }
 
 .social-icons .icon{
-    transform: translateY(-50%);
-    background: rgba(237, 231, 231, 0.6);
-    padding: 10px 30px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 10px;
     border-radius: 10px;
-    margin: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    backdrop-filter: blur(10px);
 }
+
 
 .social-icons a img {
     width: 40px;
     height: 40px;
-    transition: 0.3s;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+.social-icons .icon:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.4);
 }
 
 .social-icons a img:hover {
