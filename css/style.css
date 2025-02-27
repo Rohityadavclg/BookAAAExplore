@@ -8953,7 +8953,8 @@ body.visible-sidebar{
 
 .sidebar-page-container{
   position:relative;
-  padding:100px 0px 70px;
+  padding:100px 0px 0px;
+  margin: 0 80px;
 }
 
 .sidebar-page-container .content-side,
@@ -9127,8 +9128,9 @@ body.visible-sidebar{
   text-transform: uppercase;
   color: #10221B;
   line-height: 1.35em;
-  margin-top: 15px;
+  margin-top: 40px;
   margin-bottom:0px;
+  background: #0e8fe5;
 }
 
 .news-block-two h4 a{
@@ -9141,7 +9143,7 @@ body.visible-sidebar{
 
 .news-block-two .lower-content .text{
   position: relative;
-  line-height:28px;
+  line-height:18px;
   color:#2E2E2E;
   padding-right: 10px;
   margin-bottom:30px;
@@ -9234,7 +9236,7 @@ body.visible-sidebar{
 
 .news-detail .lower-content .feature-list{
   position:relative;
-  margin-bottom:25px;
+  margin-bottom:10px;
 }
 
 .news-detail .lower-content .feature-list li{
@@ -9242,7 +9244,7 @@ body.visible-sidebar{
   padding-left:32px;
   color:#2E2E2E;
   font-size:16px;
-  margin-bottom:15px;
+  margin-bottom:5px;
 }
 
 .news-detail .lower-content .feature-list li:before{
@@ -9275,21 +9277,29 @@ body.visible-sidebar{
   font-weight:600;
   line-height:35px;
   border-radius:10px;
-  margin-bottom:30px;
-  background-color:#f3f7fa;
+  margin:40px 0px;
+ /*  background-color:#f3f7fa; */
   padding:25px 30px 22px 35px;
+  border: 3px solid #6AD8DE;
 }
 
 .news-detail .lower-content blockquote span{
   position:relative;
   display:block;
   padding-left:20px;
-  font-size:14px;
-  font-weight:500;
-  color:#505050;
+  font-size:16px;
+  font-weight:300;
+  font-style:normal
+}
+
+.news-detail .lower-content blockquote li{
+  position:relative;
+  display:block;
+  padding-left:20px;
+  font-size:16px;
+  font-weight:400;
   font-style:normal;
-  margin-top:10px;
-  text-transform:uppercase;
+  
 }
 
 .news-detail .lower-content blockquote span:before{
@@ -9302,11 +9312,16 @@ body.visible-sidebar{
   background-color:#1dc5ce;
 }
 
-.news-detail .lower-content blockquote .quote-icon{
-  position:absolute;
-  right:50px;
-  top:35px;
+.news-detail .lower-content .location{
+  position:relative;
+  font-style:italic;
+  font-size:15px;
+  font-weight:400;
+  margin:5px;
+  background-color:#f3f7fa; 
+  padding:15px 25px;
 }
+
 
 .news-detail .post-share-options{
   position:relative;
