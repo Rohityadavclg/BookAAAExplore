@@ -22,6 +22,7 @@
     <!-- Preloader -->
     <div class="preloader"></div> 
     <div class="search-backdrop"></div>
+
     <!-- Main Header-->
     <header class="main-header">
         <div class="header-upper container-fluid">
@@ -29,7 +30,7 @@
             <div class="logo-nav">
                 <!-- Logo -->
                 <a href="index.html"><img src="images/logo.svg" alt="Logo" style="height: 50px;"></a>
-
+    
                  <!-- Navigation -->
                 <nav class="main-menu">
                     <ul>
@@ -64,19 +65,132 @@
                 </nav>
             </div>
     
-           
-            
-                <!-- Icons: Search & Sign In -->
-                <div class="nav-icons">
+            <!-- Icons: Search & Sign In -->
+            <div class="nav-icons">
                     <div class="link search-btn search-toggle"><i class="far fa-search"></i></div>
                     <a href="login.html"><i class="fa fa-user"></i> SIGN IN</a>  
                     <!-- Mobile Menu Button -->
                     <div class="nav-toggler">
                         <i class="fas fa-bars"></i>
                     </div>
-                </div>
-        
+            </div>
         </div>
+    
+        <!-- Hidden Navigation Bar -->
+        <section class="hidden-bar">
+            <div class="hidden-bar-wrapper">
+                <!-- Close Button -->
+                <div class="hidden-bar-closer">
+                    <span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14">
+                        <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+                    </svg></span>
+                </div>
+
+                <!-- Logo -->
+                <div class="nav-logo-box">
+                    <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="Treker"></a></div>
+                </div>
+
+                <!-- Side Menu -->
+                <div class="side-menu">
+                    <ul class="navigation">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li class="dropdown">
+                            <a href="destinations.html">Tours </a>
+                            <ul>
+                                <li><a href="#">East Tour</a></li>
+                                <li><a href="#">West Tour</a></li>
+                                <li><a href="#">North Tour</a></li>
+                                <li><a href="#">South Tour</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="trekking.html">Treks</a></li>
+                        <li class="dropdown">
+                            <a href="booking.html">Booking Pages </a>
+                            <ul>
+                                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="blog.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Login/Signup Buttons -->
+                <div class="links-box clearfix">
+                    <div class="clearfix">
+                        <div class="link">
+                            <a href="login.html" class="theme-btn btn-style-one">
+                                <span>Login <i class="icon far fa-angle-right"></i></span>
+                            </a>
+                        </div>
+                        <div class="link mt-2">
+                            <a href="signup.html" class="theme-btn btn-style-two">
+                                <span>Sign Up <i class="icon far fa-angle-right"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Bar Section -->
+        <div class="search-bar">
+            <div class="search-wrapper">
+                <div class="search-closer">&times;</div>
+                <input type="text" class="search-input" placeholder="Search here...">
+                <button class="search-btn-action"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Select elements
+                const navToggler = document.querySelector('.nav-toggler');
+                const hiddenBar = document.querySelector('.hidden-bar');
+                const hiddenBarCloser = document.querySelector('.hidden-bar-closer');
+
+                const searchBtn = document.querySelector('.search-btn');
+                const searchBar = document.querySelector('.search-bar');
+                const searchCloser = document.querySelector('.search-closer');
+        
+                if (navToggler && hiddenBar && hiddenBarCloser) {
+                    // Open Sidebar
+                    navToggler.addEventListener('click', function (event) {
+                        event.stopPropagation(); // Prevents event bubbling
+                        hiddenBar.classList.add('active');
+                    });
+        
+                    // Close Sidebar
+                    hiddenBarCloser.addEventListener('click', function () {
+                        hiddenBar.classList.remove('active');
+                    });
+        
+                    // Close sidebar when clicking outside (optional)
+                    document.addEventListener('click', function (event) {
+                        if (!hiddenBar.contains(event.target) && !navToggler.contains(event.target)) {
+                            hiddenBar.classList.remove('active');
+                        }
+                    });
+        
+                    // Prevent clicks inside sidebar from closing it
+                    hiddenBar.addEventListener('click', function (event) {
+                        event.stopPropagation();
+                    });
+                }
+
+                // Search bar toggle
+                searchBtn.addEventListener('click', function () {
+                    searchBar.classList.add('active');
+                });
+
+                searchCloser.addEventListener('click', function () {
+                    searchBar.classList.remove('active');
+                });
+
+            });
+        </script>
     </header>
 
      <!--Search Backdrop-->
@@ -84,117 +198,6 @@
 		
      <!-- Menu Backdrop -->
      <div class="menu-backdrop"></div>
- 
-      <!-- Hidden Navigation Bar -->
-    <section class="hidden-bar">
-        <div class="hidden-bar-wrapper">
-            <!-- Close Button -->
-            <div class="hidden-bar-closer">
-                <span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14">
-                    <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
-                </svg></span>
-            </div>
-    
-            <!-- Logo -->
-            <div class="nav-logo-box">
-                <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="Treker"></a></div>
-            </div>
-    
-            <!-- Side Menu -->
-            <div class="side-menu">
-                <ul class="navigation">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="dropdown"><a href="about.html">About Us</a>
-                        <ul>
-                            <li><a href="team.html">Our Teams</a></li>
-                            <li><a href="faq.html">FAQs</a></li>
-                            <li><a href="gallery.html">Gallery</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="destinations.html">Tours</a>
-                        <ul>
-                            <li><a href="#">East Tour</a></li>
-                            <li><a href="#">West Tour</a></li>
-                            <li><a href="#">North Tour</a></li>
-                            <li><a href="#">South Tour</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="trekking.html">Treks</a></li>
-                    <li class="dropdown"><a href="booking.html">Booking Pages</a>
-                        <ul>
-                            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="blog.html">Blogs</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-    
-            <!-- Login/Signup Buttons -->
-            <div class="links-box clearfix">
-                <div class="clearfix">
-                    <div class="link"><a href="login.html" class="theme-btn btn-style-one"><span>Login <i class="icon far fa-angle-right"></i></span></a></div>
-                    <div class="link"><a href="signup.html" class="theme-btn btn-style-two"><span>Sign Up <i class="icon far fa-angle-right"></i></span></a></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Select elements
-            const navToggler = document.querySelector('.nav-toggler');
-            const hiddenBar = document.querySelector('.hidden-bar');
-            const hiddenBarCloser = document.querySelector('.hidden-bar-closer');
-    
-            if (navToggler && hiddenBar && hiddenBarCloser) {
-                // Open Sidebar
-                navToggler.addEventListener('click', function (event) {
-                    event.stopPropagation(); // Prevents event bubbling
-                    hiddenBar.classList.add('active');
-                });
-    
-                // Close Sidebar
-                hiddenBarCloser.addEventListener('click', function () {
-                    hiddenBar.classList.remove('active');
-                });
-    
-                // Close sidebar when clicking outside (optional)
-                document.addEventListener('click', function (event) {
-                    if (!hiddenBar.contains(event.target) && !navToggler.contains(event.target)) {
-                        hiddenBar.classList.remove('active');
-                    }
-                });
-    
-                // Prevent clicks inside sidebar from closing it
-                hiddenBar.addEventListener('click', function (event) {
-                    event.stopPropagation();
-                });
-            }
-        });
-    </script>
-
-
-
-     <!-- / Hidden Bar -->  
-    <!-- / Hidden Bar and end main here-->
-
-    <!-- Banner Section -->
-    <!-- <section class="inner-banner">
-        <div class="image-layer" style="background-image: url(images/background/banner-image-1.jpg);"></div>
-        
-        <div class="auto-container">
-            <div class="content-box">
-                <h2>ABOUT US</h2>
-                <div class="bread-crumb">
-                    <ul class="clearfix">
-                        <li><span class="icon-home fa fa-home"></span><a href="index.html">Home</a></li>
-                        <li class="current">About Us</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section> -->
     
     <!--End Banner Section -->
 
@@ -211,7 +214,7 @@
                             Eight years ago, Book & Explore set out on a journey—not just to explore places, but to create experiences that leave a lasting imprint on the soul. What started as thrilling treks across Maharashtra soon evolved into a passion for curating adventures beyond boundaries.
                             From conquering the Sahyadris to witnessing the breathtaking Rann of Kutch, from seeking solace in Kedarnath-Badrinath to embracing the raw beauty of Spiti Valley, we have taken wanderers on journeys that redefine travel.
                             With 10,000+ happy explorers, Book & Explore is more than a travel company—we are storytellers, adventure seekers, and dream weavers, crafting journeys that go beyond the ordinary.
-                            <br /><br /><span>🚀 Are you ready for your next adventure? Let’s explore together with Book & Explore!
+                            <br /><span>🚀 Are you ready for your next adventure? Let’s explore together with Book & Explore!
                             </span>
                         </div>
                         <div class="f-blocks clearfix">
@@ -398,6 +401,236 @@
         </div>
     </section>
 
+    <section class="gallery-section">
+        <div class="auto-container">
+            <div class="title-box centered">
+                <h2><span>Gallery</span></h2>
+            </div>
+            <div class="gallery-grid">
+                
+                <!-- Wide Image -->
+                <div class="gallery-item">
+                    <a href="https://source.unsplash.com/800x600/?hiking" target="_blank">
+                        <img src="images/resource/gallery-5.jpg" alt="Trekking Adventure">
+                        <div class="overlay">
+                            <h4>gallery-5</h4>
+                            <p>Thrilling trekking trails.</p>
+                        </div>
+                    </a>
+                </div>
+    
+                <!-- Standard Image -->
+                <div class="gallery-item wide">
+                    <a href="https://source.unsplash.com/600x400/?beach" target="_blank">
+                        <img src="images/resource/gallery-6.jpg" alt="Beach Sunset">
+                        <div class="overlay">
+                            <h4>gallery-6</h4>
+                            <p>Golden hour magic by the sea.</p>
+                        </div>
+                    </a>
+                </div>
+    
+                <!-- More Images -->
+                <div class="gallery-item">
+                    <a href="https://source.unsplash.com/800x600/?forest" target="_blank">
+                        <img src="images/resource/gallery-7.jpg" alt="Forest Trail">
+                        <div class="overlay">
+                            <h4>gallery-7</h4>
+                            <p>Walk through lush green paths.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-item wide">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-11.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-11</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="gallery-item">
+                    <a href="https://source.unsplash.com/600x800/?camping" target="_blank">
+                        <img src="images/resource/gallery-8.jpg" alt="Camping">
+                        <div class="overlay">
+                            <h4>gallery-8</h4>
+                            <p>Under the stars, surrounded by nature.</p>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="gallery-item">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-9.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-9</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-item">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-10.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-10</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-item">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-12.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-12</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-item wide">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-13.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-13</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-item tall">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-14.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-14</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-item wide">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-15.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-15</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-item tall">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-16.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-16</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-item wide">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-17.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-17</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-item tall">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-19.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-19</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-item wide">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-18.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-18</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="gallery-item">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-20.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-20</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-item">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-21.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-21</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-item wide">
+                    <a href="https://source.unsplash.com/600x800/?nature,waterfall" target="_blank">
+                        <img src="images/resource/gallery-1.jpg" alt="Waterfall">
+                        <div class="overlay">
+                            <h4>gallery-1</h4>
+                            <p>Serene beauty of nature's finest waterfalls.</p>
+                        </div>
+                    </a>
+                </div> 
+    
+                <!-- Wide Image -->
+                <div class="gallery-item wide">
+                    <a href="https://source.unsplash.com/800x600/?fort" target="_blank">
+                        <img src="images/resource/gallery-2.jpg" alt="Historical Fort">
+                        <div class="overlay">
+                            <h4>gallery-2</h4>
+                            <p>Explore ancient forts of grandeur.</p>
+                        </div>
+                    </a>
+                </div> 
+    
+                <!-- Standard Image -->
+                <div class="gallery-item">
+                    <a href="https://source.unsplash.com/600x400/?mountain" target="_blank">
+                        <img src="images/resource/gallery-3.jpg" alt="Mountain View">
+                        <div class="overlay">
+                            <h4>gallery-3</h4>
+                            <p>Breathtaking peaks touching the sky.</p>
+                        </div>
+                    </a>
+                </div>
+    
+                <!-- Tall Image -->
+                <div class="gallery-item">
+                    <a href="https://source.unsplash.com/600x800/?lake" target="_blank">
+                        <img src="images/resource/gallery-4.jpg" alt="Serene Lake">
+                        <div class="overlay">
+                            <h4>gallery-4</h4>
+                            <p>Calm and peaceful lake with lush greenery.</p>
+                        </div>
+                    </a>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    
+    
+
     <!-- Features Section - Team -->
 <section class="features-section">
     <div class="auto-container">
@@ -418,7 +651,7 @@
     </div>
 </section>
 
-    
+    <!-- about FAQ -->
     <section class="faq-one alternate">
         <div class="auto-container">
             <div class="title-box centered">

@@ -164,7 +164,7 @@
     padding: 30px 0px;
     text-align: center;
     padding-bottom: 0;
-    background-color: #ebecf5;
+    background-color: #edf9f9;
 }
 
 .popular-section a{
@@ -322,8 +322,6 @@
     }
 }
 
-
-
 /* Responsive */
 @media (max-width: 1024px) {
     .image-box img {
@@ -346,13 +344,15 @@
     <div class="search-backdrop"></div>
 	
     <!-- Main Header-->
+    <!-- <div id="header"></div> -->
+    
     <header class="main-header">
         <div class="header-upper container-fluid">
             
             <div class="logo-nav">
                 <!-- Logo -->
                 <a href="index.html"><img src="images/logo.svg" alt="Logo" style="height: 50px;"></a>
-
+    
                  <!-- Navigation -->
                 <nav class="main-menu">
                     <ul>
@@ -387,116 +387,139 @@
                 </nav>
             </div>
     
-           
-            
-                <!-- Icons: Search & Sign In -->
-                <div class="nav-icons">
+            <!-- Icons: Search & Sign In -->
+            <div class="nav-icons">
                     <div class="link search-btn search-toggle"><i class="far fa-search"></i></div>
                     <a href="login.html"><i class="fa fa-user"></i> SIGN IN</a>  
                     <!-- Mobile Menu Button -->
                     <div class="nav-toggler">
                         <i class="fas fa-bars"></i>
                     </div>
-                </div>
+            </div>
         
-                
-           
         </div>
-    </header>
     
-    <!-- Hidden Navigation Bar -->
-    <section class="hidden-bar">
-        <div class="hidden-bar-wrapper">
-            <!-- Close Button -->
-            <div class="hidden-bar-closer">
-                <span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14">
-                    <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
-                </svg></span>
-            </div>
-    
-            <!-- Logo -->
-            <div class="nav-logo-box">
-                <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="Treker"></a></div>
-            </div>
-    
-            <!-- Side Menu -->
-            <div class="side-menu">
-                <ul class="navigation">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="dropdown"><a href="about.html">About Us</a>
-                        <ul>
-                            <li><a href="team.html">Our Teams</a></li>
-                            <li><a href="faq.html">FAQs</a></li>
-                            <li><a href="gallery.html">Gallery</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="destinations.html">Tours</a>
-                        <ul>
-                            <li><a href="#">East Tour</a></li>
-                            <li><a href="#">West Tour</a></li>
-                            <li><a href="#">North Tour</a></li>
-                            <li><a href="#">South Tour</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="trekking.html">Treks</a></li>
-                    <li class="dropdown"><a href="booking.html">Booking Pages</a>
-                        <ul>
-                            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="blog.html">Blogs</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-    
-            <!-- Login/Signup Buttons -->
-            <div class="links-box clearfix">
-                <div class="clearfix">
-                    <div class="link"><a href="login.html" class="theme-btn btn-style-one"><span>Login <i class="icon far fa-angle-right"></i></span></a></div>
-                    <div class="link"><a href="signup.html" class="theme-btn btn-style-two"><span>Sign Up <i class="icon far fa-angle-right"></i></span></a></div>
+        <!-- Hidden Navigation Bar -->
+<section class="hidden-bar">
+    <div class="hidden-bar-wrapper">
+        <!-- Close Button -->
+        <div class="hidden-bar-closer">
+            <span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14">
+                <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+            </svg></span>
+        </div>
+
+        <!-- Logo -->
+        <div class="nav-logo-box">
+            <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="Treker"></a></div>
+        </div>
+
+        <!-- Side Menu -->
+        <div class="side-menu">
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="destinations.html">Tours </a>
+                    <ul>
+                        <li><a href="#">East Tour</a></li>
+                        <li><a href="#">West Tour</a></li>
+                        <li><a href="#">North Tour</a></li>
+                        <li><a href="#">South Tour</a></li>
+                    </ul>
+                </li>
+                <li><a href="trekking.html">Treks</a></li>
+                <li class="dropdown">
+                    <a href="booking.html">Booking Pages </a>
+                    <ul>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Login/Signup Buttons -->
+        <div class="links-box clearfix">
+            <div class="clearfix">
+                <div class="link">
+                    <a href="login.html" class="theme-btn btn-style-one">
+                        <span>Login <i class="icon far fa-angle-right"></i></span>
+                    </a>
+                </div>
+                <div class="link mt-2">
+                    <a href="signup.html" class="theme-btn btn-style-two">
+                        <span>Sign Up <i class="icon far fa-angle-right"></i></span>
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
-    
+    </div>
+</section>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Select elements
-            const navToggler = document.querySelector('.nav-toggler');
-            const hiddenBar = document.querySelector('.hidden-bar');
-            const hiddenBarCloser = document.querySelector('.hidden-bar-closer');
-    
-            if (navToggler && hiddenBar && hiddenBarCloser) {
-                // Open Sidebar
-                navToggler.addEventListener('click', function (event) {
-                    event.stopPropagation(); // Prevents event bubbling
-                    hiddenBar.classList.add('active');
-                });
-    
-                // Close Sidebar
-                hiddenBarCloser.addEventListener('click', function () {
-                    hiddenBar.classList.remove('active');
-                });
-    
-                // Close sidebar when clicking outside (optional)
-                document.addEventListener('click', function (event) {
-                    if (!hiddenBar.contains(event.target) && !navToggler.contains(event.target)) {
+<!-- Search Bar Section -->
+<div class="search-bar">
+    <div class="search-wrapper">
+        <div class="search-closer">&times;</div>
+        <input type="text" class="search-input" placeholder="Search here...">
+        <button class="search-btn-action"><i class="fa fa-search"></i></button>
+    </div>
+</div>
+
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Select elements
+                const navToggler = document.querySelector('.nav-toggler');
+                const hiddenBar = document.querySelector('.hidden-bar');
+                const hiddenBarCloser = document.querySelector('.hidden-bar-closer');
+
+                const searchBtn = document.querySelector('.search-btn');
+                const searchBar = document.querySelector('.search-bar');
+                const searchCloser = document.querySelector('.search-closer');
+        
+                if (navToggler && hiddenBar && hiddenBarCloser) {
+                    // Open Sidebar
+                    navToggler.addEventListener('click', function (event) {
+                        event.stopPropagation(); // Prevents event bubbling
+                        hiddenBar.classList.add('active');
+                    });
+        
+                    // Close Sidebar
+                    hiddenBarCloser.addEventListener('click', function () {
                         hiddenBar.classList.remove('active');
-                    }
-                });
-    
-                // Prevent clicks inside sidebar from closing it
-                hiddenBar.addEventListener('click', function (event) {
-                    event.stopPropagation();
-                });
-            }
-        });
-    </script>
+                    });
+        
+                    // Close sidebar when clicking outside (optional)
+                    document.addEventListener('click', function (event) {
+                        if (!hiddenBar.contains(event.target) && !navToggler.contains(event.target)) {
+                            hiddenBar.classList.remove('active');
+                        }
+                    });
+        
+                    // Prevent clicks inside sidebar from closing it
+                    hiddenBar.addEventListener('click', function (event) {
+                        event.stopPropagation();
+                    });
+                }
 
+                // Search bar toggle
+                searchBtn.addEventListener('click', function () {
+                    searchBar.classList.add('active');
+                });
+
+                searchCloser.addEventListener('click', function () {
+                    searchBar.classList.remove('active');
+                });
+
+            });
+        </script>
+    </header>
+   
      <!--Search Backdrop-->
      <div class="search-backdrop"></div>
-		
+
      <!-- Menu Backdrop -->
      <div class="menu-backdrop"></div>
  
@@ -512,6 +535,81 @@
         <div class="banner-container">
             <div class="banner-slider-box">           
                     <div id="homeBanner"></div>
+            </div>
+        </div>
+    </section>
+
+    <!--Trending Destinations Section-->
+    <section class="trending-destinations">
+        <div class="auto-container">
+
+            <div class="title-box centered">
+                <h2><i class="bg-vector"></i><span>Trending Destinations</span></h2>
+            </div>
+
+            <div class="gallery-box">
+                <div class="masonry-container row clearfix">
+                    <!--Block-->
+                    <div class="dest-block-one masonry-item col-lg-8 col-md-12 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image-box"><img src="images/resource/gallery-1.jpg" alt=""></div>
+                            <div class="hvr-box">
+                                <div class="cap-box">
+                                    <div class="cap-inner clearfix">
+                                        <h4><a href="tours.html">Kerala</a></h4>
+                                        <div class="tour-count"><span>15 Tours</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Block-->
+                    <div class="dest-block-one masonry-item column-width col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image-box"><img src="images/resource/gallery-2.jpg" alt=""></div>
+                            <div class="hvr-box alt-hvr">
+                                <div class="cap-box">
+                                    <div class="cap-inner clearfix">
+                                        <h4><a href="tours.html">Pune</a></h4>
+                                        <div class="tour-count"><span>15 Tours</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Block-->
+                    <div class="dest-block-one masonry-item col-lg-6 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image-box"><img src="images/resource/gallery-3.jpg" alt=""></div>
+                            <div class="hvr-box">
+                                <div class="cap-box">
+                                    <div class="cap-inner clearfix">
+                                        <h4><a href="tours.html">Kasara</a></h4>
+                                        <div class="tour-count"><span>15 Tours</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Block-->
+                    <div class="dest-block-one masonry-item col-lg-6 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image-box"><img src="images/resource/gallery-4.jpg" alt=""></div>
+                            <div class="hvr-box">
+                                <div class="cap-box">
+                                    <div class="cap-inner clearfix">
+                                        <h4><a href="tours.html">Nashik</a></h4>
+                                        <div class="tour-count"><span>Tours</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
         </div>
     </section>
@@ -646,6 +744,234 @@
         </div>
     </section>
 
+    <!--Popular Section-->
+    <section class="popular-section" style="background-color: #f4f2f2;">
+        <div class="auto-container">
+            <div class="title-box centered">
+                <h2><i class="bg-vector"></i><span style="white-space: nowrap; position: relative; z-index: 1; padding: 0 15px;">Our Most Popular Tours</span></h2>
+            </div>
+            Spiti 
+b. kerala 
+c. Hampi 
+d. kedarnath 
+e. Kedarnath badirnath 
+
+            <div class="carousel-box">
+                <div class="popular-carousel owl-theme owl-carousel">
+
+                    <div class="trek-block-one" >
+                        <div class="inner-box" >
+                            <div class="image-box">
+                                <div class="image"><a href="#"><img src="images/resource/f-image-1.jpg" alt="" title=""></a></div>
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i>1 Day </span> &ensp; | &ensp; <span class="i-block"> <span>₹1200</span> Pune&ensp; | &ensp;<span>₹1400</span> Mumbai </span>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="#"> Spiti </a></h4>                            
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="packages.html" class="theme-btn"><span>View Details </span></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+                    <div class="trek-block-one">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="andhaban_Trek.html"><img src="images/resource/f-image-2.jpg" alt="" title=""></a></div>
+                                 
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day </span> &ensp; | &ensp; <span class="i-block">₹1500</span> Mumbai
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="#">kerala </a></h4>                            
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="andhaban_Trek.html" class="theme-btn"><span>View Details </span></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+                    <div class="trek-block-one ">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="bhorgir.html"><img src="images/resource/f-image-3.jpg" alt="" title=""></a></div>
+                                 
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp; <span class="i-block">₹1200</span>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="bhorgir.html"> Hampi</a></h4> 
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="bhorgir.html" class="theme-btn"><span>View Details</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+                    <div class="trek-block-one ">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="#"><img src="images/resource/f-image-4.jpg" alt="" title=""></a></div>
+                                 
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day </span> &ensp; | &ensp; <span class="i-block">₹1300</span> Pune
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="devkund.html">kedarnath</a></h4>
+                                
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="devkund.html" class="theme-btn"><span>View Details </span></a></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trek-block-one ">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="#"><img src="images/resource/f-image-4.jpg" alt="" title=""></a></div>
+                                 
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day </span> &ensp; | &ensp; <span class="i-block">₹1300</span> Pune
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="devkund.html">Kedarnath badirnath </a></h4>
+                                
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="devkund.html" class="theme-btn"><span>View Details </span></a></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>  
+            </div>
+            
+        </div>
+    </section>
+
+     <!--Popular Section-->
+     <section class="popular-section">
+        <div class="auto-container">
+            <div class="title-box centered">
+                <h2><i class="bg-vector"></i><span style="white-space: nowrap; position: relative; z-index: 1; padding: 0 15px;">Our Most Popular Devotional Tours</span></h2>
+            </div>
+
+            <div class="carousel-box">
+                <div class="popular-carousel owl-theme owl-carousel">
+
+                    <div class="trek-block-one" >
+                        <div class="inner-box" >
+                            <div class="image-box">
+                                <div class="image"><a href="#"><img src="images/resource/f-image-1.jpg" alt="" title=""></a></div>
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i>1 Day </span> &ensp; | &ensp; <span class="i-block"> <span>₹1200</span> Pune&ensp; | &ensp;<span>₹1400</span> Mumbai </span>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="#">Kedarnath</a></h4>                            
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="packages.html" class="theme-btn"><span>View Details </span></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+                    <div class="trek-block-one">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="andhaban_Trek.html"><img src="images/resource/f-image-2.jpg" alt="" title=""></a></div>
+                                 
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day </span> &ensp; | &ensp; <span class="i-block">₹1500</span> Mumbai
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="#">kedarnath - badrinath</a></h4>                            
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="andhaban_Trek.html" class="theme-btn"><span>View Details </span></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+                    <div class="trek-block-one ">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="bhorgir.html"><img src="images/resource/f-image-3.jpg" alt="" title=""></a></div>
+                                 
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp; <span class="i-block">₹1200</span>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="bhorgir.html"> 3 Jyotirlinga</a></h4> 
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="bhorgir.html" class="theme-btn"><span>View Details</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+                    <div class="trek-block-one ">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="#"><img src="images/resource/f-image-4.jpg" alt="" title=""></a></div>
+                                 
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day </span> &ensp; | &ensp; <span class="i-block">₹1300</span> Pune
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="devkund.html"> Bhimashankar ozar lenyadri</a></h4>
+                                
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="devkund.html" class="theme-btn"><span>View Details </span></a></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trek-block-one ">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="#"><img src="images/resource/f-image-4.jpg" alt="" title=""></a></div>
+                                 
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day </span> &ensp; | &ensp; <span class="i-block">₹1300</span> Pune
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="devkund.html"> Bhimashankar </a></h4>
+                                
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="devkund.html" class="theme-btn"><span>View Details </span></a></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            
+        </div>
+    </section>
+
 
  <!-- youtube-container -->
 <div class="auto-container">
@@ -760,80 +1086,7 @@
     </section>
 
 
-    <!--Trending Destinations Section-->
-    <section class="trending-destinations">
-        <div class="auto-container">
-
-            <div class="title-box centered">
-                <h2><i class="bg-vector"></i><span>Trending Destinations</span></h2>
-            </div>
-
-            <div class="gallery-box">
-                <div class="masonry-container row clearfix">
-                    <!--Block-->
-                    <div class="dest-block-one masonry-item col-lg-8 col-md-12 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box"><img src="images/resource/gallery-1.jpg" alt=""></div>
-                            <div class="hvr-box">
-                                <div class="cap-box">
-                                    <div class="cap-inner clearfix">
-                                        <h4><a href="tours.html">Kerala</a></h4>
-                                        <div class="tour-count"><span>15 Tours</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Block-->
-                    <div class="dest-block-one masonry-item column-width col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box"><img src="images/resource/gallery-2.jpg" alt=""></div>
-                            <div class="hvr-box alt-hvr">
-                                <div class="cap-box">
-                                    <div class="cap-inner clearfix">
-                                        <h4><a href="tours.html">Pune</a></h4>
-                                        <div class="tour-count"><span>15 Tours</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Block-->
-                    <div class="dest-block-one masonry-item col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box"><img src="images/resource/gallery-3.jpg" alt=""></div>
-                            <div class="hvr-box">
-                                <div class="cap-box">
-                                    <div class="cap-inner clearfix">
-                                        <h4><a href="tours.html">Kasara</a></h4>
-                                        <div class="tour-count"><span>15 Tours</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Block-->
-                    <div class="dest-block-one masonry-item col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box"><img src="images/resource/gallery-4.jpg" alt=""></div>
-                            <div class="hvr-box">
-                                <div class="cap-box">
-                                    <div class="cap-inner clearfix">
-                                        <h4><a href="tours.html">Nashik</a></h4>
-                                        <div class="tour-count"><span>Tours</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
 
         <!-- Tesstominal review section -->
@@ -867,7 +1120,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="card">
-                                        <div class="profile-initials">NJ</div> <!-- Profile Initials -->
+                                        <div class="profile-initials">Nk</div> <!-- Profile Initials -->
                                         <div class="review">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -886,7 +1139,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="card">
-                                        <div class="profile-initials">NJ</div> <!-- Profile Initials -->
+                                        <div class="profile-initials">MS</div> <!-- Profile Initials -->
                                         <div class="review">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -907,7 +1160,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="card">
-                                        <div class="profile-initials">NJ</div> <!-- Profile Initials -->
+                                        <div class="profile-initials">SJ</div> <!-- Profile Initials -->
                                         <div class="review">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -929,7 +1182,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="card">
-                                        <div class="profile-initials">NJ</div> <!-- Profile Initials -->
+                                        <div class="profile-initials">SC</div> <!-- Profile Initials -->
                                         <div class="review">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -944,7 +1197,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="card">
-                                        <div class="profile-initials">NJ</div> <!-- Profile Initials -->
+                                        <div class="profile-initials">NR</div> <!-- Profile Initials -->
                                         <div class="review">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -953,7 +1206,7 @@
                                             <i class="fa fa-star"></i>
                                         </div>
                                         <p class="testimonial-text" data-full="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque reiciendis aliquam est, ut libero doloribus.">Lorem ipsum dolor sit amet consectetur... <span class="read-more">Read More</span></p>
-                                        <h3>Mark Zuckerberg</h3>
+                                        <h3>Nina Roy</h3>
                                         
                                     </div>
                                 </div>
@@ -1032,7 +1285,8 @@
 </script>
 <script> 
 $(function(){
-  $("#header").load("header.html"); 
+//   $("#header").load("header.html"); 
+$("#header").load("MainHeader.html");
   $("#footer").load("footer.html");
   $("#homeBanner").load("homebanner.html"); //for vertical social link
 $("#homeBanner").load("homebanner2.html"); //for horizontal social link
