@@ -26,112 +26,177 @@
 	  <div class="search-backdrop"></div>
 	  
 	  <!-- Main Header-->
-	   <header class="main-header">
-		  <div class="header-top">
-			  <div class="auto-container">
-				  <div class="inner clearfix">
-					  <div class="top-left clearfix">
-						  <ul class="info clearfix">
-							  <li><i class="icon fa fa-envelope"></i> <a href="mailto:bookandexplore@gmail.com">bookandexplore@gmail.com</a></li>
-							  <li><i class="icon fa fa-phone-circle"></i> <a href="tel:+91 8888840295">+91 8888840295</a></li>
-							    </ul>
-					  </div>
-					  <div class="top-right clearfix">
-						  <div class="lang-box">
-							  <div class="lang-btn clearfix"><span class="img far fa-globe-americas"></span><span class="txt">EngLish</span><span class="icon far fa-angle-down"></span></div>
-							  
-						  </div>
-						  <div class="login"><i class="icon fa fa-user"></i> <a href="login.html">SIGN IN</a></div>
-					  </div>
-				  </div>
-			  </div>
-		  </div>
-		  <!-- Header Upper -->
-		  <div class="header-upper">        
-			  <div class="auto-container">
-				  <!-- Main Box -->
-				  <div class="main-box clearfix">
-					  <!--Logo-->
-					  <div class="logo-box">
-						   <div class="logo"><a href="index.html" title="Treker"><img src="images/logo.svg" alt="" title="Treker"></a></div>
-					  </div>
-  
-					  <div class="nav-box clearfix">
-						  <!--Nav Outer-->
-						  <div class="nav-outer clearfix">         
-							  <nav class="main-menu">
-								  <ul class="navigation clearfix">
-									  <li ><a href="index.html">Home</a>                                       
-									  </li>
-									  <li class="dropdown"><a href="about.html">About Us</a>
-										  <ul>
-											  <li><a href="team.html">Our Teams</a></li>
-											  
-											  <li><a href="faq.html">FAQs</a></li>
-											  <li><a href="gallery.html">Gallery</a></li>
-										  </ul>
-									  </li>
-									   
-									  <li  class="dropdown" ><a href="destinations.html">Tours</a>
-									  <ul>
-										  <li><a href="#">East Tour</a></li>
-											  <li><a href="#">West Tour</a></li>
-											  <li><a href="#">North Tour</a></li>
-											  <li><a href="#">South Tour</a></li> 
-									  </ul>
-									  
-									  </li>
-									  <li class="dropdown"><a href="trekking.html">Treks</a>
-										  
-									  </li>
-									  <li class="dropdown"><a href="booking.html">Booking Pages</a>
-										  <ul> 
-											  <li><a href="terms-conditions.html">Terms & Conditions</a></li> 
-										  </ul>
-									  </li>
-									  <li class="dropdown"><a href="blog.html">Blogs</a>
-										   
-									  </li>
-									  <li><a href="contact.html">Contact</a></li>
-								  </ul>
-							  </nav>
-							  <!-- Main Menu End-->
-						  </div>
-						  <!--Nav Outer End-->
-  
-						  <div class="links-box clearfix">
-							  <div class="link search-btn search-toggle"><span class="icon far fa-search"></span></div>
-							  <div class="link fav-btn"><a href="#"><span class="icon far fa-heart"></span><span class="count">02</span></a></div>
-							   </div>
-  
-						  <!-- Hidden Nav Toggler -->
-						  <div class="nav-toggler">
-							  <button class="hidden-bar-opener"><span class="icon"><img src="images/icons/menu-icon.svg" alt=""></span></button>
-						  </div>
-  
-					  </div>
-  
-					  <!-- End Header Upper -->
-					  <div class="search-box">
-						  <div class="outer-container">
-							  <div class="inner-box">
-								  <div class="form-box">
-									  <div class="s-close-btn"><span class="icon far fa-times"></span></div>
-									  <span class="s-icon fa fa-search"></span>
-									  <form method="post" action="index.html">
-										  <div class="form-group">
-											  <input type="search" name="search" value="" placeholder="Search Here" required="">
-										  </div>
-									  </form>
-								  </div>
-							  </div>
-						  </div>
-					  </div>
-  
-				  </div>
-			  </div>
-		  </div>
-	  </header>
+	  <header class="main-header">
+        <div class="header-upper container-fluid">
+            
+            <div class="logo-nav">
+                <!-- Logo -->
+                <a href="index.html"><img src="images/logo.svg" alt="Logo" style="height: 50px;"></a>
+    
+                 <!-- Navigation -->
+                <nav class="main-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="about.html">About Us</a>
+                            <!-- <ul>
+                                <li><a href="team.html">Our Teams</a></li>
+                                <li><a href="faq.html">FAQs</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                            </ul> -->
+                        </li>
+                        <li class="dropdown">
+                            <a href="destinations.html">Tours</a>
+                            <ul>
+                                <li><a href="#">East Tour</a></li>
+                                <li><a href="#">West Tour</a></li>
+                                <li><a href="#">North Tour</a></li>
+                                <li><a href="#">South Tour</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="trekking.html">Treks</a></li>
+                        <li class="dropdown">
+                            <a href="booking.html">Booking Pages</a>
+                            <ul>
+                                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="blog.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+            <!-- Icons: Search & Sign In -->
+            <div class="nav-icons">
+                    <div class="link search-btn search-toggle"><i class="far fa-search"></i></div>
+                    <a href="login.html"><i class="fa fa-user"></i> SIGN IN</a>  
+                    <!-- Mobile Menu Button -->
+                    <div class="nav-toggler">
+                        <i class="fas fa-bars"></i>
+                    </div>
+            </div>
+        
+        </div>
+    
+        <!-- Hidden Navigation Bar -->
+<section class="hidden-bar">
+    <div class="hidden-bar-wrapper">
+        <!-- Close Button -->
+        <div class="hidden-bar-closer">
+            <span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14">
+                <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+            </svg></span>
+        </div>
+
+        <!-- Logo -->
+        <div class="nav-logo-box">
+            <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="Treker"></a></div>
+        </div>
+
+        <!-- Side Menu -->
+        <div class="side-menu">
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="destinations.html">Tours </a>
+                    <ul>
+                        <li><a href="#">East Tour</a></li>
+                        <li><a href="#">West Tour</a></li>
+                        <li><a href="#">North Tour</a></li>
+                        <li><a href="#">South Tour</a></li>
+                    </ul>
+                </li>
+                <li><a href="trekking.html">Treks</a></li>
+                <li class="dropdown">
+                    <a href="booking.html">Booking Pages </a>
+                    <ul>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Login/Signup Buttons -->
+        <div class="links-box clearfix">
+            <div class="clearfix">
+                <div class="link">
+                    <a href="login.html" class="theme-btn btn-style-one">
+                        <span>Login <i class="icon far fa-angle-right"></i></span>
+                    </a>
+                </div>
+                <div class="link mt-2">
+                    <a href="signup.html" class="theme-btn btn-style-two">
+                        <span>Sign Up <i class="icon far fa-angle-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Search Bar Section -->
+<div class="search-bar">
+    <div class="search-wrapper">
+        <div class="search-closer">&times;</div>
+        <input type="text" class="search-input" placeholder="Search here...">
+        <button class="search-btn-action"><i class="fa fa-search"></i></button>
+    </div>
+</div>
+
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Select elements
+                const navToggler = document.querySelector('.nav-toggler');
+                const hiddenBar = document.querySelector('.hidden-bar');
+                const hiddenBarCloser = document.querySelector('.hidden-bar-closer');
+
+                const searchBtn = document.querySelector('.search-btn');
+                const searchBar = document.querySelector('.search-bar');
+                const searchCloser = document.querySelector('.search-closer');
+        
+                if (navToggler && hiddenBar && hiddenBarCloser) {
+                    // Open Sidebar
+                    navToggler.addEventListener('click', function (event) {
+                        event.stopPropagation(); // Prevents event bubbling
+                        hiddenBar.classList.add('active');
+                    });
+        
+                    // Close Sidebar
+                    hiddenBarCloser.addEventListener('click', function () {
+                        hiddenBar.classList.remove('active');
+                    });
+        
+                    // Close sidebar when clicking outside (optional)
+                    document.addEventListener('click', function (event) {
+                        if (!hiddenBar.contains(event.target) && !navToggler.contains(event.target)) {
+                            hiddenBar.classList.remove('active');
+                        }
+                    });
+        
+                    // Prevent clicks inside sidebar from closing it
+                    hiddenBar.addEventListener('click', function (event) {
+                        event.stopPropagation();
+                    });
+                }
+
+                // Search bar toggle
+                searchBtn.addEventListener('click', function () {
+                    searchBar.classList.add('active');
+                });
+
+                searchCloser.addEventListener('click', function () {
+                    searchBar.classList.remove('active');
+                });
+
+            });
+        </script>
+    </header>
+
 	   <!--Search Backdrop-->
 	   <div class="search-backdrop"></div>
 		  
@@ -139,71 +204,11 @@
 	   <div class="menu-backdrop"></div>
    
 	   <!-- Hidden Navigation Bar -->
-	   <section class="hidden-bar">
-		   <!-- Hidden Bar Wrapper -->
-		   <div class="hidden-bar-wrapper">
-			   <div class="hidden-bar-closer"><span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14"><path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path></svg></span></div>
-			   <div class="nav-logo-box">
-				   <div class="logo"><a href="index.html" title="Treker"><img src="images/logo.svg" alt="" title="Treker"></a></div>
-			   </div>
-			   <!-- .Side-menu -->
-			   <div class="side-menu">
-					<ul class="navigation clearfix">
-					   <li><a href="index.html">Home</a>
-						  
-					   </li>
-					   <li class="dropdown"><a href="about.html">About Us</a>
-						   <ul>
-							   <li><a href="team.html">Our Teams</a></li>
-							   
-							   <li><a href="faq.html">FAQs</a></li>
-							   <li><a href="gallery.html">Gallery</a></li>
-						   </ul>
-					   </li>
-					   
-					   <li  class="dropdown" ><a href="destinations.html">Tours</a>
-						   <ul>
-							   <li><a href="#">East Tour</a></li>
-								   <li><a href="#">West Tour</a></li>
-								   <li><a href="#">North Tour</a></li>
-								   <li><a href="#">South Tour</a></li> 
-						   </ul>
-						   
-						   </li>
-						   <li class="dropdown"><a href="trekking.html">Treks</a>
-								
-						   </li>
-					   <li class="dropdown"><a href="booking.html">Booking Pages</a>
-						   <ul>
-							   
-							   
-														   
-							   
-							   <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-							   
-						   </ul>
-					   </li>
-					   <li class="dropdown"><a href="blog.html">Blogs</a>
-						  
-					   </li>
-					   <li><a href="contact.html">Contact</a></li>
-				   </ul>
-			   </div><!-- /.Side-menu -->
-			   
-			   <div class="links-box clearfix">
-				   <div class="clearfix">
-					   <div class="link"><a href="login.html" class="theme-btn btn-style-one"><span>Login<i class="icon far fa-angle-right"></i></span></a></div>
-					   <div class="link"><a href="signup.html" class="theme-btn btn-style-two"><span>Sign Up<i class="icon far fa-angle-right"></i></span></a></div>
-				   </div>
-			   </div>
-		   
-		   </div><!-- / Hidden Bar Wrapper -->
-	   </section>
+	  
 	   <!-- / Hidden Bar -->  
 	  
 	  <!--End Main Header -->
 
-	
 	<!-- Sidebar Page Container -->
     <section class="sidebar-page-container">
     	<div class="container-fluid">
@@ -400,12 +405,184 @@
 			
 		</div>
 	</section>
-	
+
+    <!-- FAQ -->
+    <section class="faq-one alternate">
+        <div class="auto-container">
+            <div class="title-box centered">
+                <h2><span>Most Frequent Questions</span></h2>
+            </div>
+            <div class="row clearfix">
+                <!--Text Col-->
+                <div class="text-col col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="accordion-box clearfix">
+                            <!--Block-->
+                            <div class="accordion block active-block">
+                                <div class="acc-btn active">Do I need permission for the Ratangad Trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">There is no need to get permission to visit Ratangad Fort.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Is camping allowed during the Ratangad Trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Yes, camping is allowed. It offers a memorable experience of spending a night amidst nature, with multiple camping areas close to the fort.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Are water resources available on the Ratangad trek route? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Yes, water is available for purchase at local shops in the base village or along the trek route.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Is a food facility available on the Ratangad Trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Yes, local food is available at the base village.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">How difficult is the Ratangad Trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">The Ratangad Trek is of medium difficulty.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">What are the chances of encountering wild animals? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Encounters with wild animals are rare, but trekkers should stay cautious of snakes.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">How much is the Ratangad trek entry fee? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">The entry fee for the Ratangad trek is ₹30 per person.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--Text Col-->
+                <div class="text-col col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="accordion-box clearfix">
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Where is Ratangad located? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Ratangad is in the Ahmednagar district of Maharashtra, near the village of Ratanwadi.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Is it possible to trek Ratangad solo? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Yes, solo trekking is possible, but it is safer and more enjoyable in groups.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Which is the best season for the Ratangad trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">The ideal trekking season is post-monsoon, from September to February.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">What is the highest point of Ratangad? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Ratangad Fort is approximately 4,255 feet (1,297 meters) above sea level.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Is night trekking to Ratangad possible? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Yes, but it is advised to start early in the morning to avoid trekking in the dark.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Is there mobile network coverage at Ratangad? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Network coverage varies and may not be available in all areas.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Are there ATMs available at Ratangad? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">No, there are no ATMs available.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Are washroom facilities available at Ratangad? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Basic washroom facilities are available at the base village.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Is parking available at Ratangad base? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Yes, parking is available at Ratanwadi, the base village of the Ratangad trek.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
 	
     <!--Main Footer-->
    <div id="footer"></div>
-
-
+   
 </div>
 <!--End pagewrapper--> 
 

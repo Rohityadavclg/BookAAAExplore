@@ -2139,7 +2139,7 @@ body.visible-sidebar{
 
 .why-section{
   position: relative;
-  padding: 120px 0px 90px;
+  padding: 30px 0px 30px;
 }
 
 .why-section.extra-padd{
@@ -2222,6 +2222,125 @@ body.visible-sidebar{
 .why-block .text{
   position: relative;
 }
+
+
+/*
+=====================================================
+Gallery section
+===================================================== 
+*/
+
+
+/* 🌟 Gallery Section */
+.gallery-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+/* 🎭 Staggered Grid Layout */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 250px;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* 📸 Gallery Item */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 🌄 Image Styling */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* 🎨 Hover Effect - Zoom */
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* ✨ Overlay Effect */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s ease-in-out;
+  padding: 15px;
+}
+
+/* 🖱️ Show Overlay on Hover */
+.gallery-item:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 📝 Overlay Text */
+.overlay h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.overlay p {
+  font-size: 14px;
+}
+
+/* 📐 Dynamic Sizing for Tall & Wide Images */
+.gallery-item.tall {
+  grid-row: span 2;
+}
+
+.gallery-item.wide {
+  grid-column: span 2;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .gallery-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-auto-rows: 200px;
+      gap: 15px;
+      padding: 10px;
+  }
+
+  .overlay h4 {
+      font-size: 14px;
+  }
+
+  .overlay p {
+      font-size: 12px;
+  }
+
+  .gallery-item.tall {
+    grid-row: span 1;
+  }
+
+  .gallery-item.wide {
+    grid-column: span 1;
+  }
+}
+
+
 
 /*** 
 
@@ -3644,7 +3763,7 @@ body.visible-sidebar{
   position: relative;
   background: #F9FCFF;
   color: #505050;
-  padding: 162px 0 0;
+  padding: 22px 0 0;
 }
 
 .main-footer a {
@@ -3847,7 +3966,7 @@ body.visible-sidebar{
 
 .main-footer .f-bottom .inner{
   position: relative;
-  padding: 35px 0 100px;
+  padding: 35px 0 30px;
 }
 
 .main-footer .f-bottom .social-links{
@@ -4955,7 +5074,7 @@ body.visible-sidebar{
 
 .about-three{
   position: relative;
-  padding: 120px 0px 90px;
+  padding: 120px 0px 10px;
 }
 
 .about-three .floated-icon.right{
@@ -5124,6 +5243,7 @@ body.visible-sidebar{
 .about-three .image-col .image-box{
   position: relative;
 }
+
 
 /*** 
 
@@ -7978,9 +8098,75 @@ body.visible-sidebar{
   padding-right:0px;
 }
 
+/*** 
+
+====================================================================
+  Styled Pagination
+====================================================================
+
+***/
+/* 🔍 Search Bar Styling */
+.search-bar {
+  position: fixed;
+  top: 0px;
+  right: 0;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 300px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden; /* by default hidden*/
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .search-bar {
+    top:60px;
+    left: 50%;
+  }
+}
+
+/* Active State */
+.search-bar.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Search Input */
+.search-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+}
+
+/* Search Button */
+.search-btn-action {
+  background: #1DC5CE;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Close Button */
+.search-closer {
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+
 /*Search Box Widget*/
 
-.sidebar-column .search-box .form-group{
+/* .sidebar-column .search-box .form-group{
   position:relative;
   margin:0px;
 }
@@ -8024,7 +8210,7 @@ body.visible-sidebar{
 .sidebar-column .search-box .form-group input[type="search"]:focus{
   
 
-}
+} */
 
 /* Post Widget */
 
@@ -8147,7 +8333,13 @@ body.visible-sidebar{
 .sidebar-page-container{
   position:relative;
   padding:100px 0px 0px;
-  margin: 0 80px;
+  margin: 0 120px;
+}
+
+@media (max-width: 768px) {
+  .sidebar-page-container{
+    margin: 0 10px;
+  }
 }
 
 .sidebar-page-container .content-side,

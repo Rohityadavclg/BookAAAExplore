@@ -26,112 +26,176 @@
 	  <div class="search-backdrop"></div>
 	  
 	  <!-- Main Header-->
-	   <header class="main-header">
-		  <div class="header-top">
-			  <div class="auto-container">
-				  <div class="inner clearfix">
-					  <div class="top-left clearfix">
-						  <ul class="info clearfix">
-							  <li><i class="icon fa fa-envelope"></i> <a href="mailto:bookandexplore@gmail.com">bookandexplore@gmail.com</a></li>
-							  <li><i class="icon fa fa-phone-circle"></i> <a href="tel:+91 8888840295">+91 8888840295</a></li>
-							    </ul>
-					  </div>
-					  <div class="top-right clearfix">
-						  <div class="lang-box">
-							  <div class="lang-btn clearfix"><span class="img far fa-globe-americas"></span><span class="txt">EngLish</span><span class="icon far fa-angle-down"></span></div>
-							  
-						  </div>
-						  <div class="login"><i class="icon fa fa-user"></i> <a href="login.html">SIGN IN</a></div>
-					  </div>
-				  </div>
-			  </div>
-		  </div>
-		  <!-- Header Upper -->
-		  <div class="header-upper">        
-			  <div class="auto-container">
-				  <!-- Main Box -->
-				  <div class="main-box clearfix">
-					  <!--Logo-->
-					  <div class="logo-box">
-						   <div class="logo"><a href="index.html" title="Treker"><img src="images/logo.svg" alt="" title="Treker"></a></div>
-					  </div>
-  
-					  <div class="nav-box clearfix">
-						  <!--Nav Outer-->
-						  <div class="nav-outer clearfix">         
-							  <nav class="main-menu">
-								  <ul class="navigation clearfix">
-									  <li ><a href="index.html">Home</a>                                       
-									  </li>
-									  <li class="dropdown"><a href="about.html">About Us</a>
-										  <ul>
-											  <li><a href="team.html">Our Teams</a></li>
-											  
-											  <li><a href="faq.html">FAQs</a></li>
-											  <li><a href="gallery.html">Gallery</a></li>
-										  </ul>
-									  </li>
-									   
-									  <li  class="dropdown" ><a href="destinations.html">Tours</a>
-									  <ul>
-										  <li><a href="#">East Tour</a></li>
-											  <li><a href="#">West Tour</a></li>
-											  <li><a href="#">North Tour</a></li>
-											  <li><a href="#">South Tour</a></li> 
-									  </ul>
-									  
-									  </li>
-									  <li class="dropdown"><a href="trekking.html">Treks</a>
-										  
-									  </li>
-									  <li class="dropdown"><a href="booking.html">Booking Pages</a>
-										  <ul> 
-											  <li><a href="terms-conditions.html">Terms & Conditions</a></li> 
-										  </ul>
-									  </li>
-									  <li class="dropdown"><a href="blog.html">Blogs</a>
-										   
-									  </li>
-									  <li><a href="contact.html">Contact</a></li>
-								  </ul>
-							  </nav>
-							  <!-- Main Menu End-->
-						  </div>
-						  <!--Nav Outer End-->
-  
-						  <div class="links-box clearfix">
-							  <div class="link search-btn search-toggle"><span class="icon far fa-search"></span></div>
-							  <div class="link fav-btn"><a href="#"><span class="icon far fa-heart"></span><span class="count">02</span></a></div>
-							   </div>
-  
-						  <!-- Hidden Nav Toggler -->
-						  <div class="nav-toggler">
-							  <button class="hidden-bar-opener"><span class="icon"><img src="images/icons/menu-icon.svg" alt=""></span></button>
-						  </div>
-  
-					  </div>
-  
-					  <!-- End Header Upper -->
-					  <div class="search-box">
-						  <div class="outer-container">
-							  <div class="inner-box">
-								  <div class="form-box">
-									  <div class="s-close-btn"><span class="icon far fa-times"></span></div>
-									  <span class="s-icon fa fa-search"></span>
-									  <form method="post" action="index.html">
-										  <div class="form-group">
-											  <input type="search" name="search" value="" placeholder="Search Here" required="">
-										  </div>
-									  </form>
-								  </div>
-							  </div>
-						  </div>
-					  </div>
-  
-				  </div>
-			  </div>
-		  </div>
-	  </header>
+      <header class="main-header">
+        <div class="header-upper container-fluid">
+            
+            <div class="logo-nav">
+                <!-- Logo -->
+                <a href="index.html"><img src="images/logo.svg" alt="Logo" style="height: 50px;"></a>
+    
+                 <!-- Navigation -->
+                <nav class="main-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="about.html">About Us</a>
+                            <!-- <ul>
+                                <li><a href="team.html">Our Teams</a></li>
+                                <li><a href="faq.html">FAQs</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                            </ul> -->
+                        </li>
+                        <li class="dropdown">
+                            <a href="destinations.html">Tours</a>
+                            <ul>
+                                <li><a href="#">East Tour</a></li>
+                                <li><a href="#">West Tour</a></li>
+                                <li><a href="#">North Tour</a></li>
+                                <li><a href="#">South Tour</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="trekking.html">Treks</a></li>
+                        <li class="dropdown">
+                            <a href="booking.html">Booking Pages</a>
+                            <ul>
+                                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="blog.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+            <!-- Icons: Search & Sign In -->
+            <div class="nav-icons">
+                    <div class="link search-btn search-toggle"><i class="far fa-search"></i></div>
+                    <a href="login.html"><i class="fa fa-user"></i> SIGN IN</a>  
+                    <!-- Mobile Menu Button -->
+                    <div class="nav-toggler">
+                        <i class="fas fa-bars"></i>
+                    </div>
+            </div>
+        
+        </div>
+    
+        <!-- Hidden Navigation Bar -->
+<section class="hidden-bar">
+    <div class="hidden-bar-wrapper">
+        <!-- Close Button -->
+        <div class="hidden-bar-closer">
+            <span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14">
+                <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+            </svg></span>
+        </div>
+
+        <!-- Logo -->
+        <div class="nav-logo-box">
+            <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="Treker"></a></div>
+        </div>
+
+        <!-- Side Menu -->
+        <div class="side-menu">
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="destinations.html">Tours </a>
+                    <ul>
+                        <li><a href="#">East Tour</a></li>
+                        <li><a href="#">West Tour</a></li>
+                        <li><a href="#">North Tour</a></li>
+                        <li><a href="#">South Tour</a></li>
+                    </ul>
+                </li>
+                <li><a href="trekking.html">Treks</a></li>
+                <li class="dropdown">
+                    <a href="booking.html">Booking Pages </a>
+                    <ul>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Login/Signup Buttons -->
+        <div class="links-box clearfix">
+            <div class="clearfix">
+                <div class="link">
+                    <a href="login.html" class="theme-btn btn-style-one">
+                        <span>Login <i class="icon far fa-angle-right"></i></span>
+                    </a>
+                </div>
+                <div class="link mt-2">
+                    <a href="signup.html" class="theme-btn btn-style-two">
+                        <span>Sign Up <i class="icon far fa-angle-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Search Bar Section -->
+<div class="search-bar">
+    <div class="search-wrapper">
+        <div class="search-closer">&times;</div>
+        <input type="text" class="search-input" placeholder="Search here...">
+        <button class="search-btn-action"><i class="fa fa-search"></i></button>
+    </div>
+</div>
+
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Select elements
+                const navToggler = document.querySelector('.nav-toggler');
+                const hiddenBar = document.querySelector('.hidden-bar');
+                const hiddenBarCloser = document.querySelector('.hidden-bar-closer');
+
+                const searchBtn = document.querySelector('.search-btn');
+                const searchBar = document.querySelector('.search-bar');
+                const searchCloser = document.querySelector('.search-closer');
+        
+                if (navToggler && hiddenBar && hiddenBarCloser) {
+                    // Open Sidebar
+                    navToggler.addEventListener('click', function (event) {
+                        event.stopPropagation(); // Prevents event bubbling
+                        hiddenBar.classList.add('active');
+                    });
+        
+                    // Close Sidebar
+                    hiddenBarCloser.addEventListener('click', function () {
+                        hiddenBar.classList.remove('active');
+                    });
+        
+                    // Close sidebar when clicking outside (optional)
+                    document.addEventListener('click', function (event) {
+                        if (!hiddenBar.contains(event.target) && !navToggler.contains(event.target)) {
+                            hiddenBar.classList.remove('active');
+                        }
+                    });
+        
+                    // Prevent clicks inside sidebar from closing it
+                    hiddenBar.addEventListener('click', function (event) {
+                        event.stopPropagation();
+                    });
+                }
+
+                // Search bar toggle
+                searchBtn.addEventListener('click', function () {
+                    searchBar.classList.add('active');
+                });
+
+                searchCloser.addEventListener('click', function () {
+                    searchBar.classList.remove('active');
+                });
+
+            });
+        </script>
+    </header>
 	   <!--Search Backdrop-->
 	   <div class="search-backdrop"></div>
 		  
@@ -139,66 +203,7 @@
 	   <div class="menu-backdrop"></div>
    
 	   <!-- Hidden Navigation Bar -->
-	   <section class="hidden-bar">
-		   <!-- Hidden Bar Wrapper -->
-		   <div class="hidden-bar-wrapper">
-			   <div class="hidden-bar-closer"><span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14"><path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path></svg></span></div>
-			   <div class="nav-logo-box">
-				   <div class="logo"><a href="index.html" title="Treker"><img src="images/logo.svg" alt="" title="Treker"></a></div>
-			   </div>
-			   <!-- .Side-menu -->
-			   <div class="side-menu">
-					<ul class="navigation clearfix">
-					   <li><a href="index.html">Home</a>
-						  
-					   </li>
-					   <li class="dropdown"><a href="about.html">About Us</a>
-						   <ul>
-							   <li><a href="team.html">Our Teams</a></li>
-							   
-							   <li><a href="faq.html">FAQs</a></li>
-							   <li><a href="gallery.html">Gallery</a></li>
-						   </ul>
-					   </li>
-					   
-					   <li  class="dropdown" ><a href="destinations.html">Tours</a>
-						   <ul>
-							   <li><a href="#">East Tour</a></li>
-								   <li><a href="#">West Tour</a></li>
-								   <li><a href="#">North Tour</a></li>
-								   <li><a href="#">South Tour</a></li> 
-						   </ul>
-						   
-						   </li>
-						   <li class="dropdown"><a href="trekking.html">Treks</a>
-								
-						   </li>
-					   <li class="dropdown"><a href="booking.html">Booking Pages</a>
-						   <ul>
-							   
-							   
-														   
-							   
-							   <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-							   
-						   </ul>
-					   </li>
-					   <li class="dropdown"><a href="blog.html">Blogs</a>
-						  
-					   </li>
-					   <li><a href="contact.html">Contact</a></li>
-				   </ul>
-			   </div><!-- /.Side-menu -->
-			   
-			   <div class="links-box clearfix">
-				   <div class="clearfix">
-					   <div class="link"><a href="login.html" class="theme-btn btn-style-one"><span>Login<i class="icon far fa-angle-right"></i></span></a></div>
-					   <div class="link"><a href="signup.html" class="theme-btn btn-style-two"><span>Sign Up<i class="icon far fa-angle-right"></i></span></a></div>
-				   </div>
-			   </div>
-		   
-		   </div><!-- / Hidden Bar Wrapper -->
-	   </section>
+	   
 	   <!-- / Hidden Bar -->  
 	  
 	  <!--End Main Header -->
@@ -220,13 +225,15 @@
 								</div>
 								<div class="lower-content">
 									<div class="info">
-										<span class="i-block">Ratangad Fort Trek :</span>
+										<span class="i-block">The Harishchandragad :</span>
 									</div>
-									<h4>Basic Info About Location Ratangad Fort Trek:</h4>
-									<p>Ratangad is situated in the Sahyadri mountains. Ratangad is a magnificent hill fort located near the village of Ratanwadi in Maharashtra, India's Ahmednagar district. Ratangad is around 400 years old; it served as a crucial defensive position for both Mughal and British times. Ratangad has become a popular trekking destination because of its beautiful atmosphere, important historical sites, and challenging tracks.
-                                    </p>
-
-									<blockquote>
+									<h4>Basic Info About Location Harishchandragad:</h4>
+									<p>Harishchandragad is located in Maharashtra. district of Ahmednagar. Surrounded by the beautiful scenery of the Western Ghats, this fort is roughly 1,424 meters above sea level.</p>
+                                    <p>In the surrounding region, nature lovers and adventurers can enjoy lush greenery, rolling hills, and flowing waterfalls. The fort's strategic location atop a steep hill provides scenic views of the scenic Sahyadri mountain range and the huge Konkan region.</p>
+                                    <p>Entry to Harishchandragad is primarily via the base village of Pachnai, from where trekkers embark on the Kokankada Trek. For a unique experience in nature, trekkers travel through twirling trails, dense forests, and rocky terrain on their way to the fort.                                    </p>
+                                    <p>Harishchandragad Visitors can explore its ancient temples, caves, and fortifications, each telling a story of ancient eras. From the towering cliffs of Kokankada to the sacred Harishchandreshwar Temple, the fort is a gem of historical and architectural wonders. It's always considered as one of the Instagrammable treks in India.                                    </p>
+									
+                                    <blockquote>
 										What Is the Best Time to Visit Ratangad Fort?
 										<span>You can visit anytime throughout the year, but considering the weather, October to March is the best time to go. However, the area has outstanding beauty during the monsoon season (June to September).</sapn>
 									</blockquote>
@@ -302,29 +309,17 @@
 							<div class="inner-box">
 								<div class="lower-content">
                                     <div class="border mb-3"></div>
+                                    <h4 class="ml-3 text-secondary">Geographical Information of Harishchandragad:</h4>
 									<ul class="feature-list">
-										<li><b>Ratangad Fort Region:</b> Ratangadh is located in the Western Ghats, Maharashtra.
-                                            Altitude above sea level: around 4,250 feet
-                                        </li>
-                                        <li><b>Altitude above sea level:</b> 
-                                            around 4,250 feet
-                                        </li>
-										<li><b>Trekking length:</b> 
-                                            Around 4 - 5 kilometers (one way)
-                                        </li>
-										<li><b>Trek Time:</b> 
-                                            3 to 4 hours (one way)
-                                        </li>
-										<li><b>Level of difficulty:</b> 
-                                             medium
-                                        </li>
-                                        <li><b>Ratangad Fort Base Village::</b> 
-                                            Ratanwadi Village / Samrad Village.
-                                       </li>
-                                       <li><b>Ratangad Fort Distance from Pune: </b> 
-                                            176 kilometers
-                                        </li>
-									</ul>
+                                        <li><b>Harishchandragad Region:</b> Western Ghats, Maharashtra, India.</li>
+                                        <li><b>Height Above Sea Level:</b> 1,424 meters.</li>
+                                        <li><b>Trek Distance:</b> Around 5 kilometers.</li>
+                                        <li><b>Trek Duration:</b> 4-5 hours.</li>
+                                        <li><b>Difficulty Level:</b> Challenging but doable.</li>
+                                        <li><b>Base Village:</b> Pachnai or Khireshwar (Two available base points).</li>
+                                        <li><b>Harishchandragad Trek Distance from Pune:</b> 162 kilometers.</li>
+                                        <li><b>Harishchandragad Trek Distance from Mumbai:</b> 189 kilometers.</li>
+                                    </ul>
 
                                     <div class="border mb-4"></div>
 
@@ -400,6 +395,195 @@
 			
 		</div>
 	</section>
+
+    <!-- FAQ -->
+    <section class="faq-one alternate">
+        <div class="auto-container">
+            <div class="title-box centered">
+                <h2><span>Most Frequent Questions</span></h2>
+            </div>
+            <div class="row clearfix">
+                <!--Text Col-->
+                <div class="text-col col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="accordion-box clearfix">
+                            <!--Block-->
+                            <div class="accordion block active-block">
+                                <div class="acc-btn active">Do I need permission for the Harishchandragad Fort Trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">No, permission is not needed for the trek.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Is camping allowed on the Harishchandragad Fort Trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Yes, camping is allowed at designated spots and the base village.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Are there water sources on the Harishchandragad Fort trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">There are some natural water sources, but it’s recommended to carry your own water.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Is there food available on the Harishchandragad Fort trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Yes, local food facilities are available at the base village.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Is the Harishchandragad Fort Trek difficult? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">It's a moderate-level trek, suitable for beginners with basic fitness.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Are there any wild animals on the Harishchandragad Fort trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Possibly yes, so keep an eye out and take necessary precautions.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Are there changing rooms available at Harishchandragad? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Yes, basic facilities are available at the base village.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Are there any entry charges for the Harishchandragad trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">No, there are no specific entry charges for trekking.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Text Col-->
+                <div class="text-col col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="accordion-box clearfix">
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Where is Harishchandragad Fort located? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Located in Maharashtra, India, about 200 km between Pune and Mumbai.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Can the Harishchandragad Fort trek be done alone? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">It’s safer to trek with friends, but experienced trekkers can go solo.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">What is the best time to do the Harishchandragad Fort trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">The best time to visit is post-monsoon or winter.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">What is the highest altitude of Harishchandragad Fort? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">The peak is about 1,424 meters high.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Where does the Harishchandragad Fort trek start? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">The trek starts from the base villages – Pachnai or Khireshwar.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Can we do the Harishchandragad Fort trek at night? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Night treks are possible, but daytime trekking is safer.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Is there a mobile network at Harishchandragad Fort? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">There is limited network coverage depending on the area.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Are ATMs available at Harishchandragad Fort? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">No, ATMs are not available, so carry cash.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Are washrooms available at Harishchandragad Fort? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Basic washroom facilities are available at the base village.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Is parking available for the Harishchandragad trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Yes, parking is available at the base village with minimal charges.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
 	
 	
     <!--Main Footer-->
