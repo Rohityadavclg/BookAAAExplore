@@ -15,6 +15,106 @@
 <link href="css/responsive.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]--> 
 
+<style>
+  /* Trek Card */
+.trek-block-one {
+  width: 80%; /* Ensures 4 cards in a row */
+  background: #fff;
+  border-radius: 10px; /* Reduced size */
+  padding: 15px; /* Reduced padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.4s ease;
+  margin: 30px 20px;
+  text-align: center;
+}
+
+.trek-block-one:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.trek-block-one a {
+  text-decoration: none;
+}
+
+/* Image Box */
+.image-box img {
+  width: 100%;
+  height: 160px; /* Reduced height */
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.image-box img:hover {
+  transform: scale(1.05);
+}
+
+/* Info Box */
+.info {
+  font-size: 14px; /* Smaller font */
+  font-weight: 600;
+  color: #0f0f0f;
+  padding: 6px;
+  margin-top: 8px;
+  border-radius: 4px;
+  /* margin-bottom: 30px; */
+}
+
+/* Title & Button */
+.lower-content h4 {
+  font-size: 16px; /* Proper font size */
+  font-weight: 600;
+  margin: 12px 0;
+  color: #10221B;
+  transition: color 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+/* Hover Effect */
+.lower-content h4:hover {
+  color: #1DC5CE;
+}
+
+.theme-btn {
+  color: #1DC5CE; /* Initial text color */
+  background: transparent; /* No background initially */
+  padding: 6px 12px; /* Button padding */
+  border-radius: 5px; /* Rounded corners */
+  border: 2px solid #1DC5CE; /* Border color */
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s ease-in-out;
+  font-size: 14px; /* Button text size */
+  font-weight: 600; /* Bold font */
+}
+
+.theme-btn:hover {
+  background: #1DC5CE; /* Hover background */
+  color: white; /* White text on hover */
+  border-color: #1DC5CE; /* Keep border same */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .trek-block-one {
+      width: 20%; /* 3 cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .trek-block-one {
+      width: 30%; /* 2 cards per row */
+      margin: 20px  30px 30px 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .trek-block-one {
+      width: 90%; /* 1 card per row on mobile */
+  }
+}
+
+</style>
 </head>
 
 
@@ -587,282 +687,209 @@
 	<!-- News Section Two -->
   <section class="news-section-two">
     <div class="floated-icon left"><img src="images/resource/stones-left.svg" alt="" title=""></div>
-    <div class="floated-icon right"><img src="images/background/pattern-2.png" alt="" title=""></div>
+    <div class="floated-icon right"><img src="images/resource/stones-left.svg" alt="" title=""></div>
     <div class="bg-layer" style="background-image: url(images/background/image-1.jpg);"></div>
     <div class="auto-container">
         <div class="title-box centered">
             <h2><span>Explore More Trekking</span></h2>
         </div>
         <div class="content-box">
-            <div class="popular-carousel owl-theme owl-carousel">
-                <!--Block-->
-                <div class="trek-block-one">
-                  <div class="inner-box">
-                    <div class="image-box">
-                      <div class="image">
-                        <a href="Harishchandragad.html"
-                          ><img
-                            src="images/resource/f-image-3.jpg"
-                            alt=""
-                            title=""
-                        /></a>
-                      </div>
-            
-                      <div class="info">
-                        <span class="i-block"
-                          ><i class="icon far fa-clock"></i> 1 day</span
-                        >
-                        &ensp; | &ensp; <span class="i-block">₹ 1200</span>
-                      </div>
-                    </div>
-                    <div class="lower-content">
-                      <h4>
-                        <a href="naneghat_trek.html"
-                          >Harishchandragad trek</a
-                        >
-                      </h4>
-                    </div>
-                    <div class="bottom-box clearfix">
-                      <div class="more-link">
-                        <a href="Harishchandragad.html" class="theme-btn"
-                          ><span
-                            >View Details
-                            <i class="icon"
-                              ><img
-                                src="images/icons/logo-icon.svg"
-                                alt="" /></i></span
-                        ></a>
-                      </div>
-                      <div class="video-link">
-                        <a href="#" class="theme-btn"
-                          ><i class="icon far fa-video-camera"></i
-                        ></a>
-                      </div>
-                    </div>
+          <div class="popular-carousel owl-theme owl-carousel">
+
+            <!--Block-->
+            <div class="trek-block-one">
+              <div class="inner-box">
+                <div class="image-box">
+
+                  <div class="image">
+                    <a href="naneghat_trek.html"
+                      ><img
+                        src="images/Website Card Images/Naneghat Trek.png"
+                        alt=""
+                        title=""
+                    /></a>
+                  </div>
+        
+                  <div class="info">
+                    <span class="i-block">
+                      <i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp;<span class="i-block">Pune / Mumbai</span>
                   </div>
                 </div>
-                <!-- block -->
-            
-                <div class="trek-block-one">
-                  <div class="inner-box">
-                    <div class="image-box">
-                      <div class="image">
-                        <a href="Nanemachi_trek.html"
-                          ><img
-                            src="images/resource/f-image-3.jpg"
-                            alt=""
-                            title=""
-                        /></a>
-                      </div>
-            
-                      <div class="info">
-                        <span class="i-block"
-                          ><i class="icon far fa-clock"></i> 1 day</span
-                        >
-                        &ensp; | &ensp; <span class="i-block">₹ 1300</span>
-                      </div>
-                    </div>
-                    <div class="lower-content">
-                      <h4>
-                        <a href="Nanemachi_trek.html"
-                          >Nanemachi & Satsada Waterfall</a
-                        >
-                      </h4>
-                    </div>
-                    <div class="bottom-box clearfix">
-                      <div class="more-link">
-                        <a href="Nanemachi_trek.html" class="theme-btn"
-                          ><span
-                            >View Details
-                            <i class="icon"
-                              ><img
-                                src="images/icons/logo-icon.svg"
-                                alt="" /></i></span
-                        ></a>
-                      </div>
-                      <div class="video-link">
-                        <a href="#" class="theme-btn"
-                          ><i class="icon far fa-video-camera"></i
-                        ></a>
-                      </div>
-                    </div>
+                <div class="lower-content">
+                  <h4>
+                    <a href="naneghat_trek.html"
+                      >Naneghat Jungle Trek & Reverse Waterfall</a
+                    >
+                  </h4>
+                </div>
+                <div class="bottom-box clearfix">
+                  <div class="more-link">
+                    <a href="naneghat_trek.html" class="theme-btn"
+                      ><span>View Details</span></a>
                   </div>
                 </div>
-                <!-- block -->
-            
-                <div class="trek-block-one">
-                  <div class="inner-box">
-                    <div class="image-box">
-                      <div class="image">
-                        <a href="peb_Fort_Trek.html"
-                          ><img
-                            src="images/resource/f-image-3.jpg"
-                            alt=""
-                            title=""
-                        /></a>
-                      </div>
-            
-                      <div class="info">
-                        <span class="i-block"
-                          ><i class="icon far fa-clock"></i> 1 day
-                        </span>
-                        &ensp; | &ensp; <span class="i-block">₹ 1300</span>
-                      </div>
-                    </div>
-                    <div class="lower-content">
-                      <h4><a href="peb_Fort_Trek.html"> Peb Trek</a></h4>
-            
-                      <div class="bottom-box clearfix">
-                        <div class="more-link">
-                          <a href="peb_Fort_Trek.html" class="theme-btn"
-                            ><span
-                              >View Details
-                              <i class="icon"
-                                ><img
-                                  src="images/icons/logo-icon.svg"
-                                  alt="" /></i></span
-                          ></a>
-                        </div>
-                        <div class="video-link">
-                          <a href="#" class="theme-btn"
-                            ><i class="icon far fa-video-camera"></i
-                          ></a>
-                        </div>
-                      </div>
-                    </div>
+              </div>
+            </div>
+            <!-- block -->
+        
+            <div class="trek-block-one">
+              <div class="inner-box">
+                <div class="image-box">
+                  <div class="image">
+                    <a href="Nanemachi_trek.html"
+                      ><img
+                        src="images/Website Card Images/Nanemachi & Satsada Waterfall.png"
+                        alt=""
+                        title=""
+                    /></a>
+                  </div>
+        
+                  <div class="info">
+                    <span class="i-block">
+                      <i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp;<span class="i-block">Pune / Mumbai</span>
                   </div>
                 </div>
-                <!-- block -->
-                <div class="trek-block-one">
-                  <div class="inner-box">
-                    <div class="image-box">
-                      <div class="image">
-                        <a href="raigad_Trek.html"
-                          ><img
-                            src="images/resource/f-image-3.jpg"
-                            alt=""
-                            title=""
-                        /></a>
-                      </div>
-            
-                      <div class="info">
-                        <span class="i-block"
-                          ><i class="icon far fa-clock"></i> 1 day</span
-                        >
-                        &ensp; | &ensp; <span class="i-block">₹ 1200</span>
-                      </div>
-                    </div>
-                    <div class="lower-content">
-                      <h4><a href="raigad_Trek.html">Raigad Trek</a></h4>
-                      <div class="bottom-box clearfix">
-                        <div class="more-link">
-                          <a href="raigad_Trek.html" class="theme-btn"
-                            ><span
-                              >View Details
-                              <i class="icon"
-                                ><img
-                                  src="images/icons/logo-icon.svg"
-                                  alt="" /></i></span
-                          ></a>
-                        </div>
-                        <div class="video-link">
-                          <a href="#" class="theme-btn"
-                            ><i class="icon far fa-video-camera"></i
-                          ></a>
-                        </div>
-                      </div>
-                    </div>
+                <div class="lower-content">
+                  <h4>
+                    <a href="Nanemachi_trek.html"
+                      >Nanemachi & Satsada Waterfall</a
+                    >
+                  </h4>
+                </div>
+                <div class="bottom-box clearfix">
+                  <div class="more-link">
+                    <a href="Nanemachi_trek.html" class="theme-btn"
+                      ><span>View Details</span></a>
                   </div>
                 </div>
-                <!-- block -->
-                <div class="trek-block-one">
-                  <div class="inner-box">
-                    <div class="image-box">
-                      <div class="image">
-                        <a href="rajgad_trek.html"
-                          ><img
-                            src="images/resource/f-image-3.jpg"
-                            alt=""
-                            title=""
-                        /></a>
-                      </div>
-            
-                      <div class="info">
-                        <span class="i-block"
-                          ><i class="icon far fa-clock"></i> 1 day</span
-                        >
-                        &ensp; | &ensp; <span class="i-block">₹ 1200</span>
-                      </div>
-                    </div>
-                    <div class="lower-content">
-                      <h4><a href="rajgad_Trek.html"> Rajgad Trek</a></h4>
-            
-                      <div class="bottom-box clearfix">
-                        <div class="more-link">
-                          <a href="rajgad_Trek.html" class="theme-btn"
-                            ><span
-                              >View Details
-                              <i class="icon"
-                                ><img
-                                  src="images/icons/logo-icon.svg"
-                                  alt="" /></i></span
-                          ></a>
-                        </div>
-                        <div class="video-link">
-                          <a href="#" class="theme-btn"
-                            ><i class="icon far fa-video-camera"></i
-                          ></a>
-                        </div>
-                      </div>
-                    </div>
+              </div>
+            </div>
+            <!-- block -->
+        
+            <div class="trek-block-one">
+              <div class="inner-box">
+                <div class="image-box">
+                  <div class="image">
+                    <a href="peb_Fort_Trek.html"
+                      ><img
+                        src="images/Website Card Images/Kothaligad Fort Trek.png"
+                        alt=""
+                        title=""
+                    /></a>
+                  </div>
+        
+                  <div class="info">
+                    <span class="i-block">
+                      <i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp;<span class="i-block">Pune / Mumbai</span>
                   </div>
                 </div>
-                <!-- block -->
-                <div class="trek-block-one">
-                  <div class="inner-box">
-                    <div class="image-box">
-                      <div class="image">
-                        <a href="ratangad _Fort_Trek.html"
-                          ><img
-                            src="images/resource/f-image-15.jpg"
-                            alt=""
-                            title=""
-                        /></a>
-                      </div>
-            
-                      <div class="info">
-                        <span class="i-block"
-                          ><i class="icon far fa-clock"></i> 1 day</span
-                        >
-                        &ensp; | &ensp; <span class="i-block">₹ 1300</span>
-                      </div>
-                    </div>
-                    <div class="lower-content">
-                      <h4>
-                        <a href="ratangad _Fort_Trek.html">Ratangad Fort</a>
-                      </h4>
-            
-                      <div class="bottom-box clearfix">
-                        <div class="more-link">
-                          <a href="ratangad _Fort_Trek.html" class="theme-btn"
-                            ><span
-                              >View Details
-                              <i class="icon"
-                                ><img
-                                  src="images/icons/logo-icon.svg"
-                                  alt="" /></i></span
-                          ></a>
-                        </div>
-                        <div class="video-link">
-                          <a href="#" class="theme-btn"
-                            ><i class="icon far fa-video-camera"></i
-                          ></a>
-                        </div>
-                      </div>
+                <div class="lower-content">
+                  <h4><a href="peb_Fort_Trek.html"> Peb Trek</a></h4>
+                  <div class="bottom-box clearfix">
+                    <div class="more-link">
+                      <a href="peb_Fort_Trek.html" class="theme-btn"
+                        ><span>View Details</span></a>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+            <!-- block -->
+            <div class="trek-block-one">
+              <div class="inner-box">
+                <div class="image-box">
+                  <div class="image">
+                    <a href="raigad_Trek.html"
+                      ><img
+                        src="images/Website Card Images/Raigad Trek.png"
+                        alt=""
+                        title=""
+                    /></a>
+                  </div>
+        
+                  <div class="info">
+                    <span class="i-block">
+                      <i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp;<span class="i-block">Pune / Mumbai</span>
+                  </div>
+                </div>
+                <div class="lower-content">
+                  <h4><a href="raigad_Trek.html">Raigad Trek</a></h4>
+                  <div class="bottom-box clearfix">
+                    <div class="more-link">
+                      <a href="peb_Fort_Trek.html" class="theme-btn"
+                        ><span>View Details</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- block -->
+            <div class="trek-block-one">
+              <div class="inner-box">
+                <div class="image-box">
+                  <div class="image">
+                    <a href="rajgad_trek.html"
+                      ><img
+                        src="images/Website Card Images/Rajgad Trek.png"
+                        alt=""
+                        title=""
+                    /></a>
+                  </div>
+        
+                  <div class="info">
+                    <span class="i-block">
+                      <i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp;<span class="i-block">Pune / Mumbai</span>
+                  </div>
+                </div>
+                <div class="lower-content">
+                  <h4><a href="rajgad_Trek.html"> Rajgad Trek</a></h4>
+                  <div class="bottom-box clearfix">
+                    <div class="more-link">
+                      <a href="rajgad_Trek.html" class="theme-btn"
+                        ><span>View Details</span></a>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <!-- block -->
+            <div class="trek-block-one">
+              <div class="inner-box">
+                <div class="image-box">
+                  <div class="image">
+                    <a href="ratangad _Fort_Trek.html"
+                      ><img
+                        src="images/Website Card Images/Ratangad Fort.png"
+                        alt=""
+                        title=""
+                    /></a>
+                  </div>
+        
+                  <div class="info">
+                    <span class="i-block">
+                      <i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp;<span class="i-block">Pune / Mumbai</span>
+                  </div>
+                </div>
+                <div class="lower-content">
+                  <h4>
+                    <a href="ratangad _Fort_Trek.html">Ratangad Fort</a>
+                  </h4>
+        
+                  <div class="bottom-box clearfix">
+                    <div class="more-link">
+                      <a href="ratangad _Fort_Trek.html" class="theme-btn"
+                        ><span
+                          >View Details
+                          </span
+                      ></a>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
             
      
     

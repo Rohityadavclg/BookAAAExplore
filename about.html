@@ -14,6 +14,195 @@
 <link href="css/responsive.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]--> 
 
+<style>
+    /* 🚀 Features Section */
+.features-section {
+  position: relative; /* So background elements stay inside */
+  width: 100%;
+  padding: 80px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: linear-gradient(135deg, #f8f9fa, #def6f8); Soft gradient */
+  overflow: hidden;
+}
+
+/* 🎭 Image & Text Container */
+.content-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  position: relative; /* Ensures elements are placed correctly */
+  z-index: 2; /* Keeps text & image on top */
+}
+
+/* 🖼 Image Wrapper */
+.image-wrapper {
+  position: relative;
+  width: 70%;
+  max-width: 700px;
+  display: flex;
+  justify-content: center;
+}
+
+/* 🖼 Team Image */
+.team-image {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  /* transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; */
+  /* animation: fadeInUp 1s ease-out; */
+}
+
+/* ✨ Hover Effects */
+.team-image:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* 🎥 3D Floating Animation */
+.animated-image {
+  /* animation: floatAnimation 3s infinite ease-in-out; */
+}
+
+@keyframes floatAnimation {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* 📜 Text Content */
+.text-content {
+  width: 50%;
+  text-align: left;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideIn 1s ease-out forwards;
+}
+
+/* 🎬 Slide-in Animation */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.text-content h2 {
+  font-size: 26px;
+  color: #1DC5CE;
+  margin-bottom: 15px;
+}
+
+.text-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.text-content blockquote {
+  font-size: 16px;
+  font-style: italic;
+  color: #555;
+  padding: 10px;
+  border-left: 4px solid #1DC5CE;
+  margin: 15px 0;
+}
+
+/* 📱 Mobile Optimization */
+@media (max-width: 768px) {
+  .content-container {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+  }
+
+  .image-wrapper {
+      width: 90%;
+      max-width: 100%;
+  }
+
+  .text-content {
+      width: 100%;
+      text-align: center;
+      animation: fadeInUp 1s ease-out forwards;
+  }
+
+  /* 🔵 Dots - Optimized for Mobile */
+  .dot {
+    width: 5px;
+    height: 5px;
+  }
+
+  /* 🌟 Icons - Adjusted for Mobile */
+  .icon, .line {
+    display: none;
+    }
+}
+
+
+/* 🌟 Decorative Elements */
+.decorative-elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Keeps elements behind the text */
+}
+
+/* 🔵 Animated Theme Dots */
+.dot {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #cef7f9;
+  animation: bounce 3s infinite ease-in-out alternate;
+}
+
+.dot1 { top: 20%; left: 10%; }
+.dot2 { top: 20%; left: 80%; }
+.dot3 { top: 80%; left: 30%; }
+.dot4 { top: 50%; right: 10%; }
+.dot5 { top: 90%; left: 10%; }
+
+/* 🎥 Dots Animation */
+@keyframes bounce {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-10px); }
+}
+
+/* 🎭 Icons */
+.icon {
+  position: absolute;
+  font-size: 50px;
+  color: #1DC5CE;
+  opacity: 0.2;
+}
+
+.icon1 { top: 1%; left: 49%; transform: rotate(10deg); }
+.icon2 { bottom: 10%; right: 10%; transform: rotate(10deg); }
+.icon3 { top: 50%; left: 5%; transform: rotate(10deg); }
+
+
+/* 📏 Geometric Design Lines */
+.line {
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background: #1DC5CE;
+  opacity: 0.3;
+}
+
+.line1 { top: 20%; left: 20%; transform: rotate(60deg); }
+.line2 { bottom: 20%; left: 35%; transform: rotate(60deg); }
+
+
+</style>
+
 </head>
 
 <body>
@@ -207,37 +396,18 @@
         <div class="auto-container">
             <div class="row clearfix">
                 <!--Text Col-->
-                <div class="text-col col-lg-6 col-md-12 col-sm-12">
+                <div class="text-col col-lg-8 col-md-12 col-sm-12">
                     <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <h2>Not Just a Trip, But a Lifetime of Memories with Book & Explore!  🌍</h2>
                         <div class="text upper-text">
                             Eight years ago, Book & Explore set out on a journey—not just to explore places, but to create experiences that leave a lasting imprint on the soul. What started as thrilling treks across Maharashtra soon evolved into a passion for curating adventures beyond boundaries.
                             From conquering the Sahyadris to witnessing the breathtaking Rann of Kutch, from seeking solace in Kedarnath-Badrinath to embracing the raw beauty of Spiti Valley, we have taken wanderers on journeys that redefine travel.
                             With 10,000+ happy explorers, Book & Explore is more than a travel company—we are storytellers, adventure seekers, and dream weavers, crafting journeys that go beyond the ordinary.
-                            <br /><span>🚀 Are you ready for your next adventure? Let’s explore together with Book & Explore!
+                            <br /><br /><span>🚀 Are you ready for your next adventure? Let’s explore together with Book & Explore!
                             </span>
                         </div>
-                        <div class="f-blocks clearfix">
-                            <!-- Vision Block -->
-                            <div class="f-block">
-                                <div class="inner-box">
-                                    <h6 class="text-info">Our Vision</h6>
-                                    <p class="description">
-                                        "To be the most trusted and innovative travel partner, creating unforgettable journeys that inspire and connect people with the world’s most breathtaking destinations."
-                                    </p>
-                                </div>
-                            </div>
-                        
-                            <!-- Mission Block -->
-                            <div class="f-block">
-                                <div class="inner-box">
-                                    <h6 class="text-info">Our Mission</h6>
-                                    <p class="description">
-                                        "Our mission is to provide seamless, personalized, and memorable travel experiences by offering top-notch services, curated itineraries, and expert guidance. We are committed to customer satisfaction, sustainability, and making travel accessible and enjoyable for all."
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+
+
                         
                         <!-- <div class="f-blocks clearfix">
                             <div class="f-block">
@@ -267,8 +437,9 @@
                         
                     </div>
                 </div>
+                
                 <!--Image Col-->
-                <div class="image-col col-lg-6 col-md-12 col-sm-12">
+                <div class="image-col col-lg-4 col-md-12 col-sm-12">
                     <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <div class="image-box">
                             <img src="images/resource/about-image-3.svg" alt="" title="">
@@ -276,7 +447,36 @@
                     </div>
                 </div>
             </div>
+
         </div>
+
+        <div class="container-fluid">
+            <div class="f-blocks clearfix">
+                <!-- Vision Block -->
+                <div class="f-block">
+                    <div class="inner-box">
+                        <div class="icon"><i class="fas fa-lightbulb"></i></div>
+                        <h6 class="text-info">Our Vision</h6>
+                        <p class="description">
+                            "To be the most trusted and innovative travel partner, creating unforgettable journeys that inspire and connect people with the world’s most breathtaking destinations."
+                        </p>
+                    </div>
+                </div>
+            
+                <!-- Mission Block -->
+                <div class="f-block">
+                    <div class="inner-box">
+                        <div class="icon"><i class="fas fa-rocket"></i></div>
+                        <h6 class="text-info">Our Mission</h6>
+                        <p class="description">
+                            "Our mission is to provide seamless, personalized, and memorable travel experiences by offering top-notch services, curated itineraries, and expert guidance. We are committed to customer satisfaction, sustainability, and making travel accessible and enjoyable for all."
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
     </section>
 
     <!-- Facts Section -->
@@ -631,11 +831,31 @@
     
     
 
-    <!-- Features Section - Team -->
+   <!-- Features Section - Team -->
+<!-- Features Section - Team -->
 <section class="features-section">
     <div class="auto-container">
+        <!-- Background Elements - Fixed Placement -->
+        <div class="decorative-elements">
+            <div class="dot dot1"></div>
+            <div class="dot dot2"></div>
+            <div class="dot dot3"></div>
+            <div class="dot dot4"></div>
+            <div class="dot dot5"></div>
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="icon icon1"><i class="fas fa-hiking"></i></div>
+            <div class="icon icon2"><i class="fas fa-hiking"></i></div>
+            <div class="icon icon3"><i class="fas fa-hiking"></i></div>
+        </div>
+
         <div class="content-container">
-            <img src="images/background/team.jpg" alt="team" class="team-image"/>
+            <!-- Team Image Section -->
+            <div class="image-wrapper">
+                <img src="images/background/team.jpg" alt="team" class="team-image animated-image"/>
+            </div>
+
+            <!-- Text Content -->
             <div class="text-content">
                 <h2>Meet the Book & Explore Team</h2>
                 <p>
@@ -645,11 +865,13 @@
                 <blockquote>💬 "We go beyond planning trips; we create journeys that inspire, rejuvenate, and leave you with stories to tell for a lifetime."</blockquote>
                 <blockquote>💬 "Each traveler is unique, and we strive to provide personalized experiences that go beyond expectations."</blockquote>
                 <p>Our mission is to ensure that every traveler who chooses <strong>Book & Explore</strong> embarks on a journey filled with adventure, comfort, and meaningful experiences. Whether it’s a trek, an expedition, or a cultural escape, we are here to make it truly special.</p>
-                <!-- <h4>✨ Let's explore together—one adventure at a time! 🌍🚀</h4> -->
             </div>
         </div>
     </div>
 </section>
+
+
+
 
     <!-- about FAQ -->
     <section class="faq-one alternate">
