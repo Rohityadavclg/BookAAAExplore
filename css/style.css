@@ -1585,6 +1585,7 @@ body.visible-sidebar{
   font-weight: 700;
   color: #1DC5CE;
   margin: 0 0 30px;
+  background-color: #0e8fe5;
 }
 
 .title-box h2{
@@ -3813,6 +3814,7 @@ Gallery section
 
 .main-footer .info-block{
   margin-bottom: 30px;
+  background-color: #666;
 }
 
 .main-footer .info-block ul{
@@ -3898,12 +3900,12 @@ Gallery section
 
 .main-footer .lower-section{
   position: relative;
-    padding: 10px 0 0;
+  padding: 10px 0 0;
 }
 
 .main-footer .lower-section .content-box{
   position: relative;
-  padding: 60px 60px 20px;
+  padding: 50px 10px 20px 100px;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0 15px 30px 0 rgba(29, 197, 206, 0.16);
@@ -3911,7 +3913,8 @@ Gallery section
 
 .main-footer .lower-section .footer-column{
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  background: #ffffff;
 }
 
 .main-footer .lower-section h6{
@@ -5103,21 +5106,75 @@ Gallery section
 
 .about-three .text-col .upper-text{
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
-.about-three .text-col .f-blocks{
-  position: relative;
-  margin: 0 -30px;
+/* 🌟 Vision & Mission Section */
+/* 🌟 Vision & Mission Section */
+.f-blocks {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 5px;
+  flex-wrap: wrap;
 }
 
-.about-three .text-col .f-blocks .f-block{
+/* 🎭 Vision & Mission Box */
+.f-block {
+  width: 45%;
+  background: linear-gradient(135deg, #ffffff, #f7f7f7);
+  border-radius: 15px;
+  border: 2px solid #1DC5CE;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  float: left;
-  width: 50%;
-  padding: 0 30px;
-  margin-bottom: 30px;
 }
+
+/* ✨ Hover Effects */
+.f-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+  border-color: #00B4D8;
+}
+
+/* 🔥 Animated Icons */
+.f-block .icon {
+  font-size: 32px;
+  color: #1DC5CE;
+  margin-bottom: 15px;
+  animation: iconBounce 1.5s infinite alternate ease-in-out;
+}
+
+/* 📌 Icon Animation */
+@keyframes iconBounce {
+  0% { transform: translateY(10px); }
+  100% { transform: translateY(-5px); }
+}
+
+/* 📝 Text Styling */
+.f-block h6 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #10221B;
+  margin-bottom: 10px;
+}
+
+.f-block p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 1024px) {
+  .f-block {
+      width: 100%;
+  }
+}
+
+
 
 .about-three .text-col .f-block:nth-child(1):after{
   content: '';
@@ -5391,97 +5448,6 @@ Gallery section
 ====================================================================
 
 ***/
-/* 🚀 Features Section */
-.features-section {
-  position: relative;
-  width: 100%;
-  padding: 60px 0;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f8f9fa; /* Light background for contrast */
-}
-
-/* 🖼 Image & Text Container */
-.content-container {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  max-width: 1200px;
-  width: 100%;
-  padding: 20px;
-}
-
-/* 🖼 Image Styling */
-.team-image {
-  width: 50%;
-  max-width: 600px;
-  height: auto;
-  border-radius: 15px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-/* 🌟 Hover Effect */
-.team-image:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
-}
-
-/* 📜 Text Content */
-.text-content {
-  width: 50%;
-  text-align: left;
-}
-
-.text-content h2 {
-  font-size: 26px;
-  color: #1DC5CE;
-  margin-bottom: 15px;
-}
-
-.text-content p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-}
-
-.text-content blockquote {
-  font-size: 16px;
-  font-style: italic;
-  color: #555;
-  padding: 10px;
-  border-left: 4px solid #1DC5CE;
-  margin: 15px 0;
-}
-
-.text-content h4 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 20px;
-  color: #1DC5CE;
-}
-
-/* 📱 Mobile Optimization */
-@media (max-width: 768px) {
-  .content-container {
-      flex-direction: column;
-      text-align: center;
-      gap: 20px;
-  }
-
-  .team-image {
-      width: 90%;
-      max-width: 100%;
-  }
-
-  .text-content {
-      width: 100%;
-      text-align: center;
-  }
-}
-
 
 
 /*** 
@@ -5773,14 +5739,9 @@ Gallery section
   background: #1DC5CE;
 }
 
-.trek-block-one.style-two .inner-box{
-  background: #F3F7FA;
-  border-color: #E8E8E8;
-}
-
 .trek-block-one.style-two .info{
-  background: #1DC5CE;
-  color: #ffffff;
+  background: #c3c4c4;
+  color: #0b0a0a;
 }
 
 .trekking-section .load-more{
@@ -5876,6 +5837,9 @@ Gallery section
   color: #101010;
   cursor:pointer;
   padding:30px 90px 30px 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .faq-one .accordion-box .block.active-block .acc-btn{
@@ -6411,7 +6375,152 @@ Gallery section
   margin-top: 10px;
 }
 
-.trend-block-one{
+/* ========= destination image blocks ========= */
+
+/* 🌟 Main Trek Block */
+.trend-block-one {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+/* 🖼 Image Box */
+.trend-block-one .image-box {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* Square Aspect Ratio */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.trend-block-one .image-box .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #101010;
+  border-radius: 10px;
+}
+
+/* 🖼 Image Styling */
+.trend-block-one .image-box .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures full coverage */
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* 🎭 Hover Effect */
+.trend-block-one .image-box:hover .image img {
+  transform: scale(1.05);
+  opacity: 0.6; /* Darker on hover */
+}
+
+/* 🖤 Dark Overlay */
+.trend-block-one .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.trend-block-one .image-box:hover .overlay {
+  opacity: 1;
+}
+
+/* ✨ Hover Text and Arrow */
+.trend-block-one .hover-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.trend-block-one .image-box:hover .hover-content {
+  opacity: 1;
+}
+
+/* 📝 Title Text */
+.trend-block-one .hover-content h4 {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.trend-block-one .hover-content h4 a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* ⬅ Arrow Button */
+.trend-block-one .hover-content .more-link a {
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  text-align: center;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  transition: 0.3s;
+ 
+}
+
+.trend-block-one .hover-content .more-link a:hover {
+  background: #1DC5CE;
+  border-color: #1DC5CE;
+}
+
+/* 🔥 Floating Text Box */
+.trend-block-one .count {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  min-width: 110px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #1DC5CE;
+  border-radius: 25px;
+}
+
+/* 📱 Responsive Optimization */
+@media (max-width: 768px) {
+  .trend-block-one {
+    margin-bottom: 30px;
+  }
+
+  .trend-block-one .hover-content h4 {
+    font-size: 16px;
+  }
+
+  .trend-block-one .hover-content .more-link a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+/* .trend-block-one{
   position: relative;
   margin-bottom: 50px;
 }
@@ -6443,7 +6552,7 @@ Gallery section
 .trend-block-one .image-box .image img{
   position: relative;
   width: 100%;
-  border-radius: 8px 8px;
+  border-radius: 15px 8px;
   -moz-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -6476,7 +6585,7 @@ Gallery section
   width: 100%;
   font-size: 14px;
   font-weight: 500;
-  color: #ffffff;
+  color: #f48585;
   padding: 0 20px 30px 30px;
   line-height: 30px;
 }
@@ -6530,7 +6639,145 @@ Gallery section
   background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0%, #10221B 100%);
   background: -ms-linear-gradient(top,rgba(0,0,0,0) 0%, #10221B 100%);
   background: -moz-linear-gradient(top,rgba(0,0,0,0) 0%, #10221B 100%);
+} */
+
+
+/*** 
+
+====================================================================
+  Booking Card Section
+====================================================================
+
+***/
+
+/* 🌟 Booking Card */
+.booking-card {
+  position: absolute;
+  top: -120px;
+  right: 10%;
+  background: white;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  width: 260px; /* Fixed width */
+  height: 200px;
+  text-align: center;
+  padding: 10px;
+  font-family: 'Arial', sans-serif;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden; /* Ensure it's hidden initially */
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s;
 }
+
+.booking-card a{
+  text-decoration: none;
+  color: white;
+}
+
+/* ✨ Pop-up Animation */
+.booking-card.show {
+  opacity: 1;
+  visibility: visible; /* Now it's visible */
+  transform: translateY(0);
+}
+
+.booking-card .inner-box{
+  position : relative;
+  width: ;
+}
+
+/* 🔥 Header (BOOK NOW Button) */
+.booking-card .inner-box .booking-header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #39c2cc; /* Theme color */
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 8px 8px 0 0;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+/* 🎨 Hover Effect */
+.booking-header:hover {
+  background: #2fa4af; /* Slightly darker shade */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* 💰 Price */
+.booking-price {
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #39c2cc; /* Matching theme color */
+  margin: 5px 0 0 0;
+}
+
+/* ⭐ Features List */
+.booking-features {
+  position: absolute;
+  width: 100%;
+  top: 100px;
+  left: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.booking-features li {
+  font-size: 14px;
+  color: #555;
+  padding: 2px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ⭐ Star Icon */
+.booking-features li i {
+  color: #f4b400; /* Gold star color */
+  margin-right: 8px;
+}
+
+/* 📱 Responsive (Mobile Screen) */
+@media (max-width: 768px) {
+  .booking-card {
+    width: 60%;
+    height: 160px;
+    left: 20%;
+    right: auto;
+    top: -60px; /* Lower position */
+    padding: 4px 10px;
+  }
+
+  .booking-header {
+    font-size: 16px;
+    padding: 5px 8px;
+  }
+
+  .booking-price {
+    font-size: 12px;
+  }
+
+  .booking-features{
+    top: 80px;
+  }
+
+  .booking-features li {
+    font-size: 12px;
+    padding: 2px 0;
+  }
+}
+
+
+
 
 /*** 
 
@@ -6747,7 +6994,7 @@ Gallery section
 }
 
 .packages-banner.style-two{
-  min-height:580px;
+  max-height: 480px;
 }
 
 .packages-banner::before{
@@ -6770,10 +7017,41 @@ Gallery section
   display: none;
 }
 
-.packages-banner .banner-list{
-  position:relative;
-  padding-top:520px;
-  z-index:2;
+/* Banner List */
+.packages-banner .banner-list {
+  position: relative;
+  padding-top: 320px;
+  z-index: 2;
+  text-align: center; /* Center align text */
+}
+
+/* Banner Heading */
+.packages-banner .banner-list h4 {
+  position: absolute;
+  top: 90%; /* Centering text vertically */
+  left: 35%;
+  transform: translate(-50%, -50%); /* Ensures perfect centering */
+  z-index: 2;
+  font-size: 36px; /* Increased font size for better visibility */
+  font-weight: 700; /* Bold font */
+  color: white; /* Ensures text remains visible */
+  width: 90%; /* Ensures text doesn't overflow */
+  max-width: 800px; /* Restricts text width */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Adds readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  .packages-banner{
+    min-height: 230px;
+  }
+
+  .packages-banner .banner-list h4 {
+    bottom: 10%; /* Centering text vertically */
+    left: 50%;
+    font-size: 20px;
+  }
 }
 
 .packages-banner .banner-list li{
@@ -6984,29 +7262,38 @@ Gallery section
   margin-bottom:0px;
 }
 
-/* Facility Box */
-
-.package-detail-section .facility-box{
-  position:relative;
-  margin-top:35px;
+/* 🌟 Facility Box */
+.package-detail-section .facility-box {
+  position: relative;
+  margin-top: 35px;
 }
 
-.package-detail-section .facility-box h5{
-  margin-bottom:40px;
+.package-detail-section .facility-box h5 {
+  margin-bottom: 40px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #10221B;
 }
 
-.package-detail-section .facility-box .facility-option{
-  position:relative;
-  padding-left:30px;
-  font-size:16px;
-  color:#505050;
-  margin-bottom:35px;
+.package-detail-section .facility-box .facility-option {
+  position: relative;
+  padding-left: 30px;
+  font-size: 16px;
+  color: #505050;
+  margin-bottom: 25px;
+  display: flex;
+  /* align-items: center; */
+  gap: 10px;
 }
 
-.package-detail-section .facility-box .facility-option .icon{
-  position:absolute;
-  left:0px;
+/* 🔵 Skyblue Bullet */
+.package-detail-section .facility-box .facility-option::before {
+  content: "✅"; /* Arrow as a bullet */
+  font-size: 18px;
+  color: #39c2cc; /* Skyblue color */
+  font-weight: bold;
 }
+
 
 .package-detail-section .itinerary-box{
   position:relative;
@@ -7072,6 +7359,75 @@ Gallery section
 
 .package-detail-section .day-box:last-child .day-text:before{
   display:none;
+}
+
+/* ======= Cost table ======= */
+
+.cost-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cost-table a{
+  text-decoration: none;
+}
+
+/* 📝 Table Headers */
+.cost-table th {
+  background: #39c2cc; /* Sky Blue Header */
+  color: white;
+  font-size: 16px;
+  padding: 12px;
+  text-align: center;
+}
+
+/* 📊 Table Cells */
+.cost-table td {
+  font-size: 16px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+/* 🎭 Alternate Row Color */
+.cost-table tr:nth-child(even) {
+  background: #f3fbfc;
+}
+
+/* 🔥 Book Now Button */
+.book-btn {
+  display: inline-block;
+  color: #39c2cc;
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 2px solid #39c2cc;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.book-btn:hover {
+  background: #39c2cc;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .cost-table th, .cost-table td {
+      font-size: 14px;
+      padding: 8px;
+  }
+  
+  .book-btn {
+      padding: 6px 10px;
+      font-size: 12px;
+  }
 }
 
 .package-detail-section .gallery-box{
@@ -7631,11 +7987,31 @@ Gallery section
   display:none;
 }
 
-.package-info-block-two .inner-box .icon{
+/* .package-info-block-two .inner-box .icon{
   position:absolute;
   left:0px;
   top:0px;
   color:#d3f0f4;
+} */
+
+.package-info-block .inner-box .icon {
+  position: absolute; /* Keep it within the flow */
+  left:0px;
+  top:0px;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #d3f0f4;
+}
+
+/* Ensure the image is properly centered */
+.package-info-block .inner-box .icon img {
+  max-width: 50%;
+  max-height: 50%;
+  object-fit: contain;
 }
 
 .package-info-box.style-two .package-info-block .inner-box:before{
