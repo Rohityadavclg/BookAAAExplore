@@ -14,6 +14,106 @@
 <link href="css/responsive.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]--> 
 
+<style>
+	/* Trek Card */
+  .trek-block-one {
+	width: 80%; /* Ensures 4 cards in a row */
+	background: #fff;
+	border-radius: 10px; /* Reduced size */
+	padding: 15px; /* Reduced padding */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.4s ease;
+	margin: 30px 20px;
+	text-align: center;
+  }
+  
+  .trek-block-one:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .trek-block-one a {
+	text-decoration: none;
+  }
+  
+  /* Image Box */
+  .image-box img {
+	width: 100%;
+	height: 160px; /* Reduced height */
+	object-fit: cover;
+	border-radius: 10px;
+	transition: 0.3s;
+  }
+  
+  .image-box img:hover {
+	transform: scale(1.05);
+  }
+  
+  /* Info Box */
+  .info {
+	font-size: 14px; /* Smaller font */
+	font-weight: 600;
+	color: #0f0f0f;
+	padding: 6px;
+	margin-top: 8px;
+	border-radius: 4px;
+	/* margin-bottom: 30px; */
+  }
+  
+  /* Title & Button */
+  .lower-content h4 {
+	font-size: 16px; /* Proper font size */
+	font-weight: 600;
+	margin: 12px 0;
+	color: #10221B;
+	transition: color 0.3s ease-in-out; /* Smooth transition effect */
+  }
+  
+  /* Hover Effect */
+  .lower-content h4:hover {
+	color: #1DC5CE;
+  }
+  
+  .theme-btn {
+	color: #1DC5CE; /* Initial text color */
+	background: transparent; /* No background initially */
+	padding: 6px 12px; /* Button padding */
+	border-radius: 5px; /* Rounded corners */
+	border: 2px solid #1DC5CE; /* Border color */
+	text-decoration: none;
+	display: inline-block;
+	transition: 0.3s ease-in-out;
+	font-size: 14px; /* Button text size */
+	font-weight: 600; /* Bold font */
+  }
+  
+  .theme-btn:hover {
+	background: #1DC5CE; /* Hover background */
+	color: white; /* White text on hover */
+	border-color: #1DC5CE; /* Keep border same */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+	.trek-block-one {
+		width: 20%; /* 3 cards per row */
+	}
+  }
+  
+  @media (max-width: 768px) {
+	.trek-block-one {
+		width: 30%; /* 2 cards per row */
+		margin: 20px  30px 30px 30px;
+	}
+  }
+  
+  @media (max-width: 576px) {
+	.trek-block-one {
+		width: 90%; /* 1 card per row on mobile */
+	}
+  }
+  
+  </style>
 </head>
 
 
@@ -205,25 +305,13 @@
 	   <!-- Hidden Navigation Bar -->
 	  
 	   <!-- / Hidden Bar -->  
-	  
-	 
-    
-
-    <!--Page Info-->
-    <section class="page-info">
-        <div class="auto-container">
-            <div class="links">
-                
-            </div>
-        </div>
-    </section>
 
     <!-- Banner Section -->
     <section class="packages-banner" style="background-image: url(images/background/banner-1.jpg);">
         <div class="auto-container">
 			<ul class="banner-list">
-				<li><span class="icon"><img src="images/icons/location.svg" alt="" /></span>Mumbai/Pune</li>
-				 
+				<h4>Kedarnath - Badrinath Do Dham Yatra
+                     <br />via Haridwar & Rishikesh</h4>
 			</ul>
 		</div>
     </section>
@@ -231,23 +319,14 @@
 	<!-- Package Detail Section -->
 	<section class="package-detail-section">
 		<div class="auto-container">
-			<div class="row clearfix">
-				<!-- Content Column -->
-				<div class="content-column col-xl-8 col-lg-7 col-md-12 col-sm-12">
-					
-					<!-- Upper Box -->
-					<div class="upper-box">
-						<div class="clearfix">
-							<div class="pull-left">
-								<h4>Kedarnath - Badrinath 
-                                    Do Dham Yatra<br>
-                                   via  Haridwar & Rishikesh </h4>
-							</div>
-							 
-						</div>
-					</div>
-					
-					<!-- Package Info Box -->
+
+            <!-- Booking card section-->
+			<div id="booking_now"></div>
+
+			<!-- Dynamic Booking Price -->
+			<div class="booking_now_price" style="display: none;">2999</div>
+
+            <!-- Package Info Box -->
 					<div class="package-info-box style-two">
 						<div class="inner-container d-flex justify-content-between align-items-center">
 							
@@ -298,6 +377,12 @@
 						</div>
 					</div>
 					<!-- Rating Box -->
+
+
+			<div class="row clearfix">
+				<!-- Content Column -->
+				<div class="content-column col-xl-8 col-lg-7 col-md-12 col-sm-12">
+					
 					
 					 
 					
@@ -309,8 +394,8 @@
 							<div class="accordion-box clearfix">
 								<!--Block-->
 								<div class="accordion block active-block">
-									<div class="acc-btn active">Day 1: Depart from Pune/Mumbai or your respective
-                                        cities to Delhi or Haridwar via Train or Flight <i class="fa-regular fa-angle-down"></i></div>
+                                    <div class="acc-btn active"><span>Day 0</span><span>Depart from Pune/Mumbai or your respective
+                                        cities ...</span> <span><i class="fa-regular fa-angle-down"></i></span></div>
 									<div class="acc-content">
 										<div class="content">
 											<div class="bold-text"> Meal - No Meal.</div>
@@ -329,19 +414,14 @@
 											<div class="text"> 
 												• Flights departure Available PAN India. Contact us for best
                                                 rates.
-											</div>
-											 
-											 
-											
-											 
-											
+											</div>	
 										</div>
 									</div>
 								</div>
 								<!--Block-->
 								<div class="accordion block">
-									<div class="acc-btn">Day 2 :Arrival Delhi & Transfer to Haridwar by road
-                                        (250km) <i class="fa-regular fa-angle-down"></i></div>
+                                    <div class="acc-btn"><span>Day 1</span><span>Arrival Delhi & Transfer to Haridwar by road
+                                        (250km)...</span> <span><i class="fa-regular fa-angle-down"></i></span></div>
 									<div class="acc-content">
 										<div class="content">
 											<div class="bold-text">Meal - Dinner</div>
@@ -365,7 +445,7 @@
 								<!--Block-->
 								
 								<div class="accordion block">
-									<div class="acc-btn">Day 3 : Haridwar to Guptakashi/Sitapur/Sonprayag   <i class="fa-regular fa-angle-down"></i></div>
+                                    <div class="acc-btn"><span>Day 2</span><span>Haridwar to Guptakashi/Sitapur/Sonprayag...</span> <span><i class="fa-regular fa-angle-down"></i></span></div>
 									<div class="acc-content">
 										<div class="content">
 											<div class="bold-text">Meal - Breakfast & Dinner.</div>
@@ -389,7 +469,7 @@
 								<!--Block-->
 								
 								<div class="accordion block">
-									<div class="acc-btn">Day 4: Guptakashi/Sitapur/Sonprayag to Gaurikund &then trek start to Kedarnath temple  <i class="fa-regular fa-angle-down"></i></div>
+                                    <div class="acc-btn"><span>Day 3</span><span>Guptakashi/Sitapur/Sonprayag to Gaurikund &then trek ...</span> <span><i class="fa-regular fa-angle-down"></i></span></div>
 									<div class="acc-content">
 										<div class="content">
 											<div class="bold-text">Meal - Dinner.</div>
@@ -418,9 +498,7 @@
 								</div>
 								<!--Block-->
 								<div class="accordion block">
-									<!-- Day 4 -->
-									<div class="acc-btn">Day 5 :Kedarnath temple to Gaurikund then drive to
-                                        Guptakashi/Sitapur/Sonprayag  <i class="fa-regular fa-angle-down"></i></div>
+                                    <div class="acc-btn"><span>Day 4</span><span>Kedarnath temple to Gaurikund then drive to...</span> <span><i class="fa-regular fa-angle-down"></i></span></div>
 									<div class="acc-content">
 										<div class="content">
 											<div class="bold-text">Meal - Breakfast & Dinner.</div>
@@ -439,8 +517,7 @@
 								 
 								<!--Block-->
 								<div class="accordion block">
-									 
-									<div class="acc-btn">Day 6 : Guptakashi/Sitapur/Sonprayag to Badrinath  <i class="fa-regular fa-angle-down"></i></div>
+									<div class="acc-btn"><span>Day 5</span><span>Guptakashi/Sitapur/Sonprayag to Badrinath...</span> <span><i class="fa-regular fa-angle-down"></i></span></div> 
 									<div class="acc-content">
 										<div class="content">
 											<div class="bold-text">Meal - Breakfast & Dinner.</div>
@@ -456,8 +533,8 @@
 								
 							 <!--Block-->
                              <div class="accordion block">
-									 
-                                <div class="acc-btn">Day 7 : Badrinath to Rudraprayag via Mana Village.   <i class="fa-regular fa-angle-down"></i></div>
+								<div class="acc-btn"><span>Day 6</span><span>Badrinath to Rudraprayag via Mana Village...</span> <span><i class="fa-regular fa-angle-down"></i></span></div>	 
+                                
                                 <div class="acc-content">
                                     <div class="content">
                                         <div class="bold-text">Meal - Breakfast & Dinner</div>
@@ -473,8 +550,8 @@
                             </div>
                              <!--Block-->
                              <div class="accordion block">
-									 
-                                <div class="acc-btn">Day 8 : Rudraprayag to Rishikesh  <i class="fa-regular fa-angle-down"></i></div>
+								<div class="acc-btn"><span>Day 7</span><span>Rudraprayag to Rishikesh...</span> <span><i class="fa-regular fa-angle-down"></i></span></div>	 
+                               
                                 <div class="acc-content">
                                     <div class="content">
                                         <div class="bold-text">Meal - Breakfast & Dinner</div>
@@ -493,8 +570,8 @@
                             </div>
                           <!--Block-->
                           <div class="accordion block">
-									 
-                            <div class="acc-btn">Day 9 : Explore Rishikesh Overnight journey to Delhi  <i class="fa-regular fa-angle-down"></i></div>
+							<div class="acc-btn"><span>Day 8</span><span>Explore Rishikesh Overnight journey to Delhi ...</span> <span><i class="fa-regular fa-angle-down"></i></span></div>		 
+                            
                             <div class="acc-content">
                                 <div class="content">
                                     <div class="text">• Early morning wake-up call & Breakfast.</div>
@@ -511,8 +588,8 @@
                         </div>
 
                            <div class="accordion block">
-									 
-                            <div class="acc-btn">Day 10 : Reach Delhi  <i class="fa-regular fa-angle-down"></i></div>
+							<div class="acc-btn"><span>Day 9</span><span>Reach Delhi...</span> <span><i class="fa-regular fa-angle-down"></i></span></div>		 
+                           
                             <div class="acc-content">
                                 <div class="content">
                                     <div class="text">• Reach Delhi early in the morning.</div>
@@ -528,8 +605,8 @@
                          </div>
                          <!-- block -->
                          <div class="accordion block">
-									 
-                            <div class="acc-btn"> Day 11: Arrival to your respective cities<i class="fa-regular fa-angle-down"></i></div>
+							<div class="acc-btn"><span>Day 10</span><span> Arrival to your respective cities...</span> <span><i class="fa-regular fa-angle-down"></i></span></div>		 
+                            
                             <div class="acc-content">
                                 <div class="content">
                                      
@@ -540,72 +617,74 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="facility-box" style="border: 1px solid #ddd; border-radius: 8px; padding: 15px; margin-bottom: 15px; background-color: #f9f9f9;">
 						<h5 style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 10px;">Batches</h5>
 						<p style="margin: 5px 0; font-size: 16px; color: #555;"> <strong>From Pune, Mumbai & other cities</strong></p>
 						<p style="margin: 5px 0; font-size: 16px; color: #555;">• Batch 1: 13 Sep to 23 Sep</p>
 						<p style="margin: 5px 0; font-size: 16px; color: #555;">• Batch 2: 25 oct to 04 Nov</p>
-						
 						 
-					  </div>
-                      <div class="facility-box"> 
+					</div>
+
+                    <div class="facility-box">
                         <h5>Costs</h5>
-                        <table style="width: 100%; border-collapse: collapse; border: 1px solid #eee; margin-bottom: 8px;">
+                        <table class="cost-table">
                             <thead>
                                 <tr>
-                                    <th style="text-align: left; font-size: 14px; padding: 16px; border: 1px solid #ddd;">From City</th>
-                                    <th style="text-align: left; font-size: 14px; padding: 16px; border: 1px solid #ddd;">Days</th>
-                                    <th style="text-align: left; font-size: 14px; padding: 16px; border: 1px solid #ddd;">Cost Per Person<br>(3AC Train)</th>
-                                    <th style="text-align: left; font-size: 14px; padding: 16px; border: 1px solid #ddd;">Cost Per Person <br>(SL Train)</th>
+                                    <th>From City</th>
+                                    <th>Days</th>
+                                    <th>Cost PP<br>(3AC Train)</th>
+                                    <th>Cost PP<br>(SL Train)</th>
+                                    <th>Book Now</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr style="background: #f9f9f9;">
-                                    <td style="font-size: 16px; padding: 10px; border: 1px solid #ddd;">Pune / Mumbai via
-                                        Delhi</td>
-                                    <td style="font-size: 16px; padding: 10px; border: 1px solid #ddd;">10N /
-                                        11D</td>
-                                    <td style="font-size: 16px; padding: 10px; border: 1px solid #ddd;">27,999*/- </td>
-                                    <td style="font-size: 16px; padding: 10px; border: 1px solid #ddd;">25,999*/- </td>
+                                <tr>
+                                    <td>Pune / Mumbai via Delhi</td>
+                                    <td>10N / 11D</td>
+                                    <td>₹27,999/-</td>
+                                    <td>₹25,999/-</td>
+                                    <td><a href="#" class="book-btn">Book Now</a></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-size: 16px; padding: 10px; border: 1px solid #ddd;">Mumbai (Bandra to
-                                        Haridwar Train No.
-                                        19019 - & Haridwar
-                                        to bandra Train No.
-                                        22918
-                                        </td>
-                                    <td style="font-size: 16px; padding: 10px; border: 1px solid #ddd;">10N /
-                                        10D</td>
-                                    <td style="font-size: 16px; padding: 10px; border: 1px solid #ddd;">25,499*/-</td>
-                                    <td style="font-size: 16px; padding: 10px; border: 1px solid #ddd;">23,499*/-
-                                    </td>
+                                    <td>Mumbai (Bandra to Haridwar Train No. 19019 & Haridwar to Bandra Train No. 22918)</td>
+                                    <td>10N / 10D</td>
+                                    <td>₹25,499/-</td>
+                                    <td>₹23,499/-</td>
+                                    <td><a href="#" class="book-btn">Book Now</a></td>
                                 </tr>
-                                 
-                            <tr><td style="font-size: 16px; padding: 10px; border: 1px solid #ddd;"> Delhi
-                                </td>
-                            <td style="font-size: 16px; padding: 10px; border: 1px solid #ddd;">8N / 9D</td>
-                            <td style="font-size: 16px; padding: 10px; border: 1px solid #ddd;">23,999/-
-                            </td>
-                        </tr>
-                        <tr><td style="font-size: 16px; padding: 10px; border: 1px solid #ddd;">Haridwar
-                            </td>
-                        <td style="font-size: 16px; padding: 10px; border: 1px solid #ddd;">7N / 8D</td>
-                        <td style="font-size: 16px; padding: 10px; border: 1px solid #ddd;">21,999/-</td>
-                    </tr>
-                    <tr><td style="font-size: 16px; padding: 10px; border: 1px solid #ddd;">Haridwar
-                    </td>
-                    <td style="font-size: 16px; padding: 10px; border: 1px solid #ddd;">6N / 7D</td>
-                    <td style="font-size: 16px; padding: 10px; border: 1px solid #ddd;">20,499/-</td>
-                    </tr>
-                    <tr><td style="font-size: 16px; padding: 10px; border: 1px solid #ddd;">Haridwar
-                    </td>
-                    <td style="font-size: 16px; padding: 10px; border: 1px solid #ddd;">5N / 6D</td>
-                    <td style="font-size: 16px; padding: 10px; border: 1px solid #ddd;">17,999/-</td>
-                    </tr>
+                                <tr>
+                                    <td>Delhi</td>
+                                    <td>8N / 9D</td>
+                                    <td>₹23,999/-</td>
+                                    <td>—</td>
+                                    <td><a href="#" class="book-btn">Book Now</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Haridwar</td>
+                                    <td>7N / 8D</td>
+                                    <td>₹21,999/-</td>
+                                    <td>—</td>
+                                    <td><a href="#" class="book-btn">Book Now</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Haridwar</td>
+                                    <td>6N / 7D</td>
+                                    <td>₹20,499/-</td>
+                                    <td>—</td>
+                                    <td><a href="#" class="book-btn">Book Now</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Haridwar</td>
+                                    <td>5N / 6D</td>
+                                    <td>₹17,999/-</td>
+                                    <td>—</td>
+                                    <td><a href="#" class="book-btn">Book Now</a></td>
+                                </tr>
                             </tbody>
                         </table>
-                      </div>
+                    </div>
+                    
 					  
 					<!-- End Itinerary Box -->
                      <!-- things to carry -->
@@ -637,69 +716,69 @@
 					<div class="facility-box">
 						<h5>Inclusions</h5>
 						<div class="row clearfix">
-                            <div class="column col-lg-3 col-md-4 col-sm-12">
+                            <div class="column col-lg-12 col-md-12 col-sm-12">
                                 <div class="facility-option">
-                                    <span class="icon"><img src="images/icons/campings.svg" alt="" /></span>
+                                    <span class="icon"></span>
                                     Train Travel - Pune/Mumbai to Delhi & return 3AC & as per package you choose.
                                 </div>
                             </div>
-                            <div class="column col-lg-3 col-md-4 col-sm-12">
+                            <div class="column col-lg-12 col-md-12 col-sm-12">
                                 <div class="facility-option">
-                                    <span class="icon"><img src="images/icons/campings.svg" alt="" /></span>
+                                    <span class="icon"></span>
                                     Delhi to Haridwar by AC bus Local Transport (seating 5-6 hrs Journey).
                                 </div>
                             </div>
-                            <div class="column col-lg-3 col-md-4 col-sm-12">
+                            <div class="column col-lg-12 col-md-12 col-sm-12">
                                 <div class="facility-option">
-                                    <span class="icon"><img src="images/icons/campings.svg" alt="" /></span>
+                                    <span class="icon"></span>
                                     Rishikesh to Delhi by Sleeper AC bus.
                                 </div>
                             </div>
-                            <div class="column col-lg-3 col-md-4 col-sm-12">
+                            <div class="column col-lg-12 col-md-12 col-sm-12">
                                 <div class="facility-option">
-                                    <span class="icon"><img src="images/icons/campings.svg" alt="" /></span>
+                                    <span class="icon"></span>
                                     Accommodation in Hotel/Homestays on 3/4 sharing with extra mattress.
                                 </div>
                             </div>
-                            <div class="column col-lg-3 col-md-4 col-sm-12">
+                            <div class="column col-lg-12 col-md-12 col-sm-12">
                                 <div class="facility-option">
-                                    <span class="icon"><img src="images/icons/campings.svg" alt="" /></span>
+                                    <span class="icon"></span>
                                     Accommodation at Kedarnath in Hotel/Homestays/Hostels on 4 to 6 sharing with extra mattress.
                                 </div>
                             </div>
-                            <div class="column col-lg-3 col-md-4 col-sm-12">
+                            <div class="column col-lg-12 col-md-12 col-sm-12">
                                 <div class="facility-option">
-                                    <span class="icon"><img src="images/icons/campings.svg" alt="" /></span>
+                                    <span class="icon"></span>
                                     Transport from Haridwar to Sonprayag and return to Rishikesh as per group size Non AC. (Car/Tempo Traveler/Bolero).
                                 </div>
                             </div>
-                            <div class="column col-lg-3 col-md-4 col-sm-12">
+                            <div class="column col-lg-12 col-md-12 col-sm-12">
                                 <div class="facility-option">
-                                    <span class="icon"><img src="images/icons/campings.svg" alt="" /></span>
+                                    <span class="icon"></span>
                                     Meals 6X Breakfast & 7X Dinner Pure Veg.
                                 </div>
                             </div>
-                            <div class="column col-lg-3 col-md-4 col-sm-12">
+                            <div class="column col-lg-12 col-md-12 col-sm-12">
                                 <div class="facility-option">
-                                    <span class="icon"><img src="images/icons/campings.svg" alt="" /></span>
+                                    <span class="icon"></span>
                                     Sonprayag to Gaurikund & Return Taxi Charges.
                                 </div>
                             </div>
-                            <div class="column col-lg-3 col-md-4 col-sm-12">
+                            <div class="column col-lg-12 col-md-12 col-sm-12">
                                 <div class="facility-option">
-                                    <span class="icon"><img src="images/icons/campings.svg" alt="" /></span>
+                                    <span class="icon"></span>
                                     Forest Department's charges & Permits.
                                 </div>
                             </div>
-                            <div class="column col-lg-3 col-md-4 col-sm-12">
+                            <div class="column col-lg-12 col-md-12 col-sm-12">
                                 <div class="facility-option">
-                                    <span class="icon"><img src="images/icons/campings.svg" alt="" /></span>
+                                    <span class="icon"></span>
                                     Experienced crew throughout trek/tour from Haridwar or Delhi.
                                 </div>
                             </div>
-                            <div class="column col-lg-3 col-md-4 col-sm-12">
+                            <div class="column col-lg-12 col-md-12 col-sm-12">
                                 <div class="facility-option">
-                                    <span class="icon"><img src="images/icons/campings.svg" alt="" /></span>
+                                    <span class="icon"></span>
                                     Basic First Aid.
                                 </div>
                             </div>
@@ -926,19 +1005,40 @@
 						<div class="single-item-carousel owl-carousel owl-theme">
 							<div class="slide">
 								<div class="image">
-									<img src="images/resource/gallery.jpg" alt="" />
+									<img src="images/resource/gallery-6.jpg" alt="" />
 								</div>
 							</div>
 							<div class="slide">
 								<div class="image">
-									<img src="images/resource/gallery.jpg" alt="" />
+									<img src="images/resource/gallery-11.jpg" alt="" />
 								</div>
 							</div>
 							<div class="slide">
 								<div class="image">
-									<img src="images/resource/gallery.jpg" alt="" />
+									<img src="images/resource/gallery-1.jpg" alt="" />
 								</div>
 							</div>
+							<div class="slide">
+								<div class="image">
+									<img src="images/resource/gallery-4.jpg" alt="" />
+								</div>
+							</div>
+							<div class="slide">
+								<div class="image">
+									<img src="images/Slider Images/Murudeshwar.png" alt="" />
+								</div>
+							</div>
+							<div class="slide">
+								<div class="image">
+									<img src="images/Slider Images/Spiti (1).png" alt="" />
+								</div>
+							</div>
+							<div class="slide">
+								<div class="image">
+									<img src="images/Slider Images/Kerala.png" alt="" />
+								</div>
+							</div>
+							
 						</div>
 					</div>
 					
@@ -1062,117 +1162,132 @@
                 
 				<div class="popular-carousel owl-theme owl-carousel">
      
-                    <!-- block -->
-                    
-                    <div class="trek-block-one">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <div class="image"><a href="winter_spiti_vall.html"><img src="images/resource/f-image-3.jpg" alt="" title=""></a></div>
-                                
-                                <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 11 Days</span> &ensp; | &ensp; <span class="i-block">₹ 1099</span>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="winter_spiti_vall.html">winter spiti valley</a></h4>
-                                
-                                 
-                            </div>
-                            <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="winter_spiti_vall.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- block -->
-                    
-                    <div class="trek-block-one  ">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <div class="image"><a href="hampi_Gokarna.html"><img src="images/resource/f-image-3.jpg" alt="" title=""></a></div>
-                                
-                                <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 4 days /5 Nights </span> &ensp; | &ensp; <span class="i-block"></span>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="hampi_Gokarna.html">Hampi Gokarna tour</a></h4>
-                                 
-                                 
-                            <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="hampi_Gokarna.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
-                            </div>
-                        </div>
-                     </div>
-                     
-                    </div>
-                    <!-- block -->
-                    <div class="trek-block-one ">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <div class="image"><a href="kedarnath_Badrinath_Tour.html"><img src="images/resource/f-image-3.jpg" alt="" title=""></a></div>
-                                 
-                                <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 11 Days</span> &ensp; | &ensp; <span class="i-block">₹ 999</span>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="kedarnath_Badrinath_Tour.html">kedarnath & Badrinath Tour</a></h4>
-                            <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="kedarnath_Badrinath_Tour.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
-                            </div>
-                        </div>
-                     </div>
-                     
-                    </div>
-                    <!-- block -->
-                    <div class="trek-block-one">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <div class="image"><a href="kedarnath_Yatra.html"><img src="images/resource/f-image-3.jpg" alt="" title=""></a></div>
-                                
-                                <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 9 Days</span> &ensp; | &ensp; <span class="i-block"></span>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="kedarnath_Yatra.html">Kedarnath Yatra</a></h4>
-                                 
-                                 
-                            <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="kedarnath_Yatra.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
-                            </div>
-                        </div>
-                     </div>
-                     
-                    </div>
-                    <!-- block -->
-                    <div class="trek-block-one ">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <div class="image"><a href="ujjain_Omkareshwar.html"><img src="images/resource/f-image-15.jpg" alt="" title=""></a></div>
-                                 
-                                <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 3 Days</span> &ensp; | &ensp; <span class="i-block"></span>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="ujjain_Omkareshwar.html">Ujjain Omkareshwar Tour</a></h4>
-                                 
-                                 
-                            <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="ujjain_Omkareshwar.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
-                            </div>
-                        </div>
-                     </div>
-                     
-                    </div>
-                
-                </div>
+					<!-- block -->
+					
+					<div class="trek-block-one">
+						<div class="inner-box">
+							<div class="image-box">
+								<div class="image"><a href="winter_spiti_vall.html"><img src="images/Website Card Images/Spiti.png" alt="" title=""></a></div>
+								
+							<div class="info">
+                            	<span class="i-block">
+                              <i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp;<span class="i-block">Pune / Mumbai</span>
+                          	</div>
+							</div>
+							<div class="lower-content">
+								<h4><a href="winter_spiti_vall.html">winter spiti valley</a></h4>
+								
+								 
+							</div>
+							<div class="bottom-box clearfix">
+								<div class="more-link">
+								  <a href="winter_spiti_vall.html" class="theme-btn"
+									><span>View Details</span></a>
+								</div>
+							  </div>
+						</div>
+					</div>
+					<!-- block -->
+					
+					<div class="trek-block-one  ">
+						<div class="inner-box">
+							<div class="image-box">
+								<div class="image"><a href="hampi_Gokarna.html"><img src="images/Website Card Images/Hampi.png" alt="" title=""></a></div>
+								
+								<div class="info">
+									<span class="i-block">
+								  <i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp;<span class="i-block">Pune / Mumbai</span>
+								  </div>
+							</div>
+							<div class="lower-content">
+								<h4><a href="hampi_Gokarna.html">Hampi Gokarna tour</a></h4>
+								 
+								 
+								<div class="bottom-box clearfix">
+									<div class="more-link">
+									  <a href="hampi_Gokarna.html" class="theme-btn"
+										><span>View Details</span></a>
+									</div>
+								  </div>
+						</div>
+					 </div>
+					 
+					</div>
+					<!-- block -->
+					<div class="trek-block-one ">
+						<div class="inner-box">
+							<div class="image-box">
+								<div class="image"><a href="kedarnath_Badrinath_Tour.html"><img src="images/Website Card Images/Badrinath.png" alt="" title=""></a></div>
+								 
+								<div class="info">
+									<span class="i-block">
+								  <i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp;<span class="i-block">Pune / Mumbai</span>
+								  </div>
+							</div>
+							<div class="lower-content">
+								<h4><a href="kedarnath_Badrinath_Tour.html">kedarnath & Badrinath Tour</a></h4>
+								<div class="bottom-box clearfix">
+									<div class="more-link">
+									  <a href="kedarnath_Badrinath_Tour.html" class="theme-btn"
+										><span>View Details</span></a>
+									</div>
+								  </div>
+						</div>
+					 </div>
+					 
+					</div>
+					<!-- block -->
+					<div class="trek-block-one">
+						<div class="inner-box">
+							<div class="image-box">
+								<div class="image"><a href="kedarnath_Yatra.html"><img src="images/Website Card Images/Kedarnath.png" alt="" title=""></a></div>
+								
+								<div class="info">
+									<span class="i-block">
+								  <i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp;<span class="i-block">Pune / Mumbai</span>
+								  </div>
+							</div>
+							<div class="lower-content">
+								<h4><a href="kedarnath_Yatra.html">Kedarnath Yatra</a></h4>
+								 
+								 
+								<div class="bottom-box clearfix">
+									<div class="more-link">
+									  <a href="kedarnath_Yatra.html" class="theme-btn"
+										><span>View Details</span></a>
+									</div>
+								  </div>
+						</div>
+					 </div>
+					 
+					</div>
+					<!-- block -->
+					<div class="trek-block-one ">
+						<div class="inner-box">
+							<div class="image-box">
+								<div class="image"><a href="ujjain_Omkareshwar.html"><img src="images/Website Card Images/Ujain.jpeg" alt="" title=""></a></div>
+								 
+								<div class="info">
+									<span class="i-block">
+								  <i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp;<span class="i-block">Pune / Mumbai</span>
+								  </div>
+							</div>
+							<div class="lower-content">
+								<h4><a href="ujjain_Omkareshwar.html">Ujjain Omkareshwar Tour</a></h4>
+								 
+								 
+								<div class="bottom-box clearfix">
+									<div class="more-link">
+									  <a href="ujjain_Omkareshwar.html" class="theme-btn"
+										><span>View Details</span></a>
+									</div>
+								  </div>
+						</div>
+					 </div>
+					 
+					</div>
+				
+				</div>
 				
 			</div>
 		</div>
@@ -1212,6 +1327,24 @@
 $(function(){
   $("#header").load("header.html"); 
   $("#footer").load("footer.html"); 
+
+  // Get the booking price dynamically
+  const bookingPrice = $(".booking_now_price").text().trim();
+
+// Load BookingNow.html
+$("#booking_now").load("BookingNow.html", function () {
+  // Ensure the script inside BookingNow.html runs after loading
+  setTimeout(() => {
+    const bookingCard = document.querySelector(".booking-card");
+    if (bookingCard) {
+      bookingCard.classList.add("show");
+    }
+
+    // Set the dynamic price inside the loaded BookingNow.html
+    document.querySelector(".booking-price").textContent = `₹${bookingPrice}`;
+  }, 1500);
+});
+
 });
 </script> 
 </body>

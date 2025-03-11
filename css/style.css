@@ -6465,7 +6465,8 @@ Gallery section
 
 /* ⬅ Arrow Button */
 .trend-block-one .hover-content .more-link a {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   width: 50px;
   height: 50px;
   line-height: 50px;
@@ -6475,6 +6476,7 @@ Gallery section
   border: 2px solid #ffffff;
   border-radius: 50%;
   transition: 0.3s;
+ 
 }
 
 .trend-block-one .hover-content .more-link a:hover {
@@ -7286,7 +7288,7 @@ Gallery section
 
 /* 🔵 Skyblue Bullet */
 .package-detail-section .facility-box .facility-option::before {
-  content: "➤"; /* Arrow as a bullet */
+  content: "✅"; /* Arrow as a bullet */
   font-size: 18px;
   color: #39c2cc; /* Skyblue color */
   font-weight: bold;

@@ -17,8 +17,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <link href="css/responsive.css" rel="stylesheet">
-    <style>
-        
+    
+    <style> 
         .whatsapp-btn-container {
             position: fixed;
             right: 10px;
@@ -62,8 +62,20 @@
         .whatsapp-btn-container .whatsapp-btn:hover + span {
             transform: rotateZ(0deg) translateX(0px);
             opacity: 1;
-        }        
-            </style>
+        }
+        
+        /* Default (Desktop) - No gap */
+        .row.clearfix {
+            gap: 0;
+        }
+
+        /* 📱 Mobile screens (max-width: 768px) - Add gap */
+        @media (max-width: 768px) {
+            .row.clearfix {
+                gap: 10px; /* Adjust the gap as needed */
+            }
+        }
+        </style>
 </head>
 <body>
     <footer class="main-footer">
@@ -77,26 +89,27 @@
                     <div class="row clearfix">
 
                         <div class="col-xl-8 col-lg-16 col-md-16 col-sm-32">
-                            <div class="row clearfix">
-                                <div class="footer-column col-lg-4 col-md-4 col-sm-12">
+                            <div class="row clearfix ">
+                                <div class="footer-column col-lg-5 col-md-4 col-sm-12">
                                     <div class="links">
                                         <ul>
                                             <li><div class="logo"><a href="index.html" title="Treker"><img src="images/logo.svg" alt="Treker Logo" title="Treker"></a></div></li>
                                             <li class="d-flex gap-2">
                                                 <i class="fa fa-phone-circle fs-4 mt-1 mr-2"></i>
                                                 <div class="d-flex flex-column mb-3">
-                                                    <a href="tel:+918888840295" class="text-decoration-none fw-bold">+91 8888840295</a>
-                                                    <span class="ml-2">Pune Region</span>
-                                                </div> 
-                                            </li>
-
-                                            <li class="d-flex gap-2">
-                                                <i class="fa fa-phone-circle fs-4 mt-1 mr-2"></i>
-                                                <div class="d-flex flex-column mb-3">
+                                                    <a href="tel:+918888840295" class="text-decoration-none fw-bold">+91 8888840295 ,</a>
                                                     <a href="tel:+917038859121" class="text-decoration-none fw-bold">+91 7038859121</a>
                                                     <span class="ml-2">Pune Region</span>
                                                 </div> 
                                             </li>
+
+                                            <!-- <li class="d-flex gap-2">
+                                                <i class="fa fa-phone-circle fs-4 mt-1 mr-2"></i>
+                                                <div class="d-flex flex-column mb-3">
+                                                    
+                                                    <span class="ml-2">Pune Region</span>
+                                                </div> 
+                                            </li> -->
 
                                             <li class="d-flex gap-2">
                                                 <i class="fa fa-envelope fs-4 mt-1 mr-2"></i>
@@ -110,7 +123,7 @@
                                     </div>
                                 </div>
 
-                                <div class="footer-column col-lg-4 col-md-4 col-sm-12">
+                                <div class="footer-column col-lg-3 col-md-4 col-sm-12">
                                     <div class="links">
                                         <ul>
                                             <h6 >TOUR</h6>
@@ -138,7 +151,7 @@
                             </div>
                         </div>
 
-                        <div class="footer-column col-xl-4 col-lg-4 col-md-8 col-sm-12" >
+                        <div class="footer-column col-xl-3 col-lg-4 col-md-8 col-sm-12" >
                             <div class="links">
                                 <ul>    
                                     <h6>USEFUL PAGES</h6>                                        
@@ -148,7 +161,6 @@
                                     <li><a href="#">Sitemap</a></li>
                                 </ul>
                             </div>
-                            
                         </div> 
 
                         <div class="auto-container  ">

@@ -325,6 +325,9 @@
 			<!-- Booking card section-->
 			<div id="booking_now"></div>
 
+			<!-- Dynamic Booking Price -->
+			<div class="booking_now_price" style="display: none;">1200</div>
+
 			<!-- Package Info Box -->
 			<div class="package-info-box style-two">
 				<div class="inner-container d-flex justify-content-between align-items-center">
@@ -593,61 +596,61 @@ Chowk – Satara – Kolhapur – Hampi.
 						<h5>Inclusions</h5>
 						<div class="row clearfix">
 							<!-- Travel Details -->
-							<div class="column col-lg-4 col-md-4 col-sm-12">
+							<div class="column col-lg-12 col-md-4 col-sm-12">
 								<div class="facility-option">Travel in NON AC Pushback TT/Bus/ as per the group size Pune to Pune.</div>
 							</div>
-							<div class="column col-lg-4 col-md-4 col-sm-12">
+							<div class="column col-lg-12 col-md-4 col-sm-12">
 								<div class="facility-option">Mumbai to Pune & Pune to Mumbai Sitting Volvo bus.</div>
 							</div>
 							
 							<!-- Accommodation -->
-							<div class="column col-lg-4 col-md-4 col-sm-12">
+							<div class="column col-lg-12 col-md-4 col-sm-12">
 								<div class="facility-option">Rs. 1000/- PP extra for double sharing room.</div>
 							</div>
-							<div class="column col-lg-4 col-md-4 col-sm-12">
+							<div class="column col-lg-12 col-md-4 col-sm-12">
 								<div class="facility-option">Accommodation in (Non AC) Hotel/Hostels/Homestay on 3/4 sharing for 1 Night in Hampi. Extra mattress will be provided. (Male & Female separate)</div>
 							</div>
-							<div class="column col-lg-4 col-md-4 col-sm-12">
+							<div class="column col-lg-12 col-md-4 col-sm-12">
 								<div class="facility-option">Accommodation in (Non AC) Hotel/Hostels/Homestay/<br/>Dormitory/Tent Camping on 3/4 sharing for 1 Night Gokarna. Extra mattress will be provided. (Male & Female separate)</div>
 							</div>
 							
 					
 							<!-- Meals -->
-							<div class="column col-lg-4 col-md-4 col-sm-12">
+							<div class="column col-lg-12 col-md-12 col-sm-12">
 								<div class="facility-option">Meals – 4X Breakfast, 4X Lunch Veg.</div>
 							</div>
 					
 							<!-- Activities & Entry Charges -->
-							<div class="column col-lg-4 col-md-4 col-sm-12">
+							<div class="column col-lg-12 col-md-12 col-sm-12">
 								<div class="facility-option">Coracle Ride in Hampi.</div>
 							</div>
-							<div class="column col-lg-4 col-md-4 col-sm-12">
+							<div class="column col-lg-12 col-md-12 col-sm-12">
 								<div class="facility-option">Entry charges to the monuments of Hampi.</div>
 							</div>
 							<div class="column col-lg-4 col-md-4 col-sm-12">
 								<div class="facility-option">Entry Charges at any Beach at Gokarna.</div>
 							</div>
-							<div class="column col-lg-4 col-md-4 col-sm-12">
+							<div class="column col-lg-12 col-md-12 col-sm-12">
 								<div class="facility-option">Entry Charges at Yanna Caves.</div>
 							</div>
-							<div class="column col-lg-4 col-md-4 col-sm-12">
+							<div class="column col-lg-12 col-md-12 col-sm-12">
 								<div class="facility-option">Entry Charges & Honnvar Boating Charges.</div>
 							</div>
-							<div class="column col-lg-4 col-md-4 col-sm-12">
+							<div class="column col-lg-12 col-md-12 col-sm-12">
 								<div class="facility-option">Entry Charges at Murudeshwar Temple.</div>
 							</div>
 					
 							<!-- Additional Services -->
-							<div class="column col-lg-4 col-md-4 col-sm-12">
+							<div class="column col-lg-12 col-md-12 col-sm-12">
 								<div class="facility-option">Forest Department’s charges & permits.</div>
 							</div>
-							<div class="column col-lg-4 col-md-4 col-sm-12">
+							<div class="column col-lg-12 col-md-12 col-sm-12">
 								<div class="facility-option">All toll, parking fees, Driver & fuel cost.</div>
 							</div>
-							<div class="column col-lg-4 col-md-4 col-sm-12">
+							<div class="column col-lg-12 col-md-12 col-sm-12">
 								<div class="facility-option">Basic First Aid.</div>
 							</div>
-							<div class="column col-lg-4 col-md-4 col-sm-12">
+							<div class="column col-lg-12 col-md-12 col-sm-12">
 								<div class="facility-option">Experienced crew throughout trek/tour.</div>
 							</div>
 						</div>
@@ -1065,15 +1068,23 @@ Chowk – Satara – Kolhapur – Hampi.
 $(function(){
   $("#header").load("header.html"); 
   $("#footer").load("footer.html"); 
-  $("#booking_now").load("BookingNow.html", function () {
-    // Ensure the script inside BookingNow.html runs after loading
-    setTimeout(() => {
-      const bookingCard = document.querySelector(".booking-card");
-      if (bookingCard) {
-        bookingCard.classList.add("show");
-      }
-    }, 1500); // Delay animation slightly for better effect
-  });
+
+  // Get the booking price dynamically
+     const bookingPrice = $(".booking_now_price").text().trim();
+
+// Load BookingNow.html
+$("#booking_now").load("BookingNow.html", function () {
+  // Ensure the script inside BookingNow.html runs after loading
+  setTimeout(() => {
+    const bookingCard = document.querySelector(".booking-card");
+    if (bookingCard) {
+      bookingCard.classList.add("show");
+    }
+
+    // Set the dynamic price inside the loaded BookingNow.html
+    document.querySelector(".booking-price").textContent = `₹${bookingPrice}`;
+  }, 1500);
+});
 });
 </script> 
 </body>
