@@ -1,18 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
     
-    <head>
-        <meta charset="utf-8">
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-        <link rel="icon" href="images/favicon.png" type="image/x-icon">
-        <!-- Responsive -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <link href="css/responsive.css" rel="stylesheet">
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]--> 
+    
+    <!-- testominal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    
+        <!-- testominal testing temporary start -->
+        <style>
+            .container{
+                max-width:1200px;
+                width:100%;
+                position:relative;
+                margin:0 auto;
+            }
+            .mySwiper{
+                max-width: 1100px;
+                height: auto;
+                display: flex;
+                align-items: center;
+            }
+            body{
+                background-color: #cccccc;
+                font-family: "Open Sans";
+            }
+            .card{
+                text-align: center;
+                background-color: #ffffff;
+                padding:20px 30px;
+                border-radius: 10px;
+                box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+            }
+            .swiper-slide{
+                display:flex;
+                align-items:center;
+            }
+            .card img{
+                width: 130px;
+                border-radius: 50%;
+                margin-top:-70px;
+            }
+            h3, h4{
+                margin-bottom: 0px;
+                margin-top: 0px;
+            }
+            p{
+                font-size:15px;
+                line-height:20px;
+                color:#222222;
+            }
+            .read-more {
+                color: #0096FF;
+                cursor: pointer;
+                font-weight: bold;
+            }
+            .swiper-button-next, .swiper-rtl .swiper-button-prev{
+                color:#0096FF;
+            }
+            .swiper-button-next:after, .swiper-button-prev:after{
+                font-size:32px;
+            }
+            .review i{
+                color:orange;
+            }
+    
+    
+            /* Google Font */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+    
+    
+    /* Section Styling */
+    .popular-section {
+        position: relative;
+        padding: 30px 0;
+        text-align: center;
+    }
+    
+    .popular-carousel {
+        width: 100%;
+    
+    }
+    
+    /* Title Box */
+    .title-box {
+        margin-bottom: 30px;
+    }
+    
+    .title-box h2 {
+        font-size: 32px;
+        font-weight: 700;
+    }
+    
+    /* Trek Card */
+    .trek-block-one {
+        background: #fff;
+        border-radius: 12px; /* Reduced size */
+        padding: 10px; /* Reduced padding */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .trek-block-one:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Image Box */
+    .image-box img {
+        width: 100%;
+        height: 180px; /* Reduced height */
+        object-fit: cover;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+    
+    .image-box img:hover {
+        transform: scale(1.05);
+    }
+    
+    /* Info Box */
+    .info {
+        font-size: 15px; /* Smaller font */
+        font-weight: 600;
+        color: #0f0f0f;
+        background: #eaf6f6;
+        padding: 6px;
+        margin-top: 8px;
+        border-radius: 4px;
+        margin-bottom: 30px;
+    }
+    
+    /* Title & Button */
+    .lower-content h4 {
+        font-size: 16px; /* Reduced font size */
+        font-weight: 600;
+        margin: 12px 0;
+        color: #10221B;
+    }
+    
+    .theme-btn {
+        color: #1DC5CE; /* Initial text color */
+        background: transparent; /* No background initially */
+        padding: 6px 12px; /* Button padding */
+        border-radius: 5px; /* Rounded corners */
+        border: 2px solid #1DC5CE; /* Border color */
+        text-decoration: none;
+        display: inline-block;
+        transition: 0.3s ease-in-out;
+        font-size: 14px; /* Button text size */
+        font-weight: 600; /* Bold font */
+    }
+    
+    .theme-btn:hover {
+        background: #1DC5CE; /* Hover background */
+        color: white; /* White text on hover */
+        border-color: #1DC5CE; /* Keep border same */
+    }
+    
+    
+    /* Owl Carousel Controls */
+    .owl-nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .owl-prev, .owl-next {
+        background: rgba(0, 0, 0, 0.3) !important;
+        color: white !important;
+        padding: 8px !important; /* Smaller buttons */
+        border-radius: 50%;
+        transition: 0.3s;
+    }
+    
+    .owl-prev:hover, .owl-next:hover {
+        background: rgba(0, 0, 0, 0.6) !important;
+    }
+    
+    /* Responsive */
+    @media (max-width: 1024px) {
+        .image-box img {
+            height: 160px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .image-box img {
+            height: 140px;
+        }
+        .theme-btn {
+            font-size: 12px;
+        }
+    }
+    
+    /* <!-- testominal testing temporary end  --> */
+            </style>
+            
+    
     </head>
-      
  
 <body>
     <div class="page-wrapper"> 
@@ -203,3 +407,4 @@
 
  </body>
 </html>
+ 
