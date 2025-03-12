@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Home</title>
+
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -21,12 +22,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
-    <!-- testominal testing temporary start -->
     <style>
+        /* <!-- testominal testing temporary start --> */
+        .testimonials-one{
+            padding: 50px;
+            background-color: #ebecf5;
+        }
         .container{
             max-width:1200px;
             width:100%;
             position:relative;
+            padding-top: 20px;
             margin:0 auto;
         }
         .mySwiper{
@@ -34,6 +40,7 @@
             height: auto;
             display: flex;
             align-items: center;
+            
         }
         body{
             background-color: #cccccc;
@@ -46,15 +53,24 @@
             border-radius: 10px;
             box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
         }
+
         .swiper-slide{
             display:flex;
             align-items:center;
         }
-        .card img{
-            width: 130px;
-            border-radius: 50%;
-            margin-top:-70px;
-        }
+        .profile-initials {
+        width: 60px;
+        height: 60px;
+        background-color: #b1f0f3; /* Profile background */
+        color: #fff;
+        font-size: 22px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin: 0 auto 10px;
+    }
         h3, h4{
             margin-bottom: 0px;
             margin-top: 0px;
@@ -69,6 +85,20 @@
             cursor: pointer;
             font-weight: bold;
         }
+
+        .testimonial-link {
+            color: #39c2cc; /* Theme color */
+            font-weight: 300;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .testimonial-link:hover {
+            color: #2fa4af;
+            text-decoration: underline;
+        }
+
+
         .swiper-button-next, .swiper-rtl .swiper-button-prev{
             color:#0096FF;
         }
@@ -79,6 +109,65 @@
             color:orange;
         }
 
+        @media (max-width: 768px) {
+    .testimonials-one {
+        padding: 30px 0px; /* Reduced padding for smaller screens */
+    }
+
+    .container {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    overflow: hidden; /* Prevents horizontal scrolling */
+}
+
+.mySwiper {
+    max-width: 350px;
+}
+
+.swiper-slide {
+    width: 100% !important; /* Force slide to take full width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px; /* Ensure content does not touch edges */
+}
+
+.card {
+    width: 100%; /* Full width */
+    max-width: 100%; /* Ensures it stretches across the container */
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+    .profile-initials {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .testimonial-text {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none; /* Hide navigation buttons on mobile */
+    }
+
+    .swiper-pagination {
+        bottom: 5px; /* Move pagination up slightly */
+    }
+}
+
 
         /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
@@ -87,8 +176,14 @@
 /* Section Styling */
 .popular-section {
     position: relative;
-    padding: 30px 0;
+    padding: 30px 0px;
     text-align: center;
+    padding-bottom: 0;
+    background-color: #edf9f9;
+}
+
+.popular-section a{
+   text-decoration: none;
 }
 
 .popular-carousel {
@@ -97,14 +192,14 @@
 }
 
 /* Title Box */
-.title-box {
+/* .title-box {
     margin-bottom: 30px;
-}
+} */
 
-.title-box h2 {
+/* .title-box h2 {
     font-size: 32px;
     font-weight: 700;
-}
+} */
 
 /* Trek Card */
 .trek-block-one {
@@ -138,19 +233,27 @@
     font-size: 15px; /* Smaller font */
     font-weight: 600;
     color: #0f0f0f;
-    background: #eaf6f6;
     padding: 6px;
     margin-top: 8px;
     border-radius: 4px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+
+    background-color: rgb(243, 241, 241);
 }
 
 /* Title & Button */
 .lower-content h4 {
-    font-size: 16px; /* Reduced font size */
-    font-weight: 600;
-    margin: 12px 0;
+    font-size: 16px; /* Proper font size */
+    font-weight: 500;
+    margin: 10px 0;
     color: #10221B;
+    transition: color 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+/* Hover Effect */
+.lower-content h4:hover {
+    color: #21d9e2;
+    
 }
 
 .theme-btn {
@@ -177,37 +280,69 @@
 .owl-nav {
     position: absolute;
     top: 50%;
-    width: 100%;
+    left: -60px;
+    width: 110%;
     transform: translateY(-50%);
     display: flex;
     justify-content: space-between;
 }
 
 .owl-prev, .owl-next {
-    background: rgba(0, 0, 0, 0.3) !important;
-    color: white !important;
-    padding: 8px !important; /* Smaller buttons */
+    color: #1DC5CE !important;
+    padding: 20px !important; /* Adjusted padding for better control */
+    font-size: 28px; /* Increased icon size */
+    width: 70px; /* Larger width */
+    height: 70px; /* Larger height */
     border-radius: 50%;
-    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
 }
 
-.owl-prev:hover, .owl-next:hover {
-    background: rgba(0, 0, 0, 0.6) !important;
+/* Make sure navigation arrows appear properly on mobile */
+@media (max-width: 768px) {
+    .owl-nav {
+        position: absolute;
+        top: auto;
+        bottom: 10px; /* Place arrows closer to the carousel for better mobile UX */
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px; /* Ensure proper spacing */
+    }
+
+    .owl-prev, .owl-next {
+        width: 50px; /* Smaller size for mobile */
+        height: 50px;
+        font-size: 29px;
+    }
+
+    /* 🔽 Reduce extra bottom spacing in mobile */
+    .popular-section {
+        padding: 0px 0px; /* Reduced from 100px for better fit */
+    }
+    
+    /* 🔽 Responsive Heading */
+    /* .title-box h2 {
+        text-align: center;
+    } */
+
+    /* Adjust image height */
+    .image-box img {
+        height: 130px;
+    }
+
+    .trek-block-one {
+    padding: 0; /* Reduced padding */
+    }
 }
 
 /* Responsive */
 @media (max-width: 1024px) {
     .image-box img {
-        height: 160px;
-    }
-}
-
-@media (max-width: 768px) {
-    .image-box img {
-        height: 140px;
-    }
-    .theme-btn {
-        font-size: 12px;
+        height: 190px;
     }
 }
 
@@ -226,166 +361,187 @@
     <div class="search-backdrop"></div>
 	
     <!-- Main Header-->
-     <header class="main-header">
-       
-        <!-- Header Upper -->
-        <div class="header-upper">        
-            <div class="auto-container">
-                <!-- Main Box -->
-                <div class="main-box clearfix" >
-                    <!--Logo-->
-                    <div class="logo-box">
-                         <div class="logo"><a href="index.html" title="Treker"><img src="images/logo.svg" alt="" title="Treker"></a></div>
+    <!-- <div id="header"></div> -->
+    
+    <header class="main-header">
+        <div class="header-upper container-fluid">
+            
+            <div class="logo-nav">
+                <!-- Logo -->
+                <a href="index.html"><img src="images/logo.svg" alt="Logo" style="height: 50px;"></a>
+    
+                 <!-- Navigation -->
+                <nav class="main-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="about.html">About Us</a>
+                            <!-- <ul>
+                                <li><a href="team.html">Our Teams</a></li>
+                                <li><a href="faq.html">FAQs</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                            </ul> -->
+                        </li>
+                        <li class="dropdown">
+                            <a href="destinations.html">Tours</a>
+                            <ul>
+                                <li><a href="#">East Tour</a></li>
+                                <li><a href="#">West Tour</a></li>
+                                <li><a href="#">North Tour</a></li>
+                                <li><a href="#">South Tour</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="trekking.html">Treks</a></li>
+                        <li class="dropdown">
+                            <a href="booking.html">Booking Pages</a>
+                            <ul>
+                                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="blog.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+            <!-- Icons: Search & Sign In -->
+            <div class="nav-icons">
+                    <div class="link search-btn search-toggle"><i class="far fa-search"></i></div>
+                    <a href="login.html"><i class="fa fa-user"></i> SIGN IN</a>  
+                    <!-- Mobile Menu Button -->
+                    <div class="nav-toggler">
+                        <i class="fas fa-bars"></i>
                     </div>
+            </div>
+        
+        </div>
+    
+        <!-- Hidden Navigation Bar -->
+<section class="hidden-bar">
+    <div class="hidden-bar-wrapper">
+        <!-- Close Button -->
+        <div class="hidden-bar-closer">
+            <span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14">
+                <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+            </svg></span>
+        </div>
 
-                    <div class="nav-box clearfix" >
-                        <!--Nav Outer-->
-                        <div class="nav-outer clearfix">         
-                            <nav class="main-menu">
-                                <ul class="navigation clearfix">
-                                    <li></li>
-                                    <li><a href="index.html">Home</a>                                       
-                                    </li>
-                                    <li class="dropdown"><a href="about.html">About Us</a>
-                                        <ul>
-                                            <li><a href="team.html">Our Teams</a></li>
-                                            
-                                            <li><a href="faq.html">FAQs</a></li>
-                                            <li><a href="gallery.html">Gallery</a></li>
-                                        </ul>
-                                    </li>
-                                     
-                                    <li  class="dropdown" ><a href="destinations.html">Tours</a>
-                                        <ul>
-                                            <li><a href="#">East Tour</a></li>
-                                                <li><a href="#">West Tour</a></li>
-                                                <li><a href="#">North Tour</a></li>
-                                                <li><a href="#">South Tour</a></li> 
-                                        </ul>
-                                        
-                                    
-                                    </li>
-                                    <li class="dropdown"><a href="trekking.html">Treks</a>
-                                        
-                                    </li>
-                                    <li class="dropdown"><a href="booking.html">Booking Pages</a>
-                                        <ul> 
-                                            <li><a href="terms-conditions.html">Terms & Conditions</a></li> 
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="blog.html">Blogs</a>
-                                        
-                                    </li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                    <li><div class="link search-btn search-toggle"><span class="icon far fa-search"></span></div></li>
-                                </ul>
-                            </nav>
-                            <!-- Main Menu End-->
-                        </div>
-                        <!--Nav Outer End-->
+        <!-- Logo -->
+        <div class="nav-logo-box">
+            <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="Treker"></a></div>
+        </div>
 
+        <!-- Side Menu -->
+        <div class="side-menu">
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="destinations.html">Tours </a>
+                    <ul>
+                        <li><a href="#">East Tour</a></li>
+                        <li><a href="#">West Tour</a></li>
+                        <li><a href="#">North Tour</a></li>
+                        <li><a href="#">South Tour</a></li>
+                    </ul>
+                </li>
+                <li><a href="trekking.html">Treks</a></li>
+                <li class="dropdown">
+                    <a href="booking.html">Booking Pages </a>
+                    <ul>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
 
-                        <!-- Hidden Nav Toggler -->
-                        <div class="nav-toggler">
-                            <button class="hidden-bar-opener"><span class="icon"><img src="images/icons/menu-icon.svg" alt=""></span></button>
-                        </div>
-
-                    </div>
-
-                    <div class="links-box clearfix">
-                        <div class="login"><i class="icon fa fa-user"></i> <a href="login.html" class="login-text">SIGN IN</a></div>
-                    </div>
-
-                    
-
-                    <!-- End Header Upper -->
-                    <div class="search-box">
-                        <div class="outer-container">
-                            <div class="inner-box">
-                                <div class="form-box">
-                                    <div class="s-close-btn"><span class="icon far fa-times"></span></div>
-                                    <span class="s-icon fa fa-search"></span>
-                                    <form method="post" action="index.html">
-                                        <div class="form-group">
-                                            <input type="search" name="search" value="" placeholder="Search Here" required="">
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+        <!-- Login/Signup Buttons -->
+        <div class="links-box clearfix">
+            <div class="clearfix">
+                <div class="link">
+                    <a href="login.html" class="theme-btn btn-style-one">
+                        <span>Login <i class="icon far fa-angle-right"></i></span>
+                    </a>
+                </div>
+                <div class="link mt-2">
+                    <a href="signup.html" class="theme-btn btn-style-two">
+                        <span>Sign Up <i class="icon far fa-angle-right"></i></span>
+                    </a>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
+</section>
 
+<!-- Search Bar Section -->
+<div class="search-bar">
+    <div class="search-wrapper">
+        <div class="search-closer">&times;</div>
+        <input type="text" class="search-input" placeholder="Search here...">
+        <button class="search-btn-action"><i class="fa fa-search"></i></button>
+    </div>
+</div>
+
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Select elements
+                const navToggler = document.querySelector('.nav-toggler');
+                const hiddenBar = document.querySelector('.hidden-bar');
+                const hiddenBarCloser = document.querySelector('.hidden-bar-closer');
+
+                const searchBtn = document.querySelector('.search-btn');
+                const searchBar = document.querySelector('.search-bar');
+                const searchCloser = document.querySelector('.search-closer');
+        
+                if (navToggler && hiddenBar && hiddenBarCloser) {
+                    // Open Sidebar
+                    navToggler.addEventListener('click', function (event) {
+                        event.stopPropagation(); // Prevents event bubbling
+                        hiddenBar.classList.add('active');
+                    });
+        
+                    // Close Sidebar
+                    hiddenBarCloser.addEventListener('click', function () {
+                        hiddenBar.classList.remove('active');
+                    });
+        
+                    // Close sidebar when clicking outside (optional)
+                    document.addEventListener('click', function (event) {
+                        if (!hiddenBar.contains(event.target) && !navToggler.contains(event.target)) {
+                            hiddenBar.classList.remove('active');
+                        }
+                    });
+        
+                    // Prevent clicks inside sidebar from closing it
+                    hiddenBar.addEventListener('click', function (event) {
+                        event.stopPropagation();
+                    });
+                }
+
+                // Search bar toggle
+                searchBtn.addEventListener('click', function () {
+                    searchBar.classList.add('active');
+                });
+
+                searchCloser.addEventListener('click', function () {
+                    searchBar.classList.remove('active');
+                });
+
+            });
+        </script>
+    </header>
+   
      <!--Search Backdrop-->
      <div class="search-backdrop"></div>
-		
+
      <!-- Menu Backdrop -->
      <div class="menu-backdrop"></div>
  
      <!-- Hidden Navigation Bar -->
-     <section class="hidden-bar">
-         <!-- Hidden Bar Wrapper -->
-         <div class="hidden-bar-wrapper">
-             <div class="hidden-bar-closer"><span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14"><path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path></svg></span></div>
-             <div class="nav-logo-box">
-                 <div class="logo"><a href="index.html" title=""><img src="images/logo.svg" alt="" title="Treker"></a></div>
-             </div>
-             <!-- .Side-menu -->
-             <div class="side-menu">
-                  <ul class="navigation clearfix">
-                     <li><a href="index.html">Home</a></li>
-                     <li class="dropdown"><a href="about.html">About Us</a>
-                         <ul>
-                             <li><a href="team.html">Our Teams</a></li>
-                             
-                             <li><a href="faq.html">FAQs</a></li>
-                             <li><a href="gallery.html">Gallery</a></li>
-                         </ul>
-                     </li>
-                     
-                     <li class="dropdown" ><a href="destinations.html">Tours</a>
-                        <ul>
-                                <li><a href="#">East Tour</a></li>
-                                <li><a href="#">West Tour</a></li>
-                                <li><a href="#">North Tour</a></li>
-                                <li><a href="#">South Tour</a></li> 
-                        </ul>
-                        
-                         
-                         </li>
-                         <li><a href="trekking.html">Treks</a>
-                              
-                         </li>
-                     <li class="dropdown"><a href="booking.html">Booking Pages</a>
-                         <ul>
-                             
-                             
-                                                         
-                             
-                             <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                             
-                         </ul>
-                     </li>
-                     <li><a href="blog.html">Blogs</a>
-                         
-                     </li>
-                     <li><a href="contact.html">Contact</a></li>
-                 </ul>
-             </div><!-- /.Side-menu -->
-             
-             <div class="links-box clearfix">
-                 <div class="clearfix">
-                     <div class="link"><a href="login.html" class="theme-btn btn-style-one"><span>Login<i class="icon far fa-angle-right"></i></span></a></div>
-                     <div class="link"><a href="signup.html" class="theme-btn btn-style-two"><span>Sign Up<i class="icon far fa-angle-right"></i></span></a></div>
-                 </div>
-             </div>
-         
-         </div><!-- / Hidden Bar Wrapper -->
-     </section>
+     
      <!-- / Hidden Bar -->  
     
     <!--End Main Header -->
@@ -400,7 +556,82 @@
         </div>
     </section>
 
-    <!--Popular Section-->
+    <!--Trending Destinations Section-->
+    <section class="trending-destinations">
+        <div class="auto-container">
+
+            <div class="title-box centered">
+                <h2><i class="bg-vector"></i><span>Trending Destinations</span></h2>
+            </div>
+
+            <div class="gallery-box">
+                <div class="masonry-container row clearfix">
+                    <!--Block-->
+                    <div class="dest-block-one masonry-item col-lg-8 col-md-12 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image-box"><img src="images/resource/gallery-1.jpg" alt=""></div>
+                            <div class="hvr-box">
+                                <div class="cap-box">
+                                    <div class="cap-inner clearfix">
+                                        <h4><a href="tours.html">Kerala</a></h4>
+                                        <div class="tour-count"><span>15 Tours</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Block-->
+                    <div class="dest-block-one masonry-item column-width col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image-box"><img src="images/resource/gallery-2.jpg" alt=""></div>
+                            <div class="hvr-box alt-hvr">
+                                <div class="cap-box">
+                                    <div class="cap-inner clearfix">
+                                        <h4><a href="tours.html">Pune</a></h4>
+                                        <div class="tour-count"><span>15 Tours</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Block-->
+                    <div class="dest-block-one masonry-item col-lg-6 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image-box"><img src="images/resource/gallery-3.jpg" alt=""></div>
+                            <div class="hvr-box">
+                                <div class="cap-box">
+                                    <div class="cap-inner clearfix">
+                                        <h4><a href="tours.html">Kasara</a></h4>
+                                        <div class="tour-count"><span>15 Tours</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Block-->
+                    <div class="dest-block-one masonry-item col-lg-6 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image-box"><img src="images/resource/gallery-4.jpg" alt=""></div>
+                            <div class="hvr-box">
+                                <div class="cap-box">
+                                    <div class="cap-inner clearfix">
+                                        <h4><a href="tours.html">Nashik</a></h4>
+                                        <div class="tour-count"><span>Tours</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Popular Section trek-->
     <section class="popular-section">
         <div class="auto-container">
             <div class="title-box centered">
@@ -408,18 +639,18 @@
             </div>
             
             <div class="carousel-box">
-                <div class="popular-carousel owl-theme owl-carousel" >
+                <div class="popular-carousel owl-theme owl-carousel">
 
                     <div class="trek-block-one" >
                         <div class="inner-box" >
                             <div class="image-box">
-                                <div class="image"><a href="#"><img src="images/resource/f-image-1.jpg" alt="" title=""></a></div>
+                                <div class="image"><a href="#"><img src="images/Website Card Images/Bhairavgad Trek.png" alt="" title=""></a></div>
                                 <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i>1 Day </span> &ensp; | &ensp; <span class="i-block"> <span>₹1200</span> Pune&ensp; | &ensp;<span>₹1400</span> Mumbai </span>
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
                                 </div>
                             </div>
                             <div class="lower-content">
-                                <h4 class="link"><a href="#">Aadrai Jungle Trek & Kalu Waterfall View from Top</a></h4>                            
+                                <h4 class="link"><a href="#">Bhairavgad Trek</a></h4>                            
                             </div>
                             <div class="bottom-box clearfix">
                                 <div class="more-link"><a href="packages.html" class="theme-btn"><span>View Details </span></a></div>
@@ -431,14 +662,14 @@
                     <div class="trek-block-one">
                         <div class="inner-box">
                             <div class="image-box">
-                                <div class="image"><a href="andhaban_Trek.html"><img src="images/resource/f-image-2.jpg" alt="" title=""></a></div>
+                                <div class="image"><a href="andhaban_Trek.html"><img src="images/Website Card Images/Aadrai Jungle Trek & Kalu Waterfall.png" alt="" title=""></a></div>
                                  
                                 <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day </span> &ensp; | &ensp; <span class="i-block">₹1500</span> Mumbai
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
                                 </div>
                             </div>
                             <div class="lower-content">
-                                <h4 class="link"><a href="#">Aadrai Jungle Trek & Kalu Waterfall View from Top</a></h4>                            
+                                <h4 class="link"><a href="#">Aadrai Jungle Trek & Kalu Waterfall</a></h4>                            
                             </div>
                             <div class="bottom-box clearfix">
                                 <div class="more-link"><a href="andhaban_Trek.html" class="theme-btn"><span>View Details </span></a></div>
@@ -450,14 +681,14 @@
                     <div class="trek-block-one ">
                         <div class="inner-box">
                             <div class="image-box">
-                                <div class="image"><a href="bhorgir.html"><img src="images/resource/f-image-3.jpg" alt="" title=""></a></div>
+                                <div class="image"><a href="bhorgir.html"><img src="images/Website Card Images/Bhimashankar to Bhorgiri Jungle Trek.png" alt="" title=""></a></div>
                                  
                                 <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp; <span class="i-block">₹1200</span>
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
                                 </div>
                             </div>
                             <div class="lower-content">
-                                <h4 class="link"><a href="bhorgir.html"> Bhimashankar to Bhorgiri Trek</a></h4> 
+                                <h4 class="link"><a href="bhorgir.html"> Bhimashankar to Bhorgiri Jungle Trek</a></h4> 
                             </div>
                             <div class="bottom-box clearfix">
                                 <div class="more-link"><a href="bhorgir.html" class="theme-btn"><span>View Details</span></a></div>
@@ -469,10 +700,10 @@
                     <div class="trek-block-one ">
                         <div class="inner-box">
                             <div class="image-box">
-                                <div class="image"><a href="#"><img src="images/resource/f-image-4.jpg" alt="" title=""></a></div>
+                                <div class="image"><a href="#"><img src="images/Website Card Images/Devkund Waterfall Trek.png" alt="" title=""></a></div>
                                  
                                 <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day </span> &ensp; | &ensp; <span class="i-block">₹1300</span> Pune
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
                                 </div>
                             </div>
                             <div class="lower-content">
@@ -490,9 +721,9 @@
                     <div class="trek-block-one ">
                         <div class="inner-box">
                             <div class="image-box">
-                                <div class="image"><a href="#"><img src="images/resource/f-image-5.jpg" alt="" title=""></a></div>   
+                                <div class="image"><a href="#"><img src="images/Website Card Images/Harishchandragad Trek.png" alt="" title=""></a></div>   
                                 <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp; <span class="i-block"> ₹1200 </span>  Pune
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
                                 </div>
                             </div>
                             <div class="lower-content">
@@ -509,14 +740,204 @@
                     <div class="trek-block-one">
                         <div class="inner-box">
                             <div class="image-box">
-                                <div class="image"><a href="Kalsubai_trek.html"><img src="images/resource/f-image-6.jpg" alt="" title=""></a></div>
+                                <div class="image"><a href="Kalsubai_trek.html"><img src="images/Website Card Images/Kalsubai Trek.png" alt="" title=""></a></div>
                                
                                 <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp; <span class="i-block">₹ 1200</span>
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
                                 </div>
                             </div>
                             <div class="lower-content">
                                 <h4 class="link"><a href="Kalsubai_trek.html"> Kalsubai Trek</a></h4>
+                                 
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="Kalsubai_trek.html" class="theme-btn"><span>View Details </span></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trek-block-one">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="Kalsubai_trek.html"><img src="images/Website Card Images/Kalu Waterfall Trek.png" alt="" title=""></a></div>
+                               
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="Kalsubai_trek.html"> Kalu Waterfall Trek</a></h4>
+                                 
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="Kalsubai_trek.html" class="theme-btn"><span>View Details </span></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trek-block-one">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="Kalsubai_trek.html"><img src="images/Website Card Images/Kothaligad Fort Trek.png" alt="" title=""></a></div>
+                               
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="Kalsubai_trek.html"> Kothaligad Fort Trek</a></h4>
+                                 
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="Kalsubai_trek.html" class="theme-btn"><span>View Details </span></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trek-block-one">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="Kalsubai_trek.html"><img src="images/Website Card Images/Lingya Waterfall Trek.png" alt="" title=""></a></div>
+                               
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="Kalsubai_trek.html">Lingya Waterfall Trek</a></h4>
+                                 
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="Kalsubai_trek.html" class="theme-btn"><span>View Details </span></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trek-block-one">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="Kalsubai_trek.html"><img src="images/Website Card Images/Naneghat Trek.png" alt="" title=""></a></div>
+                               
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="Kalsubai_trek.html"> Naneghat Trek</a></h4>
+                                 
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="Kalsubai_trek.html" class="theme-btn"><span>View Details </span></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trek-block-one">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="Kalsubai_trek.html"><img src="images/Website Card Images/Nanemachi & Satsada Waterfall.png" alt="" title=""></a></div>
+                               
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="Kalsubai_trek.html"> Nanemachi & Satsada Waterfall</a></h4>
+                                 
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="Kalsubai_trek.html" class="theme-btn"><span>View Details </span></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trek-block-one">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="Kalsubai_trek.html"><img src="images/Website Card Images/Raigad Trek.png" alt="" title=""></a></div>
+                               
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="Kalsubai_trek.html"> Raigad Trek</a></h4>
+                                 
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="Kalsubai_trek.html" class="theme-btn"><span>View Details </span></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trek-block-one">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="Kalsubai_trek.html"><img src="images/Website Card Images/Rajgad Trek.png" alt="" title=""></a></div>
+                               
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="Kalsubai_trek.html"> Rajgad Trek</a></h4>
+                                 
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="Kalsubai_trek.html" class="theme-btn"><span>View Details </span></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trek-block-one">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="Kalsubai_trek.html"><img src="images/Website Card Images/Ratangad Fort.png" alt="" title=""></a></div>
+                               
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="Kalsubai_trek.html"> Ratangad Fort</a></h4>
+                                 
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="Kalsubai_trek.html" class="theme-btn"><span>View Details </span></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trek-block-one">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="Kalsubai_trek.html"><img src="images/Website Card Images/Sudhagad Trek.png" alt="" title=""></a></div>
+                               
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="Kalsubai_trek.html"> Sudhagad Trek</a></h4>
+                                 
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="Kalsubai_trek.html" class="theme-btn"><span>View Details </span></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trek-block-one">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="Kalsubai_trek.html"><img src="images/Website Card Images/Vasota Trek.png" alt="" title=""></a></div>
+                               
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="Kalsubai_trek.html"> Vasota Trek</a></h4>
                                  
                             </div>
                             <div class="bottom-box clearfix">
@@ -530,21 +951,259 @@
         </div>
     </section>
 
+    <!--Popular Section tour -->
+    <section class="popular-section" style="background-color: #f4f2f2;">
+        <div class="auto-container">
+            <div class="title-box centered">
+                <h2><i class="bg-vector"></i><span style="white-space: nowrap; position: relative; z-index: 1; padding: 0 15px;">Our Most Popular Tours</span></h2>
+            </div>
+
+            <div class="carousel-box">
+                <div class="popular-carousel owl-theme owl-carousel">
+
+                    <div class="trek-block-one" >
+                        <div class="inner-box" >
+                            <div class="image-box">
+                                <div class="image"><a href="#"><img src="images/Website Card Images/Spiti.png" alt="" title=""></a></div>
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="#"> Spiti </a></h4>                            
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="packages.html" class="theme-btn"><span>View Details </span></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+                    <!-- <div class="trek-block-one">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="andhaban_Trek.html"><img src="images/resource/f-image-2.jpg" alt="" title=""></a></div>
+                                 
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="#">kerala </a></h4>                            
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="andhaban_Trek.html" class="theme-btn"><span>View Details </span></a></div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                   
+                    <div class="trek-block-one ">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="bhorgir.html"><img src="images/Website Card Images/Hampi.png" alt="" title=""></a></div>
+                                 
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="bhorgir.html"> Hampi</a></h4> 
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="bhorgir.html" class="theme-btn"><span>View Details</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+                    <div class="trek-block-one ">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="#"><img src="images/Website Card Images/Velas.png" alt="" title=""></a></div>
+                                 
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="devkund.html">Velas</a></h4>
+                                
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="devkund.html" class="theme-btn"><span>View Details </span></a></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="trek-block-one ">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="#"><img src="images/Website Card Images/14.png" alt="" title=""></a></div>
+                                 
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="devkund.html">...</a></h4>
+                                
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="devkund.html" class="theme-btn"><span>View Details </span></a></div>
+                                
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <div class="trek-block-one ">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="#"><img src="images/Website Card Images/Badrinath.png" alt="" title=""></a></div>
+                                 
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="devkund.html">Kedarnath badirnath </a></h4>
+                                
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="devkund.html" class="theme-btn"><span>View Details </span></a></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>  
+            </div>
+            
+        </div>
+    </section>
+
+     <!--Popular Section devotional-->
+     <section class="popular-section">
+        <div class="auto-container">
+            <div class="title-box centered">
+                <h2><i class="bg-vector"></i><span>Our Most Popular Devotional Tours</span></h2>
+            </div>
+
+            <div class="carousel-box">
+                <div class="popular-carousel owl-theme owl-carousel">
+
+                    <div class="trek-block-one" >
+                        <div class="inner-box" >
+                            <div class="image-box">
+                                <div class="image"><a href="#"><img src="images/Website Card Images/Kedarnath.png" alt="" title=""></a></div>
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="#">Kedarnath</a></h4>                            
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="packages.html" class="theme-btn"><span>View Details </span></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+                    <div class="trek-block-one">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="andhaban_Trek.html"><img src="images/Website Card Images/Badrinath.png" alt="" title=""></a></div>
+                                 
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="#">kedarnath - badrinath</a></h4>                            
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="andhaban_Trek.html" class="theme-btn"><span>View Details </span></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+                    <div class="trek-block-one ">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="bhorgir.html"><img src="images/Website Card Images/Bhimashankar Temple.png" alt="" title=""></a></div>
+                                 
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="bhorgir.html"> 3 Jyotirlinga</a></h4> 
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="bhorgir.html" class="theme-btn"><span>View Details</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+                    <div class="trek-block-one ">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="#"><img src="images/Website Card Images/Bhimashankar Temple.png" alt="" title=""></a></div>
+                                 
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="devkund.html"> Bhimashankar ozar lenyadri</a></h4>
+                                
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="devkund.html" class="theme-btn"><span>View Details </span></a></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trek-block-one ">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="#"><img src="images/Website Card Images/Bhimashankar Temple.png" alt="" title=""></a></div>
+                                 
+                                <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <h4 class="link"><a href="devkund.html"> Bhimashankar </a></h4>
+                                
+                            </div>
+                            <div class="bottom-box clearfix">
+                                <div class="more-link"><a href="devkund.html" class="theme-btn"><span>View Details </span></a></div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>  
+            </div>
+            
+        </div>
+    </section>
+
 
  <!-- youtube-container -->
 <div class="auto-container">
  <!-- youtube video section -->
 <div class="youtube-container">
-    <div class="youtube-title text">
-         
-            <h4><span>Recommended YouTube Videos</span> </h4>
-         <div class="text"> The waterfall is surrounded by lush greenery,
-            creating a picturesque setting. Visitors can enjoy the refreshing spray of water, take
-            a dip in the natural pool formed at the base of the waterfall, or simply relax and
-            admire the scenic beauty.</div>
-           
-         
-    </div>
+        <div class="title-box centered">
+            <h2><i class="bg-vector"></i><span>Recommended YouTube Videos</span></h2>
+        </div>
+        
     <div class="youtube-videos">
         <div class="video-main">
             <iframe id="main-video" src="" frameborder="0" allowfullscreen></iframe>
@@ -602,7 +1261,7 @@
                                 </div>
                             </div>
                             <div class="image-box">
-                                <div class="image"><a href="LatestBlog2.html"><img src="images/Blogs/DevkundWaterfall-trek.jpeg" alt="" title=""></a></div>
+                                <div class="image"><a href="LatestBlog2.html"><img src="images/Blogs/DevkundWaterfall trek.webp" alt="" title=""></a></div>
                                 <div class="cat"><span>Food & Drink</span></div>
                             </div>
                         </div>
@@ -650,82 +1309,10 @@
     </section>
 
 
-    <!--Trending Destinations Section-->
-    <section class="trending-destinations">
-        <div class="auto-container">
-
-            <div class="title-box centered">
-                <h2><i class="bg-vector"></i><span>Trending Destinations</span></h2>
-            </div>
-
-            <div class="gallery-box">
-                <div class="masonry-container row clearfix">
-                    <!--Block-->
-                    <div class="dest-block-one masonry-item col-lg-8 col-md-12 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box"><a href="#"><img src="images/resource/gallery-1.jpg" alt=""></a></div>
-                            <div class="hvr-box">
-                                <div class="cap-box">
-                                    <div class="cap-inner clearfix">
-                                        <h4><a href="tours.html">Kerala</a></h4>
-                                        <div class="tour-count"><span>15 Tours</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Block-->
-                    <div class="dest-block-one masonry-item column-width col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box"><a href="#"><img src="images/resource/gallery-2.jpg" alt=""></a></div>
-                            <div class="hvr-box alt-hvr">
-                                <div class="cap-box">
-                                    <div class="cap-inner clearfix">
-                                        <h4><a href="tours.html">Pune</a></h4>
-                                        <div class="tour-count"><span>15 Tours</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Block-->
-                    <div class="dest-block-one masonry-item col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box"><a href="#"><img src="images/resource/gallery-3.jpg" alt=""></a></div>
-                            <div class="hvr-box">
-                                <div class="cap-box">
-                                    <div class="cap-inner clearfix">
-                                        <h4><a href="tours.html">Kasara</a></h4>
-                                        <div class="tour-count"><span>15 Tours</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Block-->
-                    <div class="dest-block-one masonry-item col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box"><a href="#"><img src="images/resource/gallery-4.jpg" alt=""></a></div>
-                            <div class="hvr-box">
-                                <div class="cap-box">
-                                    <div class="cap-inner clearfix">
-                                        <h4><a href="tours.html">Nashik</a></h4>
-                                        <div class="tour-count"><span>Tours</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Block-->
-                     
-                    <!--Block-->
-                     
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
 
+        <!-- Tesstominal review section -->
         <section class="testimonials-one">
             <div class="auto-container">
                 <div class="title-box centered">
@@ -737,7 +1324,7 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="card">
-                                        <img src="https://placehold.co/400" alt="">
+                                        <div class="profile-initials">BR</div> <!-- Profile Initials -->
                                         <div class="review">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -746,17 +1333,18 @@
                                             <i class="fa fa-star"></i>
                                         </div>
                                         <p class="testimonial-text" 
-                                        data-full="I recently completed my trek to Harishchandragad with Book and Explore, and it was an amazing experience! The entire trek was well-organized, and the team guided us exceptionally well. From the planning to the execution, everything was smooth and enjoyable.
-                                        The food provided was delicious and much-needed after the trek. A special mention to Mahesh Shinde—his knowledge about the place, history, and trekking tips made the experience even more enriching.
-                                        Overall, I highly recommend Book and Explore for trekking enthusiasts. Looking forward to more adventures with them!">
-                                        I recently completed my trek to Harishchandragad with Book and Explore,... 
+                                        data-full="I recently joined a midnight cycling mumbai and  it was an fantastic experience.The leaders are also excellent and supportive.
+                                        We cycled through some of Mumbai's beautiful places at night.
+                                        Thank You Team Book And Explore."
+                                        data-link="https://maps.app.goo.gl/qVfoVZHkyRz6e1ns9">
+                                        I recently joined a midnight cycling mumbai and  it was ... 
                                         <span class="read-more">Read More</span></p>
-                                        <h3>Nikhil Jadhav</h3>
+                                        <h3 class="font-size-10">Bhakti Raut</h3>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="card">
-                                        <img src="https://placehold.co/400" alt="">
+                                        <div class="profile-initials">Nk</div> <!-- Profile Initials -->
                                         <div class="review">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -767,7 +1355,8 @@
                                         <p class="testimonial-text" 
                                         data-full="'Book & Explore' truly lives up to its name! Having done more than 5 treks with them, I can confidently say that each journey has been an unforgettable adventure. Whether it's a long-route trek or a weekend escape, their planning, time management, and overall execution are simply top-notch. ⏳✨
                                         From the very first trek to the latest one, I've always felt at home with the team and fellow trekkers. Each trip has introduced me to incredible people who started as strangers but became lifelong friends by the end. ❤️🏕️
-                                        The food, safety measures, and medical assistance are well taken care of, making sure everyone has an enjoyable experience without worries. Their guidelines are clear, ensuring equal treatment and a stress-free adventure. 🏞️💯">
+                                        The food, safety measures, and medical assistance are well taken care of, making sure everyone has an enjoyable experience without worries. Their guidelines are clear, ensuring equal treatment and a stress-free adventure. 🏞️💯"
+                                        data-link="https://maps.app.goo.gl/L9YUFugGnZ2nqEpy5">
                                         'Book & Explore' truly lives up to its name! Having done more than 5 treks with... 
                                         <span class="read-more">Read More</span></p>
                                         <h3>Nitin Kanhurkar</h3>
@@ -775,7 +1364,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="card">
-                                        <img src="https://placehold.co/400" alt="">
+                                        <div class="profile-initials">AP</div> <!-- Profile Initials -->
                                         <div class="review">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -784,56 +1373,100 @@
                                             <i class="fa fa-star-half"></i>
                                         </div>
                                         <p class="testimonial-text" 
-                                        data-full="This was my first trek with Book and Explore, and I honestly didn’t expect it to be such an overwhelming and amazing experience. It turned out to be one of the most memorable treks for me!
-                                        Our trek leaders, Kadambari and Kaustubh, were both incredibly friendly,
-                                        knowledgeable, and supportive. They made sure we were well-prepared and guided us every step of the way to ensure a safe and successful trek.
-                                        I had an absolute blast, made a bunch of wonderful new friends, and returned with a treasure trove of memories. I already miss everyone and can’t wait to plan more adventures with Book and Explore!
-                                        I highly recommend Book and Explore to anyone looking for a well-organized and enjoyable trekking experience. The trek leaders are simply amazing, and the overall vibe is unmatched!♥️♥️♥️">
-                                        This was my first trek with Book and Explore, and I honestly... 
+                                        data-full="I had an amazing trip to Hampi and Gokarna with Book and Explore🌟. The place was beautiful, and I enjoyed every moment. Mayuresh, our captain, is a great leader who felt more like a friend🧡. One incident that stood out was when I was left behind in the vehicle, and he kindly offered me his seat. That gesture really showed his leadership and care.💚 The hotels and food were also fantastic, giving positive vibes throughout the trip. I highly recommend Book and Explore for anyone planning their travels. It was a wonderful experience!❤️💯"
+                                        data-link="https://maps.app.goo.gl/ucssXCUvcwUL87et8">
+                                        I had an amazing trip to Hampi and Gokarna with Book and Explore🌟... 
                                         <span class="read-more">Read More</span></p>
-                                        <h3>Mansi Shivbhakta</h3>
+                                        <h3>Amisha Pinge</h3>
+                                    </div>
+                                </div>
+                                <!-- <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="profile-initials">PJ</div> 
+                                        <div class="review">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half"></i>
+                                        </div>
+                                        <p class="testimonial-text" 
+                                        data-full="We took trip to runn of kutch of three days. The experience was very amazing. Various points were covered but none of the spots were rushed. From kutchh sunsets to mandavi beach , runn utsav , dholavira harappan site was covered. Stay was at bhunga huts and gujrati food was superb. Trip guide (Sahil pandhare) had friendly and professional behaviour. Took care of all fellow tourists well. The vehicle used was in good state. One can definitely go for booknexplore"
+                                        data-link="https://maps.app.goo.gl/guMEMJ62ksCS1ZZD9">
+                                        We took trip to runn of kutch of three days. The experience was very amazing Various points were... 
+                                        <span class="read-more">Read More</span></p>
+                                        <h3>Pranjal Jain</h3>
+                                        
+                                    </div>
+                                </div> -->
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="profile-initials">SC</div> <!-- Profile Initials -->
+                                        <div class="review">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half"></i>
+                                        </div>
+                                        <p class="testimonial-text" 
+                                        data-full="• My Kalsubai first trekking experience with Pratik Sir and Atharva Sir's group was absolutely amazing and unforgettable. It was well-organized, enjoyable, and a perfect balance of adventure and fun.
+                                        • 'Pratik Sir and Atharva Sir were incredible leaders who ensured that everyone felt safe and motivated throughout the trek. They were approachable, knowledgeable, and kept the group spirit alive.'
+                                        • 'The entire trek was perfectly planned, from transportation and meal arrangements to the route and rest breaks. Their attention to detail made the experience hassle-free and enjoyable.'
+                                        • 'The group had such a friendly and energetic vibe. The bond we developed during the trip added to the joy of the experience.'"
+                                        data-link=" https://maps.app.goo.gl/ssc5Xz5U6VMFR4ip9
+                                        ">
+                                        My Kalsubai first trekking experience with Pratik Sir and Atharva Sir's group was absolutely amazing and unforgettable.... <span class="read-more">Read More</span></p>
+                                        <h3>Sandeep Chavan</h3>
+                                        
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="card">
-                                        <img src="https://placehold.co/400" alt="">
+                                        <div class="profile-initials">VC</div> <!-- Profile Initials -->
                                         <div class="review">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-half"></i>
+                                            <i class="fa fa-star"></i>
                                         </div>
                                         <p class="testimonial-text" 
-                                        data-full="went for harishchandragad Trek with book n explore. It was my first grp Trek. I was not sure that I would enjoy it or not...but honestly speaking there was not a single moment when I got bore. All members of book n explore family are too good. mayuresh sir and pradeep are such kind n calm personalities.
+                                        data-full="Yesterday was the best day. It was such a great experience and we had loads of fun. Without BookAndExplore I couldn't have visited such a beautiful place in my life.
+                                        We started our trek so early in the morning.
+                                        The trek leaders were very kind, helpful and they were really passionate about trekking. Piyush explained all the history about harishchandragad. The food was amazing, the time management was great as we reached so early at the peak Kokankada it was because of our trek lead Ratna who pushed us to see the peak point and I couldn't be more grateful for the amazing view I got to see. It was all thanks to our amazing trek leaders Piyush, Disha, Mayuresh and Ratna."
+                                        data-link="https://maps.app.goo.gl/Dc1gwNd1mKZ7XujK7">
+                                        Yesterday was the best day. It was such a great experience and we had loads of fun. Without BookAndExplore I couldn't have visited such a beautiful place in my life....
+                                        <span class="read-more">Read More</span></p>
+                                        <h3>Vaishnavi Chavare</h3>
+                                    </div>
+                                </div>
 
-                                        I miss u all guys...n will definitely plan more n more adventures with book n explore family.
-                                        
-                                        Thanks mayuresh and  pradeep n all my frnds for being a part of this unforgettable Trek!  ♥️♥️♥️.">
-                                        went for harishchandragad Trek with book n explore. It was my first grp Trek. I was not ... 
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="profile-initials">SJ</div> <!-- Profile Initials -->
+                                        <div class="review">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <p class="testimonial-text" 
+                                        data-full="Five-star experience! Our trip to Hampi , Gokarna, Honnavar & Murudeshwar was immensely and absolutely amazing. The places we visited were stunning, and Mahesh Shinde’s guidance made the trip even more memorable. He made it pretty comfortable from day one. Right from stay to traveling was seamless.
+                                        The itinerary is super loaded with amazing spots.
+                                        A big shoutout to our team leader Mahesh Shinde!
+                                        Highly recommended!!!!!”"
+                                        data-link="https://maps.app.goo.gl/xvievqMcDNYrTuiN8">
+                                        Five-star experience! Our trip to Hampi , Gokarna, Honnavar & Murudeshwar was immensely and absolutely amazing...
                                         <span class="read-more">Read More</span></p>
-                                        <h3>SANGRAM JAMGE</h3>
-                                        
+                                        <h3>SHRIKANT JADHAV</h3>
                                     </div>
                                 </div>
+
                                 <div class="swiper-slide">
                                     <div class="card">
-                                        <img src="https://placehold.co/400" alt="">
-                                        <div class="review">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-half"></i>
-                                        </div>
-                                        <p class="testimonial-text" data-full="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque reiciendis aliquam est, ut libero doloribus.">Lorem ipsum dolor sit amet consectetur... <span class="read-more">Read More</span></p>
-                                        <h3>Safra Catz</h3>
-                                        
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <img src="https://placehold.co/400" alt="">
+                                        <div class="profile-initials">AP</div> <!-- Profile Initials -->
                                         <div class="review">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -841,9 +1474,163 @@
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                         </div>
-                                        <p class="testimonial-text" data-full="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque reiciendis aliquam est, ut libero doloribus.">Lorem ipsum dolor sit amet consectetur... <span class="read-more">Read More</span></p>
-                                        <h3>Mark Zuckerberg</h3>
-                                        
+                                        <p class="testimonial-text" 
+                                        data-full="Last week we did Rann of Kutch tour the management and team was wonderful . Desert visit on full moon day was the most mesmerizing experience. All the Best to Book and Explore team"
+                                        data-link=" https://maps.app.goo.gl/Nb6n8aaZ6owpJmFn9
+                                        ">
+                                        Last week we did Rann of Kutch tour the management and team was wonderful...
+                                        <span class="read-more">Read More</span></p>
+                                        <h3>Aryan Patne</h3>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="profile-initials">AA</div> 
+                                        <div class="review">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <p class="testimonial-text" 
+                                        data-full="I recently went for midnight cycling with Akshay and Ratna as a guide and the leaders were both amazingly supportive. Best experience till now in Mumbai . Thank you book and explore. Thank you Akshay and Ratna."
+                                        data-link=" https://maps.app.goo.gl/63RwRgEu3zuUfzWZ7
+                                        ">
+                                        I recently went for midnight cycling with Akshay and Ratna as a guide and the leaders...
+                                        <span class="read-more">Read More</span></p>
+                                        <h3>Amit Anand</h3>
+                                    </div>
+                                </div> -->
+
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="profile-initials">AA</div> <!-- Profile Initials -->
+                                        <div class="review">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <p class="testimonial-text" 
+                                        data-full="I recently completed the kalsubai treck with book and explore and had an incredible experience! Our guide, Tushar Balsaraf, Tejas kokare, Dhanashri mandlik and aditya was knowledgeable, supportive, friendly and ensured our safety throughout. I highly recommend book and explore for any trekking adventure."
+                                        data-link="https://maps.app.goo.gl/Xe31Cgy7XQavKHKb8
+                                        ">
+                                        I recently completed the kalsubai treck with book and explore and had an incredible experience!...
+                                        <span class="read-more">Read More</span></p>
+                                        <h3>amit kalokhe</h3>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="profile-initials">KC</div> <!-- Profile Initials -->
+                                        <div class="review">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <p class="testimonial-text" 
+                                        data-full="I really enjoyed the track with 'Book & Explore', everything was great, had a great time, all the track leaders were very nice, you led the team well, you took care of everything very well, all leaders nature was very good. It was great to travel with you,
+                                        thank you✌"
+                                        data-link="https://maps.app.goo.gl/kVUb6JW4DakJddV56
+                                        ">
+                                        I really enjoyed the track with "Book & Explore", everything was great, had a great...
+                                        <span class="read-more">Read More</span></p>
+                                        <h3>Kartik Choudhary</h3>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="profile-initials">VC</div> <!-- Profile Initials -->
+                                        <div class="review">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <p class="testimonial-text" 
+                                        data-full="I have travelled through many Trek pages in the past but I was overwhelmed by the experience which I got through Book and Explore.
+                                        Transportation: The buses are of good quality.      
+                                        Food: There are many halts for snacks and tea. Lunch and breakfast are also good. Where other Trek pages charge extra for non-veg food but in Book and Explore there are no such hidden charges
+                                        Trek guides : They are very polite and friendly.   
+                                        Cost: The cheapest in the market but there are compromises with the quality.                                        
+                                        Overall I would highly recommend you to join the Book and Explore community."
+                                        data-link="https://maps.app.goo.gl/Wm5j9AfbNh9aHQBz5
+                                        ">
+                                        I have travelled through many Trek pages in the past but I was overwhelmed ...
+                                        <span class="read-more">Read More</span></p>
+                                        <h3>Athlete adda</h3>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="profile-initials">VC</div> <!-- Profile Initials -->
+                                        <div class="review">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <p class="testimonial-text" 
+                                        data-full="I had the most wonderful experience of our Harishchandra Gad trek. The arrangements were on mark and our preparation was well guided. Most of us were on our first trek and still we could finish the entire trek within planned time. Our trek leads Rushikesh and Sanket were very supportive and have profound knowledge of this historic place.
+                                        The arrangement for food was also up to the mark. I had a great time on this trek.
+                                        I look forward to go on another trek with Book and Explore."
+                                        data-link="https://maps.app.goo.gl/RdQhGybD7q5HYHAa8
+                                        ">
+                                        I had the most wonderful experience of our Harishchandra Gad trek...
+                                        <span class="read-more">Read More</span></p>
+                                        <h3>Prashant Rokade</h3>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="profile-initials">VC</div> <!-- Profile Initials -->
+                                        <div class="review">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <p class="testimonial-text" 
+                                        data-full="Tour name -Hampi Gokarana
+                                        Batch - 27th Dec to 1st Jan
+                                        We recently went on a 4-night, 5-day trip with Book and Explore Tour Company, which we found through their Instagram page. Their itinerary was excellent, covering all the main attractions in Hampi and Gokarna. Our captains, Piyush and Mahesh, were incredibly helpful and understanding throughout the trip.
+                                        The package was very budget-friendly, and the captains went above and beyond to show us additional places that weren’t part of the original itinerary. On the last day, they even treated us to ice cream, which was a thoughtful gesture.
+                                        We had a great time, made new friends, and will definitely continue to explore with Book and Explore Tour Company. Thank you for everything! ♥️"
+                                        data-link="https://maps.app.goo.gl/hnLUb2FAfiBZGAMw6 ">
+                                        We recently went on a 4-night, 5-day trip with Book and Explore Tour Company,...
+                                        <span class="read-more">Read More</span></p>
+                                        <h3>Harsh Harnawale</h3>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="profile-initials">VC</div> <!-- Profile Initials -->
+                                        <div class="review">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <p class="testimonial-text" 
+                                        data-full="We went to raigad with book and explore and the overall experience was great.. Our group leaders were amazing. Everything was well planned and managed. Had so much fun with the group members. Highly recommended. Cheers to the book and explore team👍🏻✨"
+                                        data-link="https://maps.app.goo.gl/bvbLNN8GT4kJqtr79 ">
+                                        We went to raigad with book and explore and the overall experience was great...
+                                        <span class="read-more">Read More</span></p>
+                                        <h3>Diksha Dhumane</h3>
                                     </div>
                                 </div>
                             </div>
@@ -874,12 +1661,17 @@
                         
                         document.querySelectorAll('.testimonial-text').forEach(function(el) {
                             let fullText = el.getAttribute('data-full');
-                            let shortText = fullText.substring(0, 50) + '... ';
+                            let link = el.getAttribute('data-link');
+                            let shortText = fullText.substring(0, 50) + '... ';  // Show only 50 characters initially
+
+                            // Display short text with "Read More" button
                             el.innerHTML = shortText + '<span class="read-more">Read More</span>';
                 
                             el.querySelector('.read-more').addEventListener('click', function() {
                                 if (this.textContent === "Read More") {
-                                    el.innerHTML = fullText + ' <span class="read-more">Read Less</span>';
+                                    el.innerHTML = fullText + 
+                                    `<br /><a href="${link}" target="_blank" class="testimonial-link">View on Google</a><br />
+                                    <span class="read-more">Read Less</span>`;
                                 } else {
                                     el.innerHTML = shortText + '<span class="read-more">Read More</span>';
                                 }
@@ -921,7 +1713,8 @@
 </script>
 <script> 
 $(function(){
-  $("#header").load("header.html"); 
+//   $("#header").load("header.html"); 
+$("#header").load("MainHeader.html");
   $("#footer").load("footer.html");
   $("#homeBanner").load("homebanner.html"); //for vertical social link
 $("#homeBanner").load("homebanner2.html"); //for horizontal social link
@@ -1006,7 +1799,7 @@ $("#homeBanner").load("homebanner2.html"); //for horizontal social link
             $(document).ready(function(){
                 $(".popular-carousel").owlCarousel({
                     loop: true,
-                    margin: 20, /* Adjusted margin */
+                    margin: 40, /* Adjusted margin */
                     nav: true,
                     dots: true,
                     autoplay: true,

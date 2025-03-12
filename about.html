@@ -14,6 +14,195 @@
 <link href="css/responsive.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]--> 
 
+<style>
+    /* 🚀 Features Section */
+.features-section {
+  position: relative; /* So background elements stay inside */
+  width: 100%;
+  padding: 80px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: linear-gradient(135deg, #f8f9fa, #def6f8); Soft gradient */
+  overflow: hidden;
+}
+
+/* 🎭 Image & Text Container */
+.content-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  position: relative; /* Ensures elements are placed correctly */
+  z-index: 2; /* Keeps text & image on top */
+}
+
+/* 🖼 Image Wrapper */
+.image-wrapper {
+  position: relative;
+  width: 70%;
+  max-width: 700px;
+  display: flex;
+  justify-content: center;
+}
+
+/* 🖼 Team Image */
+.team-image {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  /* transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; */
+  /* animation: fadeInUp 1s ease-out; */
+}
+
+/* ✨ Hover Effects */
+.team-image:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* 🎥 3D Floating Animation */
+.animated-image {
+  /* animation: floatAnimation 3s infinite ease-in-out; */
+}
+
+@keyframes floatAnimation {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* 📜 Text Content */
+.text-content {
+  width: 50%;
+  text-align: left;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideIn 1s ease-out forwards;
+}
+
+/* 🎬 Slide-in Animation */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.text-content h2 {
+  font-size: 26px;
+  color: #1DC5CE;
+  margin-bottom: 15px;
+}
+
+.text-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.text-content blockquote {
+  font-size: 16px;
+  font-style: italic;
+  color: #555;
+  padding: 10px;
+  border-left: 4px solid #1DC5CE;
+  margin: 15px 0;
+}
+
+/* 📱 Mobile Optimization */
+@media (max-width: 768px) {
+  .content-container {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+  }
+
+  .image-wrapper {
+      width: 90%;
+      max-width: 100%;
+  }
+
+  .text-content {
+      width: 100%;
+      text-align: center;
+      animation: fadeInUp 1s ease-out forwards;
+  }
+
+  /* 🔵 Dots - Optimized for Mobile */
+  .dot {
+    width: 5px;
+    height: 5px;
+  }
+
+  /* 🌟 Icons - Adjusted for Mobile */
+  .icon, .line {
+    display: none;
+    }
+}
+
+
+/* 🌟 Decorative Elements */
+.decorative-elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Keeps elements behind the text */
+}
+
+/* 🔵 Animated Theme Dots */
+.dot {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #cef7f9;
+  animation: bounce 3s infinite ease-in-out alternate;
+}
+
+.dot1 { top: 20%; left: 10%; }
+.dot2 { top: 20%; left: 80%; }
+.dot3 { top: 80%; left: 30%; }
+.dot4 { top: 50%; right: 10%; }
+.dot5 { top: 90%; left: 10%; }
+
+/* 🎥 Dots Animation */
+@keyframes bounce {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-10px); }
+}
+
+/* 🎭 Icons */
+.icon {
+  position: absolute;
+  font-size: 50px;
+  color: #1DC5CE;
+  opacity: 0.2;
+}
+
+.icon1 { top: 1%; left: 49%; transform: rotate(10deg); }
+.icon2 { bottom: 10%; right: 10%; transform: rotate(10deg); }
+.icon3 { top: 50%; left: 5%; transform: rotate(10deg); }
+
+
+/* 📏 Geometric Design Lines */
+.line {
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background: #1DC5CE;
+  opacity: 0.3;
+}
+
+.line1 { top: 20%; left: 20%; transform: rotate(60deg); }
+.line2 { bottom: 20%; left: 35%; transform: rotate(60deg); }
+
+
+</style>
+
 </head>
 
 <body>
@@ -22,191 +211,182 @@
     <!-- Preloader -->
     <div class="preloader"></div> 
     <div class="search-backdrop"></div>
+
     <!-- Main Header-->
     <header class="main-header">
-        <div class="header-top">
-            <div class="auto-container">
-                <div class="inner clearfix">
-                    <div class="top-left clearfix">
-                        <ul class="info clearfix">
-                            <li><i class="icon fa fa-envelope"></i> <a href="mailto:bookandexplore@gmail.com">bookandexplore@gmail.com</a></li>
-                            <li><i class="icon fa fa-phone-circle"></i> <a href="tel: 8888840295">+91 8888840295</a> </li>
-                             </ul>
+        <div class="header-upper container-fluid">
+            
+            <div class="logo-nav">
+                <!-- Logo -->
+                <a href="index.html"><img src="images/logo.svg" alt="Logo" style="height: 50px;"></a>
+    
+                 <!-- Navigation -->
+                <nav class="main-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="about.html">About Us</a>
+                            <!-- <ul>
+                                <li><a href="team.html">Our Teams</a></li>
+                                <li><a href="faq.html">FAQs</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                            </ul> -->
+                        </li>
+                        <li class="dropdown">
+                            <a href="destinations.html">Tours</a>
+                            <ul>
+                                <li><a href="#">East Tour</a></li>
+                                <li><a href="#">West Tour</a></li>
+                                <li><a href="#">North Tour</a></li>
+                                <li><a href="#">South Tour</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="trekking.html">Treks</a></li>
+                        <li class="dropdown">
+                            <a href="booking.html">Booking Pages</a>
+                            <ul>
+                                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="blog.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+            <!-- Icons: Search & Sign In -->
+            <div class="nav-icons">
+                    <div class="link search-btn search-toggle"><i class="far fa-search"></i></div>
+                    <a href="login.html"><i class="fa fa-user"></i> SIGN IN</a>  
+                    <!-- Mobile Menu Button -->
+                    <div class="nav-toggler">
+                        <i class="fas fa-bars"></i>
                     </div>
-                    <div class="top-right clearfix">
-                        
-                        <div class="login"><i class="icon fa fa-user"></i> <a href="login.html">SIGN IN</a></div>
+            </div>
+        </div>
+    
+        <!-- Hidden Navigation Bar -->
+        <section class="hidden-bar">
+            <div class="hidden-bar-wrapper">
+                <!-- Close Button -->
+                <div class="hidden-bar-closer">
+                    <span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14">
+                        <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+                    </svg></span>
+                </div>
+
+                <!-- Logo -->
+                <div class="nav-logo-box">
+                    <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="Treker"></a></div>
+                </div>
+
+                <!-- Side Menu -->
+                <div class="side-menu">
+                    <ul class="navigation">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li class="dropdown">
+                            <a href="destinations.html">Tours </a>
+                            <ul>
+                                <li><a href="#">East Tour</a></li>
+                                <li><a href="#">West Tour</a></li>
+                                <li><a href="#">North Tour</a></li>
+                                <li><a href="#">South Tour</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="trekking.html">Treks</a></li>
+                        <li class="dropdown">
+                            <a href="booking.html">Booking Pages </a>
+                            <ul>
+                                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="blog.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Login/Signup Buttons -->
+                <div class="links-box clearfix">
+                    <div class="clearfix">
+                        <div class="link">
+                            <a href="login.html" class="theme-btn btn-style-one">
+                                <span>Login <i class="icon far fa-angle-right"></i></span>
+                            </a>
+                        </div>
+                        <div class="link mt-2">
+                            <a href="signup.html" class="theme-btn btn-style-two">
+                                <span>Sign Up <i class="icon far fa-angle-right"></i></span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Header Upper -->
-        <div class="header-upper">        
-            <div class="auto-container">
-                <!-- Main Box -->
-                <div class="main-box clearfix">
-                    <!--Logo-->
-                    <div class="logo-box">
-                         <div class="logo"><a href="index.html" title="Treker"><img src="images/logo.svg" alt="" title=" "></a></div>
-                    </div>
+        </section>
 
-                    <div class="nav-box clearfix">
-                        <!--Nav Outer-->
-                        <div class="nav-outer clearfix">         
-                            <nav class="main-menu">
-                                <ul class="navigation clearfix">
-                                    <li ><a href="index.html">Home</a>                                       
-                                    </li>
-                                    <li class="dropdown"><a href="about.html">About Us</a>
-                                        <ul>
-                                            <li><a href="team.html">Our Teams</a></li>
-                                            <li><a href="faq.html">FAQs</a></li>
-                                            <li><a href="gallery.html">Gallery</a></li>
-                                        </ul>
-                                    </li>
-                                     
-                                    <li   class="dropdown" ><a href="destinations.html">Tours</a>
-                                        <ul>
-                                            <li><a href="#">East Tour</a></li>
-                                                <li><a href="#">West Tour</a></li>
-                                                <li><a href="#">North Tour</a></li>
-                                                <li><a href="#">South Tour</a></li> 
-                                        </ul>
-                                        
-                                    
-                                    </li>
-                                    <li class="dropdown"><a href="trekking.html">Trek</a>
-                                        
-                                    </li>
-                                    <li class="dropdown"><a href="booking.html">Booking Pages</a>
-                                        <ul>
-                                             
-                                    
-                                            
-                                             
-                                            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                                             
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="blog.html">Blogs</a>
-                                       
-                                    </li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </nav>
-                            <!-- Main Menu End-->
-                        </div>
-                        <!--Nav Outer End-->
-
-                        <div class="links-box clearfix">
-                            <div class="link search-btn search-toggle"><span class="icon far fa-search"></span></div>
-                             
-
-                        <!-- Hidden Nav Toggler -->
-                        <div class="nav-toggler">
-                            <button class="hidden-bar-opener"><span class="icon"><img src="images/icons/menu-icon.svg" alt=""></span></button>
-                        </div>
-
-                    </div>
-
-                    <!-- End Header Upper -->
-                    <div class="search-box">
-                        <div class="outer-container">
-                            <div class="inner-box">
-                                <div class="form-box">
-                                    <div class="s-close-btn"><span class="icon far fa-times"></span></div>
-                                    <span class="s-icon fa fa-search"></span>
-                                    <form method="post" action="index.html">
-                                        <div class="form-group">
-                                            <input type="search" name="search" value="" placeholder="Search Here" required="">
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+        <!-- Search Bar Section -->
+        <div class="search-bar">
+            <div class="search-wrapper">
+                <div class="search-closer">&times;</div>
+                <input type="text" class="search-input" placeholder="Search here...">
+                <button class="search-btn-action"><i class="fa fa-search"></i></button>
             </div>
         </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Select elements
+                const navToggler = document.querySelector('.nav-toggler');
+                const hiddenBar = document.querySelector('.hidden-bar');
+                const hiddenBarCloser = document.querySelector('.hidden-bar-closer');
+
+                const searchBtn = document.querySelector('.search-btn');
+                const searchBar = document.querySelector('.search-bar');
+                const searchCloser = document.querySelector('.search-closer');
+        
+                if (navToggler && hiddenBar && hiddenBarCloser) {
+                    // Open Sidebar
+                    navToggler.addEventListener('click', function (event) {
+                        event.stopPropagation(); // Prevents event bubbling
+                        hiddenBar.classList.add('active');
+                    });
+        
+                    // Close Sidebar
+                    hiddenBarCloser.addEventListener('click', function () {
+                        hiddenBar.classList.remove('active');
+                    });
+        
+                    // Close sidebar when clicking outside (optional)
+                    document.addEventListener('click', function (event) {
+                        if (!hiddenBar.contains(event.target) && !navToggler.contains(event.target)) {
+                            hiddenBar.classList.remove('active');
+                        }
+                    });
+        
+                    // Prevent clicks inside sidebar from closing it
+                    hiddenBar.addEventListener('click', function (event) {
+                        event.stopPropagation();
+                    });
+                }
+
+                // Search bar toggle
+                searchBtn.addEventListener('click', function () {
+                    searchBar.classList.add('active');
+                });
+
+                searchCloser.addEventListener('click', function () {
+                    searchBar.classList.remove('active');
+                });
+
+            });
+        </script>
     </header>
+
      <!--Search Backdrop-->
      <div class="search-backdrop"></div>
 		
      <!-- Menu Backdrop -->
      <div class="menu-backdrop"></div>
- 
-     <!-- Hidden Navigation Bar -->
-     <section class="hidden-bar">
-         <!-- Hidden Bar Wrapper -->
-         <div class="hidden-bar-wrapper">
-             <div class="hidden-bar-closer"><span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14"><path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path></svg></span></div>
-             <div class="nav-logo-box">
-                 <div class="logo"><a href="index.html" title="Treker"><img src="images/logo.svg" alt="" title="Treker"></a></div>
-             </div>
-             <!-- .Side-menu -->
-             <div class="side-menu">
-                  <ul class="navigation clearfix">
-                     <li><a href="index.html">Home</a>
-                        
-                     </li>
-                     <li class="dropdown"><a href="about.html">About Us</a>
-                         <ul>
-                             <li><a href="team.html">Our Teams</a></li>
-                             <li><a href="faq.html">FAQs</a></li>
-                             <li><a href="gallery.html">Gallery</a></li>
-                         </ul>
-                     </li>
-                     
-                     <li><a href="destinations.html">Tours</a>
-                         
-                         
-                         </li>
-                         <li><a href="trekking.html">Trek</a>
-                             
-                         </li>
-                     <li class="dropdown"><a href="booking.html">Booking Pages</a>
-                         <ul>
-                             
-                             <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                             
-                         </ul>
-                     </li>
-                     <li class="dropdown"><a href="blog.html">Blogs</a>
-                        
-                     </li>
-                     <li><a href="contact.html">Contact</a></li>
-                 </ul>
-             </div><!-- /.Side-menu -->
-             
-             <div class="links-box clearfix">
-                 <div class="clearfix">
-                     <div class="link"><a href="login.html" class="theme-btn btn-style-one"><span>Login<i class="icon far fa-angle-right"></i></span></a></div>
-                     <div class="link"><a href="signup.html" class="theme-btn btn-style-two"><span>Sign Up<i class="icon far fa-angle-right"></i></span></a></div>
-                 </div>
-             </div>
-         
-         </div><!-- / Hidden Bar Wrapper -->
-     </section>
-     <!-- / Hidden Bar -->  
-    <!-- / Hidden Bar and end main here-->
-
-    <!-- Banner Section -->
-    <!-- <section class="inner-banner">
-        <div class="image-layer" style="background-image: url(images/background/banner-image-1.jpg);"></div>
-        
-        <div class="auto-container">
-            <div class="content-box">
-                <h2>ABOUT US</h2>
-                <div class="bread-crumb">
-                    <ul class="clearfix">
-                        <li><span class="icon-home fa fa-home"></span><a href="index.html">Home</a></li>
-                        <li class="current">About Us</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section> -->
     
     <!--End Banner Section -->
 
@@ -216,11 +396,21 @@
         <div class="auto-container">
             <div class="row clearfix">
                 <!--Text Col-->
-                <div class="text-col col-lg-6 col-md-12 col-sm-12">
+                <div class="text-col col-lg-8 col-md-12 col-sm-12">
                     <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
-                        <h2>Maharashtra Best Travel Agency</h2>
-                        <div class="text upper-text">Since 2014, we’ve helped more than 5,000 people of all ages enjoy the best outdoor experience of their lives. Whether it’s for one day or a two-week vacation, close to home.</div>
-                        <div class="f-blocks clearfix">
+                        <!-- <h2>Not Just a Trip, But a Lifetime of Memories with Book & Explore!  🌍</h2> -->
+                        <h2>Where Every Journey Begins with Us.. Your Travel, Our Expertise.🌍</h2>
+                        <div class="text upper-text">
+                            Eight years ago, Book & Explore set out on a journey—not just to explore places, but to create experiences that leave a lasting imprint on the soul. What started as thrilling treks across Maharashtra soon evolved into a passion for curating adventures beyond boundaries.
+                            From conquering the Sahyadris to witnessing the breathtaking Rann of Kutch, from seeking solace in Kedarnath-Badrinath to embracing the raw beauty of Spiti Valley, we have taken wanderers on journeys that redefine travel.
+                            With 10,000+ happy explorers, Book & Explore is more than a travel company—we are storytellers, adventure seekers, and dream weavers, crafting journeys that go beyond the ordinary.
+                            <br /><br /><span>🚀 Are you ready for your next adventure? Let’s explore together with Book & Explore!
+                            </span>
+                        </div>
+
+
+                        
+                        <!-- <div class="f-blocks clearfix">
                             <div class="f-block">
                                 <div class="inner-box">
                                     <div class="icon"><img src="images/resource/about-icon-1.svg" alt="" title=""></div>
@@ -233,8 +423,8 @@
                                     <h6>Urgent Support for Traveller</h6>
                                 </div>
                             </div>
-                        </div>
-                        <div class="quote-box">
+                        </div> -->
+                        <!-- <div class="quote-box">
                             <div class="quote">"Since 2014, we’ve helped more than 5,000 people of all ages enjoy the best outdoor experience of their lives."</div>
                             <div class="quote-info clearfix">
                                 <div class="image"><img src="images/resource/about-thumb-1.jpg" alt="" title=""></div>
@@ -244,11 +434,13 @@
                                 </div>
                                 <div class="signature"><img src="images/resource/signature-1.png" alt="" title=""></div>
                             </div>
-                        </div>
+                        </div> -->
+                        
                     </div>
                 </div>
+                
                 <!--Image Col-->
-                <div class="image-col col-lg-6 col-md-12 col-sm-12">
+                <div class="image-col col-lg-4 col-md-12 col-sm-12">
                     <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <div class="image-box">
                             <img src="images/resource/about-image-3.svg" alt="" title="">
@@ -256,7 +448,36 @@
                     </div>
                 </div>
             </div>
+
         </div>
+
+        <div class="container-fluid">
+            <div class="f-blocks clearfix">
+                <!-- Vision Block -->
+                <div class="f-block">
+                    <div class="inner-box">
+                        <div class="icon"><i class="fas fa-lightbulb"></i></div>
+                        <h6 class="text-info">Our Vision</h6>
+                        <p class="description">
+                            "To be the most trusted and innovative travel partner, creating unforgettable journeys that inspire and connect people with the world’s most breathtaking destinations."
+                        </p>
+                    </div>
+                </div>
+            
+                <!-- Mission Block -->
+                <div class="f-block">
+                    <div class="inner-box">
+                        <div class="icon"><i class="fas fa-rocket"></i></div>
+                        <h6 class="text-info">Our Mission</h6>
+                        <p class="description">
+                            "Our mission is to provide seamless, personalized, and memorable travel experiences by offering top-notch services, curated itineraries, and expert guidance. We are committed to customer satisfaction, sustainability, and making travel accessible and enjoyable for all."
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
     </section>
 
     <!-- Facts Section -->
@@ -381,93 +602,410 @@
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features-section">
-        <div class="image-layer" style="background-image: url(images/background/image-7.jpg);"></div>
+    <section class="gallery-section">
         <div class="auto-container">
-            <div class="upper-box">
-                <div class="row clearfix">
-                    <!--Block-->
-                    <div class="feature-block col-lg-3 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="icon-box"><img src="images/resource/f-icon-1.svg" alt="" ></div>
-                            <h5>Private Transport</h5>
-                            <div class="text">Richly varied landscapes, luxury accommodation travel Fully.</div>
+            <div class="title-box centered">
+                <h2><span>Gallery</span></h2>
+            </div>
+            <div class="gallery-grid">
+                
+                <!-- Wide Image -->
+                <div class="gallery-item">
+                    <a href="https://source.unsplash.com/800x600/?hiking" target="_blank">
+                        <img src="images/resource/gallery-5.jpg" alt="Trekking Adventure">
+                        <div class="overlay">
+                            <h4>gallery-5</h4>
+                            <p>Thrilling trekking trails.</p>
                         </div>
-                    </div>
-                    <!--Block-->
-                    <div class="feature-block col-lg-3 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="icon-box"><img src="images/resource/f-icon-2.svg" alt="" ></div>
-                            <h5>Diverse Destination</h5>
-                            <div class="text">Richly varied landscapes, luxury accommodation travel Fully.</div>
+                    </a>
+                </div>
+    
+                <!-- Standard Image -->
+                <div class="gallery-item wide">
+                    <a href="https://source.unsplash.com/600x400/?beach" target="_blank">
+                        <img src="images/resource/gallery-6.jpg" alt="Beach Sunset">
+                        <div class="overlay">
+                            <h4>gallery-6</h4>
+                            <p>Golden hour magic by the sea.</p>
                         </div>
-                    </div>
-                    <!--Block-->
-                    <div class="feature-block col-lg-3 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="icon-box"><img src="images/resource/f-icon-3.svg" alt="" ></div>
-                            <h5>Great Hotel</h5>
-                            <div class="text">Richly varied landscapes, luxury accommodation travel Fully.</div>
+                    </a>
+                </div>
+    
+                <!-- More Images -->
+                <div class="gallery-item">
+                    <a href="https://source.unsplash.com/800x600/?forest" target="_blank">
+                        <img src="images/resource/gallery-7.jpg" alt="Forest Trail">
+                        <div class="overlay">
+                            <h4>gallery-7</h4>
+                            <p>Walk through lush green paths.</p>
                         </div>
-                    </div>
-                    <!--Block-->
-                    <div class="feature-block col-lg-3 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="icon-box"><img src="images/resource/f-icon-4.svg" alt="" ></div>
-                            <h5>Fast Booking</h5>
-                            <div class="text">Richly varied landscapes, luxury accommodation travel Fully.</div>
+                    </a>
+                </div>
+
+                <div class="gallery-item wide">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-11.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-11</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="gallery-item">
+                    <a href="https://source.unsplash.com/600x800/?camping" target="_blank">
+                        <img src="images/resource/gallery-8.jpg" alt="Camping">
+                        <div class="overlay">
+                            <h4>gallery-8</h4>
+                            <p>Under the stars, surrounded by nature.</p>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="gallery-item">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-9.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-9</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-item">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-10.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-10</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-item">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-12.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-12</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-item wide">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-13.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-13</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-item tall">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-14.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-14</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-item wide">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-15.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-15</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-item tall">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-16.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-16</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-item wide">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-17.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-17</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-item tall">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-19.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-19</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-item wide">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-18.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-18</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="gallery-item">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-20.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-20</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-item">
+                    <a href="https://source.unsplash.com/600x400/?desert" target="_blank">
+                        <img src="images/resource/gallery-21.jpg" alt="Desert">
+                        <div class="overlay">
+                            <h4>gallery-21</h4>
+                            <p>Endless dunes and stunning landscapes.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-item wide">
+                    <a href="https://source.unsplash.com/600x800/?nature,waterfall" target="_blank">
+                        <img src="images/resource/gallery-1.jpg" alt="Waterfall">
+                        <div class="overlay">
+                            <h4>gallery-1</h4>
+                            <p>Serene beauty of nature's finest waterfalls.</p>
+                        </div>
+                    </a>
+                </div> 
+    
+                <!-- Wide Image -->
+                <div class="gallery-item wide">
+                    <a href="https://source.unsplash.com/800x600/?fort" target="_blank">
+                        <img src="images/resource/gallery-2.jpg" alt="Historical Fort">
+                        <div class="overlay">
+                            <h4>gallery-2</h4>
+                            <p>Explore ancient forts of grandeur.</p>
+                        </div>
+                    </a>
+                </div> 
+    
+                <!-- Standard Image -->
+                <div class="gallery-item">
+                    <a href="https://source.unsplash.com/600x400/?mountain" target="_blank">
+                        <img src="images/resource/gallery-3.jpg" alt="Mountain View">
+                        <div class="overlay">
+                            <h4>gallery-3</h4>
+                            <p>Breathtaking peaks touching the sky.</p>
+                        </div>
+                    </a>
+                </div>
+    
+                <!-- Tall Image -->
+                <div class="gallery-item">
+                    <a href="https://source.unsplash.com/600x800/?lake" target="_blank">
+                        <img src="images/resource/gallery-4.jpg" alt="Serene Lake">
+                        <div class="overlay">
+                            <h4>gallery-4</h4>
+                            <p>Calm and peaceful lake with lush greenery.</p>
+                        </div>
+                    </a>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    
+    
+
+   <!-- Features Section - Team -->
+<!-- Features Section - Team -->
+<section class="features-section">
+    <div class="auto-container">
+        <!-- Background Elements - Fixed Placement -->
+        <div class="decorative-elements">
+            <div class="dot dot1"></div>
+            <div class="dot dot2"></div>
+            <div class="dot dot3"></div>
+            <div class="dot dot4"></div>
+            <div class="dot dot5"></div>
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="icon icon1"><i class="fas fa-hiking"></i></div>
+            <div class="icon icon2"><i class="fas fa-hiking"></i></div>
+            <div class="icon icon3"><i class="fas fa-hiking"></i></div>
+        </div>
+
+        <div class="content-container">
+            <!-- Team Image Section -->
+            <div class="image-wrapper">
+                <img src="images/background/team.jpg" alt="team" class="team-image animated-image"/>
+            </div>
+
+            <!-- Text Content -->
+            <div class="text-content">
+                <h2>Meet the Book & Explore Team</h2>
+                <p>
+                    At <strong>Book & Explore</strong>, we’re not just a team—we’re a family of travel enthusiasts, adventurers, and storytellers who live and breathe the magic of exploration. Every trip we plan is driven by our passion for creating authentic, unforgettable, and immersive travel experiences.
+                </p>
+                <blockquote>💬 "For us, travel isn’t just about moving from one place to another. It’s about the thrill of discovery, the beauty of new experiences, and the connections made along the way."</blockquote>
+                <blockquote>💬 "We go beyond planning trips; we create journeys that inspire, rejuvenate, and leave you with stories to tell for a lifetime."</blockquote>
+                <blockquote>💬 "Each traveler is unique, and we strive to provide personalized experiences that go beyond expectations."</blockquote>
+                <p>Our mission is to ensure that every traveler who chooses <strong>Book & Explore</strong> embarks on a journey filled with adventure, comfort, and meaningful experiences. Whether it’s a trek, an expedition, or a cultural escape, we are here to make it truly special.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- about FAQ -->
+    <section class="faq-one alternate">
+        <div class="auto-container">
+            <div class="title-box centered">
+                <h2><span>Most Frequent Questions</span></h2>
+            </div>
+            <div class="row clearfix">
+                <!--Text Col-->
+                <div class="text-col col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="accordion-box clearfix">
+                            <!--Block-->
+                            <div class="accordion block active-block">
+                                <div class="acc-btn active">What is Book & Explore? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Book & Explore is a leading travel company specializing in trekking, adventure tours, and customized travel experiences across Maharashtra and beyond. With 8+ years of expertise and 10,000+ happy travelers, we are committed to making travel seamless, fun, and unforgettable.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">What kind of trips do you offer? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">
+                                            ✅ Trekking & Adventure Tours (Maharashtra forts, Spiti Valley, Kedarnath-Badrinath, and more)<br>
+                                            ✅ Cultural & Heritage Tours (Hampi-Gokarna, Rann of Kutch, Kerala, and others)<br>
+                                            ✅ Customized & Group Tours (Tailor-made trips for individuals, families, and corporate groups)<br>
+                                            ✅ Weekend Getaways & Camping (Perfect for quick escapes into nature)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Who can join your trips? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Our trips are designed for everyone—solo travelers, couples, families, corporate groups, and adventure enthusiasts. Whether you're a beginner or an experienced explorer, we have an itinerary that suits you.</div>
+                                    </div>
+                                </div>
+                            </div>
+                              <!--Block-->
+                              <div class="accordion block">
+                                <div class="acc-btn">How do I stay updated on upcoming trips? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Follow us on social media, WhatsApp, and our website for the latest updates, upcoming trips, and special discounts!</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">How do I book a trip? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">
+                                            📞 Call or WhatsApp us for instant assistance.<br>
+                                            💻 Visit our website and choose your preferred trip.<br>
+                                            📧 Email us for customized plans and corporate bookings.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="carousel-box">
-            <div class="auto-container">
-                <div class="inner-box">
-                    <div class="reviews-carousel owl-theme owl-carousel">
-                        <!--Block-->
-                        <div class="slide-item">
-                            <div class="inner">
-                                <div class="left-image">
-                                    <!-- <div class="icon"><img src="images/icons/quotes-3.svg" alt=""></div> -->
-                                    <div class="image"><img src="images/resource/rev-thumb-4.png" alt=""></div>
-                                </div>
-                                <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                                <div class="text">" Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Occaecat cupidatat non proident,sunt.</div>
-                                <div class="info">
-                                    <span class="name">William Smith</span>
-                                    <span class="designation">CEO of tourbuzz</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Block-->
-                        <div class="slide-item">
-                            <div class="inner">
-                                <div class="left-image">
-                                    <!-- <div class="icon"><img src="images/icons/quotes-3.svg" alt=""></div> -->
-                                    <div class="image"><img src="images/resource/rev-thumb-4.png" alt=""></div>
-                                </div>
-                                <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                                <div class="text">We carefully select each activity, transportation, accommodation, and included meal option to ensure a consistent level of quality on each tour.</div>
-                                <div class="info">
-                                    <span class="name">Shreekanth Jagtap</span>
-                                    <span class="designation">CEO of bookandexplore</span>
+                <!--Text Col-->
+                <div class="text-col col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="accordion-box clearfix">
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">What is included in the trip cost? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">
+                                            ✅ Accommodation (Camps, Hotels, or Homestays)<br>
+                                            ✅ Meals as per the itinerary<br>
+                                            ✅ Local transport & transfers<br>
+                                            ✅ Guided tours & trek leads<br>
+                                            ✅ Safety equipment & first-aid assistance
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!--Block-->
-                        <div class="slide-item">
-                            <div class="inner">
-                                <div class="left-image">
-                                    <!-- <div class="icon"><img src="images/icons/quotes-3.svg" alt=""></div> -->
-                                    <div class="image"><img src="images/resource/rev-thumb-4.png" alt=""></div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Do you offer customized travel packages? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Absolutely! We specialize in customized itineraries for groups, families, and corporate teams. Just tell us your destination, budget, and preferences, and we’ll craft the perfect journey for you.</div>
+                                    </div>
                                 </div>
-                                <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                                <div class="text">"Each tour is handcrafted by our team. "</div>
-                                <div class="info">
-                                    <span class="name">Shreekanth Jagtap</span>
-                                    <span class="designation">Founder of bookandexplore</span>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">How safe are your treks and tours? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">
+                                            ✅ First-aid kits & emergency backup<br>
+                                            ✅ Well-planned itineraries with safety checks<br>
+                                            ✅ Assistance for beginners & proper gear recommendations
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">What if I need to cancel my trip? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">We understand that plans change. We have a flexible cancellation and refund policy, which depends on the type of trip. Details will be shared at the time of booking.</div>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Why should I choose Book & Explore? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">
+                                            🚀 8+ years of expertise in the travel industry<br>
+                                            🌍 10,000+ happy travelers<br>
+                                            🏕 Expert-led treks and tours<br>
+                                            🎯 Personalized travel experiences<br>
+                                            💯 Hassle-free bookings and seamless execution
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -476,9 +1014,8 @@
             </div>
         </div>
     </section>
-    
 
-    <!--Team Section-->
+    
    
 
     <!--Main Footer-->

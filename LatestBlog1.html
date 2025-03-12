@@ -26,112 +26,176 @@
 	  <div class="search-backdrop"></div>
 	  
 	  <!-- Main Header-->
-	   <header class="main-header">
-		  <div class="header-top">
-			  <div class="auto-container">
-				  <div class="inner clearfix">
-					  <div class="top-left clearfix">
-						  <ul class="info clearfix">
-							  <li><i class="icon fa fa-envelope"></i> <a href="mailto:bookandexplore@gmail.com">bookandexplore@gmail.com</a></li>
-							  <li><i class="icon fa fa-phone-circle"></i> <a href="tel:+91 8888840295">+91 8888840295</a></li>
-							    </ul>
-					  </div>
-					  <div class="top-right clearfix">
-						  <div class="lang-box">
-							  <div class="lang-btn clearfix"><span class="img far fa-globe-americas"></span><span class="txt">EngLish</span><span class="icon far fa-angle-down"></span></div>
-							  
-						  </div>
-						  <div class="login"><i class="icon fa fa-user"></i> <a href="login.html">SIGN IN</a></div>
-					  </div>
-				  </div>
-			  </div>
-		  </div>
-		  <!-- Header Upper -->
-		  <div class="header-upper">        
-			  <div class="auto-container">
-				  <!-- Main Box -->
-				  <div class="main-box clearfix">
-					  <!--Logo-->
-					  <div class="logo-box">
-						   <div class="logo"><a href="index.html" title="Treker"><img src="images/logo.svg" alt="" title="Treker"></a></div>
-					  </div>
-  
-					  <div class="nav-box clearfix">
-						  <!--Nav Outer-->
-						  <div class="nav-outer clearfix">         
-							  <nav class="main-menu">
-								  <ul class="navigation clearfix">
-									  <li ><a href="index.html">Home</a>                                       
-									  </li>
-									  <li class="dropdown"><a href="about.html">About Us</a>
-										  <ul>
-											  <li><a href="team.html">Our Teams</a></li>
-											  
-											  <li><a href="faq.html">FAQs</a></li>
-											  <li><a href="gallery.html">Gallery</a></li>
-										  </ul>
-									  </li>
-									   
-									  <li  class="dropdown" ><a href="destinations.html">Tours</a>
-									  <ul>
-										  <li><a href="#">East Tour</a></li>
-											  <li><a href="#">West Tour</a></li>
-											  <li><a href="#">North Tour</a></li>
-											  <li><a href="#">South Tour</a></li> 
-									  </ul>
-									  
-									  </li>
-									  <li class="dropdown"><a href="trekking.html">Treks</a>
-										  
-									  </li>
-									  <li class="dropdown"><a href="booking.html">Booking Pages</a>
-										  <ul> 
-											  <li><a href="terms-conditions.html">Terms & Conditions</a></li> 
-										  </ul>
-									  </li>
-									  <li class="dropdown"><a href="blog.html">Blogs</a>
-										   
-									  </li>
-									  <li><a href="contact.html">Contact</a></li>
-								  </ul>
-							  </nav>
-							  <!-- Main Menu End-->
-						  </div>
-						  <!--Nav Outer End-->
-  
-						  <div class="links-box clearfix">
-							  <div class="link search-btn search-toggle"><span class="icon far fa-search"></span></div>
-							  <div class="link fav-btn"><a href="#"><span class="icon far fa-heart"></span><span class="count">02</span></a></div>
-							   </div>
-  
-						  <!-- Hidden Nav Toggler -->
-						  <div class="nav-toggler">
-							  <button class="hidden-bar-opener"><span class="icon"><img src="images/icons/menu-icon.svg" alt=""></span></button>
-						  </div>
-  
-					  </div>
-  
-					  <!-- End Header Upper -->
-					  <div class="search-box">
-						  <div class="outer-container">
-							  <div class="inner-box">
-								  <div class="form-box">
-									  <div class="s-close-btn"><span class="icon far fa-times"></span></div>
-									  <span class="s-icon fa fa-search"></span>
-									  <form method="post" action="index.html">
-										  <div class="form-group">
-											  <input type="search" name="search" value="" placeholder="Search Here" required="">
-										  </div>
-									  </form>
-								  </div>
-							  </div>
-						  </div>
-					  </div>
-  
-				  </div>
-			  </div>
-		  </div>
-	  </header>
+      <header class="main-header">
+        <div class="header-upper container-fluid">
+            
+            <div class="logo-nav">
+                <!-- Logo -->
+                <a href="index.html"><img src="images/logo.svg" alt="Logo" style="height: 50px;"></a>
+    
+                 <!-- Navigation -->
+                <nav class="main-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="about.html">About Us</a>
+                            <!-- <ul>
+                                <li><a href="team.html">Our Teams</a></li>
+                                <li><a href="faq.html">FAQs</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                            </ul> -->
+                        </li>
+                        <li class="dropdown">
+                            <a href="destinations.html">Tours</a>
+                            <ul>
+                                <li><a href="#">East Tour</a></li>
+                                <li><a href="#">West Tour</a></li>
+                                <li><a href="#">North Tour</a></li>
+                                <li><a href="#">South Tour</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="trekking.html">Treks</a></li>
+                        <li class="dropdown">
+                            <a href="booking.html">Booking Pages</a>
+                            <ul>
+                                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="blog.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+            <!-- Icons: Search & Sign In -->
+            <div class="nav-icons">
+                    <div class="link search-btn search-toggle"><i class="far fa-search"></i></div>
+                    <a href="login.html"><i class="fa fa-user"></i> SIGN IN</a>  
+                    <!-- Mobile Menu Button -->
+                    <div class="nav-toggler">
+                        <i class="fas fa-bars"></i>
+                    </div>
+            </div>
+        
+        </div>
+    
+        <!-- Hidden Navigation Bar -->
+<section class="hidden-bar">
+    <div class="hidden-bar-wrapper">
+        <!-- Close Button -->
+        <div class="hidden-bar-closer">
+            <span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14">
+                <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+            </svg></span>
+        </div>
+
+        <!-- Logo -->
+        <div class="nav-logo-box">
+            <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="Treker"></a></div>
+        </div>
+
+        <!-- Side Menu -->
+        <div class="side-menu">
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="destinations.html">Tours </a>
+                    <ul>
+                        <li><a href="#">East Tour</a></li>
+                        <li><a href="#">West Tour</a></li>
+                        <li><a href="#">North Tour</a></li>
+                        <li><a href="#">South Tour</a></li>
+                    </ul>
+                </li>
+                <li><a href="trekking.html">Treks</a></li>
+                <li class="dropdown">
+                    <a href="booking.html">Booking Pages </a>
+                    <ul>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Login/Signup Buttons -->
+        <div class="links-box clearfix">
+            <div class="clearfix">
+                <div class="link">
+                    <a href="login.html" class="theme-btn btn-style-one">
+                        <span>Login <i class="icon far fa-angle-right"></i></span>
+                    </a>
+                </div>
+                <div class="link mt-2">
+                    <a href="signup.html" class="theme-btn btn-style-two">
+                        <span>Sign Up <i class="icon far fa-angle-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Search Bar Section -->
+<div class="search-bar">
+    <div class="search-wrapper">
+        <div class="search-closer">&times;</div>
+        <input type="text" class="search-input" placeholder="Search here...">
+        <button class="search-btn-action"><i class="fa fa-search"></i></button>
+    </div>
+</div>
+
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Select elements
+                const navToggler = document.querySelector('.nav-toggler');
+                const hiddenBar = document.querySelector('.hidden-bar');
+                const hiddenBarCloser = document.querySelector('.hidden-bar-closer');
+
+                const searchBtn = document.querySelector('.search-btn');
+                const searchBar = document.querySelector('.search-bar');
+                const searchCloser = document.querySelector('.search-closer');
+        
+                if (navToggler && hiddenBar && hiddenBarCloser) {
+                    // Open Sidebar
+                    navToggler.addEventListener('click', function (event) {
+                        event.stopPropagation(); // Prevents event bubbling
+                        hiddenBar.classList.add('active');
+                    });
+        
+                    // Close Sidebar
+                    hiddenBarCloser.addEventListener('click', function () {
+                        hiddenBar.classList.remove('active');
+                    });
+        
+                    // Close sidebar when clicking outside (optional)
+                    document.addEventListener('click', function (event) {
+                        if (!hiddenBar.contains(event.target) && !navToggler.contains(event.target)) {
+                            hiddenBar.classList.remove('active');
+                        }
+                    });
+        
+                    // Prevent clicks inside sidebar from closing it
+                    hiddenBar.addEventListener('click', function (event) {
+                        event.stopPropagation();
+                    });
+                }
+
+                // Search bar toggle
+                searchBtn.addEventListener('click', function () {
+                    searchBar.classList.add('active');
+                });
+
+                searchCloser.addEventListener('click', function () {
+                    searchBar.classList.remove('active');
+                });
+
+            });
+        </script>
+    </header>
 	   <!--Search Backdrop-->
 	   <div class="search-backdrop"></div>
 		  
@@ -139,66 +203,7 @@
 	   <div class="menu-backdrop"></div>
    
 	   <!-- Hidden Navigation Bar -->
-	   <section class="hidden-bar">
-		   <!-- Hidden Bar Wrapper -->
-		   <div class="hidden-bar-wrapper">
-			   <div class="hidden-bar-closer"><span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14"><path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path></svg></span></div>
-			   <div class="nav-logo-box">
-				   <div class="logo"><a href="index.html" title="Treker"><img src="images/logo.svg" alt="" title="Treker"></a></div>
-			   </div>
-			   <!-- .Side-menu -->
-			   <div class="side-menu">
-					<ul class="navigation clearfix">
-					   <li><a href="index.html">Home</a>
-						  
-					   </li>
-					   <li class="dropdown"><a href="about.html">About Us</a>
-						   <ul>
-							   <li><a href="team.html">Our Teams</a></li>
-							   
-							   <li><a href="faq.html">FAQs</a></li>
-							   <li><a href="gallery.html">Gallery</a></li>
-						   </ul>
-					   </li>
-					   
-					   <li  class="dropdown" ><a href="destinations.html">Tours</a>
-						   <ul>
-							   <li><a href="#">East Tour</a></li>
-								   <li><a href="#">West Tour</a></li>
-								   <li><a href="#">North Tour</a></li>
-								   <li><a href="#">South Tour</a></li> 
-						   </ul>
-						   
-						   </li>
-						   <li class="dropdown"><a href="trekking.html">Treks</a>
-								
-						   </li>
-					   <li class="dropdown"><a href="booking.html">Booking Pages</a>
-						   <ul>
-							   
-							   
-														   
-							   
-							   <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-							   
-						   </ul>
-					   </li>
-					   <li class="dropdown"><a href="blog.html">Blogs</a>
-						  
-					   </li>
-					   <li><a href="contact.html">Contact</a></li>
-				   </ul>
-			   </div><!-- /.Side-menu -->
-			   
-			   <div class="links-box clearfix">
-				   <div class="clearfix">
-					   <div class="link"><a href="login.html" class="theme-btn btn-style-one"><span>Login<i class="icon far fa-angle-right"></i></span></a></div>
-					   <div class="link"><a href="signup.html" class="theme-btn btn-style-two"><span>Sign Up<i class="icon far fa-angle-right"></i></span></a></div>
-				   </div>
-			   </div>
-		   
-		   </div><!-- / Hidden Bar Wrapper -->
-	   </section>
+	   
 	   <!-- / Hidden Bar -->  
 	  
 	  <!--End Main Header -->
@@ -220,71 +225,83 @@
 								</div>
 								<div class="lower-content">
 									<div class="info">
-										<span class="i-block">Ratangad Fort Trek :</span>
+										<span class="i-block">The Harishchandragad :</span>
 									</div>
-									<h4>Basic Info About Location Ratangad Fort Trek:</h4>
-									<p>Ratangad is situated in the Sahyadri mountains. Ratangad is a magnificent hill fort located near the village of Ratanwadi in Maharashtra, India's Ahmednagar district. Ratangad is around 400 years old; it served as a crucial defensive position for both Mughal and British times. Ratangad has become a popular trekking destination because of its beautiful atmosphere, important historical sites, and challenging tracks.
-                                    </p>
-
-									<blockquote>
-										What Is the Best Time to Visit Ratangad Fort?
-										<span>You can visit anytime throughout the year, but considering the weather, October to March is the best time to go. However, the area has outstanding beauty during the monsoon season (June to September).</sapn>
+									<h4>Basic Info About Location Harishchandragad:</h4>
+									<p>Harishchandragad is located in Maharashtra. district of Ahmednagar. Surrounded by the beautiful scenery of the Western Ghats, this fort is roughly 1,424 meters above sea level.</p>
+                                    <p>In the surrounding region, nature lovers and adventurers can enjoy lush greenery, rolling hills, and flowing waterfalls. The fort's strategic location atop a steep hill provides scenic views of the scenic Sahyadri mountain range and the huge Konkan region.</p>
+                                    <p>Entry to Harishchandragad is primarily via the base village of Pachnai, from where trekkers embark on the Kokankada Trek. For a unique experience in nature, trekkers travel through twirling trails, dense forests, and rocky terrain on their way to the fort.                                    </p>
+                                    <p>Harishchandragad Visitors can explore its ancient temples, caves, and fortifications, each telling a story of ancient eras. From the towering cliffs of Kokankada to the sacred Harishchandreshwar Temple, the fort is a gem of historical and architectural wonders. It's always considered as one of the Instagrammable treks in India.                                    </p>
+									
+                                    <blockquote>
+										What Is the Best Time to Visit Harishchandragad?
+										<span><p>Trekking is permitted here year-round! However, the greatest time to visit is during the post-monsoon season (September to November), when everything is overgrown and beautiful.</p>
+                                        <p><u>Places to Check Out:</u> Look out for the historic Harishchandreshwar Temple, Taramati Peak, Konkan Kada Caves, and Kokankada Cliff as you climb. They're all a part of the journey!</p></span>    
 									</blockquote>
 
-                                    <h4>Locations to Visit in Ratangad Fort:</h4>
+                                    <h4>Places to visit near Harishchandragad :</h4>
                                     <ul class="feature-list">
-                                        <li><b>Ganesh Darwaza:</b> This temple is known as the main entrance of the fort.</li>
-                                        <li><b>Kalyan Darwaza:</b> Offering a glimpse into the region's rich past. Its imposing presence and intricate architecture evoke tales of valor and conquest.</li>
-                                        <li><b>Nedhe (natural hole):</b> Nedhe, or a naturally created hole in a rock, is one of nature's wonders. These holes are the result of wind-induced rock deterioration over millions of years. The size of these holes differs by area.</li>
-                                        <li><b>The historic waterholes and caves.</b></li>
+                                        <li>Malshej Ghat:</li>
+                                        <li>Bhandardara:</li>
+                                        <li>Randha Falls nearby.</li>
+                                        <li>Kalsubai Peak.</li>
                                     </ul>
 
                                     <blockquote>
-                                        Ratangad Fort Backpack:
-                                        <p>Things to Pack for Your Bag When Visiting Ratangad Fort:</p>
+                                        Harishchandragadh Backpack:
+                                        <p>Things to Carry for Harishchandragadh and konkan kada Trekking :</p>
 										
 										<ul class="feature-list text-secondary">
-                                            <li>2-3 Litres of water.</li>
-                                            <li>Luggage packed in a good rucksack, all luggage wrapped properly.</li>
+                                            <li>Comfortable shoes (Avoid sneakers. Try to wear sports shoes with good grip).</li>
+                                            <li>The luggage is packed in a good rucksack, all luggage is wrapped properly.</li>
+                                            <li>Light clothes (avoid shorts; full pants will be helpful to avoid scratches from brushwood).</li>
+                                            <li>A backpack with water (2-3 litres).</li>
                                             <li>Rain Poncho (Rainy Season) / Hoodies / Jacket / Winchester for winter and summer season.</li>
-                                            <li>Wear comfortable clothes during trek; avoid half sleeves shirts & lowers. Keep an extra pair of clothes.</li>
-                                            <li>Sun cap and sunscreen.</li>
                                             <li>Dry snacks / Protein Bar / Electral – energizer drink.</li>
+                                            <li>A flashlight or headlamp.</li>
+                                            <li>Trekking poles (Optional).</li>
                                             <li>Personal first aid and personal medicine if any.</li>
-                                            <li>Torch with extra batteries.</li>
-                                            <li>Trekking shoes with a good grip & socks.</li>
                                             <li>Toiletries (Napkin, Facewash, Tissue, Toilet paper, Sanitizer).</li>
-                                            <li>Trekking Pole.</li>
                                         </ul>
+                                        
 									</blockquote>
 
-                                    <h4>Nearby Places to Visit Ratangad:</h4>
+                                    <h4>Nearby Places to Visit Harishchandragad:</h4>
                                     <div class="location">
-                                        <b>Bhandardara Lake: </b>
-                                        <p>Bhandardara Lake, periodically known as Arthur Lake, is a man-made lake built on the Pravara River by the Wilson Dam. This scenic location is perfect for boating, having a picnic, or just taking in the view. Ratangad Fort is about 12 kilometers from the lake. </p>
-									</div>
-                                    <div class="location">
-                                        <b>Wilson Dam: </b>
-                                        <p>One of Maharashtra's oldest dams, it was built in the early 1900s. From the dam, you may take in the surrounding area's natural beauty and discover its historical significance. The dam is roughly 12 kilometers from Ratangad Fort, situated next to Bhandardara Lake.</p>
-									</div>
-                                    <div class="location">
-                                        <b>Sandhan Valley:</b>
-                                        <p>This valley is renowned for its peaceful surroundings and breathtaking natural beauty. It's an ideal location for hiking, camping, and birding. Ratangad Fort is approximately 2.9 kilometers from the valley.</p>
-									</div>
-                                    <div class="location">
-                                        <b>Amruteshwar Temple:</b>
-                                        <p>Located on the way to Ratangad Fort, this 12th-century shrine honors Lord Shiva. The peaceful atmosphere and detailed carvings of the shrine are well known. The temple is located in Ratanwadi village.</p>
-									</div>
-                                    <div class="location">
-                                        <b>Kalsubai Peak: </b>
-                                        <p>Kalsubai Peak is known as the highest peak in Maharashtra, and the hike is difficult, but the rewards at the summit are worth it. Ratangad Fort is located 11.27 kilometers from Kalsubai Peak.</p>
-									</div>
-                                    <div class="location">
-                                        <b>Randha Falls: </b>
-                                        <p>situated on the Rajur-Bhandardara Road, this waterfall is a hidden gem. It's a beautiful place to chill and take in the sounds of nature.</p>
-									</div>
+                                        <b>Harishchandragad Kedareshwar Cave:</b>
+                                        <p>According to the locals, the temple was constructed in the sixth century inside the Harishchandragad fort by the Kalachuri dynasty. Changdev, one of the greatest philosophers, lived here and composed the well-known text <i>Tatvasaar</i> in the fourteenth century. In the area of the temple are three caverns.</p>
+                                    </div>
 
-                                    
+                                    <div class="location">
+                                        <b>Kedareshwar Temple Harishchandragad:</b>
+                                        <p>This area contains a 5-foot Shiva Lingam in one of its caverns. According to a concept, the four pillars of the Kedareshwar Temple have mythical significance in Hindu mythology in addition to being simple structural elements.
+                                        The four yugas represented by each of these pillars are the <i>Satya, Treta, Dvapara,</i> and <i>Kali</i> yugas.</p>
+                                    </div>
+
+                                    <div class="location">
+                                        <b>Things to Experience on Konkan Kada:</b>
+                                        <p>Konkan Kada is a well-liked tourist attraction situated in Maharashtra, India's Sahyadri mountain region. It is well known for its breathtakingly beautiful surroundings and uphill hiking routes.</p>
+                                        <p>Konkan Kada is famous for its overhang, which provides breathtaking sweeping views of the hills and valleys in the area. Given its location on the edge of the Konkan region, the Marathi term "<i>Konkan Kada</i>" approximately translates to "<i>Konkan's edge</i>".</p>
+                                        <p>In addition to hiking, guests can enjoy camping in the gorgeous surroundings and see breathtaking sunrises and sunsets from Kokankada's vantage point.
+                                            Kokankada is an essential travel destination for adventure seekers, environment lovers, and everyone else hoping to take in the wonder of Maharashtra's Sahyadri highlands.</p>
+                                    </div>
+
+                                    <div class="location">
+                                        <b>Where is Konkan Kada located?</b>
+                                        <p>Konkan Kada is a well-liked tourist attraction situated in Maharashtra, India's Sahyadri mountain region.</p>
+                                    </div>
+
+                                    <div class="location">
+                                        <b>Harishchandragad Taramati Peak:</b>
+                                        <p>Trekking enthusiasts and nature lovers often visit Taramati Peak. There are rocky sections, deep trees, and occasionally steep slopes to negotiate during the hike to Taramati Peak.
+                                        Hikers are rewarded at the top with breathtaking views of the neighbouring valleys and the Western Ghats.</p>
+                                    </div>
+
+                                    <div class="location">
+                                        <b>Can I do the Harishchandragad Sunrise Trek?</b>
+                                        <p>It's advisable to trek with a group of people, especially at night, as there is a high possibility of encountering wild animals.
+                                        Be alert and avoid stepping out alone, especially if you are a beginner.</p>
+                                    </div> 
 
 								</div>
 							</div>
@@ -302,87 +319,75 @@
 							<div class="inner-box">
 								<div class="lower-content">
                                     <div class="border mb-3"></div>
+                                    <h4 class="ml-1 text-secondary">Geographical Information of Harishchandragad:</h4>
 									<ul class="feature-list">
-										<li><b>Ratangad Fort Region:</b> Ratangadh is located in the Western Ghats, Maharashtra.
-                                            Altitude above sea level: around 4,250 feet
-                                        </li>
-                                        <li><b>Altitude above sea level:</b> 
-                                            around 4,250 feet
-                                        </li>
-										<li><b>Trekking length:</b> 
-                                            Around 4 - 5 kilometers (one way)
-                                        </li>
-										<li><b>Trek Time:</b> 
-                                            3 to 4 hours (one way)
-                                        </li>
-										<li><b>Level of difficulty:</b> 
-                                             medium
-                                        </li>
-                                        <li><b>Ratangad Fort Base Village::</b> 
-                                            Ratanwadi Village / Samrad Village.
-                                       </li>
-                                       <li><b>Ratangad Fort Distance from Pune: </b> 
-                                            176 kilometers
-                                        </li>
-									</ul>
+                                        <li><b>Harishchandragad Region:</b> Western Ghats, Maharashtra, India.</li>
+                                        <li><b>Height Above Sea Level:</b> 1,424 meters.</li>
+                                        <li><b>Trek Distance:</b> Around 5 kilometers.</li>
+                                        <li><b>Trek Duration:</b> 4-5 hours.</li>
+                                        <li><b>Difficulty Level:</b> Challenging but doable.</li>
+                                        <li><b>Base Village:</b> Pachnai or Khireshwar (Two available base points).</li>
+                                        <li><b>Harishchandragad Trek Distance from Pune:</b> 162 kilometers.</li>
+                                        <li><b>Harishchandragad Trek Distance from Mumbai:</b> 189 kilometers.</li>
+                                    </ul>
 
                                     <div class="border mb-4"></div>
 
-                                    <h4>Ratangad Fort's historical importance:</h4>
-									<p>Ratangad Fort has a history of transiting for several centuries. Although Ratangad's origins are unexplored, it is believed to have been constructed during the Maratha empire. It is also believed that it was constructed in the 12th century by the Yadava dynasty, which governed the area and is credited with building it originally.</p>
-                                    <p>Like many other forts in Maharashtra, Ratangad was strategically placed to defend itself on a hilltop in the Sahyadri mountain range. This fort was used to control and keep an eye on activity inside the area and manage important trade routes.</p>
-									<p>Ratangad was owned by a string of Maratha rulers throughout history. This fort had strategic importance under Chhatrapati Shivaji Maharaj's rule. To protect his kingdom from intruders, Shivaji Maharaj charged and sustained various forts in the Sahyadri range, notably Ratangad.</p>
-                                    <p>By considering these things, it's clear that Ratangad Fort serves as both a reminder of the area's rich military, cultural, and architectural history and a tribute to its turbulent past. and it continues to attract tourists today due to its scenic beauty and historical significance. </p>  
-                                    
-                                    <div class="gallery-box">
-										<div class="row clearfix">
-											<!-- Column -->
-											<div class="column col-lg-6 col-md-6 col-sm-12">
-												<div class="image">
-													<img src="images/Blogs/RatanFort.jpeg" alt="" />
-												</div>
-											</div>
-											<!-- Column -->
-											<div class="column col-lg-6 col-md-6 col-sm-12">
-												<div class="image">
-													<img src="images/Blogs/RatanFort2.jpg" alt="" />
-												</div>
-											</div>
-										</div>
-									</div>
+                                    <h4>History of Harishchandragad:</h4>
+									<p>Harishchandragad has a long and rich history due to its ancient origins. The Kalachuri dynasty built this ridge fort between the sixth and seventh centuries, during their rule. Its rough landscape has been changed over the years by all of the dynasties and kings that have ruled it.                                    </p>
+                                    <p>Because of the fort's advantageous location, the Marathas and Mughals, two kingdoms that had fought several wars to claim its gorgeous position, wanted to use it as a defence.</p>
+                                        
+                                    <div class="gallery-grid">
+                                        <div class="gallery-item">
+                                                <img src="images/Blogs/Harishchandragad1.jpg" alt="Trekking Adventure">
+                                        </div>
+                                        <div class="gallery-item tall">
+                                                <img src="images/Blogs/Harishchandragad2.jpg" alt="Beach Sunset">   
+                                        </div>
+                                        <div class="gallery-item">
+                                                <img src="images/Blogs/Harishchandragad3.avif" alt="Forest Trail">
+                                        </div>
+                                    </div>
+
+                                    <h4>Real Story of Raja Harishchandra:</h4>
+									<p>Harishchandra was a great and honest ruler who once reigned over the ancient kingdom of Ayodhya. He was recognized throughout the country for his relentless devotion to truth and justice. His rule was marked by wealth, peace, and harmony among his subjects.
+                                    <br/>One day, as King Harishchandra was managing the matters of his kingdom, a thinker named Vishwamitra approached him with a request. Vishwamitra desired shelter in Ayodhya and asked the king's help in performing a big Yagna. King Harish Chandra quickly agreed and committed his whole support to the sage.
+                                    However, at the Yagna, disaster pounded. Vishwamitra put Harishchandra's commitment to truth to the trial by asking that he give up his kingdom, fortune, and family. Harishchandra, resolute in his dedication to honesty, volunteered to sacrifice all without hesitation. He lost his kingdom and fortune, as well as his loving wife, Queen Taramati, and son, Rohitashva.
+                                    <br/>Harishchandra set off on a journey of difficulties and hardships after losing everything. He took on the duty of a common caretaker at a cremation site, where he laboured diligently to support himself and his family. Despite several difficulties and decoys, he maintained his commitment to the truth.
+                                    <br/>Meanwhile, Queen Taramati and Prince Rohitashva found themselves working for Vishwamitra, a cruel and selfish Brahmin. 
+                                    Years passed, and word of King Harishchandra's resolute commitment to truth travelled far and wide. </p>
+                                    <p>Finally, the gods were stirred by Harishchandra's uncompromising purity and devotion. They appeared before him, fixed his empire, and reunited him with his family. The people of Ayodhya were overjoyed at the homecoming of their beloved king and family.</p>
+                                    <p>As a sign of his struggles and accomplishments, King Harishchandra built a magnificent fortress atop a mountain overlooking his empire. This fortification became known as Harishchandragadh, a tribute to the ongoing tradition of truth and justice.
+                                        As time progressed, it became a revered tourism destination, attracting visitors from all over the world seeking spiritual enlightenment and the truth.</p>
+                                    <p>Also, Kokan Kada is an amazing ridge with scenic views of the area that sits atop Harishchandragad. According to mythology, King Harishchandra once stood atop Kokan Kada, looking down at the earth below with gratitude and humbleness.
+                                        Thus, even in the face of hardship, the story of Raja Harishchandra, Harishchandragadh, and Kokan Kada continues to delight listeners and motivate them to seek truth, values, and tireless commitment.</p>
 
                                     <div class="border mb-3"></div>
 
-									<h4>How to Reach Ratangad Fort:</h4>
+									<h4>How to Reach Harishchandragad:</h4>
                                     <div class="location">
-                                        <b>From Pune (180 km):</b>
-                                        <p><u>a) Private transport:</u>
-                                            Travellers can embark on a picturesque journey starting from Pune and heading towards the Pune-Nashik Highway. Upon reaching Sangamner, take a left turn and continue driving straight until arriving at the captivating Randha Waterfall. From there, make a U-turn and proceed along the route until reaching the serene village of Ratanwadi. This route offers travellers a scenic drive through winding roads, with the highlight being the majestic Randha Waterfall, before finally reaching the starting point for the trek to Ratangad Fort.
+                                        <b>Private transport:</b>
+                                        <p><u>a) From Mumbai</u><br/>                                        
+                                            Mumbai - Kalyan - Murbad - Tokawade - Malshej Ghat - Khubi Phata - Pachnai Village
                                         </p>
-                                        <p><u>b) Public Transport:</u>
-                                           For travelers starting from Pune, the journey to Ratangad Fort begins by boarding a Nashik-bound bus from Shivajinagar. Upon reaching Sangamner, alight from the bus and avail of the local jeep services to continue onward to Ratanwadi village. These jeeps provide a convenient mode of transportation for reaching the base village of Ratangad Fort, ensuring a seamless transition from the bus journey to the trekking adventure that lies ahead.
+                                        <p><u>b) From Pune</u><br/>
+                                            Pune - Sangamner - Akole - Ratanwadi Village
                                         </p>
+                                        <p><u>c) From Nashik</u><br/>
+                                            Nashik City - Ghoti - Bari Village.
+                                         </p>
 									</div>
 
                                     <div class="location">
-                                        <b>From Mumbai (220 kilometres): </b>
-                                        <p><u>a) Private transport:</u>                                          
-                                            To reach the base village of Ratangad Fort, Ratanwadi Village, travelers can follow the Mumbai-Nashik Highway. Upon reaching Ghoti, take a right turn and continue driving until reaching Ratanwadi. This route provides a straightforward path to the starting point for exploring Ratangad Fort, ensuring a smooth journey for adventurers eager to embark on their trekking expedition.
+                                        <b>Public transport:</b>
+                                        <p><u>a) Nearest Railway Station: </u>
+                                            If you want to travel by railway then The nearest major railway station is Kalyan. From Kalyan, you can take a cab or take a state transport bus to Khireshwar village, which is the base village for the Harishchandragad trek. Or, you can take a train to Khopoli station and then take a cab or take a bus to Khireshwar village. This railway station is around 90 km from the Harishchandragad base village of Khireshwar.  
                                         </p>
-                                        <p><u>b) Public Transport:</u>
-                                            Travelers can begin their journey to Ratangad Fort by taking a local train from Chhatrapati Shivaji Maharaj Terminus (CSMT) to Kasara. Upon arrival at Kasara, local jeeps are available to transport visitors to Ratangad Fort. This convenient mode of transportation ensures a seamless transition from the train journey to the adventure awaiting at Ratangad Fort.
+                                        <p><u>b) Nearest Airport:</u>
+                                            Pune Airport, which is around 120 km from Khireshwar.
                                         </p>
 									</div>
                                     
-                                    <div class="location">
-                                        <p><u>Nearest Airport:</u>
-                                            Pune Airport or Chhatrapati Shivaji Maharaj International Airport in Mumbai.
-                                        </p>
-                                        <p><u>Nearest Railwaystation: </u>
-                                            Kasara Railwaystation or Igatpuri Railway Station. 
-                                        </p>
-
-									</div>
 									
 									
 								</div>
@@ -400,6 +405,195 @@
 			
 		</div>
 	</section>
+
+    <!-- FAQ -->
+    <section class="faq-one alternate">
+        <div class="auto-container">
+            <div class="title-box centered">
+                <h2><span>Most Frequent Questions</span></h2>
+            </div>
+            <div class="row clearfix">
+                <!--Text Col-->
+                <div class="text-col col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="accordion-box clearfix">
+                            <!--Block-->
+                            <div class="accordion block active-block">
+                                <div class="acc-btn active">Do I need permission for the Harishchandragad Fort Trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">No, permission is not needed for the trek.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Is camping allowed on the Harishchandragad Fort Trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Yes, camping is allowed at designated spots and the base village.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Are there water sources on the Harishchandragad Fort trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">There are some natural water sources, but it’s recommended to carry your own water.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Is there food available on the Harishchandragad Fort trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Yes, local food facilities are available at the base village.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Is the Harishchandragad Fort Trek difficult? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">It's a moderate-level trek, suitable for beginners with basic fitness.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Are there any wild animals on the Harishchandragad Fort trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Possibly yes, so keep an eye out and take necessary precautions.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Are there changing rooms available at Harishchandragad? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Yes, basic facilities are available at the base village.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Are there any entry charges for the Harishchandragad trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">No, there are no specific entry charges for trekking.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Text Col-->
+                <div class="text-col col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="accordion-box clearfix">
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Where is Harishchandragad Fort located? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Located in Maharashtra, India, about 200 km between Pune and Mumbai.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Can the Harishchandragad Fort trek be done alone? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">It’s safer to trek with friends, but experienced trekkers can go solo.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">What is the best time to do the Harishchandragad Fort trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">The best time to visit is post-monsoon or winter.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">What is the highest altitude of Harishchandragad Fort? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">The peak is about 1,424 meters high.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Where does the Harishchandragad Fort trek start? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">The trek starts from the base villages – Pachnai or Khireshwar.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Can we do the Harishchandragad Fort trek at night? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Night treks are possible, but daytime trekking is safer.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Is there a mobile network at Harishchandragad Fort? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">There is limited network coverage depending on the area.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Are ATMs available at Harishchandragad Fort? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">No, ATMs are not available, so carry cash.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Are washrooms available at Harishchandragad Fort? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Basic washroom facilities are available at the base village.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Is parking available for the Harishchandragad trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Yes, parking is available at the base village with minimal charges.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
 	
 	
     <!--Main Footer-->

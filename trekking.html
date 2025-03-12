@@ -14,6 +14,105 @@
 <link href="css/responsive.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]--> 
 
+<style>
+    /* Trek Card */
+.trek-block-one {
+    width: 22%; /* Ensures 4 cards in a row */
+    background: #fff;
+    border-radius: 10px; /* Reduced size */
+    padding: 15px; /* Reduced padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.4s ease;
+    margin: 30px 20px;
+    text-align: center;
+}
+
+.trek-block-one:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.trek-block-one a {
+    text-decoration: none;
+}
+
+/* Image Box */
+.image-box img {
+    width: 100%;
+    height: 190px; /* Reduced height */
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.image-box img:hover {
+    transform: scale(1.05);
+}
+
+/* Info Box */
+.info {
+    font-size: 14px; /* Smaller font */
+    font-weight: 600;
+    padding: 6px;
+    margin-top: 8px;
+    border-radius: 4px;
+    /* margin-bottom: 30px; */
+}
+
+/* Title & Button */
+.lower-content h4 {
+    font-size: 16px; /* Proper font size */
+    font-weight: 600;
+    margin: 12px 0;
+    color: #10221B;
+    transition: color 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+/* Hover Effect */
+.lower-content h4:hover {
+    color: #1DC5CE;
+}
+
+.theme-btn {
+    color: #1DC5CE; /* Initial text color */
+    background: transparent; /* No background initially */
+    padding: 6px 12px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    border: 2px solid #1DC5CE; /* Border color */
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+    font-size: 14px; /* Button text size */
+    font-weight: 600; /* Bold font */
+}
+
+.theme-btn:hover {
+    background: #1DC5CE; /* Hover background */
+    color: white; /* White text on hover */
+    border-color: #1DC5CE; /* Keep border same */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .trek-block-one {
+        width: 20%; /* 3 cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .trek-block-one {
+        width: 30%; /* 2 cards per row */
+        margin: 20px  30px 30px 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .trek-block-one {
+        width: 90%; /* 1 card per row on mobile */
+    }
+}
+
+</style>
 </head>
 
 
@@ -26,111 +125,177 @@
       <div class="search-backdrop"></div>
       
       <!-- Main Header-->
-       <header class="main-header">
-          <div class="header-top">
-              <div class="auto-container">
-                  <div class="inner clearfix">
-                      <div class="top-left clearfix">
-                          <ul class="info clearfix">
-                              <li><i class="icon fa fa-envelope"></i> <a href="mailto:bookandexplore@gmail.com">bookandexplore@gmail.com</a></li>
-                              <li><i class="icon fa fa-phone-circle"></i> <a href="tel:+91 8888840295">+91 8888840295</a></li>
-                                 </ul>
-                      </div>
-                      <div class="top-right clearfix">
-                          <div class="lang-box">
-                              
-                          </div>
-                          <div class="login"><i class="icon fa fa-user"></i> <a href="login.html">SIGN IN</a></div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <!-- Header Upper -->
-          <div class="header-upper">        
-              <div class="auto-container">
-                  <!-- Main Box -->
-                  <div class="main-box clearfix">
-                      <!--Logo-->
-                      <div class="logo-box">
-                           <div class="logo"><a href="index.html" title="Treker"><img src="images/logo.svg" alt="" title="Treker"></a></div>
-                      </div>
-  
-                      <div class="nav-box clearfix">
-                          <!--Nav Outer-->
-                          <div class="nav-outer clearfix">         
-                              <nav class="main-menu">
-                                  <ul class="navigation clearfix">
-                                      <li ><a href="index.html">Home</a>                                       
-                                      </li>
-                                      <li class="dropdown"><a href="about.html">About Us</a>
-                                          <ul>
-                                              <li><a href="team.html">Our Teams</a></li>
-                                              
-                                              <li><a href="faq.html">FAQs</a></li>
-                                              <li><a href="gallery.html">Gallery</a></li>
-                                          </ul>
-                                      </li>
-                                       
-                                      <li  class="dropdown" ><a href="destinations.html">Tours</a>
-                                      <ul>
-                                          <li><a href="#">East Tour</a></li>
-                                              <li><a href="#">West Tour</a></li>
-                                              <li><a href="#">North Tour</a></li>
-                                              <li><a href="#">South Tour</a></li> 
-                                      </ul>
-                                      
-                                      </li>
-                                      <li class="dropdown"><a href="trekking.html">Treks</a>
-                                          
-                                      </li>
-                                      <li class="dropdown"><a href="booking.html">Booking Pages</a>
-                                          <ul> 
-                                              <li><a href="terms-conditions.html">Terms & Conditions</a></li> 
-                                          </ul>
-                                      </li>
-                                      <li class="dropdown"><a href="blog.html">Blogs</a>
-                                        
-                                      </li>
-                                      <li><a href="contact.html">Contact</a></li>
-                                  </ul>
-                              </nav>
-                              <!-- Main Menu End-->
-                          </div>
-                          <!--Nav Outer End-->
-  
-                          <div class="links-box clearfix">
-                              <div class="link search-btn search-toggle"><span class="icon far fa-search"></span></div>
-                              <div class="link fav-btn"><a href="#"><span class="icon far fa-heart"></span><span class="count">02</span></a></div>
-                               </div>
-  
-                          <!-- Hidden Nav Toggler -->
-                          <div class="nav-toggler">
-                              <button class="hidden-bar-opener"><span class="icon"><img src="images/icons/menu-icon.svg" alt=""></span></button>
-                          </div>
-  
-                      </div>
-  
-                      <!-- End Header Upper -->
-                      <div class="search-box">
-                          <div class="outer-container">
-                              <div class="inner-box">
-                                  <div class="form-box">
-                                      <div class="s-close-btn"><span class="icon far fa-times"></span></div>
-                                      <span class="s-icon fa fa-search"></span>
-                                      <form method="post" action="index.html">
-                                          <div class="form-group">
-                                              <input type="search" name="search" value="" placeholder="Search Here" required="">
-                                          </div>
-                                      </form>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-  
-                  </div>
-              </div>
-          </div>
-      </header>
+      <header class="main-header">
+        <div class="header-upper container-fluid">
+            
+            <div class="logo-nav">
+                <!-- Logo -->
+                <a href="index.html"><img src="images/logo.svg" alt="Logo" style="height: 50px;"></a>
+    
+                 <!-- Navigation -->
+                <nav class="main-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="about.html">About Us</a>
+                            <!-- <ul>
+                                <li><a href="team.html">Our Teams</a></li>
+                                <li><a href="faq.html">FAQs</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                            </ul> -->
+                        </li>
+                        <li class="dropdown">
+                            <a href="destinations.html">Tours</a>
+                            <ul>
+                                <li><a href="#">East Tour</a></li>
+                                <li><a href="#">West Tour</a></li>
+                                <li><a href="#">North Tour</a></li>
+                                <li><a href="#">South Tour</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="trekking.html">Treks</a></li>
+                        <li class="dropdown">
+                            <a href="booking.html">Booking Pages</a>
+                            <ul>
+                                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="blog.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+            <!-- Icons: Search & Sign In -->
+            <div class="nav-icons">
+                    <div class="link search-btn search-toggle"><i class="far fa-search"></i></div>
+                    <a href="login.html"><i class="fa fa-user"></i> SIGN IN</a>  
+                    <!-- Mobile Menu Button -->
+                    <div class="nav-toggler">
+                        <i class="fas fa-bars"></i>
+                    </div>
+            </div>
+        
+        </div>
+    
+        <!-- Hidden Navigation Bar -->
+<section class="hidden-bar">
+    <div class="hidden-bar-wrapper">
+        <!-- Close Button -->
+        <div class="hidden-bar-closer">
+            <span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14">
+                <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+            </svg></span>
+        </div>
+
+        <!-- Logo -->
+        <div class="nav-logo-box">
+            <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="Treker"></a></div>
+        </div>
+
+        <!-- Side Menu -->
+        <div class="side-menu">
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="destinations.html">Tours </a>
+                    <ul>
+                        <li><a href="#">East Tour</a></li>
+                        <li><a href="#">West Tour</a></li>
+                        <li><a href="#">North Tour</a></li>
+                        <li><a href="#">South Tour</a></li>
+                    </ul>
+                </li>
+                <li><a href="trekking.html">Treks</a></li>
+                <li class="dropdown">
+                    <a href="booking.html">Booking Pages </a>
+                    <ul>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Login/Signup Buttons -->
+        <div class="links-box clearfix">
+            <div class="clearfix">
+                <div class="link">
+                    <a href="login.html" class="theme-btn btn-style-one">
+                        <span>Login <i class="icon far fa-angle-right"></i></span>
+                    </a>
+                </div>
+                <div class="link mt-2">
+                    <a href="signup.html" class="theme-btn btn-style-two">
+                        <span>Sign Up <i class="icon far fa-angle-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Search Bar Section -->
+<div class="search-bar">
+    <div class="search-wrapper">
+        <div class="search-closer">&times;</div>
+        <input type="text" class="search-input" placeholder="Search here...">
+        <button class="search-btn-action"><i class="fa fa-search"></i></button>
+    </div>
+</div>
+
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Select elements
+                const navToggler = document.querySelector('.nav-toggler');
+                const hiddenBar = document.querySelector('.hidden-bar');
+                const hiddenBarCloser = document.querySelector('.hidden-bar-closer');
+
+                const searchBtn = document.querySelector('.search-btn');
+                const searchBar = document.querySelector('.search-bar');
+                const searchCloser = document.querySelector('.search-closer');
+        
+                if (navToggler && hiddenBar && hiddenBarCloser) {
+                    // Open Sidebar
+                    navToggler.addEventListener('click', function (event) {
+                        event.stopPropagation(); // Prevents event bubbling
+                        hiddenBar.classList.add('active');
+                    });
+        
+                    // Close Sidebar
+                    hiddenBarCloser.addEventListener('click', function () {
+                        hiddenBar.classList.remove('active');
+                    });
+        
+                    // Close sidebar when clicking outside (optional)
+                    document.addEventListener('click', function (event) {
+                        if (!hiddenBar.contains(event.target) && !navToggler.contains(event.target)) {
+                            hiddenBar.classList.remove('active');
+                        }
+                    });
+        
+                    // Prevent clicks inside sidebar from closing it
+                    hiddenBar.addEventListener('click', function (event) {
+                        event.stopPropagation();
+                    });
+                }
+
+                // Search bar toggle
+                searchBtn.addEventListener('click', function () {
+                    searchBar.classList.add('active');
+                });
+
+                searchCloser.addEventListener('click', function () {
+                    searchBar.classList.remove('active');
+                });
+
+            });
+        </script>
+    </header>
+
        <!--Search Backdrop-->
        <div class="search-backdrop"></div>
           
@@ -138,66 +303,7 @@
        <div class="menu-backdrop"></div>
    
        <!-- Hidden Navigation Bar -->
-       <section class="hidden-bar">
-           <!-- Hidden Bar Wrapper -->
-           <div class="hidden-bar-wrapper">
-               <div class="hidden-bar-closer"><span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14"><path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path></svg></span></div>
-               <div class="nav-logo-box">
-                   <div class="logo"><a href="index.html" title="Treker"><img src="images/logo.svg" alt="" title="Treker"></a></div>
-               </div>
-               <!-- .Side-menu -->
-               <div class="side-menu">
-                    <ul class="navigation clearfix">
-                       <li><a href="index.html">Home</a>
-                          
-                       </li>
-                       <li class="dropdown"><a href="about.html">About Us</a>
-                           <ul>
-                               <li><a href="team.html">Our Teams</a></li>
-                               
-                               <li><a href="faq.html">FAQs</a></li>
-                               <li><a href="gallery.html">Gallery</a></li>
-                           </ul>
-                       </li>
-                       
-                       <li  class="dropdown" ><a href="destinations.html">Tours</a>
-                           <ul>
-                               <li><a href="#">East Tour</a></li>
-                                   <li><a href="#">West Tour</a></li>
-                                   <li><a href="#">North Tour</a></li>
-                                   <li><a href="#">South Tour</a></li> 
-                           </ul>
-                           
-                           </li>
-                           <li class="dropdown"><a href="trekking.html">Treks</a>
-                                
-                           </li>
-                       <li class="dropdown"><a href="booking.html">Booking Pages</a>
-                           <ul>
-                               
-                               
-                                                           
-                               
-                               <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                               
-                           </ul>
-                       </li>
-                       <li class="dropdown"><a href="blog.html">Blogs</a>
-                           
-                       </li>
-                       <li><a href="contact.html">Contact</a></li>
-                   </ul>
-               </div><!-- /.Side-menu -->
-               
-               <div class="links-box clearfix">
-                   <div class="clearfix">
-                       <div class="link"><a href="login.html" class="theme-btn btn-style-one"><span>Login<i class="icon far fa-angle-right"></i></span></a></div>
-                       <div class="link"><a href="signup.html" class="theme-btn btn-style-two"><span>Sign Up<i class="icon far fa-angle-right"></i></span></a></div>
-                   </div>
-               </div>
-           
-           </div><!-- / Hidden Bar Wrapper -->
-       </section>
+      
        <!-- / Hidden Bar -->  
       
        
@@ -242,58 +348,54 @@
                         <li class="filter" data-role="button" data-filter=".difficult">Difficult</li>
                     </ul>
                 </div>
-                <div class="filter-list row clearfix">
+                <div class="filter-list row justify-content-center">
+                    
                     <!--Block-->
-                    <div class="trek-block-one style-two mix all moderate m-difficult col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box">
+                    <div class="trek-block-one style-two col-xl-3 col-lg-4 col-md-4 col-sm-12">
+                        <div class="inner-box text-center">
                             <div class="image-box">
                                 <div class="image"><a href="#"><img src="images/resource/f-image-1.jpg" alt="" title=""></a></div>
-                                 
-                                 
-                                <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i>1 Day </span> &ensp; | &ensp; <span class="i-block"> ₹1300 </span> Pune
+                                <div class="info" style="background-color: rgb(75, 194, 207);">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
                                 </div>
                             </div>
                             <div class="lower-content">
-                                <h4><a href="sudhagad_Trek.html">Sudhagad Trek</a></h4>
-                                
+                                <h4><a href="sudhagad_Trek.html">Sudhagad Trek</a></h4>  
                             </div>
-                            <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="sudhagad_Trek.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
+                            <div class="bottom-box">
+                                <div class="more-link"><a href="sudhagad_Trek.html" class="theme-btn"><span>View Details </span></a></div>
                             </div>
                         </div>
                     </div>
+
                       <!--Block-->
-                      <div class="trek-block-one style-two mix all moderate m-difficult col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box">
+                      <div class="trek-block-one style-two  col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <div class="inner-box text-center">
                             <div class="image-box">
                                 <div class="image"><a href="#"><img src="images/resource/f-image-2.jpg" alt="" title=""></a></div>
-                                 
-                                 
-                                <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i>1 Day </span> &ensp; | &ensp; <span class="i-block"> ₹1300 </span> Pune
+                                <div class="info" style="background-color: rgb(75, 194, 207);">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
                                 </div>
                             </div>
                             <div class="lower-content">
                                 <h4><a href="naneghat_trek.html">Naneghat Trek</a></h4>
                                 
                             </div>
-                            <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="naneghat_trek.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
+                            <div class="bottom-box ">
+                                <div class="more-link"><a href="naneghat_trek.html" class="theme-btn"><span>View Details </span></a></div>
+                                
                             </div>
                         </div>
                     </div>
                     <!--Block-->
                     <div class="trek-block-one style-two mix all moderate m-difficult col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box">
+                        <div class="inner-box text-center">
                             <div class="image-box">
                                 <div class="image"><a href="#"><img src="images/resource/f-image-3.jpg" alt="" title=""></a></div>
                                  
                                  
-                                <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i>1 Day </span> &ensp; | &ensp; <span class="i-block"> ₹1400 </span> Pune
+                                <div class="info" style="background-color: rgb(75, 194, 207);">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
                                 </div>
                             </div>
                             <div class="lower-content">
@@ -301,8 +403,8 @@
                                 
                             </div>
                             <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="packages.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
+                                <div class="more-link"><a href="packages.html" class="theme-btn"><span>View Details</span></a></div>
+                               
                             </div>
                         </div>
                     </div>
@@ -315,8 +417,8 @@
                             <div class="image-box">
                                 <div class="image"><a href="andhaban_Trek.html"><img src="images/resource/f-image-4.jpg" alt="" title=""></a></div>
                                 
-                                <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day </span> &ensp; | &ensp; <span class="i-block">₹1550</span> Mumbai
+                                <div class="info" style="background-color: rgb(75, 194, 207);">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
                                 </div>
                             </div>
                             <div class="lower-content">
@@ -324,8 +426,8 @@
                                 
                             </div>
                             <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="andhaban_Trek.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
+                                <div class="more-link"><a href="andhaban_Trek.html" class="theme-btn"><span>View Details</span></a></div>
+                                
                             </div>
                         </div>
                     </div>
@@ -336,16 +438,16 @@
                             <div class="image-box">
                                 <div class="image"><a href="bhorgir.html"><img src="images/resource/f-image-3.jpg" alt="" title=""></a></div>
                                 
-                                <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp; <span class="i-block">₹1200 </span>
+                                <div class="info" style="background-color: rgb(75, 194, 207);">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
                                 </div>
                             </div>
                             <div class="lower-content">
                                 <h4><a href="bhorgir.html">Bhimashankar to Bhorgiri Trek</a></h4>
                             </div>
                             <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="bhorgir.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
+                                <div class="more-link"><a href="bhorgir.html" class="theme-btn"><span>View Details </span></a></div>
+                               
                             </div>
                         </div>
                     </div>
@@ -356,8 +458,8 @@
                             <div class="image-box">
                                 <div class="image"><a href="#"><img src="images/resource/f-image-4.jpg" alt="" title=""></a></div>
                                  
-                                <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp; <span class="i-block"> ₹1300</span>  Pune
+                                <div class="info" style="background-color: rgb(75, 194, 207);">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
                                 </div>
                             </div>
                             <div class="lower-content">
@@ -365,8 +467,8 @@
                                  
                             </div>
                             <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="devkund.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
+                                <div class="more-link"><a href="devkund.html" class="theme-btn"><span>View Details </span></a></div>
+                                
                             </div>
                         </div>
                     </div>
@@ -377,16 +479,16 @@
                             <div class="image-box">
                                 <div class="image"><a href="#"><img src="images/resource/f-image-5.jpg" alt="" title=""></a></div>
                                
-                                <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day </span> &ensp; | &ensp; <span class="i-block">₹1200</span> Pune
+                                <div class="info" style="background-color: rgb(75, 194, 207);">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
                                 </div>
                             </div>
                             <div class="lower-content">
                                 <h4><a href="Harishchandragad.html">Harishchandragad Trek</a></h4>        
                             </div>
                             <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="Harishchandragad.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
+                                <div class="more-link"><a href="Harishchandragad.html" class="theme-btn"><span>View Details </span></a></div>
+                                
                             </div>
                         </div>
                     </div>
@@ -397,8 +499,8 @@
                             <div class="image-box">
                                 <div class="image"><a href="Kalsubai_trek.html"><img src="images/resource/f-image-6.jpg" alt="" title=""></a></div>
                                  
-                                <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day </span> &ensp; | &ensp; <span class="i-block">₹ 1200</span>
+                                <div class="info" style="background-color: rgb(75, 194, 207);">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
                                 </div>
                             </div>
                             <div class="lower-content">
@@ -406,19 +508,20 @@
                                 
                             </div>
                             <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="Kalsubai_trek.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
+                                <div class="more-link"><a href="Kalsubai_trek.html" class="theme-btn"><span>View Details </span></a></div>
+                                
                             </div>
                         </div>
                     </div>
+
                  <!-- Block start edit -->
                  <div class="trek-block-one style-two mix all easy-m  col-xl-3 col-lg-6 col-md-6 col-sm-12">
                     <div class="inner-box">
                         <div class="image-box">
                             <div class="image"><a href="kalu_Waterfall_Trek.html"><img src="images/resource/f-image-7.jpg" alt="" title=""></a></div>
                             
-                            <div class="info">
-                                <span class="i-block"><i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp; <span class="i-block">₹ 1300</span>
+                            <div class="info" style="background-color: rgb(75, 194, 207);">
+                                <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
                             </div>
                         </div>
                         <div class="lower-content">
@@ -426,8 +529,8 @@
                         
                         </div>
                         <div class="bottom-box clearfix">
-                            <div class="more-link"><a href="kalu_Waterfall_Trek.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                            <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
+                            <div class="more-link"><a href="kalu_Waterfall_Trek.html" class="theme-btn"><span>View Details </span></a></div>
+                            
                         </div>
                     </div>
                 </div>
@@ -438,8 +541,8 @@
                         <div class="image-box">
                             <div class="image"><a href="kataldhara_trek.html"><img src="images/resource/f-image-8.jpg" alt="" title=""></a></div>
                              
-                            <div class="info">
-                                <span class="i-block"><i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp; <span class="i-block">₹ 1200</span>
+                            <div class="info" style="background-color: rgb(75, 194, 207);">
+                                <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
                             </div>
                         </div>
                         <div class="lower-content">
@@ -448,8 +551,8 @@
                              
                         </div>
                         <div class="bottom-box clearfix">
-                            <div class="more-link"><a href="kataldhara_trek.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                            <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
+                            <div class="more-link"><a href="kataldhara_trek.html" class="theme-btn"><span>View Details </span></a></div>
+                            
                         </div>
                     </div>
                 </div>
@@ -460,16 +563,16 @@
                         <div class="image-box">
                             <div class="image"><a href="kothaligad_trek.html"><img src="images/resource/f-image-9.jpg" alt="" title=""></a></div>
                              
-                            <div class="info">
-                                <span class="i-block"><i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp; <span class="i-block">₹ 1200</span>
+                            <div class="info" style="background-color: rgb(75, 194, 207);">
+                                <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
                             </div>
                         </div>
                         <div class="lower-content">
                             <h4><a href="kothaligad_trek.html">  Kothaligad Fort Trek</a></h4>                             
                         </div>
                         <div class="bottom-box clearfix">
-                            <div class="more-link"><a href="kothaligad_trek.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                            <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
+                            <div class="more-link"><a href="kothaligad_trek.html" class="theme-btn"><span>View Details </span></a></div>
+                            
                         </div>
                     </div>
                 </div>
@@ -480,16 +583,16 @@
                         <div class="image-box">
                             <div class="image"><a href="lingya_Waterfall_Trek.html"><img src="images/resource/f-image-10.jpg" alt="" title=""></a></div>
                             
-                            <div class="info">
-                                <span class="i-block"><i class="icon far fa-clock"></i> 1 day </span> &ensp; | &ensp; <span class="i-block">₹ 1200</span>
+                            <div class="info" style="background-color: rgb(75, 194, 207);">
+                                <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
                             </div>
                         </div>
                         <div class="lower-content">
                             <h4><a href="lingya_Waterfall_Trek.html">Lingya Waterfall Trek</a></h4>
                         </div>
                         <div class="bottom-box clearfix">
-                            <div class="more-link"><a href="lingya_Waterfall_Trek.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                            <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
+                            <div class="more-link"><a href="lingya_Waterfall_Trek.html" class="theme-btn"><span>View Details </span></a></div>
+                            
                         </div>
                     </div>
                 </div>
@@ -500,8 +603,8 @@
                         <div class="image-box">
                             <div class="image"><a href="mruggad_Fort_Trek.html"><img src="images/resource/f-image-11.jpg" alt="" title=""></a></div>
                              
-                            <div class="info">
-                                <span class="i-block"><i class="icon far fa-clock"></i> 1 day </span> &ensp; | &ensp; <span class="i-block">₹ 1200</span>
+                            <div class="info" style="background-color: rgb(75, 194, 207);">
+                                <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
                             </div>
                         </div>
                         <div class="lower-content">
@@ -509,8 +612,8 @@
                             
                             
                         <div class="bottom-box clearfix">
-                            <div class="more-link"><a href="mruggad_Fort_Trek.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                            <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
+                            <div class="more-link"><a href="mruggad_Fort_Trek.html" class="theme-btn"><span>View Details </span></a></div>
+                           
                         </div>
                     </div>
                 </div>
@@ -521,8 +624,8 @@
             <div class="image-box">
                 <div class="image"><a href="Nanemachi_trek.html"><img src="images/resource/f-image-13.jpg" alt="" title=""></a></div>
                
-                <div class="info">
-                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day </span> &ensp; | &ensp; <span class="i-block">₹ 1300</span>
+                <div class="info" style="background-color: rgb(75, 194, 207);">
+                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
                 </div>
             </div>
             <div class="lower-content">
@@ -531,8 +634,8 @@
                  
             </div>
             <div class="bottom-box clearfix">
-                <div class="more-link"><a href="Nanemachi_trek.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
+                <div class="more-link"><a href="Nanemachi_trek.html" class="theme-btn"><span>View Details</span></a></div>
+               
             </div>
         </div>
     </div>
@@ -543,8 +646,8 @@
             <div class="image-box">
                 <div class="image"><a href="peb_Fort_Trek.html"><img src="images/resource/f-image-14.jpg" alt="" title=""></a></div>
                
-                <div class="info">
-                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day </span> &ensp; | &ensp; <span class="i-block">₹ 1300</span>
+                <div class="info" style="background-color: rgb(75, 194, 207);">
+                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
                 </div>
             </div>
             <div class="lower-content">
@@ -552,8 +655,8 @@
                  
                 
             <div class="bottom-box clearfix">
-                <div class="more-link"><a href="peb_Fort_Trek.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
+                <div class="more-link"><a href="peb_Fort_Trek.html" class="theme-btn"><span>View Details </span></a></div>
+               
             </div>
         </div>
      </div>
@@ -565,16 +668,16 @@
             <div class="image-box">
                 <div class="image"><a href="raigad_Trek.html"><img src="images/resource/f-image-15.jpg" alt="" title=""></a></div>
                 
-                <div class="info">
-                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp; <span class="i-block">₹ 1200</span>
+                <div class="info" style="background-color: rgb(75, 194, 207);">
+                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
                 </div>
             </div>
             <div class="lower-content">
                 <h4><a href="raigad_Trek.html">Raigad Trek</a></h4>
                                      
             <div class="bottom-box clearfix">
-                <div class="more-link"><a href="raigad_Trek.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
+                <div class="more-link"><a href="raigad_Trek.html" class="theme-btn"><span>View Details </span></a></div>
+                
             </div>
         </div>
      </div>
@@ -586,8 +689,8 @@
             <div class="image-box">
                 <div class="image"><a href="rajgad_trek.html"><img src="images/resource/f-image-16.jpg" alt="" title=""></a></div>
                
-                <div class="info">
-                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day </span> &ensp; | &ensp; <span class="i-block">₹ 1200</span>
+                <div class="info" style="background-color: rgb(75, 194, 207);">
+                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
                 </div>
             </div>
             <div class="lower-content">
@@ -595,28 +698,28 @@
                  
                  
             <div class="bottom-box clearfix">
-                <div class="more-link"><a href="rajgad_Trek.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
+                <div class="more-link"><a href="rajgad_Trek.html" class="theme-btn"><span>View Details </span></a></div>
+                
             </div>
         </div>
      </div>
      
     </div>
     <!-- block -->
-    <div class="trek-block-one style-two mix all moderate m-difficult col-xl-3 col-lg-6 col-md-6 col-sm-12">
+    <div class="trek-block-one style-two  col-xl-3 col-lg-6 col-md-6 col-sm-12">
         <div class="inner-box">
             <div class="image-box">
                 <div class="image"><a href="ratangad _Fort_Trek.html"><img src="images/resource/f-image-17.jpg" alt="" title=""></a></div>
                 <div class="price"><span> </span></div>
-                <div class="info">
-                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp; <span class="i-block">₹ 1300</span>
+                <div class="info" style="background-color: rgb(75, 194, 207);">
+                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
                 </div>
             </div>
             <div class="lower-content">
                 <h4><a href="ratangad _Fort_Trek.html">Ratangad Fort</a></h4>                            
             <div class="bottom-box clearfix">
-                <div class="more-link"><a href="ratangad _Fort_Trek.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
+                <div class="more-link"><a href="ratangad _Fort_Trek.html" class="theme-btn"><span>View Details </span></a></div>
+                
             </div>
         </div>
      </div>
@@ -633,52 +736,7 @@
     </section>
 
     <!-- Facts Section -->
-    <section class="facts-section">
-        <div class="image-layer" style="background-image: url(images/background/image-6.jpg);"></div>
-        <div class="auto-container">
-            <div class="content-box">
-                <div class="video-btn"><a href="https://youtube.com/@bookandexplore?si=ck-Akk6sg5lSflxe" class="theme-btn lightbox-image"><span class="icon"><img src="images/icons/video-icon-2.svg" alt="" title=""></span></a></div>
-                <div class="subtitle">Are you ready to travel?</div>
-                <h2>bookandexplore is a Maharashtra Leading Online Tour Booking Platform</h2>
-            </div>
-        </div>
-        <div class="facts-box">
-            <div class="auto-container">
-                <div class="inner-box">
-                    <div class="row clearfix">
-                        <!--Block-->
-                        <div class="fact-block col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                            <div class="inner">
-                                <div class="count"><span class="odometer" data-count="346"></span>+</div>
-                                <div class="fact-title"><span>Tours</span></div>
-                            </div>
-                        </div>
-                        <!--Block-->
-                        <div class="fact-block col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                            <div class="inner">
-                                <div class="count"><span class="odometer" data-count="02"></span>M+</div>
-                                <div class="fact-title"><span>Followers</span></div>
-                            </div>
-                        </div>
-                        <!--Block-->
-                        <div class="fact-block col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                            <div class="inner">
-                                <div class="count"><span class="odometer" data-count="100"></span>k+</div>
-                                <div class="fact-title"><span>Happy Faces</span></div>
-                            </div>
-                        </div>
-                        <!--Block-->
-                        <div class="fact-block col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                            <div class="inner">
-                                <div class="count"><span class="odometer" data-count="50"></span>+</div>
-                                <div class="fact-title"><span>Tour Captions</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   
     <!--End Facts Section -->
 
     <!--FAQs Section-->
@@ -756,13 +814,13 @@
                     </div>
                 </div>
                 <!--Image Col-->
-                <div class="image-col col-lg-6 col-md-12 col-sm-12">
+                <!-- <div class="image-col col-lg-6 col-md-12 col-sm-12">
                     <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <div class="image-box">
                             <img src="images/resource/faq-image-1.svg" alt="" title="">
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>

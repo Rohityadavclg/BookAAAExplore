@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Now</title>
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="css/responsive.css" rel="stylesheet">
+
+</head>
+<body>
+    <section class="booking-card">
+      <div class="inner-box">
+        <div class="booking-header"><a href="#">BOOK NOW</a></div>
+        <!-- Dynamic Booking Price -->
+        <div class="booking-price"></div>
+        <ul class="booking-features">
+            <li><i class="fas fa-star"></i> Instant Confirmation</li>
+            <li><i class="fas fa-star"></i> Best Price Guaranteed</li>
+            <li><i class="fas fa-star"></i> 1000+ Happy Customers</li>
+        </ul>
+      </div>
+    </section>
+
+    <script>
+      // Function to get URL query parameter
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+
+      // Retrieve and set booking price
+      document.addEventListener("DOMContentLoaded", function () {
+        const price = getQueryParam("price"); // Get price from URL
+        if (price) {
+          document.querySelector(".booking-price").textContent = `₹${price}`;
+        }
+      });
+    </script>
+</body>
+</html>

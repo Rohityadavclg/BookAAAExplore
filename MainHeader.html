@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link href="css/responsive.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Document</title>
+
+    <style>
+        /* --- Header Styling --- */
+ .main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header-upper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.header-upper .logo-nav{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.main-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.main-menu ul li {
+  position: relative;
+}
+
+.main-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.main-menu ul li a:hover {
+  color: #1DC5CE;
+}
+
+/* Ensure dropdown menu is positioned correctly */
+.main-menu .dropdown {
+  position: relative; /* Ensure the dropdown menu aligns under the parent */
+}
+
+/* Style for dropdown menu */
+.main-menu .dropdown ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column; /* Ensures vertical stacking */
+}
+
+/* Show dropdown on hover */
+.main-menu .dropdown:hover ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Style for dropdown items */
+.main-menu .dropdown ul li {
+  display: block;
+  width: 100%; /* Ensures full width */
+  padding: 0px 0px;
+  
+}
+
+/* Remove border from last item */
+.main-menu .dropdown ul li:last-child {
+  border-bottom: none;
+}
+
+/* Style for links inside dropdown */
+.main-menu .dropdown ul li a {
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+/* Hover effect */
+.main-menu .dropdown ul li a:hover {
+  background: #f4f4f4;
+  color: #1DC5CE;
+}
+
+
+/* Align Sign-in & Search on the Right */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-icons a:hover, 
+.nav-icons i:hover {
+    color: #1DC5CE;
+}
+
+.nav-icons a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.nav-icons i {
+  font-size: 20px;
+}
+
+/* Mobile Menu */
+.nav-toggler {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .main-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: white;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      flex-direction: column;
+      padding: 20px;
+      text-align: center;
+  }
+
+  .main-menu.show {
+      display: flex;
+  }
+
+  .nav-toggler {
+      display: block;
+  }
+
+}
+
+
+/* Sidebar Style */
+body.visible-sidebar{
+  overflow-y: hidden;
+}
+
+.menu-backdrop{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9990;
+    background: rgba(0,0,0,0.70);
+    cursor: pointer;
+    opacity:0;
+    visibility:hidden;
+    transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+}
+
+.visible-sidebar .menu-backdrop {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hidden-bar {
+  position: fixed;
+  top: 0;
+  left: -100%; /* Initially hidden */
+  width: 280px;
+  height: 100vh;
+  background: white;
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+  padding: 20px;
+}
+
+/* When active, show the menu */
+.hidden-bar.active {
+  left: 0;
+}
+
+/* Close Button */
+.hidden-bar-closer {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.hidden-bar-closer:hover {
+  color: red;
+}
+
+/* Style for menu links */
+.hidden-bar .navigation {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.hidden-bar .navigation li {
+  padding: 10px 0;
+}
+
+.hidden-bar .navigation li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+  display: block;
+}
+
+.hidden-bar .navigation li a:hover {
+  color: #1DC5CE;
+}
+
+
+    </style>
+</head>
+
+<body>
+<section>
+
+<div class="search-backdrop"></div>
+
+<!-- Main Header -->
+<header class="main-header">
+    <div class="header-upper container-fluid">
+        
+        <div class="logo-nav">
+            <!-- Logo -->
+            <a href="index.html"><img src="images/logo.svg" alt="Logo" style="height: 50px;"></a>
+
+             <!-- Navigation -->
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="about.html">About Us</a>
+                        <!-- <ul>
+                            <li><a href="team.html">Our Teams</a></li>
+                            <li><a href="faq.html">FAQs</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                        </ul> -->
+                    </li>
+                    <li class="dropdown">
+                        <a href="destinations.html">Tours</a>
+                        <ul>
+                            <li><a href="#">East Tour</a></li>
+                            <li><a href="#">West Tour</a></li>
+                            <li><a href="#">North Tour</a></li>
+                            <li><a href="#">South Tour</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="trekking.html">Treks</a></li>
+                    <li class="dropdown">
+                        <a href="booking.html">Booking Pages</a>
+                        <ul>
+                            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">Blogs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+       
+        
+            <!-- Icons: Search & Sign In -->
+            <div class="nav-icons">
+                <div class="link search-btn search-toggle"><i class="far fa-search"></i></div>
+                <a href="login.html"><i class="fa fa-user"></i> SIGN IN</a>  
+                <!-- Mobile Menu Button -->
+                <div class="nav-toggler">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+    
+            
+       
+    </div>
+
+     <!-- Hidden Navigation Bar -->
+     <section class="hidden-bar">
+        <div class="hidden-bar-wrapper">
+            <!-- Close Button -->
+            <div class="hidden-bar-closer">
+                <span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14">
+                    <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+                </svg></span>
+            </div>
+    
+            <!-- Logo -->
+            <div class="nav-logo-box">
+                <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="Treker"></a></div>
+            </div>
+    
+            <!-- Side Menu -->
+            <div class="side-menu">
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown"><a href="about.html">About Us</a>
+                        <ul>
+                            <li><a href="team.html">Our Teams</a></li>
+                            <li><a href="faq.html">FAQs</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="destinations.html">Tours</a>
+                        <ul>
+                            <li><a href="#">East Tour</a></li>
+                            <li><a href="#">West Tour</a></li>
+                            <li><a href="#">North Tour</a></li>
+                            <li><a href="#">South Tour</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="trekking.html">Treks</a></li>
+                    <li class="dropdown"><a href="booking.html">Booking Pages</a>
+                        <ul>
+                            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">Blogs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <!-- Login/Signup Buttons -->
+            <div class="links-box clearfix">
+                <div class="clearfix">
+                    <div class="link"><a href="login.html" class="theme-btn btn-style-one"><span>Login <i class="icon far fa-angle-right"></i></span></a></div>
+                    <div class="link"><a href="signup.html" class="theme-btn btn-style-two"><span>Sign Up <i class="icon far fa-angle-right"></i></span></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Select elements
+            const navToggler = document.querySelector('.nav-toggler');
+            const hiddenBar = document.querySelector('.hidden-bar');
+            const hiddenBarCloser = document.querySelector('.hidden-bar-closer');
+    
+            if (navToggler && hiddenBar && hiddenBarCloser) {
+                // Open Sidebar
+                navToggler.addEventListener('click', function (event) {
+                    event.stopPropagation(); // Prevents event bubbling
+                    hiddenBar.classList.add('active');
+                });
+    
+                // Close Sidebar
+                hiddenBarCloser.addEventListener('click', function () {
+                    hiddenBar.classList.remove('active');
+                });
+    
+                // Close sidebar when clicking outside (optional)
+                document.addEventListener('click', function (event) {
+                    if (!hiddenBar.contains(event.target) && !navToggler.contains(event.target)) {
+                        hiddenBar.classList.remove('active');
+                    }
+                });
+    
+                // Prevent clicks inside sidebar from closing it
+                hiddenBar.addEventListener('click', function (event) {
+                    event.stopPropagation();
+                });
+            }
+        });
+    </script>
+</header>
+</section>
+</body>
+</html>

@@ -26,112 +26,177 @@
 	  <div class="search-backdrop"></div>
 	  
 	  <!-- Main Header-->
-	   <header class="main-header">
-		  <div class="header-top">
-			  <div class="auto-container">
-				  <div class="inner clearfix">
-					  <div class="top-left clearfix">
-						  <ul class="info clearfix">
-							  <li><i class="icon fa fa-envelope"></i> <a href="mailto:bookandexplore@gmail.com">bookandexplore@gmail.com</a></li>
-							  <li><i class="icon fa fa-phone-circle"></i> <a href="tel:+91 8888840295">+91 8888840295</a></li>
-							    </ul>
-					  </div>
-					  <div class="top-right clearfix">
-						  <div class="lang-box">
-							  <div class="lang-btn clearfix"><span class="img far fa-globe-americas"></span><span class="txt">EngLish</span><span class="icon far fa-angle-down"></span></div>
-							  
-						  </div>
-						  <div class="login"><i class="icon fa fa-user"></i> <a href="login.html">SIGN IN</a></div>
-					  </div>
-				  </div>
-			  </div>
-		  </div>
-		  <!-- Header Upper -->
-		  <div class="header-upper">        
-			  <div class="auto-container">
-				  <!-- Main Box -->
-				  <div class="main-box clearfix">
-					  <!--Logo-->
-					  <div class="logo-box">
-						   <div class="logo"><a href="index.html" title="Treker"><img src="images/logo.svg" alt="" title="Treker"></a></div>
-					  </div>
-  
-					  <div class="nav-box clearfix">
-						  <!--Nav Outer-->
-						  <div class="nav-outer clearfix">         
-							  <nav class="main-menu">
-								  <ul class="navigation clearfix">
-									  <li ><a href="index.html">Home</a>                                       
-									  </li>
-									  <li class="dropdown"><a href="about.html">About Us</a>
-										  <ul>
-											  <li><a href="team.html">Our Teams</a></li>
-											  
-											  <li><a href="faq.html">FAQs</a></li>
-											  <li><a href="gallery.html">Gallery</a></li>
-										  </ul>
-									  </li>
-									   
-									  <li  class="dropdown" ><a href="destinations.html">Tours</a>
-									  <ul>
-										  <li><a href="#">East Tour</a></li>
-											  <li><a href="#">West Tour</a></li>
-											  <li><a href="#">North Tour</a></li>
-											  <li><a href="#">South Tour</a></li> 
-									  </ul>
-									  
-									  </li>
-									  <li class="dropdown"><a href="trekking.html">Treks</a>
-										  
-									  </li>
-									  <li class="dropdown"><a href="booking.html">Booking Pages</a>
-										  <ul> 
-											  <li><a href="terms-conditions.html">Terms & Conditions</a></li> 
-										  </ul>
-									  </li>
-									  <li class="dropdown"><a href="blog.html">Blogs</a>
-										   
-									  </li>
-									  <li><a href="contact.html">Contact</a></li>
-								  </ul>
-							  </nav>
-							  <!-- Main Menu End-->
-						  </div>
-						  <!--Nav Outer End-->
-  
-						  <div class="links-box clearfix">
-							  <div class="link search-btn search-toggle"><span class="icon far fa-search"></span></div>
-							  <div class="link fav-btn"><a href="#"><span class="icon far fa-heart"></span><span class="count">02</span></a></div>
-							   </div>
-  
-						  <!-- Hidden Nav Toggler -->
-						  <div class="nav-toggler">
-							  <button class="hidden-bar-opener"><span class="icon"><img src="images/icons/menu-icon.svg" alt=""></span></button>
-						  </div>
-  
-					  </div>
-  
-					  <!-- End Header Upper -->
-					  <div class="search-box">
-						  <div class="outer-container">
-							  <div class="inner-box">
-								  <div class="form-box">
-									  <div class="s-close-btn"><span class="icon far fa-times"></span></div>
-									  <span class="s-icon fa fa-search"></span>
-									  <form method="post" action="index.html">
-										  <div class="form-group">
-											  <input type="search" name="search" value="" placeholder="Search Here" required="">
-										  </div>
-									  </form>
-								  </div>
-							  </div>
-						  </div>
-					  </div>
-  
-				  </div>
-			  </div>
-		  </div>
-	  </header>
+      <header class="main-header">
+        <div class="header-upper container-fluid">
+            
+            <div class="logo-nav">
+                <!-- Logo -->
+                <a href="index.html"><img src="images/logo.svg" alt="Logo" style="height: 50px;"></a>
+    
+                 <!-- Navigation -->
+                <nav class="main-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="about.html">About Us</a>
+                            <!-- <ul>
+                                <li><a href="team.html">Our Teams</a></li>
+                                <li><a href="faq.html">FAQs</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                            </ul> -->
+                        </li>
+                        <li class="dropdown">
+                            <a href="destinations.html">Tours</a>
+                            <ul>
+                                <li><a href="#">East Tour</a></li>
+                                <li><a href="#">West Tour</a></li>
+                                <li><a href="#">North Tour</a></li>
+                                <li><a href="#">South Tour</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="trekking.html">Treks</a></li>
+                        <li class="dropdown">
+                            <a href="booking.html">Booking Pages</a>
+                            <ul>
+                                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="blog.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+            <!-- Icons: Search & Sign In -->
+            <div class="nav-icons">
+                    <div class="link search-btn search-toggle"><i class="far fa-search"></i></div>
+                    <a href="login.html"><i class="fa fa-user"></i> SIGN IN</a>  
+                    <!-- Mobile Menu Button -->
+                    <div class="nav-toggler">
+                        <i class="fas fa-bars"></i>
+                    </div>
+            </div>
+        
+        </div>
+    
+        <!-- Hidden Navigation Bar -->
+<section class="hidden-bar">
+    <div class="hidden-bar-wrapper">
+        <!-- Close Button -->
+        <div class="hidden-bar-closer">
+            <span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14">
+                <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+            </svg></span>
+        </div>
+
+        <!-- Logo -->
+        <div class="nav-logo-box">
+            <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="Treker"></a></div>
+        </div>
+
+        <!-- Side Menu -->
+        <div class="side-menu">
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="destinations.html">Tours </a>
+                    <ul>
+                        <li><a href="#">East Tour</a></li>
+                        <li><a href="#">West Tour</a></li>
+                        <li><a href="#">North Tour</a></li>
+                        <li><a href="#">South Tour</a></li>
+                    </ul>
+                </li>
+                <li><a href="trekking.html">Treks</a></li>
+                <li class="dropdown">
+                    <a href="booking.html">Booking Pages </a>
+                    <ul>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Login/Signup Buttons -->
+        <div class="links-box clearfix">
+            <div class="clearfix">
+                <div class="link">
+                    <a href="login.html" class="theme-btn btn-style-one">
+                        <span>Login <i class="icon far fa-angle-right"></i></span>
+                    </a>
+                </div>
+                <div class="link mt-2">
+                    <a href="signup.html" class="theme-btn btn-style-two">
+                        <span>Sign Up <i class="icon far fa-angle-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Search Bar Section -->
+<div class="search-bar">
+    <div class="search-wrapper">
+        <div class="search-closer">&times;</div>
+        <input type="text" class="search-input" placeholder="Search here...">
+        <button class="search-btn-action"><i class="fa fa-search"></i></button>
+    </div>
+</div>
+
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Select elements
+                const navToggler = document.querySelector('.nav-toggler');
+                const hiddenBar = document.querySelector('.hidden-bar');
+                const hiddenBarCloser = document.querySelector('.hidden-bar-closer');
+
+                const searchBtn = document.querySelector('.search-btn');
+                const searchBar = document.querySelector('.search-bar');
+                const searchCloser = document.querySelector('.search-closer');
+        
+                if (navToggler && hiddenBar && hiddenBarCloser) {
+                    // Open Sidebar
+                    navToggler.addEventListener('click', function (event) {
+                        event.stopPropagation(); // Prevents event bubbling
+                        hiddenBar.classList.add('active');
+                    });
+        
+                    // Close Sidebar
+                    hiddenBarCloser.addEventListener('click', function () {
+                        hiddenBar.classList.remove('active');
+                    });
+        
+                    // Close sidebar when clicking outside (optional)
+                    document.addEventListener('click', function (event) {
+                        if (!hiddenBar.contains(event.target) && !navToggler.contains(event.target)) {
+                            hiddenBar.classList.remove('active');
+                        }
+                    });
+        
+                    // Prevent clicks inside sidebar from closing it
+                    hiddenBar.addEventListener('click', function (event) {
+                        event.stopPropagation();
+                    });
+                }
+
+                // Search bar toggle
+                searchBtn.addEventListener('click', function () {
+                    searchBar.classList.add('active');
+                });
+
+                searchCloser.addEventListener('click', function () {
+                    searchBar.classList.remove('active');
+                });
+
+            });
+        </script>
+    </header>
+
 	   <!--Search Backdrop-->
 	   <div class="search-backdrop"></div>
 		  
@@ -139,66 +204,7 @@
 	   <div class="menu-backdrop"></div>
    
 	   <!-- Hidden Navigation Bar -->
-	   <section class="hidden-bar">
-		   <!-- Hidden Bar Wrapper -->
-		   <div class="hidden-bar-wrapper">
-			   <div class="hidden-bar-closer"><span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14"><path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path></svg></span></div>
-			   <div class="nav-logo-box">
-				   <div class="logo"><a href="index.html" title="Treker"><img src="images/logo.svg" alt="" title="Treker"></a></div>
-			   </div>
-			   <!-- .Side-menu -->
-			   <div class="side-menu">
-					<ul class="navigation clearfix">
-					   <li><a href="index.html">Home</a>
-						  
-					   </li>
-					   <li class="dropdown"><a href="about.html">About Us</a>
-						   <ul>
-							   <li><a href="team.html">Our Teams</a></li>
-							   
-							   <li><a href="faq.html">FAQs</a></li>
-							   <li><a href="gallery.html">Gallery</a></li>
-						   </ul>
-					   </li>
-					   
-					   <li  class="dropdown" ><a href="destinations.html">Tours</a>
-						   <ul>
-							   <li><a href="#">East Tour</a></li>
-								   <li><a href="#">West Tour</a></li>
-								   <li><a href="#">North Tour</a></li>
-								   <li><a href="#">South Tour</a></li> 
-						   </ul>
-						   
-						   </li>
-						   <li class="dropdown"><a href="trekking.html">Treks</a>
-								
-						   </li>
-					   <li class="dropdown"><a href="booking.html">Booking Pages</a>
-						   <ul>
-							   
-							   
-														   
-							   
-							   <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-							   
-						   </ul>
-					   </li>
-					   <li class="dropdown"><a href="blog.html">Blogs</a>
-						  
-					   </li>
-					   <li><a href="contact.html">Contact</a></li>
-				   </ul>
-			   </div><!-- /.Side-menu -->
-			   
-			   <div class="links-box clearfix">
-				   <div class="clearfix">
-					   <div class="link"><a href="login.html" class="theme-btn btn-style-one"><span>Login<i class="icon far fa-angle-right"></i></span></a></div>
-					   <div class="link"><a href="signup.html" class="theme-btn btn-style-two"><span>Sign Up<i class="icon far fa-angle-right"></i></span></a></div>
-				   </div>
-			   </div>
-		   
-		   </div><!-- / Hidden Bar Wrapper -->
-	   </section>
+	  
 	   <!-- / Hidden Bar -->  
 	  
 	  <!--End Main Header -->
@@ -216,11 +222,11 @@
 						<div class="news-detail">
 							<div class="inner-box">
 								<div class="image-box">
-									<div class="image"><img src="images/Blogs/DevkundWaterfall-trek.jpeg" alt="" title=""></div>
+									<div class="image"><img src="images/Blogs/DevkundWaterfall trek.webp" alt="" title=""></div>
 								</div>
 								<div class="lower-content">
 									<div class="info">
-										<span class="i-block">Ratangad Fort Trek :</span>
+										<span class="i-block">Devkund Waterfall Trek :</span>
 									</div>
 									<h4>Basic Info About Location Ratangad Fort Trek:</h4>
 									<p>Ratangad is situated in the Sahyadri mountains. Ratangad is a magnificent hill fort located near the village of Ratanwadi in Maharashtra, India's Ahmednagar district. Ratangad is around 400 years old; it served as a crucial defensive position for both Mughal and British times. Ratangad has become a popular trekking destination because of its beautiful atmosphere, important historical sites, and challenging tracks.
@@ -334,22 +340,17 @@
 									<p>Ratangad was owned by a string of Maratha rulers throughout history. This fort had strategic importance under Chhatrapati Shivaji Maharaj's rule. To protect his kingdom from intruders, Shivaji Maharaj charged and sustained various forts in the Sahyadri range, notably Ratangad.</p>
                                     <p>By considering these things, it's clear that Ratangad Fort serves as both a reminder of the area's rich military, cultural, and architectural history and a tribute to its turbulent past. and it continues to attract tourists today due to its scenic beauty and historical significance. </p>  
                                     
-                                    <div class="gallery-box">
-										<div class="row clearfix">
-											<!-- Column -->
-											<div class="column col-lg-6 col-md-6 col-sm-12">
-												<div class="image">
-													<img src="images/Blogs/RatanFort.jpeg" alt="" />
-												</div>
-											</div>
-											<!-- Column -->
-											<div class="column col-lg-6 col-md-6 col-sm-12">
-												<div class="image">
-													<img src="images/Blogs/RatanFort2.jpg" alt="" />
-												</div>
-											</div>
-										</div>
-									</div>
+                                    <div class="gallery-grid">
+                                        <div class="gallery-item tall">
+                                                <img src="images/Blogs/DevkundWaterfall1.webp" alt="Trekking Adventure">
+                                        </div>
+                                        <div class="gallery-item">
+                                                <img src="images/Blogs/DevkundWaterfall2.webp" alt="Beach Sunset">   
+                                        </div>
+                                        <div class="gallery-item">
+                                                <img src="images/Blogs/DevkundWaterfall3.webp" alt="Forest Trail">
+                                        </div>
+                                    </div>
 
                                     <div class="border mb-3"></div>
 
@@ -400,6 +401,185 @@
 			
 		</div>
 	</section>
+
+    <section class="faq-one alternate">
+        <div class="auto-container">
+            <div class="title-box centered">
+                <h2><span>Most Frequent Questions</span></h2>
+            </div>
+            <div class="row clearfix">
+                <!--Text Col-->
+                <div class="text-col col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="accordion-box clearfix">
+                            <!--Block-->
+                            <div class="accordion block active-block">
+                                <div class="acc-btn active">Do I need permission for the Devkund Waterfall Trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">No, you do not need permission for the Devkund Waterfall Trek.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Can I camp near the waterfall? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Camping is not allowed near Devkund, but make sure you check local regulations and obtain permission beforehand.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Is there water available on the trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Water sources are available along the trek route, but you should carry your drinking water.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Is food available on the trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Food stalls are available on the trek route.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Is the Devkund Waterfall Trek difficult? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Devkund Waterfall Trek is relatively easy to moderate, and suitable for beginners and families.</div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!--Block-->
+                             <div class="accordion block">
+                                <div class="acc-btn">Are there any washrooms available at the Devkund Waterfall Trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">There may not be formal washroom facilities available along the trek route, so it's advisable to use the facilities at Bhira Village before starting the trek.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Entry Charges for the Devkund Waterfall Trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">₹100 per person.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Is Parking Available on the Devkund Waterfall Trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Yes. Parking is available at the base village.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Text Col-->
+                <div class="text-col col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="accordion-box clearfix">
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Is the Devkund Waterfall Trek safe to do? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">The trekking route is normally safe; however, it's advisable to stay cautious of wild animals like monkeys.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Where is Devkund Waterfall located? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Devkund Waterfall is located near Bhira Village in Maharashtra, India.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Can the Devkund Waterfall Trek be done alone? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">While it's safer to trek in a group, experienced trekkers can attempt the Devkund trek alone with proper preparation.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">What is the best time to do the Devkund Waterfall Trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">The best time to do Devkund Trek is during the monsoon season for the full waterfall experience.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">What is the highest altitude of the Devkund Waterfall Trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">The highest altitude of Devkund Waterfall is approximately 2,200 feet.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Where does the Devkund Waterfall Trek start? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">The Devkund Trek starts from Bhira Village.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Can we do the Devkund Waterfall Trek during the night? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">It's not advisable to trek at night due to safety reasons and a lack of visibility.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Is network coverage available at the Devkund Waterfall Trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Network availability may be limited in the trekking area.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Are ATM facilities available at the Devkund Waterfall Trek? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">There are no ATMs available near Devkund, so it's recommended to carry sufficient cash.</div>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
 	
 	
     <!--Main Footer-->
