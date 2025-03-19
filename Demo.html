@@ -1,372 +1,79 @@
-<?php
-/**
- * The header.
- *
- * This is the template that displays all of the <head> section and everything up until main.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
- */
-
-
-<!doctype html>
-<html <?php language_attributes(); ?> <?php twentytwentyone_the_html_classes(); ?>>
+<!DOCTYPE html>
+<html>
 <head>
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B9HCQWL9NW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
 
-  gtag('config', 'G-B9HCQWL9NW');
-</script>
-	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/theme-assets/img/favicon.png">
-	<link id="cd-base-part-1" rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/theme-assets/newmenu/app/assets/css/base-part-1c3c2c3c2.css?v=7000214">
-	<link id="cd-base-part-1" rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/theme-assets/newmenu/codyhouse-framework/main/assets/css/style.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/theme-assets/newmenu/app/components/source/mega-site-navigation/dist/mega-site-navigationc3c2c3c2.css?v=7000214">
-	<noscript>
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/theme-assets/newmenu/app/components/source/mega-site-navigation/dist/mega-site-navigationc3c2c3c2.css?v=7000214">
-	</noscript>
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/theme-assets/newmenu/app/assets/css/app-demo.css">	
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/theme-assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/theme-assets/css/animate.min.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/theme-assets/css/boxicons.min.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/theme-assets/css/flaticon.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/theme-assets/css/nice-select.min.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/theme-assets/css/rangeSlider.min.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/theme-assets/css/fancybox.min.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/theme-assets/css/meanmenu.min.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/theme-assets/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/theme-assets/css/magnific-popup.min.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/theme-assets/css/style.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/theme-assets/css/responsive.css">
-	<!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/theme-assets/css/dark-style.css"> -->
-	<!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/theme-assets/css/purecookie.css"> -->
-	<!-- Google tag (gtag.js) --> 
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-TY27Q66EJQ"></script> 
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-	  gtag('config', 'G-TY27Q66EJQ');
-	</script>
-	<?php wp_head(); ?>
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
 
-	
-</head>
-<body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
 
-<!-- End Preloader Area -->
-<!-- <div class="js-cd-demo"> -->
-  <header class="mega-nav mega-nav--mobile mega-nav--desktop@md position-absolute js-mega-nav" data-hover="on" style="background: transparent;">
-    <div class="mega-nav_container"> <a href="<?php echo esc_url( home_url() ); ?>" class="mega-nav_logo" style="
-    width: 200px;
-    height: 72px;"> <img src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/logo20-white.png" /> </a>
-      
-      <div class="mega-nav_icon-btns mega-nav_icon-btns--mobile">
-        <button class="reset mega-nav_icon-btn mega-nav_icon-btn--menu js-tab-focus" aria-label="Toggle menu" aria-controls="mega-nav-navigation">
-        <svg class="icon" viewBox="0 0 24 24" style="color:#fff;">
-          <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2">
-            <path d="M1 6h22" />
-            <path d="M1 12h22" />
-            <path d="M1 18h22" />
-          </g>
-        </svg>
-        </button>
-      </div>
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
 
-      <!-- navbar -->
-      <div class="mega-nav_nav js-mega-nav_nav" id="mega-nav-navigation" role="navigation" aria-label="Main">
-        <div class="mega-nav__nav-inner">
-          <ul class="mega-nav__items">
+.header a:hover {
+  font: bold;
+}
 
-            <li class="mega-nav__label">Menu</li>
+.header a.active {
+  background-color: rgb(57, 173, 251);
+  color: rgb(253, 250, 250);
+}
 
-            <li class="mega-nav_item js-mega-nav_item" style="padding: 0px 23px;"> <a href="<?php echo esc_url( home_url() ); ?>" style="color: #fff;" >Home</a> </li>
+.header-right {
+  float: right;
+}
 
-			  <li class="mega-nav_item js-mega-nav_item">
-
-              <button class="reset mega-nav_control js-mega-navcontrol js-tab-focus" style="color: #fff;"> Company <i class="mega-nav_arrow-icon" aria-hidden="true">
-              <svg class="icon" viewBox="0 0 16 16">
-                <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2">
-                  <path d="M2 2l12 12" />
-                  <path d="M14 2L2 14" />
-                </g>
-              </svg>
-              </i> </button>
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
   
-              <div class="mega-nav__sub-nav-wrapper">
-                <div class="mega-nav_sub-nav mega-nav_sub-nav--layout-3">
-                  <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/about-us/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/about/img/about%20us-01.jpg');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/about/About-01.png" alt="Image description"></figure>
-                    </a> </div>
-					
-                  <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/events/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/about/img/Events-01.jpg');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/about/event-01.png" alt="Image description"></figure>
-                    </a> </div>
-					
-                  <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/career/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/about/img/career-01.jpg');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/about/career-01.png" alt="Image description"></figure>
-                    </a> </div>
+  .header-right {
+    float: none;
+  }
+}
+</style>
+</head>
+<body>
 
-                  <!-- <div class="mega-nav__card"> </div>  -->
-
-			  
-			  
-			  
-			  
-                  <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/life-at-satpalda/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/about/img/life-01.jpg');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/about/Life%20%40SATPalda-01.png" alt="Image description"></figure>
-                    </a> </div>
-                </div>
-              </div>
-
-            </li>
-		
-		
-            <!-- Products -->
-            <li class="mega-nav_item js-mega-nav_item">
-              <button class="reset mega-nav_control js-mega-navcontrol js-tab-focus" style="color: #fff;"> Products <i class="mega-nav_arrow-icon" aria-hidden="true">
-              <svg class="icon" viewBox="0 0 16 16">
-                <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2">
-                  <path d="M2 2l12 12" />
-                  <path d="M14 2L2 14" />
-                </g>
-              </svg>
-              </i> </button>
-
- <div class="mega-nav__sub-nav-wrapper">
-    <!-- Mega Nav -->
-                <div class="mega-nav_sub-nav mega-nav_sub-nav--layout-3">
-		
-					
-					<!-- Satellite Imagery Menu Item and KOMPSAT Submenu Item-->
-<div class="mega-nav_card mega-nav_parent ">
-  <a href="<?php echo esc_url(home_url('/satellite-imagery/')); ?>" class="block overflow-hidden">
-    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/products/satellite%20imagery.png');background-size: cover;">
-      <img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/products/1.png" alt="Image description">
-    </figure>
-  </a>
-
-  <!-- Submenu Block -->
-  <div class="mega-nav__submenu">
-    <!-- KOMPSAT Submenu Item -->
-    <div class="mega-nav__card">
-      <a href="<?php echo esc_url(home_url('/kompsat/')); ?>" class="block overflow-hidden">
-        <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/img/kompsat.png');background-size: cover;">
-          <img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/kompsat-icon.jpg" alt="Image description">
-        </figure>
-      </a>
-    </div>
+<div class="header">
+  <a href="#default" class="logo">CompanyLogo</a>
+  <div class="header-right">
+    <a class="active" href="#home">Home</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
   </div>
 </div>
 
-					
-					
- <!--3d-landscape -->
-			  <div class="mega-nav__card"> 
-                <a href="<?php echo esc_url( home_url() ); ?>/3d-landscape/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/products/3d%20landscape.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/products/2.png" alt="Image description"></figure>
-                </a> 
-                </div>
+<div style="padding-left:20px">
+  <h1>Responsive Header</h1>
+  <p>Resize the browser window to see the effect.</p>
+  <p>Some content..</p>
+</div>
 
-<!-- aerodrome-mapping -->
-                  <div class="mega-nav__card">
-                    <a href="<?php echo esc_url( home_url() ); ?>/aerodrome-mapping-database-amdb/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/products/amdb.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/products/3.png" alt="Image description"></figure>
-                    </a> 
-                </div>
-<!--                   <div class="mega-nav__card"> </div> -->
-<!-- Software -->
-                <div class="mega-nav__card"> 
-                    <a href="<?php echo esc_url( home_url() ); ?>/software/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/products/software.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/products/4.png" alt="Image description"></figure>
-                    </a> 
-                </div>
-
-                </div>
-
-
-              </div>
-            </li>
-
-            <!-- services -->
-            <li class="mega-nav_item js-mega-nav_item">
-              <button class="reset mega-nav_control js-mega-navcontrol js-tab-focus" style="color: #fff;"> Services <i class="mega-nav_arrow-icon" aria-hidden="true">
-              <svg class="icon" viewBox="0 0 16 16">
-                <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2">
-                  <path d="M2 2l12 12" />
-                  <path d="M14 2L2 14" />
-                </g>
-              </svg>
-              </i> </button>
-				       
-                 <div class="mega-nav__sub-nav-wrapper">
-                <div class="mega-nav_sub-nav mega-nav_sub-nav--layout-3">
-                  
-					<div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/aerial-triangulation/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/img/Aerial%20Tri-01.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/Aerial-01.png" alt="Image description"></figure>
-                    </a> </div> 
-					
-		
-					  
-				 <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/terrain-modeling-dtm/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/img/terrian%20modeling-01.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/Terrain-01%20(1).png" alt="Image description"></figure>
-					    </a> </div>
-					
-                  <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/orthorectification/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/img/ortho-01.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/Ortho%20rec-01.png" alt="Image description"></figure>
-                    </a> </div>
-                  <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/terrain-modeling-dtm/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/img/terrian%20modeling-01.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/Terrain-01%20(1).png" alt="Image description"></figure>
-                    </a> </div>
-                  <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/3d-modelling/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/img/3d%20modeling-01.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/3d%20modeling-01.png" alt="Image description"></figure>
-                    </a> </div>
-                  <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/web-gis/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/img/web%20gis-01.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/web%20gis-01.png" alt="Image description"></figure>
-                    </a> </div>
-                  <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/lidar/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/img/lidar-01.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/lidar-01.png" alt="Image description"></figure>
-                    </a> </div>
-                  <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/topographic-mapping/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/img/topographic%20mappimg-01.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/topographic-01%20(1).png" alt="Image description"></figure>
-                    </a> </div>
-                  <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/drone-mapping/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/img/drone%20mapping-01.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/Drone%20map-01%20(1).png" alt="Image description"></figure>
-                    </a> </div>
-                  <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/land-use-cover-mapping/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/img/Land%20cover%20MAp-01.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/Land%20use%20cover%20mapping.png" alt="Image description"></figure>
-                    </a> </div>
-                  <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/land-subsidence-mapping/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/land%20subsidannce.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/land%20subsidence.png" alt="Image description"></figure>
-                    </a> </div>
-                  <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/pan-sharpening/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/img/spacialized%20process-01.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/Pan%20sharpening-01.png" alt="Image description"></figure>
-                    </a> </div>
-					
-<!--	Testing Start					 -->
-					
-					<div class="mega-nav__card" > <a href="<?php echo esc_url( home_url() ); ?>/gis-mapping/ " class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/img/gis-mapping.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/gismapping1.jpg" alt="Image description"></figure>
-                    </a> </div>
-
-<div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/ground-control-points/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/img/Ground-Control-Points.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/Ground-Control-Points-icon.jpg" alt="Image description"></figure>
-                    </a> </div>
-
-<div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/dgps-survey/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/img/dgps-survey.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/dgps-survey-icon.jpg" alt="Image description"></figure>
-                    </a> </div>
-
-<div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/drone-survey/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/img/Drone-Survey.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/Drone-Survey-icon.jpg" alt="Image description"></figure>
-                    </a> </div>
-					
-					
-
-<div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/digital-surface-model-dsm/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/img/Digital-Surface-Model.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/services/Digital-Surface-Model-icon.jpg" alt="Image description"></figure>
-                    </a> </div>
-
-
-					
-					
-<!--	Testing End 					 -->
-					
-					
-					
-                </div>
-              </div>
-            </li>
-
-            <!-- Sectors -->
-            <li class="mega-nav_item js-mega-nav_item">
-              <button class="reset mega-nav_control js-mega-navcontrol js-tab-focus" style="color: #fff;"> Sectors <i class="mega-nav_arrow-icon" aria-hidden="true">
-              <svg class="icon" viewBox="0 0 16 16">
-                <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2">
-                  <path d="M2 2l12 12" />
-                  <path d="M14 2L2 14" />
-                </g>
-              </svg>
-              </i> </button>
-              <div class="mega-nav__sub-nav-wrapper">
-                <div class="mega-nav_sub-nav mega-nav_sub-nav--layout-3">
-                  <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/land-and-infrastructure/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/sectors/img/land-01.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/sectors/LAND-01.png" alt="Image description"></figure>
-                    </a> </div>
-                  <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/defence-and-security/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/sectors/img/defence-01.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/sectors/Defence-01%20(1).png" alt="Image description"></figure>
-                    </a> </div>
-                  <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/energy/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/sectors/img/Natural%20res-01.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/sectors/Energy-01.png" alt="Image description"></figure>
-                    </a> </div>
-                  <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/environment/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/sectors/img/Env-01.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/sectors/env-01.png" alt="Image description"></figure>
-                    </a> </div>
-                  <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/agriculture/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/sectors/img/agriculture-01.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/sectors/Agriculture.png" alt="Image description"></figure>
-                    </a> </div>
-                  <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/water-and-irrigation/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/sectors/img/water-01.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/sectors/Water-01.png" alt="Image description"></figure>
-                    </a> </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="mega-nav_item js-mega-nav_item">
-              <button class="reset mega-nav_control js-mega-navcontrol js-tab-focus" style="color: #fff;"> Resources <i class="mega-nav_arrow-icon" aria-hidden="true">
-              <svg class="icon" viewBox="0 0 16 16">
-                <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2">
-                  <path d="M2 2l12 12" />
-                  <path d="M14 2L2 14" />
-                </g>
-              </svg>
-              </i> </button>
-              <div class="mega-nav__sub-nav-wrapper">
-                <div class="mega-nav_sub-nav mega-nav_sub-nav--layout-3">
-                  <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/blogs/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/resources/img/blogs-01.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/resources/blogs-01.png" alt="Image description"></figure>
-                    </a> </div>
-                  <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/case-studies/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/resources/img/case%20study-01.png');  background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/resources/case%20studies-01.png" alt="Image description"></figure>
-                    </a> </div>
-                  <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/sample-data/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/resources/img/Data%20sample-01.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/resources/Sample%20Data-01.png" alt="Image description"></figure>
-                    </a> </div>
-      <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/galleries/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/resources/img/galleries-01.png');background-size: cover;""><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/resources/gallery-01.png" alt="Image description"></figure>
-                    </a> </div>
-                  <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/faqs/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/resources/img/FAQS-01.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/resources/FAQs-01.png" alt="Image description"></figure>
-                    </a> </div>
-                  <div class="mega-nav__card"> <a href="<?php echo esc_url( home_url() ); ?>/newsletter/" class="block overflow-hidden">
-                    <figure style="background-image:url('<?php echo get_template_directory_uri(); ?>/theme-assets/img/resources/img/Data%20sample-01.png');background-size: cover;"><img class="block width-100%" src="<?php echo get_template_directory_uri(); ?>/theme-assets/img/resources/Newaletter-01.png" alt="Image description"></figure>
-                    </a> </div>
-                </div>
-              </div>
-            </li>
-
-          </ul>
-
-          <ul class="mega-nav__items" style="padding: 0 0px;">
-            <li class="mega-nav_item"><a href="<?php echo esc_url( home_url() ); ?>/contact-us/" class="btn btn--primary mega-nav_btn">Contact Us</a></li>
-          </ul>
-
-        </div>
-
-      </div>
-    </div>
-  </header>
-  <?php wp_body_close(); ?>
-  </body>
-  </html>
-  ?>
+</body>
+</html>
