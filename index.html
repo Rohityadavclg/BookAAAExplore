@@ -362,177 +362,12 @@
 	
     <!-- Main Header-->
     <!-- <div id="header"></div> -->
-    
+   
+    <!-- Main Header-->
     <header class="main-header">
-        <div class="header-upper container-fluid">
-            
-            <div class="logo-nav">
-                <!-- Logo -->
-                <a href="index.html"><img src="images/logo.svg" alt="Logo" style="height: 50px;"></a>
-    
-                 <!-- Navigation -->
-                <nav class="main-menu">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li class="dropdown">
-                            <a href="about.html">About Us</a>
-                            <!-- <ul>
-                                <li><a href="team.html">Our Teams</a></li>
-                                <li><a href="faq.html">FAQs</a></li>
-                                <li><a href="gallery.html">Gallery</a></li>
-                            </ul> -->
-                        </li>
-                        <li class="dropdown">
-                            <a href="destinations.html">Tours</a>
-                            <ul>
-                                <li><a href="#">East Tour</a></li>
-                                <li><a href="#">West Tour</a></li>
-                                <li><a href="#">North Tour</a></li>
-                                <li><a href="#">South Tour</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="trekking.html">Treks</a></li>
-                        <li class="dropdown">
-                            <a href="booking.html">Booking Pages</a>
-                            <ul>
-                                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="blog.html">Blogs</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-    
-            <!-- Icons: Search & Sign In -->
-            <div class="nav-icons">
-                    <div class="link search-btn search-toggle"><i class="far fa-search"></i></div>
-                    <a href="login.html"><i class="fa fa-user"></i> SIGN IN</a>  
-                    <!-- Mobile Menu Button -->
-                    <div class="nav-toggler">
-                        <i class="fas fa-bars"></i>
-                    </div>
-            </div>
-        
-        </div>
-    
-        <!-- Hidden Navigation Bar -->
-<section class="hidden-bar">
-    <div class="hidden-bar-wrapper">
-        <!-- Close Button -->
-        <div class="hidden-bar-closer">
-            <span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14">
-                <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
-            </svg></span>
-        </div>
-
-        <!-- Logo -->
-        <div class="nav-logo-box">
-            <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="Treker"></a></div>
-        </div>
-
-        <!-- Side Menu -->
-        <div class="side-menu">
-            <ul class="navigation">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li class="dropdown">
-                    <a href="destinations.html">Tours </a>
-                    <ul>
-                        <li><a href="#">East Tour</a></li>
-                        <li><a href="#">West Tour</a></li>
-                        <li><a href="#">North Tour</a></li>
-                        <li><a href="#">South Tour</a></li>
-                    </ul>
-                </li>
-                <li><a href="trekking.html">Treks</a></li>
-                <li class="dropdown">
-                    <a href="booking.html">Booking Pages </a>
-                    <ul>
-                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                    </ul>
-                </li>
-                <li><a href="blog.html">Blogs</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-
-        <!-- Login/Signup Buttons -->
-        <div class="links-box clearfix">
-            <div class="clearfix">
-                <div class="link">
-                    <a href="login.html" class="theme-btn btn-style-one">
-                        <span>Login <i class="icon far fa-angle-right"></i></span>
-                    </a>
-                </div>
-                <div class="link mt-2">
-                    <a href="signup.html" class="theme-btn btn-style-two">
-                        <span>Sign Up <i class="icon far fa-angle-right"></i></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Search Bar Section -->
-<div class="search-bar">
-    <div class="search-wrapper">
-        <div class="search-closer">&times;</div>
-        <input type="text" class="search-input" placeholder="Search here...">
-        <button class="search-btn-action"><i class="fa fa-search"></i></button>
-    </div>
-</div>
-
-        
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                // Select elements
-                const navToggler = document.querySelector('.nav-toggler');
-                const hiddenBar = document.querySelector('.hidden-bar');
-                const hiddenBarCloser = document.querySelector('.hidden-bar-closer');
-
-                const searchBtn = document.querySelector('.search-btn');
-                const searchBar = document.querySelector('.search-bar');
-                const searchCloser = document.querySelector('.search-closer');
-        
-                if (navToggler && hiddenBar && hiddenBarCloser) {
-                    // Open Sidebar
-                    navToggler.addEventListener('click', function (event) {
-                        event.stopPropagation(); // Prevents event bubbling
-                        hiddenBar.classList.add('active');
-                    });
-        
-                    // Close Sidebar
-                    hiddenBarCloser.addEventListener('click', function () {
-                        hiddenBar.classList.remove('active');
-                    });
-        
-                    // Close sidebar when clicking outside (optional)
-                    document.addEventListener('click', function (event) {
-                        if (!hiddenBar.contains(event.target) && !navToggler.contains(event.target)) {
-                            hiddenBar.classList.remove('active');
-                        }
-                    });
-        
-                    // Prevent clicks inside sidebar from closing it
-                    hiddenBar.addEventListener('click', function (event) {
-                        event.stopPropagation();
-                    });
-                }
-
-                // Search bar toggle
-                searchBtn.addEventListener('click', function () {
-                    searchBar.classList.add('active');
-                });
-
-                searchCloser.addEventListener('click', function () {
-                    searchBar.classList.remove('active');
-                });
-
-            });
-        </script>
+        <div id="website_header"></div>
     </header>
+
    
      <!--Search Backdrop-->
      <div class="search-backdrop"></div>
@@ -556,80 +391,7 @@
         </div>
     </section>
 
-    <!--Trending Destinations Section-->
-    <section class="trending-destinations">
-        <div class="auto-container">
-
-            <div class="title-box centered">
-                <h2><i class="bg-vector"></i><span>Trending Destinations</span></h2>
-            </div>
-
-            <div class="gallery-box">
-                <div class="masonry-container row clearfix">
-                    <!--Block-->
-                    <div class="dest-block-one masonry-item col-lg-8 col-md-12 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box"><img src="images/resource/gallery-1.jpg" alt=""></div>
-                            <div class="hvr-box">
-                                <div class="cap-box">
-                                    <div class="cap-inner clearfix">
-                                        <h4><a href="tours.html">Kerala</a></h4>
-                                        <div class="tour-count"><span>15 Tours</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Block-->
-                    <div class="dest-block-one masonry-item column-width col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box"><img src="images/resource/gallery-2.jpg" alt=""></div>
-                            <div class="hvr-box alt-hvr">
-                                <div class="cap-box">
-                                    <div class="cap-inner clearfix">
-                                        <h4><a href="tours.html">Pune</a></h4>
-                                        <div class="tour-count"><span>15 Tours</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Block-->
-                    <div class="dest-block-one masonry-item col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box"><img src="images/resource/gallery-3.jpg" alt=""></div>
-                            <div class="hvr-box">
-                                <div class="cap-box">
-                                    <div class="cap-inner clearfix">
-                                        <h4><a href="tours.html">Kasara</a></h4>
-                                        <div class="tour-count"><span>15 Tours</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Block-->
-                    <div class="dest-block-one masonry-item col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box"><img src="images/resource/gallery-4.jpg" alt=""></div>
-                            <div class="hvr-box">
-                                <div class="cap-box">
-                                    <div class="cap-inner clearfix">
-                                        <h4><a href="tours.html">Nashik</a></h4>
-                                        <div class="tour-count"><span>Tours</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </section>
+   
 
     <!--Popular Section trek-->
     <section class="popular-section">
@@ -1196,6 +958,82 @@
     </section>
 
 
+     <!--Trending Destinations Section-->
+     <section class="trending-destinations">
+        <div class="auto-container">
+
+            <div class="title-box centered">
+                <h2><i class="bg-vector"></i><span>Trending Destinations</span></h2>
+            </div>
+
+            <div class="gallery-box">
+                <div class="masonry-container row clearfix">
+                    <!--Block-->
+                    <div class="dest-block-one masonry-item col-lg-8 col-md-12 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image-box"><img src="images/resource/gallery-1.jpg" alt=""></div>
+                            <div class="hvr-box">
+                                <div class="cap-box">
+                                    <div class="cap-inner clearfix">
+                                        <h4><a href="tours.html">Kerala</a></h4>
+                                        <div class="tour-count"><span>15 Tours</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Block-->
+                    <div class="dest-block-one masonry-item column-width col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image-box"><img src="images/resource/gallery-2.jpg" alt=""></div>
+                            <div class="hvr-box alt-hvr">
+                                <div class="cap-box">
+                                    <div class="cap-inner clearfix">
+                                        <h4><a href="tours.html">Pune</a></h4>
+                                        <div class="tour-count"><span>15 Tours</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Block-->
+                    <div class="dest-block-one masonry-item col-lg-6 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image-box"><img src="images/resource/gallery-3.jpg" alt=""></div>
+                            <div class="hvr-box">
+                                <div class="cap-box">
+                                    <div class="cap-inner clearfix">
+                                        <h4><a href="tours.html">Kasara</a></h4>
+                                        <div class="tour-count"><span>15 Tours</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Block-->
+                    <div class="dest-block-one masonry-item col-lg-6 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image-box"><img src="images/resource/gallery-4.jpg" alt=""></div>
+                            <div class="hvr-box">
+                                <div class="cap-box">
+                                    <div class="cap-inner clearfix">
+                                        <h4><a href="tours.html">Nashik</a></h4>
+                                        <div class="tour-count"><span>Tours</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
  <!-- youtube-container -->
 <div class="auto-container">
  <!-- youtube video section -->
@@ -1410,7 +1248,7 @@
                                             <i class="fa fa-star-half"></i>
                                         </div>
                                         <p class="testimonial-text" 
-                                        data-full="• My Kalsubai first trekking experience with Pratik Sir and Atharva Sir's group was absolutely amazing and unforgettable. It was well-organized, enjoyable, and a perfect balance of adventure and fun.
+                                        data-full="My Kalsubai first trekking experience with Pratik Sir and Atharva Sir's group was absolutely amazing and unforgettable. It was well-organized, enjoyable, and a perfect balance of adventure and fun.
                                         • 'Pratik Sir and Atharva Sir were incredible leaders who ensured that everyone felt safe and motivated throughout the trek. They were approachable, knowledgeable, and kept the group spirit alive.'
                                         • 'The entire trek was perfectly planned, from transportation and meal arrangements to the route and rest breaks. Their attention to detail made the experience hassle-free and enjoyable.'
                                         • 'The group had such a friendly and energetic vibe. The bond we developed during the trip added to the joy of the experience.'"
@@ -1713,15 +1551,20 @@
 </script>
 <script> 
 $(function(){
-//   $("#header").load("header.html"); 
-$("#header").load("MainHeader.html");
-  $("#footer").load("footer.html");
-  $("#homeBanner").load("homebanner.html"); //for vertical social link
-$("#homeBanner").load("homebanner2.html"); //for horizontal social link
-  //$("#Reviewtestominal").load("Reviewtestominal.html"); 
-  $("#PopularTrecks").load("PopularTrecks.html"); 
+    $("#website_header").load("WebsiteHeader.html", function(){
+            // AFTER loading header, initialize toggles!
+            initHeaderScripts();
+    });
+    $("#footer").load("footer.html");
+    // $("#homeBanner").load("homebanner.html"); //for vertical social link
+    $("#homeBanner").load("homebanner2.html"); //for horizontal social link
+    //$("#Reviewtestominal").load("Reviewtestominal.html"); 
+    $("#PopularTrecks").load("PopularTrecks.html"); 
 });
 </script>
+
+<script src="js/main.js"></script> <!-- Single JS file -->
+
 <script>
     // Sample data for demonstration purposes
     const videos = [
@@ -1791,11 +1634,12 @@ $("#homeBanner").load("homebanner2.html"); //for horizontal social link
     // Load videos on page load
     document.addEventListener('DOMContentLoaded', loadVideos);
     
-        </script>
+</script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-        <script>
+
+<script>
             $(document).ready(function(){
                 $(".popular-carousel").owlCarousel({
                     loop: true,
@@ -1812,7 +1656,7 @@ $("#homeBanner").load("homebanner2.html"); //for horizontal social link
                     }
                 });
             });
-        </script>
+</script>
             
 </body>
 </html>
