@@ -28,112 +28,11 @@
       
       <div class="search-backdrop"></div>
       
-      <!-- Main Header-->
-       <header class="main-header">
-          <div class="header-top">
-              <div class="auto-container">
-                  <div class="inner clearfix">
-                      <div class="top-left clearfix">
-                          <ul class="info clearfix">
-                              <li><i class="icon fa fa-envelope"></i> <a href="mailto:bookandexplore@gmail.com">bookandexplore@gmail.com</a></li>
-                              <li><i class="icon fa fa-phone-circle"></i> <a href="tel:+91 8888840295">+91 8888840295</a></li>
-                              </ul>
-                      </div>
-                      <div class="top-right clearfix">
-                          <div class="lang-box">
-                              <div class="lang-btn clearfix"><span class="img far fa-globe-americas"></span><span class="txt">EngLish</span><span class="icon far fa-angle-down"></span></div>
-                              
-                          </div>
-                          <div class="login"><i class="icon fa fa-user"></i> <a href="login.html">SIGN IN</a></div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <!-- Header Upper -->
-          <div class="header-upper">        
-              <div class="auto-container">
-                  <!-- Main Box -->
-                  <div class="main-box clearfix">
-                      <!--Logo-->
-                      <div class="logo-box">
-                           <div class="logo"><a href="index.html" title="Treker"><img src="images/logo.svg" alt="" title="Treker"></a></div>
-                      </div>
-  
-                      <div class="nav-box clearfix">
-                          <!--Nav Outer-->
-                          <div class="nav-outer clearfix">         
-                              <nav class="main-menu">
-                                  <ul class="navigation clearfix">
-                                      <li ><a href="index.html">Home</a>                                       
-                                      </li>
-                                      <li class="dropdown"><a href="about.html">About Us</a>
-                                          <ul>
-                                              <li><a href="team.html">Our Teams</a></li>
-                                              
-                                              <li><a href="faq.html">FAQs</a></li>
-                                              <li><a href="gallery.html">Gallery</a></li>
-                                          </ul>
-                                      </li>
-                                       
-                                      <li  class="dropdown" ><a href="destinations.html">Tours</a>
-                                      <ul>
-                                          <li><a href="#">East Tour</a></li>
-                                              <li><a href="#">West Tour</a></li>
-                                              <li><a href="#">North Tour</a></li>
-                                              <li><a href="#">South Tour</a></li> 
-                                      </ul>
-                                      
-                                      </li>
-                                      <li class="dropdown"><a href="trekking.html">Treks</a>
-                                          
-                                      </li>
-                                      <li class="dropdown"><a href="booking.html">Booking Pages</a>
-                                          <ul> 
-                                              <li><a href="terms-conditions.html">Terms & Conditions</a></li> 
-                                          </ul>
-                                      </li>
-                                      <li class="dropdown"><a href="blog.html">Blogs</a>
-                                          
-                                      </li>
-                                      <li><a href="contact.html">Contact</a></li>
-                                  </ul>
-                              </nav>
-                              <!-- Main Menu End-->
-                          </div>
-                          <!--Nav Outer End-->
-  
-                          <div class="links-box clearfix">
-                              <div class="link search-btn search-toggle"><span class="icon far fa-search"></span></div>
-                               </div>
-  
-                          <!-- Hidden Nav Toggler -->
-                          <div class="nav-toggler">
-                              <button class="hidden-bar-opener"><span class="icon"><img src="images/icons/menu-icon.svg" alt=""></span></button>
-                          </div>
-  
-                      </div>
-  
-                      <!-- End Header Upper -->
-                      <div class="search-box">
-                          <div class="outer-container">
-                              <div class="inner-box">
-                                  <div class="form-box">
-                                      <div class="s-close-btn"><span class="icon far fa-times"></span></div>
-                                      <span class="s-icon fa fa-search"></span>
-                                      <form method="post" action="index.html">
-                                          <div class="form-group">
-                                              <input type="search" name="search" value="" placeholder="Search Here" required="">
-                                          </div>
-                                      </form>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-  
-                  </div>
-              </div>
-          </div>
-      </header>
+       <!-- Main Header-->
+    <header class="main-header">
+        <div id="website_header"></div>
+    </header>
+
        <!--Search Backdrop-->
        <div class="search-backdrop"></div>
           
@@ -399,9 +298,13 @@
 </script>
 <script> 
 $(function(){
-  $("#header").load("header.html"); 
+    $("#website_header").load("WebsiteHeader.html", function(){
+            // AFTER loading header, initialize toggles!
+            initHeaderScripts();
+    }); 
   $("#footer").load("footer.html"); 
 });
-</script> 
+</script>
+<script src="js/main.js"></script> <!-- Single JS file --> 
 </body>
 </html>

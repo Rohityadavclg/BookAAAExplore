@@ -6511,7 +6511,7 @@ Gallery section
   font-size: 18px; */
   font-size: 19px;
   font-weight: 600;
-  font-style: italic;
+  /* font-style: italic; */
   text-align: center;
   z-index: 2;
   white-space: nowrap;
@@ -7169,7 +7169,7 @@ Gallery section
 }
 
 .info-item i {
-  font-size: 38px;
+  font-size: 28px;
   color: #1DC5CE; /* Sky blue color */
   margin-bottom: 8px;
 }
