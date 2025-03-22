@@ -63,7 +63,7 @@
 /* Image Box */
 .image-box img {
     width: 100%;
-    height: 180px; /* Reduced height */
+    height: 270px; /* Reduced height */
     object-fit: cover;
     border-radius: 10px;
     transition: 0.3s;
@@ -204,174 +204,7 @@
       
       <!-- Main Header-->
       <header class="main-header">
-        <div class="header-upper container-fluid">
-            
-            <div class="logo-nav">
-                <!-- Logo -->
-                <a href="index.html"><img src="images/logo.svg" alt="Logo" style="height: 50px;"></a>
-    
-                 <!-- Navigation -->
-                <nav class="main-menu">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li class="dropdown">
-                            <a href="about.html">About Us</a>
-                            <!-- <ul>
-                                <li><a href="team.html">Our Teams</a></li>
-                                <li><a href="faq.html">FAQs</a></li>
-                                <li><a href="gallery.html">Gallery</a></li>
-                            </ul> -->
-                        </li>
-                        <li class="dropdown">
-                            <a href="destinations.html">Tours</a>
-                            <ul>
-                                <li><a href="#">East Tour</a></li>
-                                <li><a href="#">West Tour</a></li>
-                                <li><a href="#">North Tour</a></li>
-                                <li><a href="#">South Tour</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="trekking.html">Treks</a></li>
-                        <li class="dropdown">
-                            <a href="booking.html">Booking Pages</a>
-                            <ul>
-                                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="blog.html">Blogs</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-    
-            <!-- Icons: Search & Sign In -->
-            <div class="nav-icons">
-                    <div class="link search-btn search-toggle"><i class="far fa-search"></i></div>
-                    <a href="login.html"><i class="fa fa-user"></i> SIGN IN</a>  
-                    <!-- Mobile Menu Button -->
-                    <div class="nav-toggler">
-                        <i class="fas fa-bars"></i>
-                    </div>
-            </div>
-        
-        </div>
-    
-        <!-- Hidden Navigation Bar -->
-<section class="hidden-bar">
-    <div class="hidden-bar-wrapper">
-        <!-- Close Button -->
-        <div class="hidden-bar-closer">
-            <span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14">
-                <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
-            </svg></span>
-        </div>
-
-        <!-- Logo -->
-        <div class="nav-logo-box">
-            <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="Treker"></a></div>
-        </div>
-
-        <!-- Side Menu -->
-        <div class="side-menu">
-            <ul class="navigation">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li class="dropdown">
-                    <a href="destinations.html">Tours </a>
-                    <ul>
-                        <li><a href="#">East Tour</a></li>
-                        <li><a href="#">West Tour</a></li>
-                        <li><a href="#">North Tour</a></li>
-                        <li><a href="#">South Tour</a></li>
-                    </ul>
-                </li>
-                <li><a href="trekking.html">Treks</a></li>
-                <li class="dropdown">
-                    <a href="booking.html">Booking Pages </a>
-                    <ul>
-                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                    </ul>
-                </li>
-                <li><a href="blog.html">Blogs</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-
-        <!-- Login/Signup Buttons -->
-        <div class="links-box clearfix">
-            <div class="clearfix">
-                <div class="link">
-                    <a href="login.html" class="theme-btn btn-style-one">
-                        <span>Login <i class="icon far fa-angle-right"></i></span>
-                    </a>
-                </div>
-                <div class="link mt-2">
-                    <a href="signup.html" class="theme-btn btn-style-two">
-                        <span>Sign Up <i class="icon far fa-angle-right"></i></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Search Bar Section -->
-<div class="search-bar">
-    <div class="search-wrapper">
-        <div class="search-closer">&times;</div>
-        <input type="text" class="search-input" placeholder="Search here...">
-        <button class="search-btn-action"><i class="fa fa-search"></i></button>
-    </div>
-</div>
-
-        
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                // Select elements
-                const navToggler = document.querySelector('.nav-toggler');
-                const hiddenBar = document.querySelector('.hidden-bar');
-                const hiddenBarCloser = document.querySelector('.hidden-bar-closer');
-
-                const searchBtn = document.querySelector('.search-btn');
-                const searchBar = document.querySelector('.search-bar');
-                const searchCloser = document.querySelector('.search-closer');
-        
-                if (navToggler && hiddenBar && hiddenBarCloser) {
-                    // Open Sidebar
-                    navToggler.addEventListener('click', function (event) {
-                        event.stopPropagation(); // Prevents event bubbling
-                        hiddenBar.classList.add('active');
-                    });
-        
-                    // Close Sidebar
-                    hiddenBarCloser.addEventListener('click', function () {
-                        hiddenBar.classList.remove('active');
-                    });
-        
-                    // Close sidebar when clicking outside (optional)
-                    document.addEventListener('click', function (event) {
-                        if (!hiddenBar.contains(event.target) && !navToggler.contains(event.target)) {
-                            hiddenBar.classList.remove('active');
-                        }
-                    });
-        
-                    // Prevent clicks inside sidebar from closing it
-                    hiddenBar.addEventListener('click', function (event) {
-                        event.stopPropagation();
-                    });
-                }
-
-                // Search bar toggle
-                searchBtn.addEventListener('click', function () {
-                    searchBar.classList.add('active');
-                });
-
-                searchCloser.addEventListener('click', function () {
-                    searchBar.classList.remove('active');
-                });
-
-            });
-        </script>
+        <div id="website_header"></div>
     </header>
 
        <!--Search Backdrop-->
@@ -411,7 +244,7 @@
         <div class="auto-container">
             <div class="title-box centered">
                 <h2><span>Trending Destinations</span></h2>
-                <div class="text">Since 2014, we’ve helped more than 50,000 people of all ages enjoy the best outdoor experience of their lives. Whether it’s for one day or a two-week vacation, close to home or a foreign land.</div>
+                <!-- <div class="text">Since 2014, we’ve helped more than 50,000 people of all ages enjoy the best outdoor experience of their lives. Whether it’s for one day or a two-week vacation, close to home or a foreign land.</div> -->
             </div>
             <!--MixitUp Galery-->
             <div class="mixitup-gallery">
@@ -419,140 +252,82 @@
                 <div class="gallery-filters centered clearfix">
                     <ul class="filter-tabs filter-btns clearfix">
                         <li class="active filter" data-role="button" data-filter="all">All</li>
-                        <li class="filter" data-role="button" data-filter=".europe">Sahyadri Treks</li>
                         <li class="filter" data-role="button" data-filter=".asia">North</li>
                         <li class="filter" data-role="button" data-filter=".s-america">South</li>
                         <li class="filter" data-role="button" data-filter=".n-america">East</li>
                         <li class="filter" data-role="button" data-filter=".africa">West</li>
+                        <li class="filter" data-role="button" data-filter=".europe">Sahyadri Treks</li>
                     </ul>
                 </div>
             
                 <div class="filter-list row clearfix">
-                    <!-- South -->
-                    <div class="trend-block-one mix all s-america col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                   <!-- South -->
+                    <div class="trend-block-one col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="inner-box">
                             <div class="image-box">
-                                <div class="image">
-                                    <a href="hampi_Gokarna.html">
-                                        <img src="images/Website Card Images/Hampi.png" alt="Hampi Gokarna Tours" />
-                                    </a>
-                                    <!-- Dark Overlay -->
-                                    <div class="overlay"></div>
-                                    <!-- Hidden Hover Content -->
-                                    <div class="hover-content">
-                                        <h4><a href="hampi_Gokarna.html">South</a></h4>
-                                        <div class="more-link">
-                                            <a href="hampi_Gokarna.html" class="theme-btn">
-                                                <span class="far fa-long-arrow-right"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="count"><span>Hampi Gokarna Tours</span></div>
+                                <a href="hampi_Gokarna.html">
+                                    <img src="images/Website Card Images/Hampi.png" alt="Hampi Gokarna Tours" />
+                                    <div class="title-text">Hampi Gokarna Tours</div>
+                                </a>
                             </div>
                         </div>
                     </div>
+
+                    <!-- South -->
+                    <div class="trend-block-one col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <a href="kedarnath_Badrinath_Tour.html">
+                                    <img src="images/Website Card Images/Badrinath.png" alt="Hampi Gokarna Tours" />
+                                    <div class="title-text">Kedarnath & Badrinath Tours</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- South -->
+                    <div class="trend-block-one col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <a href="ujjain_Omkareshwar.html">
+                                    <img src="images/Website Card Images/Ujain.jpeg" alt="Hampi Gokarna Tours" />
+                                    <div class="title-text">Ujjain Omkareshwar Tours</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- South -->
+                    <div class="trend-block-one col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <a href="winter_spiti_vall.html">
+                                    <img src="images/Website Card Images/Spiti.png" alt="Hampi Gokarna Tours" />
+                                    <div class="title-text">Winter Spiti Valley Tours</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- South -->
+                    <div class="trend-block-one col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <a href="kedarnath_Yatra.html">
+                                    <img src="images/Website Card Images/Kedarnath.png" alt="Hampi Gokarna Tours" />
+                                    <div class="title-text">Kedarnath Yatra Tours</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                     
             
-                    <!-- North -->
-                    <div class="trend-block-one mix all s-america col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <div class="image">
-                                    <a href="kedarnath_Badrinath_Tour.html">
-                                        <img src="images/Website Card Images/Badrinath.png" alt="Hampi Gokarna Tours" />
-                                    </a>
-                                    <!-- Dark Overlay -->
-                                    <div class="overlay"></div>
-                                    <!-- Hidden Hover Content -->
-                                    <div class="hover-content">
-                                        <h4><a href="kedarnath_Badrinath_Tour.html">North</a></h4>
-                                        <div class="more-link">
-                                            <a href="kedarnath_Badrinath_Tour.html" class="theme-btn">
-                                                <span class="far fa-long-arrow-right"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="count"><span>Kedarnath & Badrinath Tours</span></div>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <!-- East -->
-                    <div class="trend-block-one mix all s-america col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <div class="image">
-                                    <a href="ujjain_Omkareshwar.html">
-                                        <img src="images/Website Card Images/Ujain.jpeg" alt="Hampi Gokarna Tours" />
-                                    </a>
-                                    <!-- Dark Overlay -->
-                                    <div class="overlay"></div>
-                                    <!-- Hidden Hover Content -->
-                                    <div class="hover-content">
-                                        <h4><a href="ujjain_Omkareshwar.html">East</a></h4>
-                                        <div class="more-link">
-                                            <a href="ujjain_Omkareshwar.html" class="theme-btn">
-                                                <span class="far fa-long-arrow-right"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="count"><span>Ujjain Omkareshwar Tours </span></div>
-                            </div>
-                        </div>
-                    </div>
+                   
 
-                     <!-- East -->
-                     <div class="trend-block-one mix all s-america col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <div class="image">
-                                    <a href="winter_spiti_vall.html">
-                                        <img src="images/Website Card Images/Spiti.png" alt="Hampi Gokarna Tours" />
-                                    </a>
-                                    <!-- Dark Overlay -->
-                                    <div class="overlay"></div>
-                                    <!-- Hidden Hover Content -->
-                                    <div class="hover-content">
-                                        <h4><a href="winter_spiti_vall.html">West</a></h4>
-                                        <div class="more-link">
-                                            <a href="winter_spiti_vall.html" class="theme-btn">
-                                                <span class="far fa-long-arrow-right"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="count"><span>Winter Spiti Valley Tours</span></div>
-                            </div>
-                        </div>
-                    </div>
+                    
 
-                    <!-- North -->
-                    <div class="trend-block-one mix all s-america col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <div class="image">
-                                    <a href="kedarnath_Yatra.html">
-                                        <img src="images/Website Card Images/Kedarnath.png" alt="Hampi Gokarna Tours" />
-                                    </a>
-                                    <!-- Dark Overlay -->
-                                    <div class="overlay"></div>
-                                    <!-- Hidden Hover Content -->
-                                    <div class="hover-content">
-                                        <h4><a href="kedarnath_Yatra.htmll">North</a></h4>
-                                        <div class="more-link">
-                                            <a href="kedarnath_Yatra.html" class="theme-btn">
-                                                <span class="far fa-long-arrow-right"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="count"><span>Kedarnath Yatra Tours</span></div>
-                            </div>
-                        </div>
-                    </div>
+                    
 
                 </div>
             
@@ -651,26 +426,6 @@
                     <div class="trek-block-one ">
                         <div class="inner-box">
                             <div class="image-box">
-                                <div class="image"><a href="#"><img src="images/Website Card Images/14.png" alt="" title=""></a></div>
-                                 
-                                <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4 class="link"><a href="devkund.html">...</a></h4>
-                                
-                            </div>
-                            <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="devkund.html" class="theme-btn"><span>View Details </span></a></div>
-                                
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="trek-block-one ">
-                        <div class="inner-box">
-                            <div class="image-box">
                                 <div class="image"><a href="#"><img src="images/Website Card Images/Badrinath.png" alt="" title=""></a></div>
                                  
                                 <div class="info">
@@ -727,10 +482,14 @@
 </script>
 <script> 
 $(function(){
-  $("#header").load("header.html"); 
+    $("#website_header").load("WebsiteHeader.html", function(){
+            // AFTER loading header, initialize toggles!
+            initHeaderScripts();
+    });
   $("#footer").load("footer.html"); 
 });
 </script> 
+<script src="js/main.js"></script> <!-- Single JS file -->
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

@@ -31,176 +31,8 @@
       
       <div class="search-backdrop"></div>
       
-      <!-- Main Header-->
       <header class="main-header">
-        <div class="header-upper container-fluid">
-            
-            <div class="logo-nav">
-                <!-- Logo -->
-                <a href="index.html"><img src="images/logo.svg" alt="Logo" style="height: 50px;"></a>
-    
-                 <!-- Navigation -->
-                <nav class="main-menu">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li class="dropdown">
-                            <a href="about.html">About Us</a>
-                            <!-- <ul>
-                                <li><a href="team.html">Our Teams</a></li>
-                                <li><a href="faq.html">FAQs</a></li>
-                                <li><a href="gallery.html">Gallery</a></li>
-                            </ul> -->
-                        </li>
-                        <li class="dropdown">
-                            <a href="destinations.html">Tours</a>
-                            <ul>
-                                <li><a href="#">East Tour</a></li>
-                                <li><a href="#">West Tour</a></li>
-                                <li><a href="#">North Tour</a></li>
-                                <li><a href="#">South Tour</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="trekking.html">Treks</a></li>
-                        <li class="dropdown">
-                            <a href="booking.html">Booking Pages</a>
-                            <ul>
-                                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="blog.html">Blogs</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-    
-            <!-- Icons: Search & Sign In -->
-            <div class="nav-icons">
-                    <div class="link search-btn search-toggle"><i class="far fa-search"></i></div>
-                    <a href="login.html"><i class="fa fa-user"></i> SIGN IN</a>  
-                    <!-- Mobile Menu Button -->
-                    <div class="nav-toggler">
-                        <i class="fas fa-bars"></i>
-                    </div>
-            </div>
-        
-        </div>
-    
-        <!-- Hidden Navigation Bar -->
-<section class="hidden-bar">
-    <div class="hidden-bar-wrapper">
-        <!-- Close Button -->
-        <div class="hidden-bar-closer">
-            <span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14">
-                <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
-            </svg></span>
-        </div>
-
-        <!-- Logo -->
-        <div class="nav-logo-box">
-            <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="Treker"></a></div>
-        </div>
-
-        <!-- Side Menu -->
-        <div class="side-menu">
-            <ul class="navigation">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li class="dropdown">
-                    <a href="destinations.html">Tours </a>
-                    <ul>
-                        <li><a href="#">East Tour</a></li>
-                        <li><a href="#">West Tour</a></li>
-                        <li><a href="#">North Tour</a></li>
-                        <li><a href="#">South Tour</a></li>
-                    </ul>
-                </li>
-                <li><a href="trekking.html">Treks</a></li>
-                <li class="dropdown">
-                    <a href="booking.html">Booking Pages </a>
-                    <ul>
-                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                    </ul>
-                </li>
-                <li><a href="blog.html">Blogs</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-
-        <!-- Login/Signup Buttons -->
-        <div class="links-box clearfix">
-            <div class="clearfix">
-                <div class="link">
-                    <a href="login.html" class="theme-btn btn-style-one">
-                        <span>Login <i class="icon far fa-angle-right"></i></span>
-                    </a>
-                </div>
-                <div class="link mt-2">
-                    <a href="signup.html" class="theme-btn btn-style-two">
-                        <span>Sign Up <i class="icon far fa-angle-right"></i></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Search Bar Section -->
-<div class="search-bar">
-    <div class="search-wrapper">
-        <div class="search-closer">&times;</div>
-        <input type="text" class="search-input" placeholder="Search here...">
-        <button class="search-btn-action"><i class="fa fa-search"></i></button>
-    </div>
-</div>
-
-        
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                // Select elements
-                const navToggler = document.querySelector('.nav-toggler');
-                const hiddenBar = document.querySelector('.hidden-bar');
-                const hiddenBarCloser = document.querySelector('.hidden-bar-closer');
-
-                const searchBtn = document.querySelector('.search-btn');
-                const searchBar = document.querySelector('.search-bar');
-                const searchCloser = document.querySelector('.search-closer');
-        
-                if (navToggler && hiddenBar && hiddenBarCloser) {
-                    // Open Sidebar
-                    navToggler.addEventListener('click', function (event) {
-                        event.stopPropagation(); // Prevents event bubbling
-                        hiddenBar.classList.add('active');
-                    });
-        
-                    // Close Sidebar
-                    hiddenBarCloser.addEventListener('click', function () {
-                        hiddenBar.classList.remove('active');
-                    });
-        
-                    // Close sidebar when clicking outside (optional)
-                    document.addEventListener('click', function (event) {
-                        if (!hiddenBar.contains(event.target) && !navToggler.contains(event.target)) {
-                            hiddenBar.classList.remove('active');
-                        }
-                    });
-        
-                    // Prevent clicks inside sidebar from closing it
-                    hiddenBar.addEventListener('click', function (event) {
-                        event.stopPropagation();
-                    });
-                }
-
-                // Search bar toggle
-                searchBtn.addEventListener('click', function () {
-                    searchBar.classList.add('active');
-                });
-
-                searchCloser.addEventListener('click', function () {
-                    searchBar.classList.remove('active');
-                });
-
-            });
-        </script>
+        <div id="website_header"></div>
     </header>
 
        <!--Search Backdrop-->
@@ -237,24 +69,29 @@
 
         <!--Contact Section-->
         <section class="contact-section">
-            <div class="floated-icon right"><img src="images/resource/stones-right-3.svg" alt="" title=""></div>
-            <div class="floated-icon right-2"><img src="images/resource/stones-right-2.svg" alt="" title=""></div>
+            <div class="floated-icon left-2 "><img src="images/resource/stones-right-2.svg" alt="" title=""></div>
+            <div class="floated-icon right"><img src="images/resource/stones-right-2.svg" alt="" title=""></div>
             <div class="auto-container">
 
-                <div class="info-section">
+                <div class="info-section" >
                     <div class="row clearfix">
                         <!--Block-->
-                        <div class="info-block col-lg-4 col-md-6 col-sm-12">
+                        <div class="info-block col-lg-3 col-md-3 col-sm-12">
                             <div class="inner-box">
                                 <div class="map-icon"><img src="images/resource/india-map.svg" alt="" title=""></div>
-                            
-                              <div class="text"> SR.NO.505/2A3 WADGAON
-BUDRUK, WADGAON BK Pune, Maharashtra 411041</div>
-                                 
+                                <div class="text"> SR.NO.505/2A3 WADGAON
+                                                BUDRUK, WADGAON BK Pune, Maharashtra 411041</div>
                                 <div class="phone"><a href="tel:+918308602787">+91 8888820495</a></div>
-                                  <div class="phone"><a href="tel:+918308602787">+91 8308602787</a></div>
+                                <div class="phone"><a href="tel:+918308602787">+91 8308602787</a></div>
                             </div>
                         </div>
+
+                        <section class="map-section col-lg-9 col-md-9 col-sm-12">
+                            <!--Map Box-->
+                            <div class="map-box">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d7568.823602698123!2d73.823318!3d18.464997!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDI3JzU0LjAiTiA3M8KwNDknMjMuOSJF!5e0!3m2!1sen!2sin!4v1736677406555!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                               </div>
+                        </section>
                     </div>
                 </div>
                 <div class="title-box centered">
@@ -305,76 +142,14 @@ BUDRUK, WADGAON BK Pune, Maharashtra 411041</div>
             </div>
         </section>
 
-        <!--Find Us Section-->
-        <section class="find-us">
-            <div class="floated-icon left"><img src="images/resource/stones-left.svg" alt="" title=""></div>
-            <div class="floated-icon right"><img src="images/resource/floated-icon-right-2.svg" alt="" title=""></div>
-            <div class="auto-container">
-                <div class="title-box centered">
-                    <h2><span>Find Our Office on Map</span></h2>
-                    <div class="text">Contact us and get strapped in for a better adventure experience in your life-time. Just look for opportunity to be with nature. </div>
-                </div>
-                <div class="row clearfix">
-                    <!--Text Col-->
-                    <div class="map-col col-lg-6 col-md-12 col-sm-12">
-                        <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
-                            <div class="map">
-                                <div class="map-image"><img src="images/resource/world-map.svg" alt="" title=""></div>
-                                <div class="loc-point loc-1">
-                                    <div class="loc-icon"><img src="images/icons/loc-hover.svg" alt="" title=""></div>
-                                    <div class="loc-popup">
-                                        <div class="text"> SR.NO.505/2A3 WADGAON
-BUDRUK, WADGAON BK Pune, Maharashtra 411041</div>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Text Col-->
-                    <div class="text-col col-lg-6 col-md-12 col-sm-12">
-                        <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
-                            <div class="accordion-box clearfix">
-                                <!--Block-->
-                                <div class="accordion block active-block">
-                                    <div class="acc-btn active">How can I find your location? <i class="fa-regular fa-angle-down"></i></div>
-                                    <div class="acc-content">
-                                        <div class="content">
-                                            <div class="text">One of the major benefits of trekking is that it improves your physical health immensely. Spending multiple hours on the trail, climbing around boulders.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Block-->
-                                <div class="accordion block">
-                                    <div class="acc-btn">What do I need to carry? <i class="fa-regular fa-angle-down"></i></div>
-                                    <div class="acc-content">
-                                        <div class="content">
-                                            <div class="text">One of the major benefits of trekking is that it improves your physical health immensely. Spending multiple hours on the trail, climbing around boulders.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Block-->
-                                <div class="accordion block">
-                                    <div class="acc-btn">How concerned should I be about the altitude? <i class="fa-regular fa-angle-down"></i></div>
-                                    <div class="acc-content">
-                                        <div class="content">
-                                            <div class="text">One of the major benefits of trekking is that it improves your physical health immensely. Spending multiple hours on the trail, climbing around boulders.</div>
-                                        </div>
-                                    </div>
-                                </div>
+        
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="map-section">
+<!--         <section class="map-section">
             <!--Map Box-->
-            <div class="map-box">
+<!--             <div class="map-box">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d7568.823602698123!2d73.823318!3d18.464997!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDI3JzU0LjAiTiA3M8KwNDknMjMuOSJF!5e0!3m2!1sen!2sin!4v1736677406555!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-               </div>
-        </section>
+               </div> -->
+<!--         </section> --> -->
 
         <!--Main Footer-->
         <div id="footer"></div>
@@ -399,7 +174,7 @@ BUDRUK, WADGAON BK Pune, Maharashtra 411041</div>
     <script src="js/wow.js"></script>
     <script src="js/custom-script.js"></script>
      
-    <script>
+    <!-- <script>
         $(document).ready(function(){
             $("#header").load("header.html", function(response, status, xhr) {
                 if (status == "error") {
@@ -412,6 +187,17 @@ BUDRUK, WADGAON BK Pune, Maharashtra 411041</div>
                 }
             });
         });
-    </script>
+    </script> -->
+    <script> 
+        $(function(){
+            $("#website_header").load("WebsiteHeader.html", function(){
+                    // AFTER loading header, initialize toggles!
+                    initHeaderScripts();
+            });
+            $("#footer").load("footer.html");
+           
+        });
+        </script>
+    <script src="js/main.js"></script> <!-- Single JS file -->
 </body>
 </html>

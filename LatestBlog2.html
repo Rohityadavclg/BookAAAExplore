@@ -27,174 +27,7 @@
 	  
 	  <!-- Main Header-->
       <header class="main-header">
-        <div class="header-upper container-fluid">
-            
-            <div class="logo-nav">
-                <!-- Logo -->
-                <a href="index.html"><img src="images/logo.svg" alt="Logo" style="height: 50px;"></a>
-    
-                 <!-- Navigation -->
-                <nav class="main-menu">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li class="dropdown">
-                            <a href="about.html">About Us</a>
-                            <!-- <ul>
-                                <li><a href="team.html">Our Teams</a></li>
-                                <li><a href="faq.html">FAQs</a></li>
-                                <li><a href="gallery.html">Gallery</a></li>
-                            </ul> -->
-                        </li>
-                        <li class="dropdown">
-                            <a href="destinations.html">Tours</a>
-                            <ul>
-                                <li><a href="#">East Tour</a></li>
-                                <li><a href="#">West Tour</a></li>
-                                <li><a href="#">North Tour</a></li>
-                                <li><a href="#">South Tour</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="trekking.html">Treks</a></li>
-                        <li class="dropdown">
-                            <a href="booking.html">Booking Pages</a>
-                            <ul>
-                                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="blog.html">Blogs</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-    
-            <!-- Icons: Search & Sign In -->
-            <div class="nav-icons">
-                    <div class="link search-btn search-toggle"><i class="far fa-search"></i></div>
-                    <a href="login.html"><i class="fa fa-user"></i> SIGN IN</a>  
-                    <!-- Mobile Menu Button -->
-                    <div class="nav-toggler">
-                        <i class="fas fa-bars"></i>
-                    </div>
-            </div>
-        
-        </div>
-    
-        <!-- Hidden Navigation Bar -->
-<section class="hidden-bar">
-    <div class="hidden-bar-wrapper">
-        <!-- Close Button -->
-        <div class="hidden-bar-closer">
-            <span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14">
-                <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
-            </svg></span>
-        </div>
-
-        <!-- Logo -->
-        <div class="nav-logo-box">
-            <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="Treker"></a></div>
-        </div>
-
-        <!-- Side Menu -->
-        <div class="side-menu">
-            <ul class="navigation">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li class="dropdown">
-                    <a href="destinations.html">Tours </a>
-                    <ul>
-                        <li><a href="#">East Tour</a></li>
-                        <li><a href="#">West Tour</a></li>
-                        <li><a href="#">North Tour</a></li>
-                        <li><a href="#">South Tour</a></li>
-                    </ul>
-                </li>
-                <li><a href="trekking.html">Treks</a></li>
-                <li class="dropdown">
-                    <a href="booking.html">Booking Pages </a>
-                    <ul>
-                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                    </ul>
-                </li>
-                <li><a href="blog.html">Blogs</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-
-        <!-- Login/Signup Buttons -->
-        <div class="links-box clearfix">
-            <div class="clearfix">
-                <div class="link">
-                    <a href="login.html" class="theme-btn btn-style-one">
-                        <span>Login <i class="icon far fa-angle-right"></i></span>
-                    </a>
-                </div>
-                <div class="link mt-2">
-                    <a href="signup.html" class="theme-btn btn-style-two">
-                        <span>Sign Up <i class="icon far fa-angle-right"></i></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Search Bar Section -->
-<div class="search-bar">
-    <div class="search-wrapper">
-        <div class="search-closer">&times;</div>
-        <input type="text" class="search-input" placeholder="Search here...">
-        <button class="search-btn-action"><i class="fa fa-search"></i></button>
-    </div>
-</div>
-
-        
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                // Select elements
-                const navToggler = document.querySelector('.nav-toggler');
-                const hiddenBar = document.querySelector('.hidden-bar');
-                const hiddenBarCloser = document.querySelector('.hidden-bar-closer');
-
-                const searchBtn = document.querySelector('.search-btn');
-                const searchBar = document.querySelector('.search-bar');
-                const searchCloser = document.querySelector('.search-closer');
-        
-                if (navToggler && hiddenBar && hiddenBarCloser) {
-                    // Open Sidebar
-                    navToggler.addEventListener('click', function (event) {
-                        event.stopPropagation(); // Prevents event bubbling
-                        hiddenBar.classList.add('active');
-                    });
-        
-                    // Close Sidebar
-                    hiddenBarCloser.addEventListener('click', function () {
-                        hiddenBar.classList.remove('active');
-                    });
-        
-                    // Close sidebar when clicking outside (optional)
-                    document.addEventListener('click', function (event) {
-                        if (!hiddenBar.contains(event.target) && !navToggler.contains(event.target)) {
-                            hiddenBar.classList.remove('active');
-                        }
-                    });
-        
-                    // Prevent clicks inside sidebar from closing it
-                    hiddenBar.addEventListener('click', function (event) {
-                        event.stopPropagation();
-                    });
-                }
-
-                // Search bar toggle
-                searchBtn.addEventListener('click', function () {
-                    searchBar.classList.add('active');
-                });
-
-                searchCloser.addEventListener('click', function () {
-                    searchBar.classList.remove('active');
-                });
-
-            });
-        </script>
+        <div id="website_header"></div>
     </header>
 
 	   <!--Search Backdrop-->
@@ -616,9 +449,13 @@
 </script>
 <script> 
 $(function(){
-  $("#header").load("header.html"); 
+    $("#website_header").load("WebsiteHeader.html", function(){
+            // AFTER loading header, initialize toggles!
+            initHeaderScripts();
+    });
   $("#footer").load("footer.html"); 
 });
 </script> 
+<script src="js/main.js"></script> <!-- Single JS file -->
 </body>
 </html>

@@ -127,175 +127,9 @@
 	  
 	  <!-- Main Header-->
 	  <header class="main-header">
-        <div class="header-upper container-fluid">
-            
-            <div class="logo-nav">
-                <!-- Logo -->
-                <a href="index.html"><img src="images/logo.svg" alt="Logo" style="height: 50px;"></a>
-    
-                 <!-- Navigation -->
-                <nav class="main-menu">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li class="dropdown">
-                            <a href="about.html">About Us</a>
-                            <!-- <ul>
-                                <li><a href="team.html">Our Teams</a></li>
-                                <li><a href="faq.html">FAQs</a></li>
-                                <li><a href="gallery.html">Gallery</a></li>
-                            </ul> -->
-                        </li>
-                        <li class="dropdown">
-                            <a href="destinations.html">Tours</a>
-                            <ul>
-                                <li><a href="#">East Tour</a></li>
-                                <li><a href="#">West Tour</a></li>
-                                <li><a href="#">North Tour</a></li>
-                                <li><a href="#">South Tour</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="trekking.html">Treks</a></li>
-                        <li class="dropdown">
-                            <a href="booking.html">Booking Pages</a>
-                            <ul>
-                                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="blog.html">Blogs</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-    
-            <!-- Icons: Search & Sign In -->
-            <div class="nav-icons">
-                    <div class="link search-btn search-toggle"><i class="far fa-search"></i></div>
-                    <a href="login.html"><i class="fa fa-user"></i> SIGN IN</a>  
-                    <!-- Mobile Menu Button -->
-                    <div class="nav-toggler">
-                        <i class="fas fa-bars"></i>
-                    </div>
-            </div>
-        
-        </div>
-    
-        <!-- Hidden Navigation Bar -->
-<section class="hidden-bar">
-    <div class="hidden-bar-wrapper">
-        <!-- Close Button -->
-        <div class="hidden-bar-closer">
-            <span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14">
-                <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
-            </svg></span>
-        </div>
-
-        <!-- Logo -->
-        <div class="nav-logo-box">
-            <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="Treker"></a></div>
-        </div>
-
-        <!-- Side Menu -->
-        <div class="side-menu">
-            <ul class="navigation">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li class="dropdown">
-                    <a href="destinations.html">Tours </a>
-                    <ul>
-                        <li><a href="#">East Tour</a></li>
-                        <li><a href="#">West Tour</a></li>
-                        <li><a href="#">North Tour</a></li>
-                        <li><a href="#">South Tour</a></li>
-                    </ul>
-                </li>
-                <li><a href="trekking.html">Treks</a></li>
-                <li class="dropdown">
-                    <a href="booking.html">Booking Pages </a>
-                    <ul>
-                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                    </ul>
-                </li>
-                <li><a href="blog.html">Blogs</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-
-        <!-- Login/Signup Buttons -->
-        <div class="links-box clearfix">
-            <div class="clearfix">
-                <div class="link">
-                    <a href="login.html" class="theme-btn btn-style-one">
-                        <span>Login <i class="icon far fa-angle-right"></i></span>
-                    </a>
-                </div>
-                <div class="link mt-2">
-                    <a href="signup.html" class="theme-btn btn-style-two">
-                        <span>Sign Up <i class="icon far fa-angle-right"></i></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Search Bar Section -->
-<div class="search-bar">
-    <div class="search-wrapper">
-        <div class="search-closer">&times;</div>
-        <input type="text" class="search-input" placeholder="Search here...">
-        <button class="search-btn-action"><i class="fa fa-search"></i></button>
-    </div>
-</div>
-
-        
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                // Select elements
-                const navToggler = document.querySelector('.nav-toggler');
-                const hiddenBar = document.querySelector('.hidden-bar');
-                const hiddenBarCloser = document.querySelector('.hidden-bar-closer');
-
-                const searchBtn = document.querySelector('.search-btn');
-                const searchBar = document.querySelector('.search-bar');
-                const searchCloser = document.querySelector('.search-closer');
-        
-                if (navToggler && hiddenBar && hiddenBarCloser) {
-                    // Open Sidebar
-                    navToggler.addEventListener('click', function (event) {
-                        event.stopPropagation(); // Prevents event bubbling
-                        hiddenBar.classList.add('active');
-                    });
-        
-                    // Close Sidebar
-                    hiddenBarCloser.addEventListener('click', function () {
-                        hiddenBar.classList.remove('active');
-                    });
-        
-                    // Close sidebar when clicking outside (optional)
-                    document.addEventListener('click', function (event) {
-                        if (!hiddenBar.contains(event.target) && !navToggler.contains(event.target)) {
-                            hiddenBar.classList.remove('active');
-                        }
-                    });
-        
-                    // Prevent clicks inside sidebar from closing it
-                    hiddenBar.addEventListener('click', function (event) {
-                        event.stopPropagation();
-                    });
-                }
-
-                // Search bar toggle
-                searchBtn.addEventListener('click', function () {
-                    searchBar.classList.add('active');
-                });
-
-                searchCloser.addEventListener('click', function () {
-                    searchBar.classList.remove('active');
-                });
-
-            });
-        </script>
+        <div id="website_header"></div>
     </header>
+
 	   <!--Search Backdrop-->
 	   <div class="search-backdrop"></div>
 		  
@@ -309,21 +143,13 @@
 	 
     
 
-    <!--Page Info-->
-    <section class="page-info">
-        <div class="auto-container">
-            <div class="links">
-                
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Banner Section -->
     <section class="packages-banner" style="background-image: url(images/background/banner-1.jpg);">
         <div class="auto-container">
 			<ul class="banner-list">
-				<li><span class="icon"><img src="images/icons/location.svg" alt="" /></span>Mumbai/Pune</li>
-				 
+				<h4>SPITI</h4>
 			</ul>
 		</div>
     </section>
@@ -331,72 +157,59 @@
 	<!-- Package Detail Section -->
 	<section class="package-detail-section">
 		<div class="auto-container">
+
+			<!-- Booking card section-->
+			<div id="booking_now"></div>
+
+			<!-- Dynamic Booking Price -->
+			<div class="booking_now_price" style="display: none;">17,499</div>
+
+			<!-- Package Info Box -->
+			<div class="package-info-box style-two">
+				<div class="inner-container d-flex justify-content-between align-items-center flex-wrap">
+			  
+				  <div class="info-item">
+					<i class="fas fa-clock"></i>
+					<span>Duration</span>
+					<p>5 Hr</p>
+				  </div>
+			  
+				  <div class="info-item">
+					<i class="fas fa-bus"></i>
+					<span>Transport</span>
+					<p>Bus</p>
+				  </div>
+			  
+				  <div class="info-item">
+					<i class="fas fa-hotel"></i>
+					<span>Stay</span>
+					<p>Hotel</p>
+				  </div>
+			  
+				  <div class="info-item">
+					<i class="fas fa-utensils"></i>
+					<span>Meals</span>
+					<p>Free</p>
+				  </div>
+			  
+				  <div class="info-item">
+					<i class="fas fa-map-marked-alt"></i>
+					<span>Sightseeing</span>
+					<p>Xyz</p>
+				  </div>
+			  
+				  <div class="info-item">
+					<i class="fas fa-user-tie"></i>
+					<span>Guide</span>
+					<p>Trek Leaders</p>
+				  </div>
+			  
+				</div>
+			</div>
+
 			<div class="row clearfix">
 				<!-- Content Column -->
 				<div class="content-column col-xl-8 col-lg-7 col-md-12 col-sm-12">
-					
-					<!-- Upper Box -->
-					<div class="upper-box">
-						<div class="clearfix">
-							<div class="pull-left">
-								<h4>SPITI <br>
-                                </h4>
-							</div>
-							 
-						</div>
-					</div>
-					
-					<!-- Package Info Box -->
-					<div class="package-info-box style-two">
-						<div class="inner-container d-flex justify-content-between align-items-center">
-							
-							<!-- Package Info Block -->
-							<div class="package-info-block">
-								<div class="inner-box">
-									<div class="icon"><img src="images/icons/duration.svg" alt="" /></div>
-									<strong>Duration</strong>
-									11 Days
-								</div>
-							</div>
-							
-							<!-- Package Info Block -->
-							<div class="package-info-block">
-								<div class="inner-box">
-									<div class="icon"><img src="images/icons/category-icon.svg" alt="" /></div>
-									<strong>Age group</strong>
-									18 - 45.
-								</div>
-							</div>
-						 <!-- Package Info Block -->
-						 <div class="package-info-block">
-							<div class="inner-box">
-								<div class="icon"><img src="images/icons/team-group.svg" alt="" /></div>
-								<strong>Price</strong>
-								  Starting with<br>
-								₹17,499/-<br>
-								per person
-							</div>
-						</div>
-							 
-							 
-						</div>
-					</div>
-					<!-- End Package Info Box -->
-					
-					<!-- Rating Box -->
-					<div class="rating-box">
-						<div class="clearfix">
-							 
-							<div class="pull-right">
-								<ul class="post-info">
-									<li><span class="icon"><img src="images/icons/share-icon.svg" alt="" /></span>Share</li>
-									<li><span class="icon "><img src="images/icons/review-icon.svg" alt="" /></span>Review</li>
-									<li><span class="icon "><img src="images/icons/heart-icon-1.svg" alt="" /></span>Wishlist</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<!-- Rating Box -->
 					
 					<h5>About SPITI</h5>
 					<p>A drive through Spiti is like a roller coaster that excites
@@ -433,317 +246,291 @@
 						</ul>
 						
 					</div>
-					 <!-- Itinerary Box -->
-					<div class="itinerary-box">
-						<h5>Itinerary</h5>
-						<div class="faq-one style-two">
-							<div class="accordion-box clearfix">
-								<!--Block-->
-								<div class="accordion block active-block">
-									<div class="acc-btn active">Day 1 <i class="fa-regular fa-angle-down"></i></div>
-									<div class="acc-content">
-										<div class="content">
-											<div class="bold-text">Depart from Pune/Mumbai or your
-												respective cities to Delhi via Train or Flight .</div>
-											<div class="text"> 
-												• Pune - Goa Exp or Sampark Kranti Exp
-											</div>
-											<div class="text"> 
-												• Mumbai - 12247, 12471, 12903, 12216, 12925
-											</div>
-											<div class="text"> 
-												• Tejas, Rajdhani, Duranto Exp Available at Extra
-												cost.
-											</div>
-											<div class="text"> 
-												• For other cities contact us will assist you.
-											</div>
-											<div class="text"> 
-												• Flights departure Available PAN India.
-												Contact us for best rates.
 
-											</div>
-											 
-											 
-											
-											 
-											
-										</div>
-									</div>
-								</div>
-								<!--Block-->
-								<div class="accordion block">
-									<div class="acc-btn">Day 2 <i class="fa-regular fa-angle-down"></i></div>
-									<div class="acc-content">
-										<div class="content">
-											<div class="bold-text">Arrival Delhi, Transfer to Shimla Via
-												Volvo Semi Sleeper.</div>
-											 
-											<div class="text"> • Meet at the boarding point in Delhi Kashmiri gate/ R
-												K Ashram 1 hour Prior to the departure Time. </div>
-											<div class="text"> •  Overnight journey from Delhi to Shimla in Volvo.
-												(Report in Delhi by 9 PM On Saturday).  </div>
-											 
-										</div>
-									</div>
-								</div>
-								<!--Block-->
-								
-								<div class="accordion block">
-									<div class="acc-btn">Day 3   <i class="fa-regular fa-angle-down"></i></div>
-									<div class="acc-content">
-										<div class="content">
-											<div class="bold-text">Shimla - Chitkul</div>
-											<div class="text">•  Today morning we will Reach Shimla and The
-												Adventure begins. Hit the roads and begin your
-												transfer from Shimla to Chitkul. Travel along the
-												Sutlej river from where you will take a right turn
-												towards Chitkul following the Baspa river. Chitkul is
-												the last inhabited village before the Indo-China
-												border Overnight stay and dinner in Rakchum. </div>
-										</div>
-									</div>
-								</div>
-								<!--Block-->
-								
-								<div class="accordion block">
-									<div class="acc-btn">Day 4   <i class="fa-regular fa-angle-down"></i></div>
-									<div class="acc-content">
-										<div class="content">
-											<div class="bold-text">Chitkul - Tabo</div>
-											 
-											<div class="text"> •  Today morning we will explore chitkul and have some
-												pahadon wali maggi sitting by the riverside of Baspa
-												river at Chitkul & if time permits we will pay a short
-												visit to a nearby village Sangla in kinnaur valley and
-												soon leave for Tabo & have an overnight stay at
-												Tabo.
-												</div>
-											 
-											 
-											 
-										</div>
-									</div>
-								</div>
-								<!--Block-->
-								<div class="accordion block">
-									<!-- Day 4 -->
-									<div class="acc-btn">Day 5  <i class="fa-regular fa-angle-down"></i></div>
-									<div class="acc-content">
-										<div class="content">
-											<div class="bold-text">Tabo - Dhankar - Kaza</div>
-											 
-											 <div class="text">• Tabo is a very mystical village which has a history of
-												more than 1,025 years. Today our group will try go get
-												an insight into the life of villagers and visit the
-												nearby caves and Tabo Monastery. After that we
-												'll
-												move towards Dhankar monastery then we head
-												towards Kaza (Headquarter of Spiti), where we will
-												be staying for the following days.
-												</div>
-										</div>
-									</div>
-								</div>
-								
-								 
-								 
-								<!--Block-->
-								<div class="accordion block">
-									<!-- Day 5 -->
-									<div class="acc-btn">Day 6   <i class="fa-regular fa-angle-down"></i></div>
-									<div class="acc-content">
-										<div class="content">
-											<div class="bold-text">Kaza - Langza - Hikkim - Komic</div>
-											<div class="text">•  Today morning after visiting the local streets of
-												kaza and making our own snowman in the snow!! we will
-												hit the roads to explore the highest post office of
-												the world in Hikkim at 14,567ft & after posting fews
-												letters to our loved ones we
-												'll visit the village Komic
-												(worlds highest village) & Langza (fossil village of
-												India) .</div>
-											 
-										</div>
-									</div>
-								</div>
-								<!--Block-->
-								<div class="accordion block">
-									<!-- Day 7 -->
-									<div class="acc-btn">Day 7   <i class="fa-regular fa-angle-down"></i></div>
-									<div class="acc-content">
-										<div class="content">
-											<div class="bold-text">Kaza - Key - Kibber - Chincham</div>
-											<div class="text">•  We will visit the Famous Key Monastery which is
-												build on a mountain hill. it was founded by Dromtön, a
-												pupil of the famous teacher, Atisha, in the 11th
-												century. post key we will visit Chicham bridge (Asia
-												highest bridge). Then we will head towards kibber
-												village Which is famous for spotting snow leopards.
-												</div>
-											 
-										</div>
-									</div>
-								</div>
-							 <!--Block-->
-							 <div class="accordion block">
-								<!-- Day 5 -->
-								<div class="acc-btn">Day 8   <i class="fa-regular fa-angle-down"></i></div>
-								<div class="acc-content">
-									<div class="content">
-										<div class="bold-text">Kaza - Kalpa</div>
-										<div class="text">•  Today Morning Marks as our last day at kaza so to
-											make sure we dont miss out on anything we will have a
-											small walk in the town and observe the scenic beauty
-											of the place once again. We will the hit the roads to
-											reach kalpa via Nako village. We will be having an
-											overnight stay at Kalpa.</div>
-										 
-									</div>
-								</div>
-							</div>
-<!--Block-->
-<div class="accordion block">
-	<!-- Day 5 -->
-	<div class="acc-btn">Day 9   <i class="fa-regular fa-angle-down"></i></div>
-	<div class="acc-content">
-		<div class="content">
-			<div class="bold-text"> Kalpa - Shimla - Delhi</div>
-			<div class="text">•  Wake up relaxed in the morning today and have our
-				Breakfast with a majestic view of Kalpa. Post
-				breakfast we will explore kalpa and visit nearby
-				suicide point and have some photographs clicked and
-				some insta savy reels before we leave for Delhi via
-				Shimla.</div>
-			 
+					<!-- Itinerary Box -->
+<div class="itinerary-box">
+	<h5>Itinerary</h5>
+	<div class="faq-one style-two">
+	  <div class="accordion-box clearfix">
+  
+		<!--Block Day 1-->
+		<div class="accordion block active-block">
+		  <div class="acc-btn active">
+			<span class="d-flex gap-3"><h6>Day 0:</h6><h6>Depart from Pune/Mumbai or respective cities to Delhi</h6></span>  
+			<span><i class="fa-regular fa-angle-down"></i></span>
+		  </div>
+		  <div class="acc-content">
+			<div class="content">
+			  <div class="bold-text">Depart from Pune/Mumbai or your respective cities to Delhi via Train or Flight.</div>
+			  <div class="text">• Pune - Goa Exp or Sampark Kranti Exp</div>
+			  <div class="text">• Mumbai - 12247, 12471, 12903, 12216, 12925</div>
+			  <div class="text">• Tejas, Rajdhani, Duronto Exp Available at Extra cost.</div>
+			  <div class="text">• For other cities contact us, we will assist you.</div>
+			  <div class="text">• Flights departure Available PAN India. Contact us for best rates.</div>
+			</div>
+		  </div>
 		</div>
+  
+		<!--Block Day 2-->
+		<div class="accordion block">
+		  <div class="acc-btn">
+			<span class="d-flex gap-3"><h6>Day 1:</h6><h6>Arrival Delhi, Transfer to Shimla</h6></span>  
+			<span><i class="fa-regular fa-angle-down"></i></span>
+		  </div>
+		  <div class="acc-content">
+			<div class="content">
+			  <div class="bold-text">Arrival Delhi, Transfer to Shimla Via Volvo Semi Sleeper.</div>
+			  <div class="text">• Meet at the boarding point in Delhi Kashmiri Gate / RK Ashram 1 hour prior to departure.</div>
+			  <div class="text">• Overnight journey from Delhi to Shimla in Volvo. (Report in Delhi by 9 PM on Saturday).</div>
+			</div>
+		  </div>
+		</div>
+  
+		<!--Block Day 3-->
+		<div class="accordion block">
+		  <div class="acc-btn">
+			<span class="d-flex gap-3"><h6>Day 2:</h6><h6>Shimla to Chitkul</h6></span>  
+			<span><i class="fa-regular fa-angle-down"></i></span>
+		  </div>
+		  <div class="acc-content">
+			<div class="content">
+			  <div class="bold-text">Shimla - Chitkul</div>
+			  <div class="text">• Today morning we will reach Shimla and the adventure begins. Hit the roads towards Chitkul.</div>
+			  <div class="text">• Travel along Sutlej river, then Baspa river leading to Chitkul.</div>
+			  <div class="text">• Chitkul is the last inhabited village before the Indo-China border.</div>
+			  <div class="text">• Overnight stay and dinner in Rakcham.</div>
+			</div>
+		  </div>
+		</div>
+  
+		<!--Block Day 4-->
+		<div class="accordion block">
+		  <div class="acc-btn">
+			<span class="d-flex gap-3"><h6>Day 3:</h6><h6>Chitkul to Tabo</h6></span>  
+			<span><i class="fa-regular fa-angle-down"></i></span>
+		  </div>
+		  <div class="acc-content">
+			<div class="content">
+			  <div class="bold-text">Chitkul - Tabo</div>
+			  <div class="text">• Explore Chitkul village and enjoy Maggi by Baspa river.</div>
+			  <div class="text">• Optional visit to Sangla village.</div>
+			  <div class="text">• Depart for Tabo and have overnight stay at Tabo.</div>
+			</div>
+		  </div>
+		</div>
+  
+		<!--Block Day 5-->
+		<div class="accordion block">
+		  <div class="acc-btn">
+			<span class="d-flex gap-3"><h6>Day 4:</h6><h6>Tabo - Dhankar - Kaza</h6></span>  
+			<span><i class="fa-regular fa-angle-down"></i></span>
+		  </div>
+		  <div class="acc-content">
+			<div class="content">
+			  <div class="bold-text">Tabo - Dhankar - Kaza</div>
+			  <div class="text">• Explore mystical village Tabo, Tabo Monastery, and nearby caves.</div>
+			  <div class="text">• Move towards Dhankar Monastery and later proceed to Kaza.</div>
+			  <div class="text">• Overnight stay at Kaza.</div>
+			</div>
+		  </div>
+		</div>
+  
+		<!--Block Day 6-->
+		<div class="accordion block">
+		  <div class="acc-btn">
+			<span class="d-flex gap-3"><h6>Day 5:</h6><h6>Kaza - Langza - Hikkim - Komic</h6></span>  
+			<span><i class="fa-regular fa-angle-down"></i></span>
+		  </div>
+		  <div class="acc-content">
+			<div class="content">
+			  <div class="bold-text">Kaza - Langza - Hikkim - Komic</div>
+			  <div class="text">• Explore Kaza local streets, build snowman!</div>
+			  <div class="text">• Visit highest post office in Hikkim (14,567ft) and post letters.</div>
+			  <div class="text">• Visit Komic (world’s highest village) and Langza (fossil village of India).</div>
+			</div>
+		  </div>
+		</div>
+  
+		<!--Block Day 7-->
+		<div class="accordion block">
+		  <div class="acc-btn">
+			<span class="d-flex gap-3"><h6>Day 6:</h6><h6>Kaza - Key - Kibber - Chicham</h6></span>  
+			<span><i class="fa-regular fa-angle-down"></i></span>
+		  </div>
+		  <div class="acc-content">
+			<div class="content">
+			  <div class="bold-text">Kaza - Key - Kibber - Chicham</div>
+			  <div class="text">• Visit Key Monastery built on a mountain hill (11th century).</div>
+			  <div class="text">• Visit Chicham Bridge (Asia’s highest bridge).</div>
+			  <div class="text">• Proceed to Kibber village (spot snow leopards!).</div>
+			</div>
+		  </div>
+		</div>
+  
+		<!--Block Day 8-->
+		<div class="accordion block">
+		  <div class="acc-btn">
+			<span class="d-flex gap-3"><h6>Day 7:</h6><h6>Kaza to Kalpa</h6></span>  
+			<span><i class="fa-regular fa-angle-down"></i></span>
+		  </div>
+		  <div class="acc-content">
+			<div class="content">
+			  <div class="bold-text">Kaza - Kalpa</div>
+			  <div class="text">• Morning walk to soak in Kaza’s scenic beauty one last time.</div>
+			  <div class="text">• Depart towards Kalpa via Nako village.</div>
+			  <div class="text">• Overnight stay at Kalpa.</div>
+			</div>
+		  </div>
+		</div>
+  
+		<!--Block Day 9-->
+		<div class="accordion block">
+		  <div class="acc-btn">
+			<span class="d-flex gap-3"><h6>Day 8:</h6><h6>Kalpa - Shimla - Delhi</h6></span>  
+			<span><i class="fa-regular fa-angle-down"></i></span>
+		  </div>
+		  <div class="acc-content">
+			<div class="content">
+			  <div class="bold-text">Kalpa - Shimla - Delhi</div>
+			  <div class="text">• Morning breakfast with majestic view of Kalpa.</div>
+			  <div class="text">• Visit suicide point, capture photos & reels.</div>
+			  <div class="text">• Depart to Delhi via Shimla.</div>
+			</div>
+		  </div>
+		</div>
+  
+		<!--Block Day 10-->
+		<div class="accordion block">
+		  <div class="acc-btn">
+			<span class="d-flex gap-3"><h6>Day 9:</h6><h6>Reach Delhi. Catch Train/Flight to Hometown</h6></span>  
+			<span><i class="fa-regular fa-angle-down"></i></span>
+		  </div>
+		  <div class="acc-content">
+			<div class="content">
+			  <div class="bold-text">Reach Delhi. Catch Train/Flight to Hometown</div>
+			  <div class="text">• Pune - Goa or Jhelum Exp.</div>
+			  <div class="text">• Mumbai - 12926, 19020, 11058</div>
+			  <div class="text">• Tejas, Rajdhani, Duronto Exp available at extra cost.</div>
+			  <div class="text">• For other cities contact us, we will assist you.</div>
+			  <div class="text">• Flights departure available PAN India.</div>
+			</div>
+		  </div>
+		</div>
+  
+		<!--Block Day 11-->
+		<div class="accordion block">
+		  <div class="acc-btn">
+			<span class="d-flex gap-3"><h6>Day 10:</h6><h6>Reach your city with full of Memories</h6></span>  
+			<span><i class="fa-regular fa-angle-down"></i></span>
+		  </div>
+		  <div class="acc-content">
+			<div class="content">
+			  <div class="bold-text">Reach your city with full of Memories.</div>
+			</div>
+		  </div>
+		</div>
+  
+	  </div>
 	</div>
-</div>
-<!--Block-->
-<div class="accordion block">
-	 
-	<div class="acc-btn">Day 10   <i class="fa-regular fa-angle-down"></i></div>
-	<div class="acc-content">
-		<div class="content">
-			<div class="bold-text"> Reach Delhi. Catch Train/Flight to
-				Hometown</div>
-			<div class="text">•  Pune - Goa or Jhelum Exp.</div>
-			<div class="text">• Mumbai - 12926, 19020, 11058</div>
-			<div class="text">• Tejas, Rajdhani, Duranto Exp Available at Extra cost.</div>
-			<div class="text">• For other cities contact us will assist you.</div>
-			<div class="text">• Flights departure Available PAN India.
-				Contact us for best rates.</div>
+  </div>
 
-		</div>
-	</div>
-</div>
-<!--Block-->
-<div class="accordion block">
-	<!-- Day 5 -->
-	<div class="acc-btn">Day 11   <i class="fa-regular fa-angle-down"></i></div>
-	<div class="acc-content">
-		<div class="content">
-			<div class="bold-text">Reach your city with full of Memories.</div>
-			 
-			 
-		</div>
-	</div>
+  <!-- Costs -->
+  <div class="facility-box">
+	<h5>Costs</h5>
+	<table class="cost-table">
+		<thead>
+			<tr>
+				<th>City</th>
+				<th>3AC Train Travel PP</th>
+				<th>Sleeper Train Travel PP</th>
+				<th>Book Now</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Pune & Mumbai</td>
+				<td>₹22,499/-<br>Triple Sharing Room</td>
+				<td>₹20,499/-<br>Triple Sharing Room</td>
+				<td><a href="#" class="book-btn">Book Now</a></td>
+			</tr>
+			<tr>
+				<td>Pune & Mumbai</td>
+				<td>₹24,499/-<br>Double Sharing Room</td>
+				<td>₹22,499/-<br>Double Sharing Room</td>
+				<td><a href="#" class="book-btn">Book Now</a></td>
+			</tr>
+			<tr>
+				<td>Delhi</td>
+				<td>₹17,499/-<br>Triple Sharing Room</td>
+				<td>₹19,499/-<br>Double Sharing Room</td>
+				<td><a href="#" class="book-btn">Book Now</a></td>
+			</tr>
+			<tr>
+				<td colspan="4" style="text-align: center; font-weight: bold;">
+					Reach us for Best rates from other cities of Maharashtra
+				</td>
+			</tr>
+		</tbody>
+	</table>
 </div>
 
- 
- 
- 
-							</div>
-						</div>
-					</div>
+
 				 <!-- Batches -->
-					<div class="facility-box" style="border: 1px solid #ddd; border-radius: 8px; padding: 15px; margin-bottom: 15px; background-color: #f9f9f9;">
+					<div class="facility-box" style="border: 2px solid #39c2cc; border-radius: 8px; padding: 15px; margin-bottom: 15px;">
 						<h5 style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 10px;">Batches</h5>
-						<p style="margin: 5px 0; font-size: 16px; color: #555;">• Batch 1: 29 Sep - 09 Oct</p>
-						<p style="margin: 5px 0; font-size: 16px; color: #555;">• Batch 2: 06 Oct - 16 Oct</p>
-						<p style="margin: 5px 0; font-size: 16px; color: #555;">• Batch 3: 13 Oct - 23 Oct</p>
-						<p style="margin: 5px 0; font-size: 16px; color: #555;">• Batch 4: 20 Oct - 30 Oct</p>
-						<p style="margin: 5px 0; font-size: 16px; color: #555;">• Batch 5: 27 Oct - 6 Nov</p>
-						<p style="margin: 5px 0; font-size: 16px; color: #555;">• Batch 6: 03 Nov - 13 Nov</p>
-						<p style="margin: 5px 0; font-size: 16px; color: #555;">• Batch 7: 10 Nov - 20 Nov</p>
-						<p style="margin: 5px 0; font-size: 16px; color: #555;">• Batch 8: 17 Nov - 27 Nov</p>
-						<p style="margin: 5px 0; font-size: 16px; color: #555;">• Batch 9: 24 Nov - 04 Dec</p>
-						<p style="margin: 5px 0; font-size: 16px; color: #555;">• Batch 10: 01 Dec - 11 Dec</p>
-						<p style="margin: 5px 0; font-size: 16px; color: #555;">• Batch 11: 08 Dec - 18 Dec</p>
-						<p style="margin: 5px 0; font-size: 16px; color: #555;">• Batch 12: 15 Dec - 25 Dec</p>
-						<p style="margin: 5px 0; font-size: 16px; color: #555;">• Batch 13: 22 Dec - 01 Jan Christmas & NY Special</p>
-						<p style="margin: 5px 0; font-size: 16px; color: #555;">• Batch 14: 24 Dec - 03 Jan Christmas & NY Special</p>
-						<p style="margin: 5px 0; font-size: 16px; color: #555;">• Batch 15: 29 Dec - 08 Jan Christmas & NY Special</p>
-						
-						 
- 
- 
- 
-						 
+						<p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 1: 29 Sep - 09 Oct</p>
+						<p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 2: 06 Oct - 16 Oct</p>
+						<p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 3: 13 Oct - 23 Oct</p>
+						<p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 4: 20 Oct - 30 Oct</p>
+						<p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 5: 27 Oct - 6 Nov</p>
+						<p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 6: 03 Nov - 13 Nov</p>
+						<p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 7: 10 Nov - 20 Nov</p>
+						<p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 8: 17 Nov - 27 Nov</p>
+						<p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 9: 24 Nov - 04 Dec</p>
+						<p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 10: 01 Dec - 11 Dec</p>
+						<p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 11: 08 Dec - 18 Dec</p>
+						<p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 12: 15 Dec - 25 Dec</p>
+						<p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 13: 22 Dec - 01 Jan Christmas & NY Special</p>
+						<p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 14: 24 Dec - 03 Jan Christmas & NY Special</p>
+						<p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 15: 29 Dec - 08 Jan Christmas & NY Special</p> 
 					  </div>
-					  <div class="facility-box"> 
-						<h5>Hotel Names</h5>
-						<p>• Rupin River View Hotel, Rakchham/ similar</p>
-						<p>• Hotel White Nest, Kalpa/ similar.</p>
-						<p>• Green Tara Homestay, Tabo/similar.</p>
-						<p>• Juniper's Home - Story Homes, Kaza/ similar.
-							 </p> 
-					  </div>
-					<!-- End Itinerary Box -->
-					<div class="facility-box">
-						<h5>Inclusions</h5>
-						<div class="row clearfix">
-							<div class="column col-lg-3 col-md-4 col-sm-12">
-					<div class="facility-option"><span class="icon"><img src="images/icons/campings.svg" alt="" /></span>Train Travel - Pune/Mumbai/Your City to Delhi & return 3AC &
-						as per package yo choose.</div>
-									<div class="facility-option"><span class="icon"><img src="images/icons/campings.svg" alt="" /></span>Delhi to Shimla via Semi Sleeper Volvo & Same for return from
-										Manali.</div>
-							
-							</div>
-							<div class="column col-lg-3 col-md-4 col-sm-12">
-								<div class="facility-option"><span class="icon"><img src="images/icons/campings.svg" alt="" /></span>Shimla - Kaza - Shimla Tempo traveler.</div>
-								<div class="facility-option"><span class="icon"><img src="images/icons/campings.svg" alt="" /></span>Accommodation as per the Itinerary in the Standard
-									Hotels/Homestays Category - Double/Triple Sharing as per
-									gender basis</div>
-							
-							</div>
-							<div class="column col-lg-3 col-md-4 col-sm-12">
-								<div class="facility-option"><span class="icon"><img src="images/icons/campings.svg" alt="" /></span>Stay for 6 nights - 1 night in hotel at Rakchham, 1 night in
-									homestay at Tabo, 3 nights in homestay at Kaza & 1 Night in
-									Hotel in Kalpa.</div>
-							</div>
-							<div class="column col-lg-3 col-md-4 col-sm-12">
-								<div class="facility-option"><span class="icon"><img src="images/icons/campings.svg" alt="" /></span> Meals - 06 Breakfast + 06 Dinner.</div>
-							</div>
-							<div class="column col-lg-3 col-md-4 col-sm-12">
-								<div class="facility-option"><span class="icon"><img src="images/icons/campings.svg" alt="" /></span> Entry tickets in all Monasteries.
-                                </div>
-							</div>
-							<div class="column col-lg-3 col-md-4 col-sm-12">
-								<div class="facility-option"><span class="icon"><img src="images/icons/campings.svg" alt="" /></span>Team captain throughout the trip.</div>
-							    
-							</div>
-							<div class="column col-lg-3 col-md-4 col-sm-12">
-								<div class="facility-option"><span class="icon"><img src="images/icons/campings.svg" alt="" /></span>Experienced Local Drivers. Driver Night Charges, Toll Tax,
-									Parking Charges, etc</div>
-							</div>
-							<div class="column col-lg-3 col-md-4 col-sm-12">
-								<div class="facility-option"><span class="icon"><img src="images/icons/campings.svg" alt="" /></span> An oxygen Cylinder 24x7 in the car in case of emergency</div>
-							</div>
-							<div class="column col-lg-3 col-md-4 col-sm-12">
-								<div class="facility-option"><span class="icon"><img src="images/icons/campings.svg" alt="" /></span> Basic First Aid Box in the Vehicle.</div>
-							</div>
-							<div class="column col-lg-3 col-md-4 col-sm-12">
-								<div class="facility-option"><span class="icon"><img src="images/icons/campings.svg" alt="" /></span> Sightseeing as per the itinerary Only.</div>
-							</div>
-							 
-							 
-							 
-						</div>
+
+					  <!-- Newly added point -->
+  					<div class="mt-5">
+						<h5>Who can book this tour</h5>
+						<ul class="feature-list">
+							<li>Para1</li>
+							<li>Para2</li>
+							<li>Para3</li>
+						</ul>
 					</div>
+
+
+
+					<!--  Inclusions -->
+					<div class="feature-box">
+						<h5>Inclusions</h5>
+						<ul class="feature-list">
+						  <li>Train Travel - Pune/Mumbai/Your City to Delhi & return 3AC & as per package you choose.</li>
+						  <li>Shimla - Kaza - Shimla Tempo traveler.</li>
+						  <li>Stay for 6 nights - 1 night in hotel at Rakchham, 1 night in homestay at Tabo, 3 nights in homestay at Kaza & 1 Night in Hotel in Kalpa.</li>
+						  <li>Meals - 06 Breakfast + 06 Dinner.</li>
+						  <li>Delhi to Shimla via Semi Sleeper Volvo & Same for return from Manali.</li>
+						  <li>Accommodation as per the Itinerary in the Standard Hotels/Homestays Category - Double/Triple Sharing as per gender basis.</li>
+						  <li>Entry tickets in all Monasteries.</li>
+						  <li>Team captain throughout the trip.</li>
+						  <li>Experienced Local Drivers. Driver Night Charges, Toll Tax, Parking Charges, etc.</li>
+						  <li>An oxygen Cylinder 24x7 in the car in case of emergency.</li>
+						  <li>Basic First Aid Box in the Vehicle.</li>
+						  <li>Sightseeing as per the itinerary Only.</li>
+						</ul>
+					</div>
+					  
+
 					<!-- exclusion  -->
  <div class="facility-box">
     <h5>Exclusions</h5>
+	<ul class="exclusion-list">
 	<li>Food during Train Travel, Day 1, Day 2, Day 10 & Day 11.</li>
     <li>Any kind of food or beverage that is not included in the
 		package like alcoholic drinks, mineral water, meals/
@@ -760,85 +547,52 @@
 		roadblocks etc. (to be borne directly by the customer on
 		the spot)</li>
     <li>Anything not mentioned in Inclusion.</li>
+	</ul>
   </div>
             <!-- trains -->
 			 <div class="facility-box">
 				<h5><strong> Trains </strong></h5>
 				<ul>
 					<h5>Departure:</h5>
-					<li>• Pune - Goa Exp or Sampark Kranti Exp.</li>
-					<li>• Mumbai - 12247, 12471, 12903, 12216, 12925</li>
-					<li>• Tejas, Rajdhani, Duranto Exp Available at Extra cost.</li>
-					<li>• For other cities contact us will assist you.</li>
-					<li>• Flights departure Available PAN India. Contact us for
+					<ul class="feature-list">
+					<li>Pune - Goa Exp or Sampark Kranti Exp.</li>
+					<li>Mumbai - 12247, 12471, 12903, 12216, 12925</li>
+					<li>Tejas, Rajdhani, Duranto Exp Available at Extra cost.</li>
+					<li>For other cities contact us will assist you.</li>
+					<li>Flights departure Available PAN India. Contact us for
 						best rates.</li>
+						</ul>
 				</ul>
 				<br>
 				<ul>
 					<h5>Arrival:</h5>
-					<li>• Pune - Goa or Jhelum Exp.</li>
-					<li>• Mumbai - 12926, 19020, 11058</li>
-					<li>• Tejas, Rajdhani, Duranto Exp Available at Extra cost.</li>
-					<li>• For other cities contact us will assist you.</li>
-					<li>• Flights departure Available PAN India. Contact us for
+					<ul class="feature-list">
+					<li>Pune - Goa or Jhelum Exp.</li>
+					<li>Mumbai - 12926, 19020, 11058</li>
+					<li>Tejas, Rajdhani, Duranto Exp Available at Extra cost.</li>
+					<li>For other cities contact us will assist you.</li>
+					<li>Flights departure Available PAN India. Contact us for
 						best rates.</li>
+					</ul>
 				</ul>
-			 </div>
-			 <!-- Costs -->
-			 <div class="facility-box">
-				<h5>Costs</h5>
-				<table class="cost-table">
-					<thead>
-						<tr>
-							<th>City</th>
-							<th>3AC Train Travel PP</th>
-							<th>Sleeper Train Travel PP</th>
-							<th>Book Now</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Pune & Mumbai</td>
-							<td>₹22,499/-<br>Triple Sharing Room</td>
-							<td>₹20,499/-<br>Triple Sharing Room</td>
-							<td><a href="#" class="book-btn">Book Now</a></td>
-						</tr>
-						<tr>
-							<td>Pune & Mumbai</td>
-							<td>₹24,499/-<br>Double Sharing Room</td>
-							<td>₹22,499/-<br>Double Sharing Room</td>
-							<td><a href="#" class="book-btn">Book Now</a></td>
-						</tr>
-						<tr>
-							<td>Delhi</td>
-							<td>₹17,499/-<br>Triple Sharing Room</td>
-							<td>₹19,499/-<br>Double Sharing Room</td>
-							<td><a href="#" class="book-btn">Book Now</a></td>
-						</tr>
-						<tr>
-							<td colspan="4" style="text-align: center; font-weight: bold;">
-								Reach us for Best rates from other cities of Maharashtra
-							</td>
-						</tr>
-					</tbody>
-				</table>
 			</div>
 			
-
   <div class="facility-box"> 
-  <h5>Rs. 2000 PP Extra on Christmas & NY BatchesRs.
-	 </h5>
-	 <h6><br> 
+  <h5>Rs. 2000 PP Extra on Christmas & NY BatchesRs.</h5>
+	 <h6>
 		1000/- Flat Discount for Group of 4 & More.<br>
 		(Aplicable on Pune/Mumbai to Pune/Mumbai)</h6>
 
-  <p>• A solo traveler can choose any of the two (Double or Triple Sharing Room) </p>
-  <p>• Flight departure available from PAN India reach us for best rates. </p>
-  <p>• Train like Tejas, Duronto, Rajdhani also available. (Add on)</p>
+		<ul class="feature-list">
+  <li>A solo traveler can choose any of the two (Double or Triple Sharing Room) </li>
+  <li>Flight departure available from PAN India reach us for best rates. </li>
+  <li>Train like Tejas, Duronto, Rajdhani also available. (Add on)</li>
+</ul>
 </div>
+
 <div class="facility-box"> 
 	<h5>   IMPORTANT NOTE	</h5>
-	 
+	<ul class="feature-list">
 	<li>Guaranteed departures every Friday.</li>
 	<li>In house captains trained for handling medical
 		emergencies and disaster management.</li>
@@ -847,7 +601,303 @@
 	<li> Age group 18 - 45.</li>
 	<li>Minor (Above 12 Year) allowed with Adult.</li>
 	<li>Primarily for solo travelers, friends and couples.</li>	
+	</ul>
 </div>
+
+<!-- Blocks section like FAQ -->
+<section class="faq-one alternate"> 
+	<div class="row clearfix">
+		<!--Text Col-->
+		<div class="text-col col-lg-4 col-md-12 col-sm-12">
+			<div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
+				<div class="accordion-box clearfix">
+					<!--Block-->
+					<div class="accordion block">
+						<div class="acc-btn">Things you should know before booking <i class="fa-solid fa-arrow-down-long"></i></div>
+						<div class="acc-content">
+							<div class="content">
+								<div class="text">
+									Para1
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+		<!--Text Col-->
+		<div class="text-col col-lg-4 col-md-12 col-sm-12">
+			<div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
+				<div class="accordion-box clearfix">
+					<!--Block-->
+					<div class="accordion block">
+						<div class="acc-btn">Things to Carry
+							<i class="fa-solid fa-arrow-down-long"></i></div>
+						<div class="acc-content">
+							<div class="content">
+								<div class="text">
+									Para2
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Text Col-->
+		<div class="text-col col-lg-4 col-md-12 col-sm-12">
+			<div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
+				<div class="accordion-box clearfix">
+					<!--Block-->
+					<div class="accordion block">
+						<div class="acc-btn">Booking policy<i class="fa-solid fa-arrow-down-long"></i></div>
+						<div class="acc-content">
+							<div class="content">
+								<div class="text">
+									Para3
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Text Col-->
+		<div class="text-col col-lg-4 col-md-12 col-sm-12">
+			<div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
+				<div class="accordion-box clearfix">
+					<!--Block-->
+					<div class="accordion block">
+						<div class="acc-btn">Terms and conditions<i class="fa-solid fa-arrow-down-long"></i></div>
+						<div class="acc-content">
+							<div class="content">
+								<div class="text">
+									Para4
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Text Col-->
+		<div class="text-col col-lg-4 col-md-12 col-sm-12">
+			<div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
+				<div class="accordion-box clearfix">
+					<!--Block-->
+					<div class="accordion block">
+						<div class="acc-btn"> Cancellation Policy
+							<i class="fa-solid fa-arrow-down-long"></i></div>
+						<div class="acc-content">
+							<div class="content">
+								<div class="text">
+									Para5
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Text Col-->
+		<div class="text-col col-lg-4 col-md-12 col-sm-12">
+			<div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
+				<div class="accordion-box clearfix">
+					<!--Block-->
+					<div class="accordion block">
+						<div class="acc-btn"> IRCTC Rules <i class="fa-solid fa-arrow-right-long"></i></div>
+						<div class="acc-content">
+							<div class="content">
+								<div class="text">
+									Para6
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Text Col-->
+		<div class="text-col col-lg-4 col-md-12 col-sm-12">
+			<div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
+				<div class="accordion-box clearfix">
+					<!--Block-->
+					<div class="accordion block">
+						<div class="acc-btn"> Travel Agreement /Booklet <i class="fa-solid fa-arrow-right-long"></i></div>
+						<div class="acc-content">
+							<div class="content">
+								<div class="text">
+									Para7
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- New Blocks section -->
+<section class="info-accordion-section">
+	<div class="info-accordion-container">
+  
+	  <!-- Single Accordion -->
+	  <div class="info-accordion-item">
+		<div class="info-accordion-header">Things you should know before booking <i class="fa-solid fa-angle-right"></i></div>
+		<div class="info-accordion-content">
+			<div class="">
+				<ul class="feature-list">
+					<!-- Travel Details -->
+					<li>Travel in NON AC Pushback TT/Bus/ as per the group size Pune to Pune.</li>
+					<li>Mumbai to Pune & Pune to Mumbai Sitting Volvo bus.</li>
+
+					<!-- Accommodation -->
+					<li>Rs. 1000/- PP extra for double sharing room.</li>
+					<li>Accommodation in (Non AC) Hotel/Hostels/Homestay on 3/4 sharing for 1 Night in Hampi. Extra mattress will be provided. (Male & Female separate)</li>
+
+				</ul>
+			</div>
+		</div>
+	  </div>
+  
+	  <!-- Accordion Item -->
+	  <div class="info-accordion-item">
+		<div class="info-accordion-header">Things to Carry <i class="fa-solid fa-angle-right"></i></div>
+		<div class="info-accordion-content">
+			<div class="">
+				<ul class="feature-list">
+					<!-- Travel Details -->
+					<li>Travel in NON AC Pushback TT/Bus/ as per the group size Pune to Pune.</li>
+					<li>Mumbai to Pune & Pune to Mumbai Sitting Volvo bus.</li>
+
+					<!-- Accommodation -->
+					<li>Rs. 1000/- PP extra for double sharing room.</li>
+					<li>Accommodation in (Non AC) Hotel/Hostels/Homestay on 3/4 sharing for 1 Night in Hampi. Extra mattress will be provided. (Male & Female separate)</li>
+
+				</ul>
+			</div>
+		</div>
+	  </div>
+
+	  <div class="info-accordion-item">
+		<div class="info-accordion-header"> Rules & Regulation<i class="fa-solid fa-angle-right"></i></div>
+		<div class="info-accordion-content">
+			<div class="">
+				<ul class="feature-list">
+					<!-- Travel Details -->
+					<li>Travel in NON AC Pushback TT/Bus/ as per the group size Pune to Pune.</li>
+					<li>Mumbai to Pune & Pune to Mumbai Sitting Volvo bus.</li>
+
+					<!-- Accommodation -->
+					<li>Rs. 1000/- PP extra for double sharing room.</li>
+					<li>Accommodation in (Non AC) Hotel/Hostels/Homestay on 3/4 sharing for 1 Night in Hampi. Extra mattress will be provided. (Male & Female separate)</li>
+
+				</ul>
+			</div>
+		</div>
+	  </div>
+  
+	  <div class="info-accordion-item">
+		<div class="info-accordion-header">Booking Policy <i class="fa-solid fa-angle-right"></i></div>
+		<div class="info-accordion-content">
+			<div class="">
+				<ul class="feature-list">
+					<!-- Travel Details -->
+					<li>Travel in NON AC Pushback TT/Bus/ as per the group size Pune to Pune.</li>
+					<li>Mumbai to Pune & Pune to Mumbai Sitting Volvo bus.</li>
+
+					<!-- Accommodation -->
+					<li>Rs. 1000/- PP extra for double sharing room.</li>
+					<li>Accommodation in (Non AC) Hotel/Hostels/Homestay on 3/4 sharing for 1 Night in Hampi. Extra mattress will be provided. (Male & Female separate)</li>
+
+				</ul>
+			</div>
+		</div>
+	  </div>
+  
+	  <div class="info-accordion-item">
+		<div class="info-accordion-header">Terms and Conditions <i class="fa-solid fa-angle-right"></i></div>
+		<div class="info-accordion-content">
+			<div class="">
+				<ul class="feature-list">
+					<!-- Travel Details -->
+					<li>Travel in NON AC Pushback TT/Bus/ as per the group size Pune to Pune.</li>
+					<li>Mumbai to Pune & Pune to Mumbai Sitting Volvo bus.</li>
+
+					<!-- Accommodation -->
+					<li>Rs. 1000/- PP extra for double sharing room.</li>
+					<li>Accommodation in (Non AC) Hotel/Hostels/Homestay on 3/4 sharing for 1 Night in Hampi. Extra mattress will be provided. (Male & Female separate)</li>
+
+				</ul>
+			</div>
+		</div>
+	  </div>
+  
+	  <div class="info-accordion-item">
+		<div class="info-accordion-header">Cancellation Policy <i class="fa-solid fa-angle-right"></i></div>
+		<div class="info-accordion-content">
+			<div class="">
+				<ul class="feature-list">
+					<!-- Travel Details -->
+					<li>Travel in NON AC Pushback TT/Bus/ as per the group size Pune to Pune.</li>
+					<li>Mumbai to Pune & Pune to Mumbai Sitting Volvo bus.</li>
+
+					<!-- Accommodation -->
+					<li>Rs. 1000/- PP extra for double sharing room.</li>
+					<li>Accommodation in (Non AC) Hotel/Hostels/Homestay on 3/4 sharing for 1 Night in Hampi. Extra mattress will be provided. (Male & Female separate)</li>
+
+				</ul>
+			</div>
+		</div>
+	  </div>
+  
+	  <div class="info-accordion-item">
+		<div class="info-accordion-header">IRCTC Rules <i class="fa-solid fa-angle-right"></i></div>
+		<div class="info-accordion-content">
+			<div class="">
+				<ul class="feature-list">
+					<!-- Travel Details -->
+					<li>Travel in NON AC Pushback TT/Bus/ as per the group size Pune to Pune.</li>
+					<li>Mumbai to Pune & Pune to Mumbai Sitting Volvo bus.</li>
+
+					<!-- Accommodation -->
+					<li>Rs. 1000/- PP extra for double sharing room.</li>
+					<li>Accommodation in (Non AC) Hotel/Hostels/Homestay on 3/4 sharing for 1 Night in Hampi. Extra mattress will be provided. (Male & Female separate)</li>
+
+				</ul>
+			</div>
+		</div>
+	  </div>
+  
+	  <div class="info-accordion-item">
+		<div class="info-accordion-header">Travel Agreement / Booklet <i class="fa-solid fa-angle-right"></i></div>
+		<div class="info-accordion-content">
+			<div class="">
+				<ul class="feature-list">
+					<!-- Travel Details -->
+					<li>Travel in NON AC Pushback TT/Bus/ as per the group size Pune to Pune.</li>
+					<li>Mumbai to Pune & Pune to Mumbai Sitting Volvo bus.</li>
+
+					<!-- Accommodation -->
+					<li>Rs. 1000/- PP extra for double sharing room.</li>
+					<li>Accommodation in (Non AC) Hotel/Hostels/Homestay on 3/4 sharing for 1 Night in Hampi. Extra mattress will be provided. (Male & Female separate)</li>
+
+				</ul>
+			</div>
+		</div>
+	  </div>
+  
+	</div>
+</section>
+
 					<!-- Gallery Box -->
 					<div class="gallery-box">
 						<h5>Gallery</h5>
@@ -855,16 +905,6 @@
 							<div class="slide">
 								<div class="image">
 									<img src="images/resource/gallery-6.jpg" alt="" />
-								</div>
-							</div>
-							<div class="slide">
-								<div class="image">
-									<img src="images/resource/gallery-11.jpg" alt="" />
-								</div>
-							</div>
-							<div class="slide">
-								<div class="image">
-									<img src="images/resource/gallery-1.jpg" alt="" />
 								</div>
 							</div>
 							<div class="slide">
@@ -997,6 +1037,147 @@
 		</div>
 	</section>
 	<!-- End Package Detail Section -->
+
+	<!-- FAQ Section -->
+	<section class="faq-one alternate">
+        <div class="auto-container">
+            <div class="title-box centered">
+                <h2><span>Most Frequent Questions</span></h2>
+            </div>
+            <div class="row clearfix">
+                <!--Text Col-->
+                <div class="text-col col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="accordion-box clearfix">
+                            <!--Block-->
+                            <div class="accordion block active-block">
+                                <div class="acc-btn active">What is Book & Explore? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Book & Explore is a leading travel company specializing in trekking, adventure tours, and customized travel experiences across Maharashtra and beyond. With 8+ years of expertise and 10,000+ happy travelers, we are committed to making travel seamless, fun, and unforgettable.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">What kind of trips do you offer? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">
+                                            ✅ Trekking & Adventure Tours (Maharashtra forts, Spiti Valley, Kedarnath-Badrinath, and more)<br>
+                                            ✅ Cultural & Heritage Tours (Hampi-Gokarna, Rann of Kutch, Kerala, and others)<br>
+                                            ✅ Customized & Group Tours (Tailor-made trips for individuals, families, and corporate groups)<br>
+                                            ✅ Weekend Getaways & Camping (Perfect for quick escapes into nature)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Who can join your trips? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Our trips are designed for everyone—solo travelers, couples, families, corporate groups, and adventure enthusiasts. Whether you're a beginner or an experienced explorer, we have an itinerary that suits you.</div>
+                                    </div>
+                                </div>
+                            </div>
+                              <!--Block-->
+                              <div class="accordion block">
+                                <div class="acc-btn">How do I stay updated on upcoming trips? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Follow us on social media, WhatsApp, and our website for the latest updates, upcoming trips, and special discounts!</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">How do I book a trip? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">
+                                            📞 Call or WhatsApp us for instant assistance.<br>
+                                            💻 Visit our website and choose your preferred trip.<br>
+                                            📧 Email us for customized plans and corporate bookings.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Text Col-->
+                <div class="text-col col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="accordion-box clearfix">
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">What is included in the trip cost? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">
+                                            ✅ Accommodation (Camps, Hotels, or Homestays)<br>
+                                            ✅ Meals as per the itinerary<br>
+                                            ✅ Local transport & transfers<br>
+                                            ✅ Guided tours & trek leads<br>
+                                            ✅ Safety equipment & first-aid assistance
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Do you offer customized travel packages? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">Absolutely! We specialize in customized itineraries for groups, families, and corporate teams. Just tell us your destination, budget, and preferences, and we’ll craft the perfect journey for you.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">How safe are your treks and tours? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">
+                                            ✅ First-aid kits & emergency backup<br>
+                                            ✅ Well-planned itineraries with safety checks<br>
+                                            ✅ Assistance for beginners & proper gear recommendations
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">What if I need to cancel my trip? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">We understand that plans change. We have a flexible cancellation and refund policy, which depends on the type of trip. Details will be shared at the time of booking.</div>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <!--Block-->
+                            <div class="accordion block">
+                                <div class="acc-btn">Why should I choose Book & Explore? <i class="fa-regular fa-angle-down"></i></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">
+                                            🚀 8+ years of expertise in the travel industry<br>
+                                            🌍 10,000+ happy travelers<br>
+                                            🏕 Expert-led treks and tours<br>
+                                            🎯 Personalized travel experiences<br>
+                                            💯 Hassle-free bookings and seamless execution
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 	
 	<!-- News Section Two -->
     <section class="news-section-two tours-page">
@@ -1174,9 +1355,53 @@
 </script>
 <script> 
 $(function(){
-  $("#header").load("header.html"); 
+	$("#website_header").load("WebsiteHeader.html", function(){
+            // AFTER loading header, initialize toggles!
+            initHeaderScripts();
+    });
   $("#footer").load("footer.html"); 
+
+  // Get the booking price dynamically
+  const bookingPrice = $(".booking_now_price").text().trim();
+
+// Load BookingNow.html
+$("#booking_now").load("BookingNow.html", function () {
+  // Ensure the script inside BookingNow.html runs after loading
+  setTimeout(() => {
+    const bookingCard = document.querySelector(".booking-card");
+    if (bookingCard) {
+      bookingCard.classList.add("show");
+    }
+
+    // Set the dynamic price inside the loaded BookingNow.html
+    document.querySelector(".booking-price").textContent = `₹${bookingPrice}`;
+  }, 1500);
 });
-</script> 
+
+});
+</script>
+<script src="js/main.js"></script> <!-- Single JS file --> 
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+  const accordions = document.querySelectorAll('.info-accordion-item');
+
+  accordions.forEach(item => {
+    const header = item.querySelector('.info-accordion-header');
+
+    header.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+
+      // Close all
+      accordions.forEach(acc => acc.classList.remove('active'));
+
+      // Toggle current based on previous state
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    });
+  });
+});
+
+</script>
 </body>
 </html>
