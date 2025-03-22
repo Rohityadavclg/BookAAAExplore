@@ -3908,7 +3908,7 @@ Gallery section
 .main-footer .lower-section .footer-column{
   position: relative;
   margin-bottom: 20px;
-  background: #ffffff;
+  
 }
 
 .main-footer .lower-section h6{
@@ -3939,6 +3939,11 @@ Gallery section
   line-height: 24px;
   text-transform: capitalize;
   margin-bottom: 7px;
+}
+
+.main-footer .lower-section .links li .logo{
+  width: 130px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .main-footer .lower-section .links li:last-child{
@@ -5061,6 +5066,54 @@ Gallery section
   text-decoration: underline;
 }
 
+/* custom-rating-box */
+.inner-banner .content-box .custom-rating-box {
+  position: absolute;
+  bottom: -90%;
+  left: 44%;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.custom-post-info {
+  display: flex;
+  gap: 25px; /* Adjust spacing between items */
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.custom-post-info li {
+  display: flex;
+  align-items: center;
+  color: #fff; /* White text */
+  font-weight: 500;
+  font-size: 16px;
+  gap: 10px;
+}
+
+.custom-post-info a{
+  text-decoration: none;
+}
+
+.custom-post-info .custom-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #fff; /* White background */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-post-info .custom-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+/* custom-rating-box */
+
 /*** 
 
 ====================================================================
@@ -5898,6 +5951,7 @@ Gallery section
   display: block;
 }
 
+/*------- New info-accordion-section ----------*/
 .info-accordion-section {
   padding: 50px 0;
 }
@@ -5920,7 +5974,7 @@ Gallery section
 /* Left Side: Title & Arrow */
 .info-accordion-header {
   flex: 1;
-  width: 30%;
+  width: 0%;
   padding: 20px;
   cursor: pointer;
   font-weight: 600;
@@ -5954,10 +6008,9 @@ Gallery section
   background: #888888; /* Gray */
 }
 
-
 /* Right Side: Content */
 .info-accordion-content {
-  flex: 1;
+  flex: 2;
   width: 50%;
   padding: 20px;
   background: #fff;
@@ -6511,7 +6564,7 @@ Gallery section
   font-size: 18px; */
   font-size: 19px;
   font-weight: 600;
-  font-style: italic;
+  /* font-style: italic; */
   text-align: center;
   z-index: 2;
   white-space: nowrap;
@@ -7113,7 +7166,7 @@ Gallery section
 
 .package-detail-section{
   position:relative;
-  padding:5px 0px 100px;
+  padding:5px 0px 0px;
 }
 
 .package-detail-section .upper-box{
@@ -7169,7 +7222,7 @@ Gallery section
 }
 
 .info-item i {
-  font-size: 38px;
+  font-size: 28px;
   color: #1DC5CE; /* Sky blue color */
   margin-bottom: 8px;
 }
@@ -7234,6 +7287,8 @@ Gallery section
   display:block;
   margin-bottom:4px;
 }
+
+
 
 /* Rating Box */
 
@@ -10371,7 +10426,7 @@ figcaption {
   padding: 30px 30px;
   background: #ffffff;
   border: 1px dashed #1DC5CE;
-  min-height: 100%;
+  min-height: auto;
   border-radius: 8px;
   -moz-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
