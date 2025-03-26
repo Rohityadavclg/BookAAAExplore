@@ -5066,54 +5066,6 @@ Gallery section
   text-decoration: underline;
 }
 
-/* custom-rating-box */
-.inner-banner .custom-rating-box {
-  position: absolute;
-  bottom: 10%;
-  left: 2%;
-  margin-top: 20px;
-  display: inline-block;
-}
-
-.custom-post-info {
-  display: flex;
-  gap: 25px; /* Adjust spacing between items */
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-}
-
-.custom-post-info li {
-  display: flex;
-  align-items: center;
-  color: #fff; /* White text */
-  font-weight: 500;
-  font-size: 16px;
-  gap: 10px;
-}
-
-.custom-post-info a{
-  text-decoration: none;
-}
-
-.custom-post-info .custom-icon {
-  width: 40px;
-  height: 40px;
-  background-color: #fff; /* White background */
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.custom-post-info .custom-icon img {
-  width: 20px;
-  height: 20px;
-}
-
-/* custom-rating-box */
-
 /*** 
 
 ====================================================================
@@ -6561,12 +6513,12 @@ Gallery section
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
-  font-size: 22px; /* Increased size to enhance calligraphy */
-  font-weight: 550; /* Usually lighter for calligraphy */
+  font-size: 20px; /* Increased size to enhance calligraphy */
+  font-weight: 500; /* Usually lighter for calligraphy */
   text-align: center;
   z-index: 2;
   white-space: nowrap;
-  font-family: 'Satisfy', cursive;
+  /* font-family: 'Satisfy', cursive; */
   /* letter-spacing: 1px; Slight spacing for elegance */
   text-shadow: 1px 1px 3px rgba(0,0,0,0.6); /* Adds depth */
   padding: 0 10px 0 10px;
@@ -7103,15 +7055,16 @@ Gallery section
 .packages-banner .banner-list {
   position: relative;
   padding-top: 320px;
-  z-index: 2;
-  text-align: center;
+  z-index: 1;
+  text-align: start;
+
 }
 
 /* Banner Heading */
 .packages-banner .banner-list h4 {
   position: absolute;
-  bottom: -40%; /* Keep heading at bottom section */
-  left: 25%; /* Center horizontally */
+  bottom: -29%; /* Keep heading at bottom section */
+  left: 36%; /* Center horizontally */
   transform: translate(-50%, 0); /* Perfect center horizontally */
   z-index: 2;
   font-size: 26px;
@@ -7124,6 +7077,56 @@ Gallery section
   word-wrap: break-word;
 }
 
+/* custom-rating-box */
+.packages-banner .banner-list .custom-rating-box {
+  position: absolute;
+  margin-top: 20px;
+  display: inline-block;
+  bottom: -40%; /* Keep heading at bottom section */
+  left: 3%; /* Center horizontally */
+  z-index: 2;
+}
+
+.custom-post-info {
+  display: flex;
+  gap: 25px; /* Adjust spacing between items */
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.custom-post-info li {
+  display: flex;
+  align-items: center;
+  color: #fff; /* White text */
+  font-weight: 500;
+  font-size: 16px;
+  gap: 10px;
+}
+
+.custom-post-info a{
+  text-decoration: none;
+}
+
+.custom-post-info .custom-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #fff; /* White background */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-post-info .custom-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+/* custom-rating-box */
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
 
@@ -7132,8 +7135,11 @@ Gallery section
     padding-top: 100px; /* Less padding on mobile */
   }
 
+  .packages-banner .banner-list{
+    text-align: center;
+  }
+
   .packages-banner .banner-list h4 {
-    position: absolute;
     bottom: 20%; /* Still visible at bottom */
     left: 50%; 
     transform: translate(-50%, 0);
@@ -7142,27 +7148,8 @@ Gallery section
     max-width: 90%;
     padding: 8px;
   }
-}
 
 
-.packages-banner .banner-list li{
-  position:relative;
-  color:#ffffff;
-  font-size:14px;
-  font-weight:500;
-  margin-right:15px;
-  display:inline-block;
-}
-
-.packages-banner .banner-list li .icon{
-  position:relative;
-  margin-right:15px;
-}
-
-.packages-banner .banner-list li:last-child{
-  padding:5px 12px;
-  border-radius:3px;
-  background-color:#1DC5CE;
 }
 
 /* Package Detail Section */
@@ -7198,10 +7185,9 @@ Gallery section
 
 .package-info-box{
   position:relative;
-  margin-top:10px;
   padding:10px 10px;
   border-radius:6px;
-  margin-bottom:30px;
+  margin: 10px 20px;
   background-color:#f3f7fa;
 }
 
@@ -7211,7 +7197,7 @@ Gallery section
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 2px;
 }
 
 .info-item {
@@ -7219,22 +7205,26 @@ Gallery section
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex: 1 1 150px; /* 6 items on desktop, flexible */
+  flex: 1 1 10%; /* 6 items on desktop, flexible */
   padding: 15px;
   min-width: 120px;
 }
 
 .info-item i {
-  font-size: 28px;
+  font-size: 25px;
   color: #1DC5CE; /* Sky blue color */
   margin-bottom: 8px;
 }
 
 .info-item span {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 14px;
   text-align: center;
   color: #333;
+}
+
+.info-item p {
+  text-align: center;
 }
 
 /* Responsive: 2 per row on small screen */
@@ -10425,66 +10415,123 @@ figcaption {
   position: relative;
   padding: 40px 40px 15px;
   background: #F3F7FA;
+  margin-bottom: 50px;
 }
 
-.contact-section .info-section{
+.contact-section .info-section {
   position: relative;
-  margin-bottom: 90px;
+  margin-bottom: 50px;
+  padding: 20px;
+  height: 550px;
+  display: flex;
 }
 
-.info-section .info-block{
-  position: relative;
+.info-section .info-block {
   margin-bottom: 30px;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
 }
 
-.info-section .info-block .inner-box{
-  position: relative;
-  display: block;
-  text-align: center;
-  padding: 30px 30px;
-  background: #ffffff;
+.info-section .inner-box {
+  flex: 1;
   border: 1px dashed #1DC5CE;
-  min-height: auto;
-  border-radius: 8px;
-  -moz-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  border-radius: 12px;
+  padding: 30px;
+  transition: all 0.4s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* distributes content with space */
 }
 
-.info-section .info-block .inner-box:hover{
-    box-shadow: 0 12px 30px 0 rgba(29, 197, 206, 0.20);
+.info-section .inner-box:hover {
+  box-shadow: 0 15px 35px rgba(29, 197, 206, 0.25);
+  transform: translateY(-5px);
 }
 
-.info-section .info-block .map-icon{
-  position: relative;
-  margin-bottom: 30px;
+.info-section .map-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #1DC5CE;
+  margin-bottom: 20px;
 }
 
-.info-section .info-block h5{
-  position: relative;
+.info-section .map-icon i {
+  font-size: 24px;
+}
+
+.info-section h5 {
   font-size: 22px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin: 0;
 }
 
-.info-section .info-block .address{
-  position: relative;
-  margin-bottom: 20px;
-}
-
-.info-section .info-block .phone{
-  position: relative;
+.info-section .text {
+  margin: 20px 0;
   font-size: 16px;
-  font-weight: 500;
-  color: #1DC5CE;
-  line-height: 24px;
+  color: #333;
+  line-height: 1.6;
 }
 
-.info-section .info-block .phone a{
+.info-section .phone {
+  margin-top: 10px;
+}
+
+.info-section a {
   color: #1DC5CE;
-  text-decoration: underline;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links ul {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: white;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Brand Colors */
+.social-links .facebook {
+  background: #1877f2;
+}
+
+.social-links .twitter {
+  background: #1DA1F2; /* Official Twitter Blue */
+}
+
+.social-links .instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.social-links .youtube {
+  background: #ff0000;
+}
+
+.social-links a:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
 }
 
 /*** 
