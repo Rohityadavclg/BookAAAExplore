@@ -7349,10 +7349,10 @@ Gallery section
 
 .package-detail-section .content-column .feature-box{
   position:relative;
-  margin-top:30px;
-  padding:35px 0px 32px;
-  border-top:1px dashed #CBCBCB;
-  border-bottom:1px dashed #CBCBCB;
+  margin-top:20px;
+  padding:20px 0px 20px;
+  /* border-top:1px dashed #CBCBCB;
+  border-bottom:1px dashed #CBCBCB; */
 }
 
 .package-detail-section .content-column .feature-box h5{
@@ -7447,8 +7447,8 @@ Gallery section
 .package-detail-section .itinerary-box{
   position:relative;
   padding:30px 0px 30px;
-  border-top:1px dashed #CBCBCB;
-  border-bottom:1px dashed #CBCBCB;
+  /* border-top:1px dashed #CBCBCB;
+  border-bottom:1px dashed #CBCBCB; */
 }
 
 .package-detail-section .itinerary-box .days-outer{
