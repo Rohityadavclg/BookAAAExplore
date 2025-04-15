@@ -8113,7 +8113,7 @@ Gallery section
 .package-info-box-two{
   position:relative;
   margin-top:15px;
-  padding:32px 50px;
+  padding:52px 50px;
   border-radius:6px;
   margin-bottom:30px;
   background-color:#f3f7fa;
@@ -8171,7 +8171,7 @@ Gallery section
 }
 
 .package-info-box.style-two .package-info-block .inner-box:before{
-  right:-40px;
+  right:-50px;
 }
 
 .package-info-box.style-two .package-info-block .inner-box{
