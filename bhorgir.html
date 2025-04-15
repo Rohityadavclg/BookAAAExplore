@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Bhimashankar Bhorgiri Trek</title>
+<title>Bhorgir Trek</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -14,9 +14,110 @@
 <link href="css/responsive.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]--> 
 
+<style>
+	/* Trek Card */
+  .trek-block-one {
+	width: 80%; /* Ensures 4 cards in a row */
+	background: #fff;
+	border-radius: 10px; /* Reduced size */
+	padding: 15px; /* Reduced padding */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.4s ease;
+	margin: 30px 20px;
+	text-align: center;
+  }
+  
+  .trek-block-one:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .trek-block-one a {
+	text-decoration: none;
+  }
+  
+  /* Image Box */
+  .image-box img {
+	width: 100%;
+	height: 280px; /* Reduced height */
+	object-fit: cover;
+	border-radius: 10px;
+	transition: 0.3s;
+  }
+  
+  .image-box img:hover {
+	transform: scale(1.05);
+  }
+  
+  /* Info Box */
+  .info {
+	font-size: 14px; /* Smaller font */
+	font-weight: 600;
+	color: #0f0f0f;
+	padding: 6px;
+	margin-top: 8px;
+	border-radius: 4px;
+	background-color: #4bc2cf;
+	/* margin-bottom: 30px; */
+  }
+  
+  /* Title & Button */
+  .lower-content h4 {
+	font-size: 18px; /* Proper font size */
+	font-weight: 650;
+	margin: 12px 0;
+	color: #10221B;
+	transition: color 0.3s ease-in-out; /* Smooth transition effect */
+  }
+  
+  /* Hover Effect */
+  .lower-content h4:hover {
+	color: #1DC5CE;
+  }
+  
+  .theme-btn {
+	color: #1DC5CE; /* Initial text color */
+	background: transparent; /* No background initially */
+	padding: 6px 12px; /* Button padding */
+	border-radius: 5px; /* Rounded corners */
+	border: 2px solid #1DC5CE; /* Border color */
+	text-decoration: none;
+	display: inline-block;
+	transition: 0.3s ease-in-out;
+	font-size: 14px; /* Button text size */
+	font-weight: 600; /* Bold font */
+  }
+  
+  .theme-btn:hover {
+	background: #1DC5CE; /* Hover background */
+	color: white; /* White text on hover */
+	border-color: #1DC5CE; /* Keep border same */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+	.trek-block-one {
+		width: 20%; /* 3 cards per row */
+	}
+  }
+  
+  @media (max-width: 768px) {
+	.trek-block-one {
+		width: 30%; /* 2 cards per row */
+		margin: 20px  30px 30px 30px;
+	}
+  }
+  
+  @media (max-width: 576px) {
+	.trek-block-one {
+		width: 90%; /* 1 card per row on mobile */
+	}
+  }
+  
+</style>
+
 </head>
 
-  
 
 <body>
     <div class="page-wrapper"> 
@@ -26,9 +127,9 @@
       
       <div class="search-backdrop"></div>
       
-      <!-- Main Header-->
+       <!-- Main Header-->
     <header class="main-header">
-        <div id="website_header"></div>
+      <div id="website_header"></div>
     </header>
 
        <!--Search Backdrop-->
@@ -38,81 +139,125 @@
        <div class="menu-backdrop"></div>
    
        <!-- Hidden Navigation Bar -->
-      
+       
        <!-- / Hidden Bar -->  
+      
+      <!--End Main Header -->
 
     <!-- Banner Section -->
     <section class="packages-banner" style="background-image: url(images/background/banner-1.jpg);">
         <div class="auto-container">
-			<ul class="banner-list">
-				<li><span class="icon"><img src="images/icons/location.svg" alt="" /></span>Pune</li>
-				<li>View on Map</li>
-			</ul>
-		</div>
+          <ul class="banner-list">
+            <h4>Bhorgir Trek</h4>
+
+            <!-- New Rating Box -->
+            <div class="custom-rating-box">
+              <ul class="custom-post-info">
+                <a href="#">
+                    <li>
+                        <div class="custom-icon">
+                          <img src="images/icons/share-icon.svg" alt="Share" />
+                        </div>
+                        <div>Share</div>
+                    </li>
+                </a>
+                <a href="#"><li>
+                    <span class="custom-icon">
+                    <img src="images/icons/review-icon.svg" alt="Review" />
+                    </span>
+                    Review
+                </li>
+                </a>
+                <a href="#"><li>
+                    <span class="custom-icon">
+                    <img src="images/icons/heart-icon-1.svg" alt="Wishlist" />
+                    </span>
+                    Wishlist
+                </li>
+                </a>
+              </ul>
+          </div>
+          <!-- End New Rating Box -->
+          </ul>
+		    </div>
     </section>
     <!--End Banner Section -->
 
 	<!-- Package Detail Section -->
 	<section class="package-detail-section">
+
+     <!-- Package Info Box -->
+     <div class="package-info-box style-two">
+      <div class="inner-container d-flex justify-content-between align-items-center flex-wrap">
+        <div class="info-item">
+          <i class="fas fa-clock"></i>
+          <span>Duration</span>
+          <p>6 KM</p>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-road"></i>
+          <span>Trek Length</span>
+          <p>6 KM </p>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-mountain"></i>
+          <span>Difficulty</span>
+          <p>Moderate</p>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-arrow-up"></i>
+          <span>Max Altitude</span>
+          <p>5400 ft</p>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-home"></i>
+          <span>Base Village</span>
+          <p>Bari Village</p>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-bus"></i>
+          <span>Transport</span>
+          <p>Private Vehicle</p>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-utensils"></i>
+          <span>Meals</span>
+          <p>Breakfast & Lunch</p>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-map-marked-alt"></i>
+          <span>Sightseeing</span>
+          <p>Ratangad Peak</p>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-user-tie"></i>
+          <span>Guide</span>
+          <p>Trek Leaders</p>
+        </div>
+
+      </div>
+    </div>
+
 		<div class="auto-container">
-		
-			<!-- Upper Box -->
-			<div class="upper-box">
-				<div class="clearfix">
-					<div class="pull-left">
-						<h4>Bhimashankar to Bhorgiri Trek</h4>
-					</div>
-					 
-				</div>
-			</div>
+	
+      <!-- Booking card section-->
+      <div id="booking_now"></div>
+
+      <!-- Dynamic Booking Price -->
+      <div class="booking_now_price" style="display: none;">1200</div>
+      
 			
-			<!-- Package Info Box -->
-			<div class="package-info-box">
-				<div class="inner-container d-flex justify-content-between align-items-center">
-					
-					<!-- Package Info Block -->
-					<div class="package-info-block">
-						<div class="inner-box">
-							<div class="icon"><img src="images/icons/duration.svg" alt="" /></div>
-							<strong>Duration</strong>
-							  3-4 hours
-						</div>
-					</div>
-					
-					<!-- Package Info Block -->
-					<div class="package-info-block">
-						<div class="inner-box">
-							<div class="icon"><img src="images/icons/speedometer.svg" alt="" /></div>
-							<strong>Difficulty</strong>
-							Easy-Moderate
-						</div>
-					</div>
-					
-					<!-- Package Info Block -->
-					<div class="package-info-block">
-						<div class="inner-box">
-							<div class="icon"><img src="images/icons/team-group.svg" alt="" /></div>
-							<strong>Price</strong>
-                            <div class="price"> <span> <strong>₹1200 Pune</strong> </span></div>
-						</div>
-					</div>
-					
-					<!-- Package Info Block -->
-					<div class="package-info-block">
-						<div class="inner-box">
-							<div class="icon"><img src="images/icons/hill.svg" alt="" /></div>
-							<strong>Trek Length</strong>
-                             6-7 kilometers
-                              
-						</div>
-					</div>
-					
-				</div>
-			</div>
-			<!-- End Package Info Box -->
 			
 			<!-- Rating Box -->
-			<div class="rating-box">
+			<!-- <div class="rating-box">
 				<div class="clearfix">
 					 
 					<div class="pull-right">
@@ -123,164 +268,195 @@
 						</ul>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<!-- Rating Box -->
 			
 			<div class="row clearfix">
 				<!-- Content Column -->
 				<div class="content-column col-xl-8 col-lg-7 col-md-12 col-sm-12">
-					<h5>About Bhimashankar Bhorgiri Trek</h5>
-                    <p> The Bhorgiri Bhimashankar Trek is a popular trekking route located in the
-                        Sahyadri mountain range of Maharashtra, India. It offers a thrilling and scenic
-                        trekking experience, taking you through dense forests, rugged terrains, and
-                        picturesque landscapes.</p>
-                    <p> The trek starts from the village of Bhorgiri, which is approximately 70 kilometers
-                        away from Pune. From Bhorgiri, the trail winds its way through lush green forests,
-                        offering glimpses of diverse flora and fauna along the way. The monsoon season,
-                        from June to September, is an ideal time to undertake this trek as the entire region
-                        transforms into a verdant paradise with numerous waterfalls and streams. </p>
-                    <p> The trek to Bhimashankar, a famous pilgrim site dedicated to Lord Shiva, is
-                        moderate in difficulty and can be completed within a day. The total trek distance is
-                        around 6-7 kilometers, with an elevation gain of approximately 1,200 meters. </p>
-                        <p>
-                            As you ascend, you will encounter steep slopes, rocky patches, and mesmerizing
-                            viewpoints offering breathtaking vistas of the surrounding valleys. Keep an eye out
-                            for wildlife such as langurs, birds, and if you're lucky, you may even spot some
-                            rare species like the Malabar Giant Squirrel.
-                        </p>
-                        <p>
-                            The final stretch of the trek takes you to Bhimashankar Temple, an ancient and
-                            revered shrine of Lord Shiva. Explore the temple complex, witness the religious
-                            rituals, and soak in the spiritual ambiance before beginning the descent back to
-                            Bhorgiri.
-                            
-                        </p>
-                        <p> The Bhorgiri Bhimashankar Trek is a fantastic opportunity to connect with nature,
-                            challenge yourself, and experience the beauty of the Sahyadri Mountains. It attracts
-                            both adventure enthusiasts and pilgrims seeking a blend of adventure and
-                            spirituality.</p>
-					 <div class="feature-box">
-						<h5>Things to Carry</h5>
-						<ul class="feature-list">
-							<ul>
-                                <li>Luggage Packed in Big Good Sack, All Luggage Wrap Properly.</li>
-                                <li>Good Trekking Shoes.</li>
-                                <li>Extra pair of clothes and socks.</li>
-                                <li>Dry Snacks.</li>
-                                <li>Electral/Glucon-D energizer drinks.</li>
-                                <li>2-liter water bottle. (1 liter each)</li>
-                                <li>A Sweater/ Warm wear/ Rainwear. Wear comfortable clothing during trek (full sleeves Shirt T-Shirt, Avoid Jeans).</li>
-                                <li>Head Torch / Hand Torch Compulsory.</li>
-                                <li>Cap / Hat, goggles, sunscreen, Odomos.</li>
-                                <li>Camera, Binocular (Optional).</li>
-                                <li>Identity proof (must).</li>
-                                <li>Toiletries (Napkin, Face Wash, Tissue, Toilet paper, Sanitizer).</li>
-                                <li>Slippers (At the end of day or trek so you feel relax).</li>
-                                <li>Personal Medicine if any.</li>
-                                *Please Come Prepared
-                            </ul>
-                            
-						</ul>
-					</div>
-					<div class="facility-box">
-						<h5>Inclusions</h5>
-						<div class="row clearfix">
-							<div class="column col-lg-4 col-md-4 col-sm-12">
-								<div class="facility-option"><span class="icon"><img src="images/icons/campings.svg" alt="" /></span>Traveling 
-                                    from Pune to Pune & Mumbai to Mumbai. </div>
-							</div>
-							<div class="column col-lg-4 col-md-4 col-sm-12">
-								<div class="facility-option"><span class="icon"><img src="images/icons/toilet.svg" alt="" /></span>Toilet as per destination</div>
-							</div>
-							<div class="column col-lg-4 col-md-4 col-sm-12">
-								<div class="facility-option"><span class="icon"><img src="images/icons/kitchen-tool.svg" alt="" /></span>  1x Breakfast & Lunch. (Veg/Nonveg)</div>
-							</div>
-							<div class="column col-lg-4 col-md-4 col-sm-12">
-								<div class="facility-option"><span class="icon"><img src="images/icons/lights.svg" alt="" /></span>Forest Department’s charges & Permits.</div>
-							</div>
-							<div class="column col-lg-4 col-md-4 col-sm-12">
-								<div class="facility-option"><span class="icon"><img src="images/icons/smoking.svg" alt="" /></span>Experienced crew throughout trek/tour.
-                                </div>
-							</div>
-							<div class="column col-lg-4 col-md-4 col-sm-12">
-								<div class="facility-option"><span class="icon"><img src="images/icons/wifi-signal.svg" alt="" /></span>Basic First Aid.</div>
-							</div>
-						</div>
-					</div>
-					 <!-- exclusion  -->
-                     <div class="facility-box">
-                        <h5>Exclusions</h5>
-                        <li> Anything not mentioned in Inclusion.</li>
+					<h5>About Bhorgir</h5>
+                     <p>The Bhorgiri Bhimashankar Trek is a popular trekking route located in the Sahyadri mountain range of Maharashtra, India. It offers a thrilling and scenic trekking experience, taking you through dense forests, rugged terrains, and picturesque landscapes.</p>
+                     <p>The trek starts from the village of Bhorgiri, which is approximately 70 kilometers away from Pune. From Bhorgiri, the trail winds its way through lush green forests, offering glimpses of diverse flora and fauna along the way. The monsoon season, from June to September, is an ideal time to undertake this trek as the entire region transforms into a verdant paradise with numerous waterfalls and streams.</p>
+                     <p>The trek to Bhimashankar, a famous pilgrim site dedicated to Lord Shiva, is moderate in difficulty and can be completed within a day. The total trek distance is around 6-7 kilometers, with an elevation gain of approximately 1,200 meters.</p>
+                        <p>As you ascend, you will encounter steep slopes, rocky patches, and mesmerizing viewpoints offering breathtaking vistas of the surrounding valleys. Keep an eye out for wildlife such as langurs, birds, and if you're lucky, you may even spot some rare species like the Malabar Giant Squirrel.</p>
+					 
+                <!-- Itinerary Box -->
+                <div class="itinerary-box">
+                  <h5>Itinerary</h5>
+                  <div class="faq-one style-two">
+                    <div class="accordion-box clearfix">
+
+                      <!-- Day 1 -->
+                      <div class="accordion block active-block">
+                        <div class="acc-btn active">
+                          <span class="d-flex gap-3">
+                            <h6>Day 1:</h6>
+                            <h6>Depart from Pune/Mumbai</h6>
+                          </span>
+                          <span><i class="fa-regular fa-angle-down"></i></span>
+                        </div>
+                        <div class="acc-content">
+                          <div class="content">
+                            <div class="bold-text">Depart from Pune in Private Vehicle as per the group size.</div>
+                            <div class="text">
+                              <strong>Route & Pickup Point for Pune:</strong>
+                              <ul>
+                                <li><strong>• Pickup point –</strong> Meet at Ch. Shivajinagar Near Lokmangal Maharashtra Bank at 10:30 PM.</li>
+                                <li>• Multiple on route pickup point available.</li>
+                                <li>• Route will be Ch. Shivajinagar –> Aundh – Jagtap Dairy – Kokane Chowk – Nashik Phata – Bhosari – Bari Village (Kalsubai).</li>
+                              </ul>
+                              <strong>Route & Pickup Point for Mumbai:</strong>
+                              <ul>
+                                <li>• Catch 08:44 PM Fast Local from CSMT to Kasara & reach Kasara.</li>
+                                <li>• 8:44PM CSMT –> 8:51PM Byculla – 8:58PM Dadar – 09:07PM Kurla – 09:11PM Ghatkopar – 09:22PM Mulund – 09:26PM Thane – 09:42PM Dombivali – 09:52PM Kalyan – 09:57PM Shahad – 10:00PM Ambivli – 10:06PM Titwala – 10:13PM Khadavli – 10:20PM Vasind – 10:26PM Asangao – 10:35PM Atgaon – 10:39PM Thansit – 10:45PM Khardi – 11:00PM Kasara.</li>
+                                <li>• Our trek leader will meet you near station.</li>
+                                <li><strong>11:45PM - </strong>Leave for Base Village.</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-					<!-- Itinerary Box -->
-					<div class="itinerary-box">
-						<h5>Itinerary</h5>
-						<div class="days-outer">
-						
-							<!-- Day Box -->
-							<div class="day-box">
-								<div class="title">Day 1: Depart from Pune in Private Vehicle as per the group size.</div>
-								<div class="day-text">
-                                 <ul>
-                                     <p class="title">Route & Pickup Point for Pune</p>
-                                    <li><strong>• Pickup point –</strong> Meet at Ch. Shivajinagar Near Lokmagal Maharashtra Bank
-                                        at 10:30 PM.Route will be Ch. Shivajinagar – Aundh – Jagtap Dairy – Kokane Chowk –
-                                        Nashik Phata – Bhosari – Chakan – Rajgurunagar – Bhimashankar. 
-                                    
-                                        </li>
-                                    <li> <strong>• 03:00 AM –</strong> Reach Bhimashanakar Parking & rest in bus for some time. </li>
-                                    <li>• Fresh up & Breakfast.</li>
-                                    <li> <strong>• 
-                                        06:30 AM – </strong> Bhimashankar Temple & Take Mukh Darshan & start
-                                        trek to Bhorgiri. Will visit Guptabhimashanakr on trek route.
-                                    </li>
-                                    <li>  <strong>• 01:00 PM –</strong> Lunch Local Food Only Veg.
-                                        (Bus will came to the end point of trek by road)</li>
-                                        <li>
-                                             <strong>• 03:00PM – </strong> Return Journey.
-                                        </li>
-                                        <li> <strong>• 08:00PM – </strong>Reach Pune with full of memories. (+/-1hr)</li>
-                                 </ul>
-                                 
-                                </div>
-							</div>
-							
-							<!-- Day Box -->
-							 
-							
-							 
-							
-							 
-							
-						</div>
-					</div>
-					<!-- End Itinerary Box -->
-                     <!-- facinatingbox -->
-					 
-					<!-- Gallery Box -->
-					<div class="gallery-box">
-						<h5>Gallery</h5>
-						<div class="single-item-carousel owl-carousel owl-theme">
-							<div class="slide">
-								<div class="image">
-									<img src="images/background/image-1.jpg" alt="" />
-								</div>
-							</div>
-							<div class="slide">
-								<div class="image">
-									<img src="images/background/pattern-1.png" alt="" />
-								</div>
-							</div>
-							<div class="slide">
-								<div class="image">
-									<img src="images/background/pattern-2.png" alt="" />
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					 
-					
+
+                      <!-- Day 2 -->
+                      <div class="accordion block">
+                        <div class="acc-btn">
+                          <span class="d-flex gap-3">
+                            <h6>Day 2:</h6>
+                            <h6>Reach Base Village & Start Trek</h6>
+                          </span>
+                          <span><i class="fa-regular fa-angle-down"></i></span>
+                        </div>
+                        <div class="acc-content">
+                          <div class="content">
+                            <div class="bold-text">Reach Base Village & Start Trek</div>
+                            <ul>
+                              <li><strong>• 03:00AM –</strong> Reach Base Village.</li>
+                              <li>• Freshen up and Start Trek.</li>
+                              <li><strong>• 03:30AM –</strong> Start Trek.</li>
+                              <li><strong>• 07:00AM –</strong> Reach the highest peak and watch magical sunrise.</li>
+                              <li><strong>• 07:30AM –</strong> Breakfast at top.</li>
+                              <li><strong>• 08:00AM –</strong> Start Descend.</li>
+                              <li><strong>• 12:00PM –</strong> Reach Base village and have Lunch.</li>
+                              <li><strong>• 02:30PM – </strong>Leave for Pune & Reach by 9 PM with full of Memories.</li>
+                              <li><strong>• 02:30PM – </strong>Leave for Kasara by Jeep and then by local to Mumbai.</li>
+                              <li><strong>• 05:00PM –</strong> Reach Kasara & take available local to Mumbai. (Arrival Time Depends on Pace of Group and Traffic)</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <!-- End Itinerary Box -->
+ 
+                  <!-- Costs -->
+                  <div class="facility-box">
+                    <h5>Costs</h5>
+                    <table class="cost-table">
+                      <thead>
+                        <tr>
+                          <th>City</th>
+                          <th>3AC Train Travel PP</th>
+                          <th>Sleeper Train Travel PP</th>
+                          <th>Book Now</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Pune & Mumbai</td>
+                          <td>₹22,499/-<br>Triple Sharing Room</td>
+                          <td>₹20,499/-<br>Triple Sharing Room</td>
+                          <td><a href="#" class="book-btn">Book Now</a></td>
+                        </tr>
+                        <tr>
+                          <td>Pune & Mumbai</td>
+                          <td>₹24,499/-<br>Double Sharing Room</td>
+                          <td>₹22,499/-<br>Double Sharing Room</td>
+                          <td><a href="#" class="book-btn">Book Now</a></td>
+                        </tr>
+                        <tr>
+                          <td>Delhi</td>
+                          <td>₹17,499/-<br>Triple Sharing Room</td>
+                          <td>₹19,499/-<br>Double Sharing Room</td>
+                          <td><a href="#" class="book-btn">Book Now</a></td>
+                        </tr>
+                        <tr>
+                          <td colspan="4" style="text-align: center; font-weight: bold;">
+                            Reach us for Best rates from other cities of Maharashtra
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+   <!-- Batches -->
+   <div class="facility-box" style="border: 2px solid #39c2cc; border-radius: 8px; padding: 15px; margin-bottom: 15px;">
+    <h5 style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 10px;">Batches</h5>
+    <p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 1: 29 Sep - 09 Oct</p>
+    <p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 2: 06 Oct - 16 Oct</p>
+    <p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 3: 13 Oct - 23 Oct</p>
+    <p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 4: 20 Oct - 30 Oct</p>
+    <p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 5: 27 Oct - 6 Nov</p>
+    <p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 6: 03 Nov - 13 Nov</p>
+    <p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 7: 10 Nov - 20 Nov</p>
+    <p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 8: 17 Nov - 27 Nov</p>
+    <p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 9: 24 Nov - 04 Dec</p>
+    <p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 10: 01 Dec - 11 Dec</p>
+    <p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 11: 08 Dec - 18 Dec</p>
+    <p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 12: 15 Dec - 25 Dec</p>
+    <p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 13: 22 Dec - 01 Jan Christmas & NY Special</p>
+    <p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 14: 24 Dec - 03 Jan Christmas & NY Special</p>
+    <p style="margin: 5px 0; font-size: 16px; color: #555;">Batch 15: 29 Dec - 08 Jan Christmas & NY Special</p> 
+    </div>
+
+     <!-- Newly added point -->
+     <div class="mt-5">
+      <h5>Who can book this tour</h5>
+      <ul class="feature-list">
+        <li>Para1</li>
+        <li>Para2</li>
+        <li>Para3</li>
+      </ul>
+    </div>
+
+    <div class="feature-box">
+      <h5>Discounts/Coupons</h5>
+      <ul class="feature-list">
+        <!-- Travel Details -->
+        <li>5% Discount Applicable on, group of more than or equal to 5.</li>
+        <li>5% Discount Applicable, if you book a tour 45 days before departure.</li>
+        <p> <strong>Note – Any one Discount coupon will applicable </strong></p>
+      </ul>
+    </div>
+
+
+
+
+    <!--  Inclusions -->
+    <div class="feature-box">
+      <h5>Inclusions</h5>
+      <ul class="feature-list">
+        <li>Traveling from Pune to Pune & Mumbai to Mumbai.</li>
+        <li>Toilet as per destination</li>
+        <li>1x Breakfast & Lunch. (Veg/Nonveg)</li>
+        <li>Forest Department’s charges & Permits.</li>
+        <li>Experienced crew throughout trek/tour</li>
+        <li>Basic First Aid.</li>
+        
+      </ul>
+    </div>
+      
+
+    <!-- exclusion  -->
+<div class="facility-box">
+<h5>Exclusions</h5>
+<ul class="exclusion-list">
+<li>Anything not mentioned in Inclusion..</li>
+
+</ul>
+</div>
+
 				</div>
 				<!-- Sidebar Column -->
 				<div class="sidebar-column col-xl-4 col-lg-5 col-md-12 col-sm-12">
@@ -337,49 +513,91 @@
 							<!-- End Booking Form -->
 							
 						</div>
-                        <div class="sidebar-widget buy-treker-widget">
-							<div class="widget-content">
-								<div class="logo">
-									<a href="#"><img src="https://www.wearandexplore.in/wp-content/uploads/2022/08/Amhi-Chukuch-Shakat-Nahi_Red-2048x1920.png" alt="" /></a>
-								</div>
-								<div class="text">Awesome Travelling <br> T-Shirt </div>
-								<a href="https://www.wearandexplore.in/product/aamhi-chukuch-shakat-nahi/" class="theme-btn buy-now">Buy Now</a>
-							</div>
-						</div>
 						
-										
-						<!-- Buy Treker Widget -->
-						<div class="sidebar-widget buy-treker-widget">
-							<div class="widget-content">
-								<div class="logo">
-									<a href="#"><img src="https://www.wearandexplore.in/wp-content/uploads/2022/08/Amhi-Chukuch-Shakat-Nahi_Red-2048x1920.png" alt="" /></a>
-								</div>
-								<div class="text">Awesome Travelling <br> T-Shirt </div>
-								<a href="https://www.wearandexplore.in/product/aamhi-chukuch-shakat-nahi/" class="theme-btn buy-now">Buy Now</a>
-							</div>
-						</div>
-						<div class="sidebar-widget buy-treker-widget">
-							<div class="widget-content">
-								<div class="logo">
-									<a href="#"><img src="https://www.wearandexplore.in/wp-content/uploads/2022/08/Amhi-Chukuch-Shakat-Nahi_Red-2048x1920.png" alt="" /></a>
-								</div>
-								<div class="text">Awesome Travelling <br> T-Shirt </div>
-								<a href="https://www.wearandexplore.in/product/aamhi-chukuch-shakat-nahi/" class="theme-btn buy-now">Buy Now</a>
-							</div>
-						</div>
-						<div class="sidebar-widget buy-treker-widget">
-							<div class="widget-content">
-								<div class="logo">
-									<a href="#"><img src="https://www.wearandexplore.in/wp-content/uploads/2022/08/Amhi-Chukuch-Shakat-Nahi_Red-2048x1920.png" alt="" /></a>
-								</div>
-								<div class="text">Awesome Travelling <br> T-Shirt </div>
-								<a href="https://www.wearandexplore.in/product/aamhi-chukuch-shakat-nahi/" class="theme-btn buy-now">Buy Now</a>
-							</div>
-						</div>
+                        <div class="sidebar-widget buy-treker-widget">
+                            <div class="widget-content">
+                              <div class="logo">
+                                <a href="#"
+                                  ><img
+                                    src="https://www.wearandexplore.in/wp-content/uploads/2022/08/Amhi-Chukuch-Shakat-Nahi_Red-2048x1920.png"
+                                    alt=""
+                                /></a>
+                              </div>
+                              <div class="text">
+                                Awesome Travelling <br />
+                                T-Shirt
+                              </div>
+                              <a
+                                href="https://www.wearandexplore.in/product/aamhi-chukuch-shakat-nahi/"
+                                class="theme-btn buy-now"
+                                >Buy Now</a
+                              >
+                            </div>
+                          </div>
+                        
+                          <!-- Buy Treker Widget -->
+                          <div class="sidebar-widget buy-treker-widget">
+                            <div class="widget-content">
+                              <div class="logo">
+                                <a href="#"
+                                  ><img
+                                    src="https://www.wearandexplore.in/wp-content/uploads/2022/08/Amhi-Chukuch-Shakat-Nahi_Red-2048x1920.png"
+                                    alt=""
+                                /></a>
+                              </div>
+                              <div class="text">
+                                Awesome Travelling <br />
+                                T-Shirt
+                              </div>
+                              <a
+                                href="https://www.wearandexplore.in/product/aamhi-chukuch-shakat-nahi/"
+                                class="theme-btn buy-now"
+                                >Buy Now</a
+                              >
+                            </div>
+                          </div>
+                          <div class="sidebar-widget buy-treker-widget">
+                            <div class="widget-content">
+                              <div class="logo">
+                                <a href="#"
+                                  ><img
+                                    src="https://www.wearandexplore.in/wp-content/uploads/2022/08/Amhi-Chukuch-Shakat-Nahi_Red-2048x1920.png"
+                                    alt=""
+                                /></a>
+                              </div>
+                              <div class="text">
+                                Awesome Travelling <br />
+                                T-Shirt
+                              </div>
+                              <a
+                                href="https://www.wearandexplore.in/product/aamhi-chukuch-shakat-nahi/"
+                                class="theme-btn buy-now"
+                                >Buy Now</a
+                              >
+                            </div>
+                          </div>
+                          <div class="sidebar-widget buy-treker-widget">
+                            <div class="widget-content">
+                              <div class="logo">
+                                <a href="#"
+                                  ><img
+                                    src="https://cdn.statically.io/img/www.wearandexplore.in/wp-content/uploads/2022/07/Hiker-Evolution-Half-Sleevs-Shirt-Yellow-800x800.png?quality=100&f=auto"
+                                    alt=""
+                                /></a>
+                              </div>
+                              <div class="text">
+                                Awesome Travelling <br />
+                                T-Shirt
+                              </div>
+                              <a
+                                href="https://www.wearandexplore.in/product/aamhi-chukuch-shakat-nahi/"
+                                class="theme-btn buy-now"
+                                >Buy Now</a
+                              >
+                            </div>
+                          </div>
 						
 					 
-						
-						 
 						
 						 
 						 
@@ -387,154 +605,618 @@
 					</div>
 				</div>
 			</div>
+
+      <div class="row clearfix">
+        <div class="content-column">
+            <!-- New Blocks section -->
+          <section class="info-accordion-section">
+            <div class="info-accordion-container">
+            
+              <!-- Single Accordion -->
+              <div class="info-accordion-item">
+              <div class="info-accordion-header">Things you should know before booking <i class="fa-solid fa-angle-right"></i></div>
+              <div class="info-accordion-content">
+                <div class="">
+                  <ul class="feature-list">
+                    <!-- Travel Details -->
+                    <li>Travel in NON AC Pushback TT/Bus/ as per the group size Pune to Pune.</li>
+                    <li>Mumbai to Pune & Pune to Mumbai Sitting Volvo bus.</li>
+
+                    <!-- Accommodation -->
+                    <li>Rs. 1000/- PP extra for double sharing room.</li>
+                    <li>Accommodation in (Non AC) Hotel/Hostels/Homestay on 3/4 sharing for 1 Night in Hampi. Extra mattress will be provided. (Male & Female separate)</li>
+
+                  </ul>
+                </div>
+              </div>
+              </div>
+            
+              <!-- Accordion Item -->
+              <div class="info-accordion-item">
+              <div class="info-accordion-header">Things to Carry <i class="fa-solid fa-angle-right"></i></div>
+              <div class="info-accordion-content">
+                <div class="">
+                  <ul class="feature-list">
+                    <!-- Travel Details -->
+                    <li>Travel in NON AC Pushback TT/Bus/ as per the group size Pune to Pune.</li>
+                    <li>Mumbai to Pune & Pune to Mumbai Sitting Volvo bus.</li>
+
+                    <!-- Accommodation -->
+                    <li>Rs. 1000/- PP extra for double sharing room.</li>
+                    <li>Accommodation in (Non AC) Hotel/Hostels/Homestay on 3/4 sharing for 1 Night in Hampi. Extra mattress will be provided. (Male & Female separate)</li>
+
+                  </ul>
+                </div>
+              </div>
+              </div>
+
+              <div class="info-accordion-item">
+              <div class="info-accordion-header"> Rules & Regulation<i class="fa-solid fa-angle-right"></i></div>
+              <div class="info-accordion-content">
+                <div class="">
+                  <ul class="feature-list">
+                    <!-- Travel Details -->
+                    <li>Travel in NON AC Pushback TT/Bus/ as per the group size Pune to Pune.</li>
+                    <li>Mumbai to Pune & Pune to Mumbai Sitting Volvo bus.</li>
+
+                    <!-- Accommodation -->
+                    <li>Rs. 1000/- PP extra for double sharing room.</li>
+                    <li>Accommodation in (Non AC) Hotel/Hostels/Homestay on 3/4 sharing for 1 Night in Hampi. Extra mattress will be provided. (Male & Female separate)</li>
+
+                  </ul>
+                </div>
+              </div>
+              </div>
+            
+              <div class="info-accordion-item">
+              <div class="info-accordion-header">Booking Policy <i class="fa-solid fa-angle-right"></i></div>
+              <div class="info-accordion-content">
+                <div class="">
+                  <ul class="feature-list">
+                    <!-- Travel Details -->
+                    <li>Travel in NON AC Pushback TT/Bus/ as per the group size Pune to Pune.</li>
+                    <li>Mumbai to Pune & Pune to Mumbai Sitting Volvo bus.</li>
+
+                    <!-- Accommodation -->
+                    <li>Rs. 1000/- PP extra for double sharing room.</li>
+                    <li>Accommodation in (Non AC) Hotel/Hostels/Homestay on 3/4 sharing for 1 Night in Hampi. Extra mattress will be provided. (Male & Female separate)</li>
+
+                  </ul>
+                </div>
+              </div>
+              </div>
+            
+              <div class="info-accordion-item">
+              <div class="info-accordion-header">Terms and Conditions <i class="fa-solid fa-angle-right"></i></div>
+              <div class="info-accordion-content">
+                <div class="">
+                  <ul class="feature-list">
+                    <!-- Travel Details -->
+                    <li>Travel in NON AC Pushback TT/Bus/ as per the group size Pune to Pune.</li>
+                    <li>Mumbai to Pune & Pune to Mumbai Sitting Volvo bus.</li>
+
+                    <!-- Accommodation -->
+                    <li>Rs. 1000/- PP extra for double sharing room.</li>
+                    <li>Accommodation in (Non AC) Hotel/Hostels/Homestay on 3/4 sharing for 1 Night in Hampi. Extra mattress will be provided. (Male & Female separate)</li>
+
+                  </ul>
+                </div>
+              </div>
+              </div>
+            
+              <div class="info-accordion-item">
+              <div class="info-accordion-header">Cancellation Policy <i class="fa-solid fa-angle-right"></i></div>
+              <div class="info-accordion-content">
+                <div class="">
+                  <ul class="feature-list">
+                    <!-- Travel Details -->
+                    <li>Travel in NON AC Pushback TT/Bus/ as per the group size Pune to Pune.</li>
+                    <li>Mumbai to Pune & Pune to Mumbai Sitting Volvo bus.</li>
+
+                    <!-- Accommodation -->
+                    <li>Rs. 1000/- PP extra for double sharing room.</li>
+                    <li>Accommodation in (Non AC) Hotel/Hostels/Homestay on 3/4 sharing for 1 Night in Hampi. Extra mattress will be provided. (Male & Female separate)</li>
+
+                  </ul>
+                </div>
+              </div>
+              </div>
+            
+              <div class="info-accordion-item">
+              <div class="info-accordion-header">IRCTC Rules <i class="fa-solid fa-angle-right"></i></div>
+              <div class="info-accordion-content">
+                <div class="">
+                  <ul class="feature-list">
+                    <!-- Travel Details -->
+                    <li>Travel in NON AC Pushback TT/Bus/ as per the group size Pune to Pune.</li>
+                    <li>Mumbai to Pune & Pune to Mumbai Sitting Volvo bus.</li>
+
+                    <!-- Accommodation -->
+                    <li>Rs. 1000/- PP extra for double sharing room.</li>
+                    <li>Accommodation in (Non AC) Hotel/Hostels/Homestay on 3/4 sharing for 1 Night in Hampi. Extra mattress will be provided. (Male & Female separate)</li>
+
+                  </ul>
+                </div>
+              </div>
+              </div>
+            
+              <div class="info-accordion-item">
+              <div class="info-accordion-header">Travel Agreement / Booklet <i class="fa-solid fa-angle-right"></i></div>
+              <div class="info-accordion-content">
+                <div class="">
+                  <ul class="feature-list">
+                    <!-- Travel Details -->
+                    <li>Travel in NON AC Pushback TT/Bus/ as per the group size Pune to Pune.</li>
+                    <li>Mumbai to Pune & Pune to Mumbai Sitting Volvo bus.</li>
+
+                    <!-- Accommodation -->
+                    <li>Rs. 1000/- PP extra for double sharing room.</li>
+                    <li>Accommodation in (Non AC) Hotel/Hostels/Homestay on 3/4 sharing for 1 Night in Hampi. Extra mattress will be provided. (Male & Female separate)</li>
+
+                  </ul>
+                </div>
+              </div>
+              </div>
+            
+            </div>
+          </section>
+
+          <!-- New Blocks section -->
+          <section class="info-accordion-section">
+            <h5> Pickup Location & Time</h5>
+            <div class="info-accordion-container">
+            
+              <!-- Accordion Item-->
+              <div class="info-accordion-item">
+              <div class="info-accordion-header">For Pune <i class="fa-solid fa-angle-right"></i></div>
+              <div class="info-accordion-content">
+                <div class="">
+                  <ul class="feature-list">
+                    <!-- Travel Details -->
+                    <li> 8:30 PM - Ch. Shivajinagar (Lokmangal Maharashtra Bank)<br />
+                      <b>Location</b> - <a href="https://maps.app.goo.gl/YJA1aVRAmBux2G6g8" target="_blank">https://maps.app.goo.gl/YJA1aVRAmBux2G6g8</a></li>
+
+                    <li> 8:30 PM - Ch. Shivajinagar (Lokmangal Maharashtra Bank)<br />
+                      <b>Location</b> - <a href="https://maps.app.goo.gl/YJA1aVRAmBux2G6g8" target="_blank">https://maps.app.goo.gl/YJA1aVRAmBux2G6g8</a></li>
+
+                    <li> 8:30 PM - Ch. Shivajinagar (Lokmangal Maharashtra Bank)<br />
+                      <b>Location</b> - <a href="https://maps.app.goo.gl/YJA1aVRAmBux2G6g8" target="_blank">https://maps.app.goo.gl/YJA1aVRAmBux2G6g8</a></li>
+
+                    <li> 8:30 PM - Ch. Shivajinagar (Lokmangal Maharashtra Bank)<br />
+                      <b>Location</b> - <a href="https://maps.app.goo.gl/YJA1aVRAmBux2G6g8" target="_blank">https://maps.app.goo.gl/YJA1aVRAmBux2G6g8</a></li>
+
+                    <li> 8:30 PM - Ch. Shivajinagar (Lokmangal Maharashtra Bank)<br />
+                      <b>Location</b> - <a href="https://maps.app.goo.gl/YJA1aVRAmBux2G6g8" target="_blank">https://maps.app.goo.gl/YJA1aVRAmBux2G6g8</a></li>
+
+                    <li> 8:30 PM - Ch. Shivajinagar (Lokmangal Maharashtra Bank)<br />
+                      <b>Location</b> - <a href="https://maps.app.goo.gl/YJA1aVRAmBux2G6g8" target="_blank">https://maps.app.goo.gl/YJA1aVRAmBux2G6g8</a></li>
+
+                    <li> 8:30 PM - Ch. Shivajinagar (Lokmangal Maharashtra Bank)<br />
+                      <b>Location</b> - <a href="https://maps.app.goo.gl/YJA1aVRAmBux2G6g8" target="_blank">https://maps.app.goo.gl/YJA1aVRAmBux2G6g8</a></li>
+
+                    <li> 8:30 PM - Ch. Shivajinagar (Lokmangal Maharashtra Bank)<br />
+                      <b>Location</b> - <a href="https://maps.app.goo.gl/YJA1aVRAmBux2G6g8" target="_blank">https://maps.app.goo.gl/YJA1aVRAmBux2G6g8</a></li>
+
+                    <li> 8:30 PM - Ch. Shivajinagar (Lokmangal Maharashtra Bank)<br />
+                      <b>Location</b> - <a href="https://maps.app.goo.gl/YJA1aVRAmBux2G6g8" target="_blank">https://maps.app.goo.gl/YJA1aVRAmBux2G6g8</a></li>
+
+                    <li> 8:30 PM - Ch. Shivajinagar (Lokmangal Maharashtra Bank)<br />
+                      <b>Location</b> - <a href="https://maps.app.goo.gl/YJA1aVRAmBux2G6g8" target="_blank">https://maps.app.goo.gl/YJA1aVRAmBux2G6g8</a></li>
+                  </ul>
+                </div>
+              </div>
+              </div>
+            
+              <!-- Accordion Item -->
+              <div class="info-accordion-item">
+              <div class="info-accordion-header">For Mumbai <i class="fa-solid fa-angle-right"></i></div>
+              <div class="info-accordion-content">
+                <div class="">
+                  <ul class="feature-list">
+                    <!-- Travel Details -->
+                    <li> Reach Kasara by 11 PM.
+                      Catch 08:44 PM fast local from CSMT to Kasara & reach Kasara</li>
+
+                  </ul>
+                </div>
+              </div>
+              </div>
+            </div>
+          </section>
+        </div>
+          
+      </div>
+
+      <div class="row clearfix">
+				<!-- Content Column -->
+				<div class="content-column col-xl-8 col-lg-7 col-md-12 col-sm-12">
+					
+					<!-- Gallery Box -->
+					<div class="gallery-box">
+						<h5>Gallery</h5>
+						<div class="single-item-carousel owl-carousel owl-theme">
+							<div class="slide">
+								<div class="image">
+									<img src="images/resource/gallery-6.jpg" alt="" />
+								</div>
+							</div>
+							<div class="slide">
+								<div class="image">
+									<img src="images/resource/gallery-4.jpg" alt="" />
+								</div>
+							</div>
+							<div class="slide">
+								<div class="image">
+									<img src="images/Slider Images/Murudeshwar.png" alt="" />
+								</div>
+							</div>
+							<div class="slide">
+								<div class="image">
+									<img src="images/Slider Images/Spiti (1).png" alt="" />
+								</div>
+							</div>
+							<div class="slide">
+								<div class="image">
+									<img src="images/Slider Images/Kerala.png" alt="" />
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
 			
 		</div>
 	</section>
 	<!-- End Package Detail Section -->
+
+  <!-- FAQ Section -->
+	<section class="faq-one alternate">
+    <div class="auto-container">
+        <div class="title-box centered">
+            <h2><span>Most Frequent Questions</span></h2>
+        </div>
+        <div class="row clearfix">
+            <!--Text Col-->
+            <div class="text-col col-lg-6 col-md-12 col-sm-12">
+                <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
+                    <div class="accordion-box clearfix">
+                        <!--Block-->
+                        <div class="accordion block active-block">
+                            <div class="acc-btn active">What is Book & Explore? <i class="fa-regular fa-angle-down"></i></div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text">Book & Explore is a leading travel company specializing in trekking, adventure tours, and customized travel experiences across Maharashtra and beyond. With 8+ years of expertise and 10,000+ happy travelers, we are committed to making travel seamless, fun, and unforgettable.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Block-->
+                        <div class="accordion block">
+                            <div class="acc-btn">What kind of trips do you offer? <i class="fa-regular fa-angle-down"></i></div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text">
+                                        ✅ Trekking & Adventure Tours (Maharashtra forts, Spiti Valley, Kedarnath-Badrinath, and more)<br>
+                                        ✅ Cultural & Heritage Tours (Hampi-Gokarna, Rann of Kutch, Kerala, and others)<br>
+                                        ✅ Customized & Group Tours (Tailor-made trips for individuals, families, and corporate groups)<br>
+                                        ✅ Weekend Getaways & Camping (Perfect for quick escapes into nature)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Block-->
+                        <div class="accordion block">
+                            <div class="acc-btn">Who can join your trips? <i class="fa-regular fa-angle-down"></i></div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text">Our trips are designed for everyone—solo travelers, couples, families, corporate groups, and adventure enthusiasts. Whether you're a beginner or an experienced explorer, we have an itinerary that suits you.</div>
+                                </div>
+                            </div>
+                        </div>
+                          <!--Block-->
+                          <div class="accordion block">
+                            <div class="acc-btn">How do I stay updated on upcoming trips? <i class="fa-regular fa-angle-down"></i></div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text">Follow us on social media, WhatsApp, and our website for the latest updates, upcoming trips, and special discounts!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Block-->
+                        <div class="accordion block">
+                            <div class="acc-btn">How do I book a trip? <i class="fa-regular fa-angle-down"></i></div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text">
+                                        📞 Call or WhatsApp us for instant assistance.<br>
+                                        💻 Visit our website and choose your preferred trip.<br>
+                                        📧 Email us for customized plans and corporate bookings.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Text Col-->
+            <div class="text-col col-lg-6 col-md-12 col-sm-12">
+                <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
+                    <div class="accordion-box clearfix">
+                        <!--Block-->
+                        <div class="accordion block">
+                            <div class="acc-btn">What is included in the trip cost? <i class="fa-regular fa-angle-down"></i></div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text">
+                                        ✅ Accommodation (Camps, Hotels, or Homestays)<br>
+                                        ✅ Meals as per the itinerary<br>
+                                        ✅ Local transport & transfers<br>
+                                        ✅ Guided tours & trek leads<br>
+                                        ✅ Safety equipment & first-aid assistance
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Block-->
+                        <div class="accordion block">
+                            <div class="acc-btn">Do you offer customized travel packages? <i class="fa-regular fa-angle-down"></i></div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text">Absolutely! We specialize in customized itineraries for groups, families, and corporate teams. Just tell us your destination, budget, and preferences, and we’ll craft the perfect journey for you.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Block-->
+                        <div class="accordion block">
+                            <div class="acc-btn">How safe are your treks and tours? <i class="fa-regular fa-angle-down"></i></div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text">
+                                        ✅ First-aid kits & emergency backup<br>
+                                        ✅ Well-planned itineraries with safety checks<br>
+                                        ✅ Assistance for beginners & proper gear recommendations
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Block-->
+                        <div class="accordion block">
+                            <div class="acc-btn">What if I need to cancel my trip? <i class="fa-regular fa-angle-down"></i></div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text">We understand that plans change. We have a flexible cancellation and refund policy, which depends on the type of trip. Details will be shared at the time of booking.</div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <!--Block-->
+                        <div class="accordion block">
+                            <div class="acc-btn">Why should I choose Book & Explore? <i class="fa-regular fa-angle-down"></i></div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text">
+                                        🚀 8+ years of expertise in the travel industry<br>
+                                        🌍 10,000+ happy travelers<br>
+                                        🏕 Expert-led treks and tours<br>
+                                        🎯 Personalized travel experiences<br>
+                                        💯 Hassle-free bookings and seamless execution
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 	
 	<!-- News Section Two -->
     <section class="news-section-two">
         <div class="floated-icon left"><img src="images/resource/stones-left.svg" alt="" title=""></div>
-        <div class="floated-icon right"><img src="images/background/pattern-2.png" alt="" title=""></div>
-        <div class="bg-layer" style="background-image: url(images/background/image-1.jpg);"></div>
+        <div class="floated-icon right"><img src="images/resource/stones-left.svg" alt="" title=""></div>
+        <!-- <div class="bg-layer" style="background-image: url(images/background/image-1.jpg);"></div> -->
         <div class="auto-container">
             <div class="title-box centered">
                 <h2><span>Explore More Trekking</span></h2>
             </div>
             <div class="content-box">
                 
-				<div class="popular-carousel owl-theme owl-carousel">
-                    <!--Block-->
-                    <div class="trek-block-one  ">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <div class="image"><a href="naneghat_trek.html"><img src="images/resource/f-image-3.jpg" alt="" title=""></a></div>
-                                
-                                <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp; <span class="i-block">₹ 1200</span>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="naneghat_trek.html">Naneghat Jungle Trek & Reverse Waterfall</a></h4>
-                                 
-                                 
-                            </div>
-                            <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="naneghat_trek.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- block -->
-                    
-                    <div class="trek-block-one">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <div class="image"><a href="Nanemachi_trek.html"><img src="images/resource/f-image-3.jpg" alt="" title=""></a></div>
-                                
-                                <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp; <span class="i-block">₹ 1300</span>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="Nanemachi_trek.html">Nanemachi & Satsada Waterfall</a></h4>
-                                
-                                 
-                            </div>
-                            <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="Nanemachi_trek.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- block -->
-                    
-                    <div class="trek-block-one  ">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <div class="image"><a href="peb_Fort_Trek.html"><img src="images/resource/f-image-3.jpg" alt="" title=""></a></div>
-                                
-                                <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day </span> &ensp; | &ensp; <span class="i-block">₹ 1300</span>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="peb_Fort_Trek.html"> Peb Trek</a></h4>
-                                 
-                                 
-                            <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="peb_Fort_Trek.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
-                            </div>
-                        </div>
-                     </div>
-                     
-                    </div>
-                    <!-- block -->
-                    <div class="trek-block-one ">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <div class="image"><a href="raigad_Trek.html"><img src="images/resource/f-image-3.jpg" alt="" title=""></a></div>
-                                 
-                                <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp; <span class="i-block">₹ 1200</span>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="raigad_Trek.html">Raigad Trek</a></h4>
-                            <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="raigad_Trek.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
-                            </div>
-                        </div>
-                     </div>
-                     
-                    </div>
-                    <!-- block -->
-                    <div class="trek-block-one">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <div class="image"><a href="rajgad_trek.html"><img src="images/resource/f-image-3.jpg" alt="" title=""></a></div>
-                                
-                                <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp; <span class="i-block">₹ 1200</span>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="rajgad_Trek.html"> Rajgad Trek</a></h4>
-                                 
-                                 
-                            <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="rajgad_Trek.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
-                            </div>
-                        </div>
-                     </div>
-                     
-                    </div>
-                    <!-- block -->
-                    <div class="trek-block-one ">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <div class="image"><a href="ratangad _Fort_Trek.html"><img src="images/resource/f-image-15.jpg" alt="" title=""></a></div>
-                                 
-                                <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp; <span class="i-block">₹ 1300</span>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="ratangad _Fort_Trek.html">Ratangad Fort</a></h4>
-                                 
-                                 
-                            <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="ratangad _Fort_Trek.html" class="theme-btn"><span>View Details <i class="icon"><img src="images/icons/logo-icon.svg" alt=""></i></span></a></div>
-                                <div class="video-link"><a href="#" class="theme-btn"><i class="icon far fa-video-camera"></i></a></div>
-                            </div>
-                        </div>
-                     </div>
-                     
-                    </div>
+                <div class="popular-carousel owl-theme owl-carousel">
 
+                    <!--Block-->
+                    <div class="trek-block-one">
+                      <div class="inner-box">
+                        <div class="image-box">
+
+                          <div class="image">
+                            <a href="naneghat_trek.html"
+                              ><img
+                                src="images/Website Card Images/Naneghat Trek.png"
+                                alt=""
+                                title=""
+                            /></a>
+                          </div>
+                
+                          <div class="info">
+                            <span class="i-block">
+                              <i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp;<span class="i-block">Pune / Mumbai</span>
+                          </div>
+                        </div>
+                        <div class="lower-content">
+                          <h4>
+                            <a href="naneghat_trek.html"
+                              >Naneghat Jungle Trek & Reverse Waterfall</a
+                            >
+                          </h4>
+                        </div>
+                        <div class="bottom-box clearfix">
+                          <div class="more-link">
+                            <a href="naneghat_trek.html" class="theme-btn"
+                              ><span>View Details</span></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- block -->
+                
+                    <div class="trek-block-one">
+                      <div class="inner-box">
+                        <div class="image-box">
+                          <div class="image">
+                            <a href="Nanemachi_trek.html"
+                              ><img
+                                src="images/Website Card Images/Nanemachi & Satsada Waterfall.png"
+                                alt=""
+                                title=""
+                            /></a>
+                          </div>
+                
+                          <div class="info">
+                            <span class="i-block">
+                              <i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp;<span class="i-block">Pune / Mumbai</span>
+                          </div>
+                        </div>
+                        <div class="lower-content">
+                          <h4>
+                            <a href="Nanemachi_trek.html"
+                              >Nanemachi & Satsada Waterfall</a
+                            >
+                          </h4>
+                        </div>
+                        <div class="bottom-box clearfix">
+                          <div class="more-link">
+                            <a href="Nanemachi_trek.html" class="theme-btn"
+                              ><span>View Details</span></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- block -->
+                
+                    <div class="trek-block-one">
+                      <div class="inner-box">
+                        <div class="image-box">
+                          <div class="image">
+                            <a href="peb_Fort_Trek.html"
+                              ><img
+                                src="images/Website Card Images/Kothaligad Fort Trek.png"
+                                alt=""
+                                title=""
+                            /></a>
+                          </div>
+                
+                          <div class="info">
+                            <span class="i-block">
+                              <i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp;<span class="i-block">Pune / Mumbai</span>
+                          </div>
+                        </div>
+                        <div class="lower-content">
+                          <h4><a href="peb_Fort_Trek.html"> Peb Trek</a></h4>
+                          <div class="bottom-box clearfix">
+                            <div class="more-link">
+                              <a href="peb_Fort_Trek.html" class="theme-btn"
+                                ><span>View Details</span></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- block -->
+                    <div class="trek-block-one">
+                      <div class="inner-box">
+                        <div class="image-box">
+                          <div class="image">
+                            <a href="raigad_Trek.html"
+                              ><img
+                                src="images/Website Card Images/Raigad Trek.png"
+                                alt=""
+                                title=""
+                            /></a>
+                          </div>
+                
+                          <div class="info">
+                            <span class="i-block">
+                              <i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp;<span class="i-block">Pune / Mumbai</span>
+                          </div>
+                        </div>
+                        <div class="lower-content">
+                          <h4><a href="raigad_Trek.html">Raigad Trek</a></h4>
+                          <div class="bottom-box clearfix">
+                            <div class="more-link">
+                              <a href="raigad_Trek.html" class="theme-btn"
+                                ><span>View Details</span></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- block -->
+                    <div class="trek-block-one">
+                      <div class="inner-box">
+                        <div class="image-box">
+                          <div class="image">
+                            <a href="rajgad_trek.html"
+                              ><img
+                                src="images/Website Card Images/Rajgad Trek.png"
+                                alt=""
+                                title=""
+                            /></a>
+                          </div>
+                
+                          <div class="info">
+                            <span class="i-block">
+                              <i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp;<span class="i-block">Pune / Mumbai</span>
+                          </div>
+                        </div>
+                        <div class="lower-content">
+                          <h4><a href="rajgad_Trek.html"> Rajgad Trek</a></h4>
+                          <div class="bottom-box clearfix">
+                            <div class="more-link">
+                              <a href="rajgad_Trek.html" class="theme-btn"
+                                ><span>View Details</span></a>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <!-- block -->
+                    <div class="trek-block-one">
+                      <div class="inner-box">
+                        <div class="image-box">
+                          <div class="image">
+                            <a href="ratangad _Fort_Trek.html"
+                              ><img
+                                src="images/Website Card Images/Ratangad Fort.png"
+                                alt=""
+                                title=""
+                            /></a>
+                          </div>
+                
+                          <div class="info">
+                            <span class="i-block">
+                              <i class="icon far fa-clock"></i> 1 day</span> &ensp; | &ensp;<span class="i-block">Pune / Mumbai</span>
+                          </div>
+                        </div>
+                        <div class="lower-content">
+                          <h4>
+                            <a href="ratangad _Fort_Trek.html">Ratangad Fort</a>
+                          </h4>
+                
+                          <div class="bottom-box clearfix">
+                            <div class="more-link">
+                              <a href="ratangad _Fort_Trek.html" class="theme-btn"
+                                ><span
+                                  >View Details
+                                  </span
+                              ></a>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                 </div>
 				
 			</div>
@@ -550,9 +1232,9 @@
 
 <!--Scroll to top-->
 <div class="scroll-to-top scroll-to-target d-flex align-items-center justify-content-center rounded-circle bg-dark p-2 shadow" data-target="html" style="width: 50px; height: 50px;">
-    <span class="icon">
-        <img src="images/icons/arrow-up.svg" alt="" title="Go To Top" class="img-fluid">
-    </span>
+  <span class="icon">
+      <img src="images/icons/arrow-up.svg" alt="" title="Go To Top" class="img-fluid">
+  </span>
 </div>
 
 <script src="js/jquery.js"></script>
@@ -571,14 +1253,53 @@
     crossorigin="anonymous">
 </script>
 <script> 
-$(function(){
+  $(function(){
     $("#website_header").load("WebsiteHeader.html", function(){
             // AFTER loading header, initialize toggles!
             initHeaderScripts();
     });
-  $("#footer").load("footer.html"); 
+    $("#footer").load("footer.html");
+  
+     // Get the booking price dynamically
+     const bookingPrice = $(".booking_now_price").text().trim();
+
+// Load BookingNow.html
+$("#booking_now").load("BookingNow.html", function () {
+  // Ensure the script inside BookingNow.html runs after loading
+  setTimeout(() => {
+    const bookingCard = document.querySelector(".booking-card");
+    if (bookingCard) {
+      bookingCard.classList.add("show");
+    }
+
+    // Set the dynamic price inside the loaded BookingNow.html
+    document.querySelector(".booking-price").textContent = `₹${bookingPrice}`;
+  }, 1500);
 });
-</script> 
-<script src="js/main.js"></script> <!-- Single JS file -->
+  });
+  </script> 
+  <script src="js/main.js"></script> <!-- Single JS file -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const accordions = document.querySelectorAll('.info-accordion-item');
+  
+    accordions.forEach(item => {
+      const header = item.querySelector('.info-accordion-header');
+  
+      header.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+  
+        // Close all
+        accordions.forEach(acc => acc.classList.remove('active'));
+  
+        // Toggle current based on previous state
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  });
+  
+  </script>
 </body>
 </html>
