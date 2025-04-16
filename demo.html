@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Treks Page</title>
+  <!-- Include your CSS links here if any -->
+  <style>
+    /* Basic styling for trek cards */
+    .trek-card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      max-width: 600px;
+    }
+    .trek-card img {
+      width: 150px;
+      height: auto;
+      object-fit: cover;
+      margin-right: 15px;
+    }
+    .trek-info {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Available Treks</h1>
+  <div id="treks-container"></div>
+
+  <!-- 1) Include your central script -->
+  <script src="js/common.js"></script>
+  
+  <!-- 2) Page-specific script to build the UI -->
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const treks = await fetchAllTreks();
+      const container = document.getElementById('treks-container');
+      
+      if (treks && treks.length > 0) {
+        treks.forEach(trek => {
+          // Create a card container for each trek.
+          const card = document.createElement('div');
+          card.className = 'trek-card';
+          
+          // Create an image element using the URL provided by the API.
+          const img = document.createElement('img');
+          // Use the image URL; if missing, you can set a placeholder URL.
+          img.src = trek.image || 'placeholder.jpg';
+          img.alt = trek.title;
+
+          // Create an info div to hold textual data.
+          const infoDiv = document.createElement('div');
+          infoDiv.className = 'trek-info';
+          infoDiv.innerHTML = `
+            <h2>${trek.title}</h2>
+            <p><strong>Duration:</strong> ${trek.duration}</p>
+            <p><strong>Difficulty:</strong> ${trek.difficulty}</p>
+            <p><strong>Endurance:</strong> ${trek.endurance}</p>
+            <p><strong>Place:</strong> ${trek.place}</p>
+          `;
+          
+          // Append the image and info elements to the card.
+          card.appendChild(img);
+          card.appendChild(infoDiv);
+          
+          // Append the card to the container.
+          container.appendChild(card);
+        });
+      } else {
+        container.textContent = 'No treks found or an error occurred.';
+      }
+    });
+  </script>
+</body>
+</html>

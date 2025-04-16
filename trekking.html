@@ -161,6 +161,7 @@
 
     <!--Trekking Section-->
     <section class="trekking-section">
+
         <div class="floated-icon left"><img src="images/resource/hills-image-2.svg" alt="" title=""></div>
         <div class="floated-icon right"><img src="images/resource/stones-right.svg" alt="" title=""></div>
         <div class="floated-icon right-2"><img src="images/resource/floated-icon-right-2.svg" alt="" title=""></div>
@@ -181,391 +182,73 @@
                         <li class="filter" data-role="button" data-filter=".difficult">Himalayan Treks</li>
                     </ul>
                 </div>
-                <div class="filter-list row justify-content-center">
+                <div class="filter-list row justify-content-center" id="treks-dynamic-container">
+                    <!-- Append Dynamic card content in this container-->
+                </div>
+
+                <!-- Central script -->
+                <script src="js/common.js"></script>
+
+                <!-- Dynamic script -->
+                <script>
+                    document.addEventListener('DOMContentLoaded', async () => {
+                    const treks = await fetchAllTreks();
+                    const container = document.getElementById('treks-dynamic-container');
                     
-                    <!--Block-->
-                    <div class="trek-block-one style-two col-xl-3 col-lg-4 col-md-4 col-sm-12">
-                        <div class="inner-box text-center">
-                            <div class="image-box">
-                                <div class="image"><a href="sudhagad_Trek.html"><img src="images/Website Card Images/Sudhagad Trek.png" alt="" title=""></a></div>
-                                <div class="info" style="background-color: rgb(75, 194, 207);">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="sudhagad_Trek.html">Sudhagad Trek</a></h4>  
-                            </div>
-                            <div class="bottom-box">
-                                <div class="more-link"><a href="sudhagad_Trek.html" class="theme-btn"><span>View Details </span></a></div>
-                            </div>
-                        </div>
-                    </div>
-
-                      <!--Block-->
-                      <div class="trek-block-one style-two  col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box text-center">
-                            <div class="image-box">
-                                <div class="image"><a href="naneghat_trek.html"><img src="images/Website Card Images/Naneghat Trek.png" alt="" title=""></a></div>
-                                <div class="info" style="background-color: rgb(75, 194, 207);">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="naneghat_trek.html">Naneghat Trek</a></h4>
-                                
-                            </div>
-                            <div class="bottom-box ">
-                                <div class="more-link"><a href="naneghat_trek.html" class="theme-btn"><span>View Details </span></a></div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <!--Block-->
-                    <div class="trek-block-one style-two mix all moderate m-difficult col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box text-center">
-                            <div class="image-box">
-                                <div class="image"><a href="aadrai_jungle.html"><img src="images/Website Card Images/Aadrai Jungle Trek & Kalu Waterfall.png" alt="" title=""></a></div>
-                                 
-                                 
-                                <div class="info" style="background-color: rgb(75, 194, 207);">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="aadrai_jungle.html">Aadrai Jungle Trek & Kalu Waterfall</a></h4>
-                                
-                            </div>
-                            <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="aadrai_jungle.html" class="theme-btn"><span>View Details</span></a></div>
-                               
-                            </div>
-                        </div>
-                    </div>
+                    //set static image path for fallback if dynamic image is null or empty
+                    function getValidImage(image, fallbackPath = 'images/Website Card Images/Sudhagad Trek.png') {
+                    return image && typeof image === 'string' && image.trim() !== '' ? image : fallbackPath;
+                    }
                     
-                    
-                                                            
-                    <!--Block-->
-                    <div class="trek-block-one style-two mix all easy-m difficult col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <div class="image"><a href="andhaban_Trek.html"><img src="images/Website Card Images/Andharban Trek.png" alt="" title=""></a></div>
-                                
+                    if (treks && treks.length > 0) {
+                        treks.forEach(trek => {
+                        const trekSlug = trek.title.toLowerCase().replace(/\s+/g, '_').replace(/[^\w_]/g, '');
+                        const trekURL = `${trekSlug}.html`;
+                
+                        const cardHTML = `
+                            <div class="trek-block-one style-two col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                            <div class="inner-box text-center">
+                                <div class="image-box">
+                                <div class="image">
+                                    <a href="${trekURL}">
+                                    <img 
+                                    src="${getValidImage(trek.image)}" 
+                                    alt="${trek.title}" 
+                                    title="${trek.title}" 
+                                    >
+
+                                    </a>
+                                </div>
                                 <div class="info" style="background-color: rgb(75, 194, 207);">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
+                                    <span class="i-block"><i class="icon far fa-clock"></i> ${trek.duration || '1 Day'} </span> &ensp; | &ensp;
+                                    <span class="i-block">${trek.place || 'Mumbai / Pune'}</span>
+                                </div>
+                                </div>
+                                <div class="lower-content">
+                                <h4><a href="${trekURL}">${trek.title}</a></h4>
+                                </div>
+                                <div class="bottom-box">
+                                <div class="more-link">
+                                    <a href="${trekURL}" class="theme-btn"><span>View Details</span></a>
+                                </div>
                                 </div>
                             </div>
-                            <div class="lower-content">
-                                <h4><a href="#">Andharban Trek</a></h4>
-                                
                             </div>
-                            <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="andhaban_Trek.html" class="theme-btn"><span>View Details</span></a></div>
-                                
-                            </div>
-                        </div>
-                    </div>
+                        `;
+                        console.log("Trek Title:", trek.title, "Image Used:", trek.image && trek.image.trim() !== '' ? trek.image : 'images/Website Card Images/Sudhagad Trek.jpg');
 
-                    <!--Block-->
-                    <div class="trek-block-one style-two mix all m-difficult col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <div class="image"><a href="bhorgir.html"><img src="images/Website Card Images/Bhimashankar to Bhorgiri Jungle Trek.png" alt="" title=""></a></div>
-                                
-                                <div class="info" style="background-color: rgb(75, 194, 207);">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="bhorgir.html">Bhimashankar to Bhorgiri Trek</a></h4>
-                            </div>
-                            <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="bhorgir.html" class="theme-btn"><span>View Details </span></a></div>
-                               
-                            </div>
-                        </div>
-                    </div>
 
-                    <!--Block-->
-                    <div class="trek-block-one style-two mix all easy-m moderate col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <div class="image"><a href="devkund.html"><img src="images/Website Card Images/Devkund Waterfall Trek.png" alt="" title=""></a></div>
-                                 
-                                <div class="info" style="background-color: rgb(75, 194, 207);">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="devkund.html">Devkund Waterfall Trek</a></h4>
-                                 
-                            </div>
-                            <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="devkund.html" class="theme-btn"><span>View Details </span></a></div>
-                                
-                            </div>
-                        </div>
-                    </div>
+                        // Append the card HTML to the container
+                        container.insertAdjacentHTML('beforeend', cardHTML);
+                        });
+                    } else {
+                        container.innerHTML = '<p>No treks found or an error occurred.</p>';
+                    }
+                    });
+                </script>
 
-                    <!--Block-->
-                    <div class="trek-block-one style-two mix all moderate col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <div class="image"><a href="Harishchandragad.html"><img src="images/Website Card Images/Harishchandragad Trek.png" alt="" title=""></a></div>
-                               
-                                <div class="info" style="background-color: rgb(75, 194, 207);">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="Harishchandragad.html">Harishchandragad Trek</a></h4>        
-                            </div>
-                            <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="Harishchandragad.html" class="theme-btn"><span>View Details </span></a></div>
-                                
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Block-->
-                    <div class="trek-block-one style-two mix all easy-m moderate m-difficult difficult col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <div class="image"><a href="Kalsubai_trek.html"><img src="images/Website Card Images/Kalsubai Trek.png" alt="" title=""></a></div>
-                                 
-                                <div class="info" style="background-color: rgb(75, 194, 207);">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="Kalsubai_trek.html">Kalsubai Trek</a></h4>
-                                
-                            </div>
-                            <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="Kalsubai_trek.html" class="theme-btn"><span>View Details </span></a></div>
-                                
-                            </div>
-                        </div>
-                    </div>
-
-                 <!-- Block start edit -->
-                 <div class="trek-block-one style-two mix all easy-m  col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <div class="image"><a href="kalu_Waterfall_Trek.html"><img src="images/Website Card Images/Kalu Waterfall Trek.png" alt="" title=""></a></div>
-                            
-                            <div class="info" style="background-color: rgb(75, 194, 207);">
-                                <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
-                            </div>
-                        </div>
-                        <div class="lower-content">
-                            <h4><a href="kalu_Waterfall_Trek.html">Kalu Waterfall Trek</a></h4>
-                        
-                        </div>
-                        <div class="bottom-box clearfix">
-                            <div class="more-link"><a href="kalu_Waterfall_Trek.html" class="theme-btn"><span>View Details </span></a></div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <!-- block -->
-                
-                <div class="trek-block-one style-two mix all  m-difficult  col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <div class="image"><a href="kataldhara_trek.html"><img src="images/Website Card Images/Sudhagad Trek.png" alt="" title=""></a></div>
-                             
-                            <div class="info" style="background-color: rgb(75, 194, 207);">
-                                <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
-                            </div>
-                        </div>
-                        <div class="lower-content">
-                            <h4><a href="kataldhara_trek.html">Kataldhara Waterfall Trek</a></h4>
-                             
-                             
-                        </div>
-                        <div class="bottom-box clearfix">
-                            <div class="more-link"><a href="kataldhara_trek.html" class="theme-btn"><span>View Details </span></a></div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <!-- block -->
-                
-                <div class="trek-block-one style-two mix all  moderate col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <div class="image"><a href="kothaligad_trek.html"><img src="images/Website Card Images/Kothaligad Fort Trek.png" alt="" title=""></a></div>
-                             
-                            <div class="info" style="background-color: rgb(75, 194, 207);">
-                                <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
-                            </div>
-                        </div>
-                        <div class="lower-content">
-                            <h4><a href="kothaligad_trek.html">  Kothaligad Fort Trek</a></h4>                             
-                        </div>
-                        <div class="bottom-box clearfix">
-                            <div class="more-link"><a href="kothaligad_trek.html" class="theme-btn"><span>View Details </span></a></div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <!-- block -->
-                
-                <div class="trek-block-one style-two mix all moderate col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <div class="image"><a href="lingya_Waterfall_Trek.html"><img src="images/Website Card Images/Lingya Waterfall Trek.png" alt="" title=""></a></div>
-                            
-                            <div class="info" style="background-color: rgb(75, 194, 207);">
-                                <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
-                            </div>
-                        </div>
-                        <div class="lower-content">
-                            <h4><a href="lingya_Waterfall_Trek.html">Lingya Waterfall Trek</a></h4>
-                        </div>
-                        <div class="bottom-box clearfix">
-                            <div class="more-link"><a href="lingya_Waterfall_Trek.html" class="theme-btn"><span>View Details </span></a></div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <!-- block -->
-                
-                <div class="trek-block-one style-two mix all moderate m-difficult col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <div class="image"><a href="mruggad_Fort_Trek.html"><img src="images/Website Card Images/Sudhagad Trek.png" alt="" title=""></a></div>
-                             
-                            <div class="info" style="background-color: rgb(75, 194, 207);">
-                                <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
-                            </div>
-                        </div>
-                        <div class="lower-content">
-                            <h4><a href="mruggad_Fort_Trek.html">Mruggad Fort Trek</a></h4>
-                            
-                            
-                        <div class="bottom-box clearfix">
-                            <div class="more-link"><a href="mruggad_Fort_Trek.html" class="theme-btn"><span>View Details </span></a></div>
-                           
-                        </div>
-                    </div>
-                </div>
-             </div>
-     <!-- block -->
-     <div class="trek-block-one style-two mix all m-difficult difficult col-xl-3 col-lg-6 col-md-6 col-sm-12">
-        <div class="inner-box">
-            <div class="image-box">
-                <div class="image"><a href="Nanemachi_trek.html"><img src="images/Website Card Images/Nanemachi & Satsada Waterfall.png" alt="" title=""></a></div>
-               
-                <div class="info" style="background-color: rgb(75, 194, 207);">
-                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
-                </div>
+                <div class="load-more"><a href="trekking.html" class="theme-btn btn-style-one"><span>Load More......</span></a></div>
             </div>
-            <div class="lower-content">
-                <h4><a href="Nanemachi_trek.html">Nanemachi & Satsada Waterfall</a></h4>
-                 
-                 
-            </div>
-            <div class="bottom-box clearfix">
-                <div class="more-link"><a href="Nanemachi_trek.html" class="theme-btn"><span>View Details</span></a></div>
-               
-            </div>
-        </div>
-    </div>
-    <!-- block -->
-    
-    <div class="trek-block-one style-two mix all m-difficult difficult col-xl-3 col-lg-6 col-md-6 col-sm-12">
-        <div class="inner-box">
-            <div class="image-box">
-                <div class="image"><a href="peb_Fort_Trek.html"><img src="images/Website Card Images/Sudhagad Trek.png" alt="" title=""></a></div>
-               
-                <div class="info" style="background-color: rgb(75, 194, 207);">
-                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
-                </div>
-            </div>
-            <div class="lower-content">
-                <h4><a href="peb_Fort_Trek.html"> Peb Trek</a></h4>
-                 
-                
-            <div class="bottom-box clearfix">
-                <div class="more-link"><a href="peb_Fort_Trek.html" class="theme-btn"><span>View Details </span></a></div>
-               
-            </div>
-        </div>
-     </div>
-     
-    </div>
-    <!-- block -->
-    <div class="trek-block-one style-two mix all m-difficult difficult col-xl-3 col-lg-6 col-md-6 col-sm-12">
-        <div class="inner-box">
-            <div class="image-box">
-                <div class="image"><a href="raigad_Trek.html"><img src="images/Website Card Images/Raigad Trek.png" alt="" title=""></a></div>
-                
-                <div class="info" style="background-color: rgb(75, 194, 207);">
-                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
-                </div>
-            </div>
-            <div class="lower-content">
-                <h4><a href="raigad_Trek.html">Raigad Trek</a></h4>
-                                     
-            <div class="bottom-box clearfix">
-                <div class="more-link"><a href="raigad_Trek.html" class="theme-btn"><span>View Details </span></a></div>
-                
-            </div>
-        </div>
-     </div>
-     
-    </div>
-    <!-- block -->
-    <div class="trek-block-one style-two mix all m-difficult difficult col-xl-3 col-lg-6 col-md-6 col-sm-12">
-        <div class="inner-box">
-            <div class="image-box">
-                <div class="image"><a href="rajgad_trek.html"><img src="images/Website Card Images/Rajgad Trek.png" alt="" title=""></a></div>
-               
-                <div class="info" style="background-color: rgb(75, 194, 207);">
-                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
-                </div>
-            </div>
-            <div class="lower-content">
-                <h4><a href="rajgad_trek.html">Rajgad Trek</a></h4>
-                 
-                 
-            <div class="bottom-box clearfix">
-                <div class="more-link"><a href="rajgad_trek.html" class="theme-btn"><span>View Details </span></a></div>
-                
-            </div>
-        </div>
-     </div>
-     
-    </div>
-    <!-- block -->
-    <div class="trek-block-one style-two  col-xl-3 col-lg-6 col-md-6 col-sm-12">
-        <div class="inner-box">
-            <div class="image-box">
-                <div class="image"><a href="ratangad _Fort_Trek.html"><img src="images/Website Card Images/Ratangad Fort.png" alt="" title=""></a></div>
-                <div class="price"><span> </span></div>
-                <div class="info" style="background-color: rgb(75, 194, 207);">
-                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block"> Mumbai / Pune </span>
-                </div>
-            </div>
-            <div class="lower-content">
-                <h4><a href="ratangad _Fort_Trek.html">Ratangad Fort</a></h4>                            
-            <div class="bottom-box clearfix">
-                <div class="more-link"><a href="ratangad _Fort_Trek.html" class="theme-btn"><span>View Details </span></a></div>
-                
-            </div>
-        </div>
-     </div>
-     
-    </div>
-    
-    <!-- block -->
-    
-
-                
-            </div>
-            <div class="load-more"><a href="trekking.html" class="theme-btn btn-style-one"><span>Load More......</span></a></div>
-        </div>
     </section>
 
     <!-- Facts Section -->

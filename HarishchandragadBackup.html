@@ -145,13 +145,21 @@
       <!--End Main Header -->
 
    
-      <script src="js/common.js"></script>
+
      
 
     <!-- Banner Section -->
     <section class="packages-banner" style="background-image: url(images/background/banner-1.jpg);">
         <div class="auto-container">
           <ul class="banner-list">
+
+            <!-- pdf button -->
+            <!-- <div class="downloadPDF">
+              <a href="https://admin-bookandexplore-in.onrender.com/api/documents/678bf3752018ed005a7d57d0" target="_blank" class="pdf-button">
+                <i class="fas fa-file-pdf"></i>
+                <span>Download PDF</span>
+              </a>
+            </div> -->
 
             <h4>Harishchandragad Trek </h4>
 
@@ -166,15 +174,13 @@
                         <div>Share</div>
                     </li>
                 </a>
-                <a href="#" id="dynamicPdfLink" target="_blank">
-                  <li>
-                    <div class="custom-icon">
-                      <img src="images/icons/Download.svg" alt="Download PDF" />
-                    </div>
+                <a href="https://admin-bookandexplore-in.onrender.com/api/documents/678bf3752018ed005a7d57d0" target="_blank"><li>
+                    <span class="custom-icon">
+                    <img src="images/icons/Download.svg" alt="Review" />
+                    </span>
                     Download PDF
-                  </li>
+                </li>
                 </a>
-                
                 <a href="#"><li>
                     <span class="custom-icon">
                     <img src="images/icons/heart-icon-1.svg" alt="Wishlist" />
@@ -184,20 +190,6 @@
                 </a>
               </ul>
           </div>
-          <script>
-            const trekId = '678bf3779bb24f3a82c98ec1'; // Replace with dynamic value if needed
-          
-            document.addEventListener('DOMContentLoaded', async () => {
-              const trekData = await fetchTrekById(trekId);
-          
-              if (trekData?.trekDetails?.media?.pdfFile) {
-                const pdfLink = document.getElementById('dynamicPdfLink');
-                if (pdfLink) {
-                  pdfLink.setAttribute('href', trekData.trekDetails.media.pdfFile);
-                }
-              }
-            });
-          </script>
           <!-- End New Rating Box -->
           </ul>
 		    </div>
