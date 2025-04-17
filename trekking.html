@@ -182,6 +182,12 @@
                         <li class="filter" data-role="button" data-filter=".difficult">Himalayan Treks</li>
                     </ul>
                 </div>
+
+                <!-- Loader Spinner -->
+                <div id="loader" class="spinner-container" style="text-align: center; padding: 50px;">
+                    <img src="images/Spinner-5.gif" alt="Loading..." style="width: 80px; height: auto;">
+                </div>
+
                 <div class="filter-list row justify-content-center" id="treks-dynamic-container">
                     <!-- Append Dynamic card content in this container-->
                 </div>
@@ -191,61 +197,65 @@
 
                 <!-- Dynamic script -->
                 <script>
-                    document.addEventListener('DOMContentLoaded', async () => {
-                    const treks = await fetchAllTreks();
-                    const container = document.getElementById('treks-dynamic-container');
-                    
-                    //set static image path for fallback if dynamic image is null or empty
-                    function getValidImage(image, fallbackPath = 'images/Website Card Images/Sudhagad Trek.png') {
-                    return image && typeof image === 'string' && image.trim() !== '' ? image : fallbackPath;
-                    }
-                    
-                    if (treks && treks.length > 0) {
+                    document.addEventListener('DOMContentLoaded', () => {
+                      const container = document.getElementById('treks-dynamic-container');
+                      const loader = document.getElementById('loader');
+                  
+                      function getValidImage(image, fallbackPath = 'images/Website Card Images/Sudhagad Trek.png') {
+                        return image && typeof image === 'string' && image.trim() !== '' ? image : fallbackPath;
+                      }
+                  
+                      function goToTrekDetails(id) {
+                        window.location.href = `trekDetails.html?id=${id}`;
+                      }
+                  
+                      fetchAllTreks().then(treks => {
+                        loader.style.display = 'none'; // Hide loader
+                  
+                        if (!treks || treks.length === 0) {
+                          container.innerHTML = '<p>No treks found or an error occurred.</p>';
+                          return;
+                        }
+                  
                         treks.forEach(trek => {
-                        const trekSlug = trek.title.toLowerCase().replace(/\s+/g, '_').replace(/[^\w_]/g, '');
-                        const trekURL = `${trekSlug}.html`;
-                
-                        const cardHTML = `
+                          if (trek.status !== 'active') return; // Skip inactive card treks
+                  
+                          const imageURL = getValidImage(trek.image);
+                  
+                          const cardHTML = `
                             <div class="trek-block-one style-two col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                            <div class="inner-box text-center">
+                              <div class="inner-box text-center">
                                 <div class="image-box">
-                                <div class="image">
-                                    <a href="${trekURL}">
-                                    <img 
-                                    src="${getValidImage(trek.image)}" 
-                                    alt="${trek.title}" 
-                                    title="${trek.title}" 
-                                    >
-
-                                    </a>
-                                </div>
-                                <div class="info" style="background-color: rgb(75, 194, 207);">
+                                  <div class="image" onclick="goToTrekDetails('${trek.id}')" style="cursor: pointer;">
+                                    <img src="${imageURL}" alt="${trek.title}" title="${trek.title}">
+                                  </div>
+                                  <div class="info" style="background-color: rgb(75, 194, 207);">
                                     <span class="i-block"><i class="icon far fa-clock"></i> ${trek.duration || '1 Day'} </span> &ensp; | &ensp;
                                     <span class="i-block">${trek.place || 'Mumbai / Pune'}</span>
-                                </div>
+                                  </div>
                                 </div>
                                 <div class="lower-content">
-                                <h4><a href="${trekURL}">${trek.title}</a></h4>
+                                  <h4 onclick="goToTrekDetails('${trek.id}')" style="cursor: pointer;">${trek.title}</h4>
                                 </div>
                                 <div class="bottom-box">
-                                <div class="more-link">
-                                    <a href="${trekURL}" class="theme-btn"><span>View Details</span></a>
+                                  <div class="more-link">
+                                    <button onclick="goToTrekDetails('${trek.id}')" class="theme-btn"><span>View Details</span></button>
+                                  </div>
                                 </div>
-                                </div>
+                              </div>
                             </div>
-                            </div>
-                        `;
-                        console.log("Trek Title:", trek.title, "Image Used:", trek.image && trek.image.trim() !== '' ? trek.image : 'images/Website Card Images/Sudhagad Trek.jpg');
-
-
-                        // Append the card HTML to the container
-                        container.insertAdjacentHTML('beforeend', cardHTML);
+                          `;
+                  
+                          container.insertAdjacentHTML('beforeend', cardHTML);
                         });
-                    } else {
-                        container.innerHTML = '<p>No treks found or an error occurred.</p>';
-                    }
+                      }).catch(error => {
+                        loader.style.display = 'none';
+                        container.innerHTML = '<p>Error loading treks. Please try again later.</p>';
+                        console.error('Fetch error:', error);
+                      });
                     });
-                </script>
+                  </script>
+                  
 
                 <div class="load-more"><a href="trekking.html" class="theme-btn btn-style-one"><span>Load More......</span></a></div>
             </div>

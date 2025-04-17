@@ -5749,8 +5749,14 @@ Gallery section
   margin-top: 30px;
 }
 
-/*** 
+/* Spinner of data fetching (treks and tours) */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
 
+/*** 
 ====================================================================
   FAQ Section
 ====================================================================
@@ -6713,7 +6719,7 @@ Gallery section
   border-radius: 12px; /* Rounded corners */
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
   width: 260px; /* Fixed width */
-  height: 200px;
+  height: 210px;
   text-align: center;
   padding: 10px;
   font-family: 'Arial', sans-serif;
@@ -6810,10 +6816,10 @@ Gallery section
 @media (max-width: 768px) {
   .booking-card {
     width: 60%;
-    height: 160px;
+    height: 180px;
     left: 20%;
     right: auto;
-    top: -150px; /* Lower position */
+    top: -180px; /* Lower position */
     padding: 4px 10px;
   }
 

@@ -168,13 +168,12 @@
                 </a>
                 <a href="#" id="dynamicPdfLink" target="_blank">
                   <li>
-                    <div class="custom-icon">
-                      <img src="images/icons/Download.svg" alt="Download PDF" />
-                    </div>
-                    Download PDF
+                  <div class="custom-icon">
+                    <img src="images/icons/Download.svg" alt="Download PDF" />
+                  </div>
+                    <div>Download PDF</div>
                   </li>
                 </a>
-                
                 <a href="#"><li>
                     <span class="custom-icon">
                     <img src="images/icons/heart-icon-1.svg" alt="Wishlist" />
@@ -185,6 +184,29 @@
               </ul>
           </div>
           <script>
+            // Function to get URL parameter by name
+            function getQueryParam(param) {
+              const urlParams = new URLSearchParams(window.location.search);
+              return urlParams.get(param);
+            }
+          
+            const trekId = getQueryParam('id'); // Automatically fetches 'id' from URL
+          
+            document.addEventListener('DOMContentLoaded', async () => {
+              if (!trekId) return; // No ID found in URL
+          
+              const trekData = await fetchTrekById(trekId);
+          
+              if (trekData?.trekDetails?.media?.pdfFile) {
+                const pdfLink = document.getElementById('dynamicPdfLink');
+                if (pdfLink) {
+                  pdfLink.setAttribute('href', trekData.trekDetails.media.pdfFile);
+                }
+              }
+            });
+          </script>
+          
+          <!-- <script>
             const trekId = '678bf3779bb24f3a82c98ec1'; // Replace with dynamic value if needed
           
             document.addEventListener('DOMContentLoaded', async () => {
@@ -197,7 +219,7 @@
                 }
               }
             });
-          </script>
+          </script> -->
           <!-- End New Rating Box -->
           </ul>
 		    </div>
