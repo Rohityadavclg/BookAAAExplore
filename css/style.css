@@ -5749,8 +5749,14 @@ Gallery section
   margin-top: 30px;
 }
 
-/*** 
+/* Spinner of data fetching (treks and tours) */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
 
+/*** 
 ====================================================================
   FAQ Section
 ====================================================================
@@ -6713,7 +6719,7 @@ Gallery section
   border-radius: 12px; /* Rounded corners */
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
   width: 260px; /* Fixed width */
-  height: 200px;
+  height: 210px;
   text-align: center;
   padding: 10px;
   font-family: 'Arial', sans-serif;
@@ -6738,7 +6744,9 @@ Gallery section
 
 .booking-card .inner-box{
   position : relative;
+ 
   width: 20;
+ 
 }
 
 /* 🔥 Header (BOOK NOW Button) */
@@ -6768,10 +6776,17 @@ Gallery section
   position: absolute;
   width: 100%;
   top: 50px;
-  font-size: 28px;
+  margin: 5px 0 15px 0;
+}
+
+.booking-price .sub-text{
+  font-size: 18px;
+}
+
+.booking-price .booking-price-low{
+  font-size: 22px;
   font-weight: bold;
-  color: #39c2cc; /* Matching theme color */
-  margin: 5px 0 0 0;
+  color: #39c2cc; 
 }
 
 /* ⭐ Features List */
@@ -6804,10 +6819,10 @@ Gallery section
 @media (max-width: 768px) {
   .booking-card {
     width: 60%;
-    height: 160px;
+    height: 180px;
     left: 20%;
     right: auto;
-    top: -150px; /* Lower position */
+    top: -180px; /* Lower position */
     padding: 4px 10px;
   }
 
@@ -6817,7 +6832,15 @@ Gallery section
   }
 
   .booking-price {
-    font-size: 12px;
+    font-size: 10px;
+  }
+
+  .booking-price .sub-text{
+    font-size: 14px;
+  }
+  
+  .booking-price .booking-price-low{
+    font-size: 18px;
   }
 
   .booking-features{
@@ -7080,6 +7103,52 @@ Gallery section
   text-align: start;
 
 }
+
+.downloadPDF {
+  position: absolute;
+  bottom: -20px;  /* Change as needed */
+  left: 40px;  /* Change as needed */
+  z-index: 10;
+  animation: slideFade 0.8s ease-out;
+}
+
+.pdf-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #39c2cc;
+  color: #fff;
+  padding: 10px 18px;
+  text-decoration: none;
+  font-weight: 400;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.pdf-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+  background-color: white;
+  color:#39c2cc;
+  border: 2px solid #39c2cc;
+}
+.pdf-button i {
+  font-size: 1.2em;
+}
+
+@keyframes slideFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 
 /* Banner Heading */
 .packages-banner .banner-list h4 {
@@ -7742,6 +7811,13 @@ Gallery section
 /* REMOVE DEFAULT OWL NAV/DOTS */
 .owl-nav, .owl-dots {
   display: none !important;
+}
+
+.single-item-carousel .slide .image img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 /* Mobile screen adjustment */

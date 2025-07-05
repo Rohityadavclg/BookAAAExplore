@@ -1,4 +1,5 @@
- const BASE_URL = 'http://localhost:5000'; 
+
+ const BASE_URL = 'http://localhost:5000'
  // actual base url 
 async function fetchAllTreks() {
   try {
@@ -30,6 +31,6 @@ async function fetchTrekById(trekId) {
     console.error(`Error fetching trek by ID ${trekId}:`, error);
     return null;
   }
+ 
 }
-
  
