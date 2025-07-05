@@ -1,6 +1,5 @@
-// This file contains common functions and constants used across the application
 
- const BASE_URL = 'https://admin-bookandexplore-in.onrender.com'; 
+ const BASE_URL = 'http://localhost:5000'
  // actual base url 
 async function fetchAllTreks() {
   try {
@@ -32,4 +31,6 @@ async function fetchTrekById(trekId) {
     console.error(`Error fetching trek by ID ${trekId}:`, error);
     return null;
   }
+ 
 }
+ 
