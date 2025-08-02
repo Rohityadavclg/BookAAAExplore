@@ -248,182 +248,82 @@
                     </ul>
                 </div>
             
-                <div class="filter-list row clearfix">
-                   <!-- South -->
-                    <div class="trend-block-one col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <a href="hampi_Gokarna.html">
-                                    <img src="images/Website Card Images/Hampi.png" alt="Hampi Gokarna Tours" />
-                                    <div class="title-text">Hampi Gokarna Tours</div>
-                                </a>
-                            </div>
+                  <div class="filter-list row clearfix"  id="tours-dynamic-container" >
+                   <!-- Dynamic content goes here -->
+                 </div>
+                 <script>
+           document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('tours-dynamic-container');
+    const loader = document.getElementById('loader');
+
+    function getValidImage(image, fallbackPath = 'images/Website Card Images/default-tour.png') {
+        return image && typeof image === 'string' && image.trim() !== '' ? image : fallbackPath;
+    }
+
+    fetchAllTours().then(tours => {
+        if (loader) loader.style.display = 'none'; // Hide loader
+
+        if (!tours || tours.length === 0) {
+            container.innerHTML = '<p>No tours found or an error occurred.</p>';
+            return;
+        }
+
+        container.innerHTML = ''; // Clear existing content
+
+        tours.forEach(tour => {
+            if (tour.status !== 'active') return; // Skip inactive tours
+
+            const imageURL = getValidImage(tour.image);
+               
+            const cardHTML = `
+                <div class="trend-block-one col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <div class="image-box">
+                              <a href="javascript:void(0)" onclick="fetchTourDetails('${tour.id}')">
+                                <img src="${imageURL}" alt="${tour.title}" title="${tour.title}" />
+                                <div class="title-text">${tour.title}</div>
+                            </a>
                         </div>
                     </div>
-
-                    <!-- South -->
-                    <div class="trend-block-one col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <a href="kedarnath_Badrinath_Tour.html">
-                                    <img src="images/Website Card Images/Badrinath.png" alt="kedarnath Badrinath Tour" />
-                                    <div class="title-text">Kedarnath & Badrinath Tours</div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- South -->
-                    <div class="trend-block-one col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <a href="ujjain_Omkareshwar.html">
-                                    <img src="images/Website Card Images/Ujain.jpeg" alt="Ujjain Tour" />
-                                    <div class="title-text">Ujjain Omkareshwar Tours</div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- South -->
-                    <div class="trend-block-one col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <a href="winter_spiti_vall.html">
-                                    <img src="images/Website Card Images/Spiti.png" alt="winter spiti Tour" />
-                                    <div class="title-text">Winter Spiti Valley Tours</div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-
-                    <!-- South -->
-                    <div class="trend-block-one col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <a href="kedarnath_Yatra.html">
-                                    <img src="images/Website Card Images/Kedarnath.png" alt="Kedarnath Yatra Tour" />
-                                    <div class="title-text">Kedarnath Yatra Tours</div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="trend-block-one col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <a href="Velas.html">
-                                    <img src="images/Website Card Images/Velas.png" alt="Velas Tour" />
-                                    <div class="title-text">Velas Tours</div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-            
-                <div class="load-more"><a href="destinations.html" class="theme-btn btn-style-one"><span>Load More...</span></a></div>
+            `;
+
+            container.insertAdjacentHTML('beforeend', cardHTML);
+        });
+
+        // Initialize MixItUp after adding cards
+        if (typeof mixitup !== 'undefined') {
+            mixitup('#tours-dynamic-container');
+        }
+    }).catch(error => {
+        if (loader) loader.style.display = 'none';
+        container.innerHTML = '<p>Error loading tours. Please try again later.</p>';
+        console.error('Fetch error:', error);
+    });
+});
+             </script>
+                <div class="load-more"><a href="destinationApi.html" class="theme-btn btn-style-one"><span>Load More...</span></a></div>
             </div>
             
         </div>
     </section>
 
-    <!--Popular Section tour -->
-    <section class="popular-section" style="background-color: #f4f2f2;">
+       <section class="popular-section">
         <div class="auto-container">
             <div class="title-box centered">
-                <h2><!--<i class="bg-vector"></i>--><span style="white-space: nowrap; position: relative; z-index: 1; padding: 0 15px;">Our Most Popular Tours</span></h2>
+                <h2> <span style="white-space: nowrap; position: relative; z-index: 1; padding: 0 15px;">Our Most Popular Treks</span></h2>
             </div>
-
+            
             <div class="carousel-box">
-                <div class="popular-carousel owl-theme owl-carousel">
-
-                    <div class="trek-block-one" >
-                        <div class="inner-box" >
-                            <div class="image-box">
-                                <div class="image"><a href="winter_spiti_vall.html"><img src="images/Website Card Images/Spiti.png" alt="" title=""></a></div>
-                                <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4 class="link"><a href="winter_spiti_vall.html"> Spiti </a></h4>                            
-                            </div>
-                            <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="winter_spiti_vall.html" class="theme-btn"><span>View Details </span></a></div>
-                            </div>
-                        </div>
-                    </div>
-
-                   
-                    
-
-                   
-                    <div class="trek-block-one ">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <div class="image"><a href="hampi_Gokarna.html"><img src="images/Website Card Images/Hampi.png" alt="" title=""></a></div>
-                                 
-                                <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4 class="link"><a href="hampi_Gokarna.html"> Hampi</a></h4> 
-                            </div>
-                            <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="hampi_Gokarna.html" class="theme-btn"><span>View Details</span></a></div>
-                            </div>
-                        </div>
-                    </div>
-
-                   
-                    <div class="trek-block-one ">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <div class="image"><a href="Velas.html"><img src="images/Website Card Images/Velas.png" alt="" title=""></a></div>
-                                 
-                                <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4 class="link"><a href="Velas.html">Velas</a></h4>
-                                
-                            </div>
-                            <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="Velas.html" class="theme-btn"><span>View Details </span></a></div>
-                                
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="trek-block-one ">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <div class="image"><a href="kedarnath_Badrinath_Tour.html"><img src="images/Website Card Images/Badrinath.png" alt="" title=""></a></div>
-                                 
-                                <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> 1 Day </span> &ensp; | &ensp; <span class="i-block">  Pune / Mumbai </span>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4 class="link"><a href="kedarnath_Badrinath_Tour.html">Kedarnath badirnath </a></h4>
-                                
-                            </div>
-                            <div class="bottom-box clearfix">
-                                <div class="more-link"><a href="kedarnath_Badrinath_Tour.html" class="theme-btn"><span>View Details </span></a></div>
-                                
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="owl-theme owl-carousel"  id="popular-treks-carousel">
+           
                 </div>  
             </div>
             
         </div>
-    </section>
+      </section>
+    <!--Popular Section tour -->
+   
 
     <!--Main Footer-->
    <div id="footer"></div>
@@ -440,6 +340,7 @@
 </div>
 
 <script src="js/jquery.js"></script>
+ <script src="js/common.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery-ui.js"></script>
@@ -465,10 +366,78 @@ $(function(){
   $("#footer").load("footer.html"); 
 });
 </script> 
-<script src="js/main.js"></script> <!-- Single JS file -->
+<script src="js/main.js"></script>  
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+ 
+    document.addEventListener("DOMContentLoaded", function() {
+        // Call the function to load the tours
+        loadPopularTours();
+    });
+
+    
+    async function loadPopularTours() {
+        // Get the container where the trek cards will be placed
+        const container = document.getElementById('popular-treks-carousel');
+        if (!container) {
+            console.error("Carousel container not found!");
+            return;
+        }
+          
+        try {
+           const tours = await fetchAllTours();
+            if (!tours || tours.length === 0) {
+                container.innerHTML = "<p>No popular treks available at the moment.</p>";
+                return;
+            }
+            // Create the HTML for each trek card
+            container.innerHTML = tours
+            
+              
+                .map(tour => `
+                   <div class="trek-block-one">
+                        <div class="inner-box">
+                            <div class="image-box">
+                              <div class="image">
+                                  <a href="javascript:void(0)" onclick="fetchTourDetails('${tour.id}')"><img src="${tour.image || 'images/resource/gallery-2.jpg'}" alt="${tour.title}"></a>
+                                
+                                </div>
+
+                                 <div class="info">
+                                    <span class="i-block"><i class="icon far fa-clock"></i> ${tour.duration || '1 Day'} </span> &ensp; | &ensp; <span class="i-block">${tour.place || 'Mumbai / Pune'}</span>
+                                </div>
+                                
+                            </div>
+                             
+                            <div class="lower-content">
+                                <h4 class="link"><a href="javascript:void(0)" onclick="fetchTourDetails('${tour.id}')">${tour.title}</a></h4>
+                            </div>
+                             
+                            <div class="bottom-box clearfix">
+                                <div class="more-link">
+                                    <a href="javascript:void(0)" onclick="fetchTourDetails('${tour.id}')" class="theme-btn"><span>View Details</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+
+            
+      if ($.fn.owlCarousel) {
+            $('#popular-treks-carousel').owlCarousel({
+                loop: true, margin: 40, nav: true, smartSpeed: 700, autoplay: 5000,
+                responsive: { 0: { items: 1 }, 576: { items: 2 },  768: { items: 3 }, 1024: { items: 4 } }
+            });
+        }
+
+        } catch (error) {
+            console.error("Failed to load popular treks:", error);
+            container.innerHTML = "<p>Error loading treks. Please try again later.</p>";
+        }
+    }
+</script>
 <script>
     $(document).ready(function(){
         $(".popular-carousel").owlCarousel({

@@ -5748,6 +5748,14 @@ Gallery section
   text-align: center;
   margin-top: 30px;
 }
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+
+
 
 /*** 
 
@@ -6771,7 +6779,16 @@ Gallery section
   font-size: 28px;
   font-weight: bold;
   color: #39c2cc; /* Matching theme color */
-  margin: 5px 0 0 0;
+  margin: 5px 0 15px 0;
+}
+.booking-price .sub-text{
+  font-size: 18px;
+}
+
+.booking-price .booking-price-low{
+  font-size: 22px;
+  font-weight: bold;
+  color: #39c2cc; 
 }
 
 /* ⭐ Features List */
@@ -6817,11 +6834,18 @@ Gallery section
   }
 
   .booking-price {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .booking-features{
     top: 80px;
+  }
+.booking-price .sub-text{
+    font-size: 14px;
+  }
+  
+  .booking-price .booking-price-low{
+    font-size: 18px;
   }
 
   .booking-features li {
