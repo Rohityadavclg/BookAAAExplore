@@ -564,14 +564,7 @@
       initHeaderScripts();
     });
     $("#footer").load("footer.html");
-    const bookingPrice = $(".booking_now_price").text().trim();
-    $("#booking_now").load("BookingNow.html", function () {
-      setTimeout(() => {
-        const bookingCard = document.querySelector(".booking-card");
-        if (bookingCard) bookingCard.classList.add("show");
-        document.querySelector(".booking-price").textContent = `₹${bookingPrice}`;
-      }, 1500);
-    });
+    
   });
 
   document.addEventListener("DOMContentLoaded", async () => {
@@ -600,6 +593,32 @@
         throw new Error("No trek details found in the response");
       }
 
+
+         //console.log("baseVillageCost from API:", data.baseVillageCost);
+                var bookingPriceDiv = document.querySelector(".booking_now_price");
+                if (bookingPriceDiv) {
+                    bookingPriceDiv.textContent = data.baseVillageCost || "N/A";
+                  //  console.log("Updated booking_now_price textContent:", bookingPriceDiv.textContent);
+                } else {
+                    console.error("booking_now_price div not found in DOM");
+                }
+
+                 $("#booking_now").load("BookingNow.html", function () {
+                    setTimeout(function () {
+                        var bookingCard = document.querySelector(".booking-card");
+                        if (bookingCard) {
+                            bookingCard.className += " show";
+                        }
+                        var bookingPriceElement = document.querySelector(".booking-price");
+                        if (bookingPriceElement) {
+                            var priceText = bookingPriceDiv ? bookingPriceDiv.textContent : "N/A";
+                            bookingPriceElement.textContent =  priceText;
+                          //  console.log("Updated booking-price textContent:", bookingPriceElement.textContent);
+                        } else {
+                          //  console.error("booking-price element not found in BookingNow.html");
+                        }
+                    }, 1500);
+                });
       // Banner Section
       document.getElementById("banner-section").style.backgroundImage = `url(${
         data.media?.backgroundImage || "images/background/banner-1.jpg"
