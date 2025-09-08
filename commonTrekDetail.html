@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Trek Details</title>
     <!-- Stylesheets -->
-     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
@@ -91,12 +91,15 @@
                             </div>
                         </div>
 
+                        <!-- new code for dynamic code integration for third party code  -->
+                        <div id="book-container"></div>
+           
                         <!-- Costs -->
                         <div class="facility-box">
                             <h5>Costs</h5>
                             <table class="cost-table">
                                 <thead>
-                                    <tr><th>City</th><th>  Costing</th><th>Book Now</th></tr>
+                                    <tr><th>City</th><th>  Costing</th></tr>
                                 </thead>
                                 <tbody id="cost-table-body"></tbody>
                             </table>
@@ -133,8 +136,8 @@
                         </div>
                     </div>
 
-                    <!-- Sidebar Column -->
-                    <div class="sidebar-column col-xl-4 col-lg-5 col-md-12 col-sm-12">
+                    <!-- Sidebar Column Side bar content  from uploading content  -->
+                    <!-- <div class="sidebar-column col-xl-4 col-lg-5 col-md-12 col-sm-12">
                         <div class="inner-column">
                             <div class="sidebar-widget booking-widget" style="background-image: url(images/background/booking-bg.jpg);">
                                 <h5>Book this Trek</h5>
@@ -172,9 +175,9 @@
                                     </form>
                                 </div>
                             </div>
-                            <!-- Promo Widgets remain static -->
+                           
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <!-- Additional Sections -->
@@ -523,7 +526,7 @@
     <script src="js/wow.js"></script>
     <script src="js/custom-script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
+    <script type="text/javascript" src='https://logout.world/static/widget/logout-booking.js'></script>
     <script
     src="https://code.jquery.com/jquery-3.3.1.js"
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -593,7 +596,7 @@
         throw new Error("No trek details found in the response");
       }
 
-
+          
          //console.log("baseVillageCost from API:", data.baseVillageCost);
                 var bookingPriceDiv = document.querySelector(".booking_now_price");
                 if (bookingPriceDiv) {
@@ -624,8 +627,25 @@
         data.media?.backgroundImage || "images/background/banner-1.jpg"
       })`;
       document.getElementById("trek-title").textContent = data.title || "Loading...";
+      
       document.getElementById("share-link").href = data.media?.pdfFile || "#";
 
+      // Inject custom JavaScript if present for the payment gateway most important 
+      if (data.customJavascript && data.customJavascript.trim() !== '') { 
+          const tempContainer = document.createElement('div');
+          tempContainer.innerHTML = data.customJavascript; 
+          const scripts = tempContainer.querySelectorAll('script');  
+           scripts.forEach(scriptNode => {
+              const newScript = document.createElement('script');
+                    for (const attr of scriptNode.attributes) {
+                     newScript.setAttribute(attr.name, attr.value);
+                      }
+                  newScript.innerHTML = scriptNode.innerHTML;
+               document.body.appendChild(newScript);
+               });
+              }
+
+        // end payment gateway script
       // Package Info
       const packageInfo = document.getElementById("package-info");
       packageInfo.innerHTML = `
@@ -714,7 +734,7 @@
           <tr>
             <td>${cost.city.trim() || "N/A"}</td>
             <td>${cost.price || "N/A"}</td>
-            <td><a href="#" class="book-btn">Book Now</a></td>
+            
           </tr>
         `);
       });
@@ -757,7 +777,7 @@
       (data.exclusions || []).forEach((item) => {
         exclusionsList.insertAdjacentHTML("beforeend", `<li>${item || "N/A"}</li>`);
       });
-
+         
       // Additional Info Sections
       const additionalInfoContainer = document.getElementById("additional-info-container");
       const additionalSections = [
@@ -932,8 +952,8 @@ document.getElementById("gallery-carousel-1").innerHTML = images.slice(0, midInd
 
     </script>
 
-     
- 
+   <script type="text/javascript" src='https://logout.world/static/widget/logout-booking.js'></script>
+           
   
 </body>
 </html>
