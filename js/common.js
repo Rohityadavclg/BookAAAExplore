@@ -1,5 +1,5 @@
-const BASE_URL = 'http://localhost:5000'; 
-//const BASE_URL='https://ksnezqtepd.us-east-1.awsapprunner.com';
+//const BASE_URL = 'http://localhost:5000'; 
+const BASE_URL='https://ksnezqtepd.us-east-1.awsapprunner.com';
  // actual base url 
 
 
