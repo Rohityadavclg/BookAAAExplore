@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Kedarnath-Badrinath - Tour's</title>
+    <title>Tour's Page</title>
     <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -155,7 +155,7 @@
                                 <div class="accordion-box clearfix" id="itinerary-container"></div>
                             </div>
                         </div>
-
+                    <div id="book-container"></div>
                         <!-- Costs -->
                         <div class="facility-box">
                             <h5>Costs</h5>
@@ -166,7 +166,7 @@
                                         <th>Days</th>
                                         <th>Cost PP (3AC Train)</th>
                                         <th>Cost PP (SL Train)</th>
-                                        <th>Book Now</th>
+                                        <!-- <th>Book Now</th> -->
                                     </tr>
                                 </thead>
                                 <tbody id="cost-table-body"></tbody>
@@ -225,7 +225,7 @@
                     <!-- Sidebar Column -->
                     <div class="sidebar-column col-xl-4 col-lg-5 col-md-12 col-sm-12">
                         <div class="inner-column">
-                            <div class="sidebar-widget booking-widget" style="background-image: url(images/background/booking-bg.jpg);">
+                            <!-- <div class="sidebar-widget booking-widget" style="background-image: url(images/background/booking-bg.jpg);">
                                 <h5>Book this Tour</h5>
                                 <div class="booking-form">
                                     <form method="post" action="sendemail.php" id="contact-form">
@@ -260,9 +260,9 @@
                                         </div>
                                     </form>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- Promo Widgets -->
-                            <div class="promo-widget t-shirt-marketing">
+                            <!-- <div class="promo-widget t-shirt-marketing">
                                 <div class="promo-content">
                                     <div class="promo-images">
                                         <img src="https://www.wearandtour.in/wp-content/uploads/2022/08/Amhi-Chukuch-Shakat-Nahi_Red-2048x1920.png" alt="Back View">
@@ -270,7 +270,7 @@
                                     <div class="promo-title">Your Next Favorite <br/>Travelling T-Shirts</div>
                                     <a href="https://www.wearandtour.in/product/aamhi-chukuch-shakat-nahi/" class="theme-btn promo-buy">Buy Now</a>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -623,6 +623,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+     <script type="text/javascript" src='https://logout.world/static/widget/logout-booking.js'></script>
     
     <script src="js/common.js"></script>
 
@@ -672,7 +673,20 @@
                 document.getElementById("banner-section").style.backgroundImage = `url(${data.media?.backgroundImage || "images/background/banner-1.jpg"})`;
                 document.getElementById("tour-title").textContent = data.title || "Kedarnath-Badrinath Do Dham Yatra";
                 document.getElementById("share-link").href = data.media?.pdfFile || "#";
-
+                 // Inject custom JavaScript if present for the payment gateway most important 
+            if (data.customJavascript && data.customJavascript.trim() !== '') { 
+             const tempContainer = document.createElement('div');
+          tempContainer.innerHTML = data.customJavascript; 
+          const scripts = tempContainer.querySelectorAll('script');  
+           scripts.forEach(scriptNode => {
+              const newScript = document.createElement('script');
+                    for (const attr of scriptNode.attributes) {
+                     newScript.setAttribute(attr.name, attr.value);
+                      }
+                  newScript.innerHTML = scriptNode.innerHTML;
+               document.body.appendChild(newScript);
+               });
+              }
                 // Package Info
                 const packageInfo = document.getElementById("package-info");
                 packageInfo.innerHTML = `
@@ -730,7 +744,7 @@
                             <td>${cost.days || "N/A"}</td>
                             <td>${cost.costPerPerson3AC || "N/A"}</td>
                             <td>${cost.costPerPersonSL || "N/A"}</td>
-                            <td><a href="#" class="book-btn">Book Now</a></td>
+                            
                         </tr>
                     `);
                 });
@@ -937,8 +951,8 @@
                                     </a>
                                 </div>
                                 <div class="info">
-                                    <span class="i-block"><i class="icon far fa-clock"></i> ${tour.duration || '1 day'}</span> &ensp; | &ensp;
-                                    <span class="i-block">${tour.baseVillage || 'Pune / Mumbai'}</span>
+                                    <span class="i-block"><i class="icon far fa-clock"></i> ${tour.duration || '1 day'}</span>  
+                                   
                                 </div>
                             </div>
                             <div class="lower-content">

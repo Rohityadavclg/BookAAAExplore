@@ -1,6 +1,17 @@
-//const BASE_URL = 'http://localhost:5000'; 
-const BASE_URL='https://ksnezqtepd.us-east-1.awsapprunner.com';
+const BASE_URL = 'http://localhost:5000'; 
+//const BASE_URL='https://ksnezqtepd.us-east-1.awsapprunner.com';
  // actual base url 
+
+
+
+function toSlug(name) {
+  return name
+    .toLowerCase()
+    .replace(/\s+/g, '-')  
+    .replace(/[^a-z0-9-]/g, '')  
+    .replace(/-+/g, '-'); 
+}
+
 async function fetchAllTreks() {
   try {
     const response = await fetch(`${BASE_URL}/api/public/treks`);
