@@ -3473,9 +3473,6 @@ Gallery section
   right: 25px;
   bottom: 115px;
 }
-
-
-
 .news-block-one{
   position: relative;
   margin-bottom: 30px;
@@ -6740,7 +6737,7 @@ Gallery section
 /* ✨ Pop-up Animation */
 .booking-card.show {
   opacity: 1;
-  visibility: visible; /* Now it's visible */
+  visibility: visible;  
   transform: translateY(0);
 }
 
@@ -6749,7 +6746,7 @@ Gallery section
   width: 20;
 }
 
-/* 🔥 Header (BOOK NOW Button) */
+/*  Header (BOOK NOW Button) */
 .booking-card .inner-box .booking-header {
   position: absolute;
   width: 100%;
@@ -6761,17 +6758,8 @@ Gallery section
   font-weight: bold;
   padding: 12px;
   border-radius: 8px 8px 0 0;
-  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
-  cursor: pointer;
+  cursor: default;
 }
-
-/* 🎨 Hover Effect */
-.booking-header:hover {
-  background: #2fa4af; /* Slightly darker shade */
-  transform: scale(1.05); /* Slight zoom effect */
-}
-
-/* 💰 Price */
 .booking-price {
   position: absolute;
   width: 100%;
@@ -6817,7 +6805,7 @@ Gallery section
   margin-right: 8px;
 }
 
-/* 📱 Responsive (Mobile Screen) */
+/*  Responsive (Mobile Screen) */
 @media (max-width: 768px) {
   .booking-card {
     width: 60%;

@@ -164,8 +164,8 @@
                                     <tr>
                                         <th>From City</th>
                                         <th>Days</th>
-                                        <th>Cost PP (3AC Train)</th>
-                                        <th>Cost PP (SL Train)</th>
+                                        <th>Cost PP (3/4 Sharing)</th>
+                                        <th>Cost PP (Couple Sharing)</th>
                                         <!-- <th>Book Now</th> -->
                                     </tr>
                                 </thead>
@@ -291,7 +291,7 @@
 
                 <!-- Gallery Section -->
 
-                 <div class="row clearfix">
+    <div class="row clearfix">
         <h5 style="font-size: 22px; font-weight: bold;">Gallery</h5>
         <div class="content-column col-xl-6 col-lg-6 col-md-12 col-sm-12">
             <div class="gallery-box">
@@ -667,8 +667,32 @@
                 }
 
                 // Set Booking Price
-                document.querySelector(".booking_now_price").textContent = data.price.replace("INR ", "") || "2999";
+                //document.querySelector(".booking_now_price").textContent = data.price.replace("INR ", "") || "2999";
+                
+                var bookingPriceDiv = document.querySelector(".booking_now_price");
+                if (bookingPriceDiv) {
+                    bookingPriceDiv.textContent = data.price || "N/A";
+                  //  console.log("Updated booking_now_price textContent:", bookingPriceDiv.textContent);
+                } else {
+                    console.error("booking_now_price div not found in DOM");
+                }
 
+                 $("#booking_now").load("BookingNow.html", function () {
+                    setTimeout(function () {
+                        var bookingCard = document.querySelector(".booking-card");
+                        if (bookingCard) {
+                            bookingCard.className += " show";
+                        }
+                        var bookingPriceElement = document.querySelector(".booking-price");
+                        if (bookingPriceElement) {
+                            var priceText = bookingPriceDiv ? bookingPriceDiv.textContent : "N/A";
+                            bookingPriceElement.textContent =  priceText;
+                          //  console.log("Updated booking-price textContent:", bookingPriceElement.textContent);
+                        } else {
+                          //  console.error("booking-price element not found in BookingNow.html");
+                        }
+                    }, 1500);
+                });
                 // Banner Section
                 document.getElementById("banner-section").style.backgroundImage = `url(${data.media?.backgroundImage || "images/background/banner-1.jpg"})`;
                 document.getElementById("tour-title").textContent = data.title || "Kedarnath-Badrinath Do Dham Yatra";
@@ -870,7 +894,7 @@
                 document.getElementById("gallery-carousel-1").innerHTML = images.slice(0, midIndex).map((img, i) => `
                     <div class="slide">
                         <div class="image">
-                            <a href="${img}" data-fancybox="gallery"><div class="overlay-text">Gallery ${i + 1}</div></a>
+                            <a href="${img}" data-fancybox="gallery"></a>
                             <img src="${img}" alt="Gallery Image ${i + 1}" />
                         </div>
                     </div>
@@ -878,7 +902,7 @@
                 document.getElementById("gallery-carousel-2").innerHTML = images.slice(midIndex).map((img, i) => `
                     <div class="slide">
                         <div class="image">
-                            <a href="${img}" data-fancybox="gallery"><div class="overlay-text">Gallery ${midIndex + i + 1}</div></a>
+                            <a href="${img}" data-fancybox="gallery"> </a>
                             <img src="${img}" alt="Gallery Image ${midIndex + i + 1}" />
                         </div>
                     </div>
