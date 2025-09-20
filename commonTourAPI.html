@@ -210,16 +210,16 @@
                         </div>
 
                         <!-- Important Information -->
-                        <!-- <div class="facility-box">
-                            <h5>Important Information</h5>
+                     <div class="facility-box">
+                            <!-- <h5>Important Information</h5> -->
                             <div id="important-information-container"></div>
-                        </div> -->
+                        </div>
 
                         <!-- Transportation -->
-                        <!-- <div class="facility-box">
-                            <h5>Transportation</h5>
+                        <div class="facility-box">
+                            <!-- <h5>Transportation</h5> -->
                             <div id="transportation-container"></div>
-                        </div> -->
+                        </div>
                     </div>
 
                     <!-- Sidebar Column -->
@@ -723,8 +723,13 @@
                 `;
 
                 // About Section
-                document.getElementById("about-title").textContent = `About ${data.title || "Tour"}`;
-                document.getElementById("description-container").innerHTML = `<p>${data.description || "No description available"}</p>`;
+             document.getElementById("about-title").textContent = `About ${data.title || "Tour"}`;
+
+             document.getElementById("description-container").innerHTML = (data.description || "")
+             .split(/\r?\n\r?\n/)  
+             .map(paragraph => `<p>${paragraph.replace(/\r?\n/g, " ").trim()}</p>`) 
+             .join("\n"); 
+                //document.getElementById("description-container").innerHTML = `<p>${data.description || "No description available"}</p>`;
 
                 // Itinerary
                 const itineraryContainer = document.getElementById("itinerary-container");
@@ -792,7 +797,7 @@
                 (data.discounts || []).forEach(discount => {
                     discountsList.insertAdjacentHTML("beforeend", `<li>${discount.description} (${discount.discountAmount})</li>`);
                 });
-                discountsList.insertAdjacentHTML("beforeend", `<strong>NOTE – ANY ONE DISCOUNT COUPON WILL APPLICABLE*</strong>`);
+                discountsList.insertAdjacentHTML("beforeend", `<strong></strong>`);
 
                 // Things to Carry
                 const thingsToCarryList = document.getElementById("things-to-carry-list");
@@ -813,30 +818,30 @@
                 });
 
                 // Important Information
-                const importantInfoContainer = document.getElementById("important-information-container");
-                if (data.importantInformation) {
-                    importantInfoContainer.innerHTML = `
-                        <h5>Meals</h5>
-                        <ul class="feature-list">${data.importantInformation.meals?.map(item => `<li>${item}</li>`).join("") || "<li>N/A</li>"}</ul>
-                        <h5>Hotels</h5>
-                        <ul class="feature-list">${data.importantInformation.hotels?.map(item => `<li>${item}</li>`).join("") || "<li>N/A</li>"}</ul>
-                        <h5>Transport</h5>
-                        <ul class="feature-list">${data.importantInformation.transportInfo?.map(item => `<li>${item}</li>`).join("") || "<li>N/A</li>"}</ul>
-                        <h5>General Information</h5>
-                        <ul class="feature-list">${data.importantInformation.generalInfo?.map(item => `<li>${item}</li>`).join("") || "<li>N/A</li>"}</ul>
-                    `;
-                }
+                // const importantInfoContainer = document.getElementById("important-information-container");
+                // if (data.importantInformation) {
+                //     importantInfoContainer.innerHTML = `
+                //         <h5>Meals</h5>
+                //         <ul class="feature-list">${data.importantInformation.meals?.map(item => `<li>${item}</li>`).join("") || "<li>N/A</li>"}</ul>
+                //         <h5>Hotels</h5>
+                //         <ul class="feature-list">${data.importantInformation.hotels?.map(item => `<li>${item}</li>`).join("") || "<li>N/A</li>"}</ul>
+                //         <h5>Transport</h5>
+                //         <ul class="feature-list">${data.importantInformation.transportInfo?.map(item => `<li>${item}</li>`).join("") || "<li>N/A</li>"}</ul>
+                //         <h5>General Information</h5>
+                //         <ul class="feature-list">${data.importantInformation.generalInfo?.map(item => `<li>${item}</li>`).join("") || "<li>N/A</li>"}</ul>
+                //     `;
+                // }
 
                 // Transportation
-                const transportationContainer = document.getElementById("transportation-container");
-                if (data.transport) {
-                    transportationContainer.innerHTML = `
-                        <h5>Departure</h5>
-                        <ul class="feature-list">${data.transport.departure?.map(item => `<li>${item}</li>`).join("") || "<li>N/A</li>"}</ul>
-                        <h5>Arrival</h5>
-                        <ul class="feature-list">${data.transport.arrival?.map(item => `<li>${item}</li>`).join("") || "<li>N/A</li>"}</ul>
-                    `;
-                }
+                // const transportationContainer = document.getElementById("transportation-container");
+                // if (data.transport) {
+                //     transportationContainer.innerHTML = `
+                //         <h5>Departure</h5>
+                //         <ul class="feature-list">${data.transport.departure?.map(item => `<li>${item}</li>`).join("") || "<li>N/A</li>"}</ul>
+                //         <h5>Arrival</h5>
+                //         <ul class="feature-list">${data.transport.arrival?.map(item => `<li>${item}</li>`).join("") || "<li>N/A</li>"}</ul>
+                //     `;
+                // }
 
                 // Additional Info Sections
                 const additionalInfoContainer = document.getElementById("additional-info-container");
