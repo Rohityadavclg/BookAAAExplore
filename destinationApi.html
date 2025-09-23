@@ -274,14 +274,15 @@
             if (tour.status !== 'active') return; // Skip inactive tours
 
             const imageURL = getValidImage(tour.image);
-               
+          
+            
             const cardHTML = `
                 <div class="trend-block-one col-xl-3 col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box">
                         <div class="image-box">
                               <a href="javascript:void(0)" onclick="fetchTourDetails('${tour.id}')">
                                 <img src="${imageURL}" alt="${tour.title}" title="${tour.title}" />
-                                <div class="title-text">${tour.title}</div>
+                                 <div class="title-text">${tour.title}</div>
                             </a>
                         </div>
                     </div>

@@ -6542,8 +6542,9 @@ Gallery section
   font-size: 20px; /* Increased size to enhance calligraphy */
   font-weight: 500; /* Usually lighter for calligraphy */
   text-align: center;
+  width: 90%;
   z-index: 2;
-  white-space: nowrap;
+  white-space: normal;
   /* font-family: 'Satisfy', cursive; */
   /* letter-spacing: 1px; Slight spacing for elegance */
   text-shadow: 1px 1px 3px rgba(0,0,0,0.6); /* Adds depth */
@@ -6570,7 +6571,7 @@ Gallery section
   }
 
   .trend-block-one .title-text {
-    font-size: 18px;
+    font-size: 1px;
   }
 }
 

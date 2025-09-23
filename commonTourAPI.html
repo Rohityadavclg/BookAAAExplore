@@ -715,8 +715,8 @@
                 const packageInfo = document.getElementById("package-info");
                 packageInfo.innerHTML = `
                     <div class="info-item"><i class="fas fa-clock"></i><span>Duration</span><p>${data.duration || "N/A"}</p></div>
-                    <div class="info-item"><i class="fas fa-bus"></i><span>Transport</span><p>Bus</p></div>
-                    <div class="info-item"><i class="fas fa-hotel"></i><span>Stay</span><p>Hotel</p></div>
+                    <div class="info-item"><i class="fas fa-bus"></i><span>Transport</span><p>${data.transportMedium}</p></div>
+                    <div class="info-item"><i class="fas fa-hotel"></i><span>Stay</span><p>${data.stay}</p></div>
                     <div class="info-item"><i class="fas fa-utensils"></i><span>Meals</span><p>${data.meals || "N/A"}</p></div>
                     <div class="info-item"><i class="fas fa-map-marked-alt"></i><span>Sightseeing</span><p>${data.sightseeing || "N/A"}</p></div>
                     <div class="info-item"><i class="fas fa-user-tie"></i><span>Guide</span><p>${data.guide || "N/A"}</p></div>
@@ -782,8 +782,11 @@
                 const batchesContainer = document.getElementById("batches-container");
                 (data.batches || []).forEach(batch => {
                     batchesContainer.insertAdjacentHTML("beforeend", `
-                        <p style="margin: 5px 0; font-size: 16px; color: #555;">${batch.batchName || "N/A"}: ${new Date(batch.startDate).toLocaleDateString()} - ${new Date(batch.endDate).toLocaleDateString()}</p>
-                    `);
+                        <p style="margin: 5px 0; font-size: 16px; color: #555;">${batch.batchName || "N/A"}:   
+                           ${new Date(batch.startDate || Date.now()).toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' })} - ${new Date(
+                            batch.endDate || Date.now()
+                                ).toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' })}</p>
+                        `);
                 });
 
                 // Who Can Book
