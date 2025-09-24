@@ -47,7 +47,7 @@ async function fetchTrekDetails(trekId) {
     const trek = await fetchTrekById(trekId);
     if (trek) {
       // Redirect to the details page with the trek ID as a query parameter
-   window.location.href = `commonTrekDetail.html?id=${trekId}`;
+   window.location.href = `trek.html?id=${trekId}`;
     } else {
       alert('Trek not found or an error occurred.');
     }
@@ -95,12 +95,72 @@ async function fetchTourDetails(tourId) {
     const trek = await fetchTourById(tourId);
     if (trek) {
       // Redirect to the details page with the trek ID as a query parameter
-   window.location.href = `commonTourAPI.html?id=${tourId}`;
+   window.location.href = `tour.html?id=${tourId}`;
     } else {
       alert('Tours not found or an error occurred.');
     }
   } catch (error) {
     
     alert('An error occurred while fetching tours details.');
+  }
+}
+
+
+
+//#start region Function new Way 
+
+ async function fetchTrekBySlug(trekSlug) {
+  try {
+    const response = await fetch(`${BASE_URL}/api/public/treks/${trekSlug}`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const result = await response.json();
+    return result;
+  } catch (error) {
+    console.error(`Error fetching trek by slug ${trekSlug}:`, error);
+    return null;
+  }
+}
+
+async function fetchTrekDetailsBySlug(trekSlug) {
+  try {
+    const result = await fetchTrekBySlug(trekSlug);
+    if (result && result.success) {
+      window.location.href = `trek.html?slug=${trekSlug}`;
+    } else {
+      alert('Trek not found or an error occurred.');
+    }
+  } catch (error) {
+    console.error('An error occurred while fetching trek details:', error);
+    alert('An error occurred while fetching trek details.');
+  }
+}
+
+async function fetchTourBySlug(tourSlug) {
+  try {
+    const response = await fetch(`${BASE_URL}/api/public/tours/${tourSlug}`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const result = await response.json();
+    return result;
+  } catch (error) {
+    console.error(`Error fetching tour by slug ${tourSlug}:`, error);
+    return null;
+  }
+}
+
+async function fetchTourDetailsBySlug(tourSlug) {
+  try {
+    const result = await fetchTourBySlug(tourSlug);
+    if (result && result.success) {
+      window.location.href = `tour.html?slug=${tourSlug}`;
+    } else {
+      alert('Tour not found or an error occurred.');
+    }
+  } catch (error) {
+    console.error('An error occurred while fetching tour details:', error);
+    alert('An error occurred while fetching tour details.');
   }
 }

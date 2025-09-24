@@ -229,7 +229,7 @@
   <div class="inner-box text-center">
     <div class="image-box">
       <div class="image">
-        <a href="javascript:void(0)" onclick="fetchTrekDetails('${trek.id}')">
+        <a href="javascript:void(0)" onclick="fetchTrekDetailsBySlug('${trek.slug}')">
           <img src="${imageURL}" alt="${trek.title}" title="${trek.title}">
         </a>
       </div>
@@ -240,12 +240,12 @@
     </div>
     <div class="lower-content">
       <h4>
-        <a href="javascript:void(0)" onclick="fetchTrekDetails('${trek.id}')">${trek.title}</a>
+        <a href="javascript:void(0)" onclick="fetchTrekDetailsBySlug('${trek.slug}')">${trek.title}</a>
       </h4>
     </div>
     <div class="bottom-box clearfix">
       <div class="more-link">
-        <a href="javascript:void(0)" onclick="fetchTrekDetails('${trek.id}')" class="theme-btn">
+        <a href="javascript:void(0)" onclick="fetchTrekDetailsBySlug('${trek.slug}')" class="theme-btn">
           <span>View Details</span>
         </a>
       </div>
@@ -269,7 +269,7 @@
                 });
             </script>
 
-            <div class="load-more"><a href="trekkingWithAPI.html" class="theme-btn btn-style-one"><span>Load More......</span></a></div>
+            <div class="load-more"><a href="alltreks.html" class="theme-btn btn-style-one"><span>Load More......</span></a></div>
         </div>
     </div>
     </section>
