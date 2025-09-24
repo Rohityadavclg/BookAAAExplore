@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="keywords" content="trekking, tours, travel, adventure, devotional tours, Pune, Mumbai, Harishchandragad, Bhimashankar, Kedarnath, Badrinath, Kasara, Nashik, Kerala, cycling, hiking, bookandexplore, India, nature, mountains, waterfalls, jungle, fort, temple, tourism, holiday, vacation, blog, reviews, best treks, popular tours, trending destinations, group travel, weekend getaways, travel guide, explore, outdoor activities, family tours, solo travel, travel agency, top reviews, YouTube travel, travel experiences">
 <title>Home</title>
 
 <!-- Stylesheets -->
@@ -542,7 +543,7 @@
                             <div class="hvr-box">
                                 <div class="cap-box">
                                     <div class="cap-inner clearfix">
-                                        <h4><a href="tours.html">Kerala</a></h4>
+                                        <h4><a href="alltours.html">Kerala</a></h4>
                                         <div class="tour-count"><span>15 Tours</span></div>
                                     </div>
                                 </div>
@@ -557,7 +558,7 @@
                             <div class="hvr-box alt-hvr">
                                 <div class="cap-box">
                                     <div class="cap-inner clearfix">
-                                        <h4><a href="tours.html">Pune</a></h4>
+                                        <h4><a href="alltours.html">Pune</a></h4>
                                         <div class="tour-count"><span>15 Tours</span></div>
                                     </div>
                                 </div>
@@ -572,7 +573,7 @@
                             <div class="hvr-box">
                                 <div class="cap-box">
                                     <div class="cap-inner clearfix">
-                                        <h4><a href="tours.html">Kasara</a></h4>
+                                        <h4><a href="alltours.html">Kasara</a></h4>
                                         <div class="tour-count"><span>15 Tours</span></div>
                                     </div>
                                 </div>
@@ -587,7 +588,7 @@
                             <div class="hvr-box">
                                 <div class="cap-box">
                                     <div class="cap-inner clearfix">
-                                        <h4><a href="tours.html">Nashik</a></h4>
+                                        <h4><a href="alltours.html">Nashik</a></h4>
                                         <div class="tour-count"><span>Tours</span></div>
                                     </div>
                                 </div>
@@ -1250,7 +1251,7 @@ $(function(){
                         <div class="inner-box">
                             <div class="image-box">
                               <div class="image">
-                                  <a href="javascript:void(0)" onclick="fetchTourDetails('${tour.id}')"><img src="${tour.image || 'images/resource/gallery-2.jpg'}" alt="${tour.title}"></a>
+                                  <a href="javascript:void(0)" onclick="fetchTourDetailsBySlug('${tour.slug}')"><img src="${tour.image || 'images/resource/gallery-2.jpg'}" alt="${tour.title}"></a>
                                 
                                 </div>
 
@@ -1261,12 +1262,12 @@ $(function(){
                             </div>
                              
                             <div class="lower-content">
-                                <h4 class="link"><a href="javascript:void(0)" onclick="fetchTourDetails('${tour.id}')">${tour.title}</a></h4>
+                                <h4 class="link"><a href="javascript:void(0)" onclick="fetchTourDetailsBySlug('${tour.slug}')">${tour.title}</a></h4>
                             </div>
                              
                             <div class="bottom-box clearfix">
                                 <div class="more-link">
-                                    <a href="javascript:void(0)" onclick="fetchTourDetails('${tour.id}')" class="theme-btn"><span>View Details</span></a>
+                                    <a href="javascript:void(0)" onclick="fetchTourDetailsBySlug('${tour.slug}')" class="theme-btn"><span>View Details</span></a>
                                 </div>
                             </div>
                         </div>
@@ -1320,7 +1321,7 @@ $(function(){
                         <div class="inner-box">
                             <div class="image-box">
                               <div class="image">
-                                  <a href="javascript:void(0)" onclick="fetchTrekDetails('${trek.id}')"><img src="${trek.image || 'images/resource/gallery-2.jpg'}" alt="${trek.title}"></a>
+                                  <a href="javascript:void(0)" onclick="fetchTrekDetailsBySlug('${trek.slug}')"><img src="${trek.image || 'images/resource/gallery-2.jpg'}" alt="${trek.title}"></a>
                                 
                                 </div>
 
@@ -1331,12 +1332,12 @@ $(function(){
                             </div>
                              
                             <div class="lower-content">
-                                <h4 class="link"><a href="javascript:void(0)" onclick="fetchTrekDetails('${trek.id}')">${trek.title}</a></h4>
+                                <h4 class="link"><a href="javascript:void(0)" onclick="fetchTrekDetailsBySlug('${trek.slug}')">${trek.title}</a></h4>
                             </div>
                              
                             <div class="bottom-box clearfix">
                                 <div class="more-link">
-                                    <a href="javascript:void(0)" onclick="fetchTrekDetails('${trek.id}')" class="theme-btn"><span>View Details</span></a>
+                                    <a href="javascript:void(0)" onclick="fetchTrekDetailsBySlug('${trek.slug}')" class="theme-btn"><span>View Details</span></a>
                                 </div>
                             </div>
                         </div>

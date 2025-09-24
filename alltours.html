@@ -280,7 +280,7 @@
                 <div class="trend-block-one col-xl-3 col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box">
                         <div class="image-box">
-                              <a href="javascript:void(0)" onclick="fetchTourDetails('${tour.id}')">
+                              <a href="javascript:void(0)" onclick="fetchTourDetailsBySlug('${tour.slug}')">
                                 <img src="${imageURL}" alt="${tour.title}" title="${tour.title}" />
                                  <div class="title-text">${tour.title}</div>
                             </a>
@@ -303,7 +303,7 @@
     });
 });
              </script>
-                <div class="load-more"><a href="destinationApi.html" class="theme-btn btn-style-one"><span>Load More...</span></a></div>
+                <div class="load-more"><a href="alltours.html" class="theme-btn btn-style-one"><span>Load More...</span></a></div>
             </div>
             
         </div>
@@ -402,7 +402,7 @@ $(function(){
                         <div class="inner-box">
                             <div class="image-box">
                               <div class="image">
-                                  <a href="javascript:void(0)" onclick="fetchTourDetails('${tour.id}')"><img src="${tour.image || 'images/resource/gallery-2.jpg'}" alt="${tour.title}"></a>
+                                  <a href="javascript:void(0)" onclick="fetchTourDetailsBySlug('${tour.slug}')"><img src="${tour.image || 'images/resource/gallery-2.jpg'}" alt="${tour.title}"></a>
                                 
                                 </div>
 
@@ -413,12 +413,12 @@ $(function(){
                             </div>
                              
                             <div class="lower-content">
-                                <h4 class="link"><a href="javascript:void(0)" onclick="fetchTourDetails('${tour.id}')">${tour.title}</a></h4>
+                                <h4 class="link"><a href="javascript:void(0)" onclick="fetchTourDetailsBySlug('${tour.slug}')">${tour.title}</a></h4>
                             </div>
                              
                             <div class="bottom-box clearfix">
                                 <div class="more-link">
-                                    <a href="javascript:void(0)" onclick="fetchTourDetails('${tour.id}')" class="theme-btn"><span>View Details</span></a>
+                                    <a href="javascript:void(0)" onclick="fetchTourDetailsBySlug('${tour.slug}')" class="theme-btn"><span>View Details</span></a>
                                 </div>
                             </div>
                         </div>

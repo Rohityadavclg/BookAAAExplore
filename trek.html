@@ -572,19 +572,24 @@
 
   document.addEventListener("DOMContentLoaded", async () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const trekId = urlParams.get("id");
-     
+    //const trekId = urlParams.get("id");
+      const trekSlug = urlParams.get("slug");
 
-    if (!trekId) {
+    // if (!trekId) {
       
-      alert("Trek ID is missing. Please ensure the URL contains a valid ID.");
+    //   alert("Trek ID is missing. Please ensure the URL contains a valid ID.");
+    //   return;
+    // }
+    if (!trekSlug) {
+      
+      alert("Trek slug is missing. Please ensure the URL contains a valid slug.");
       return;
     }
 
     try {
       
-      const response = await fetchTrekById(trekId);
-      
+     // const response = await fetchTrekById(trekId);
+      const response = await fetchTrekBySlug(trekSlug);
 
       if (!response || !response.success) {
         throw new Error(response?.error || "Failed to fetch trek details from API");
@@ -862,8 +867,8 @@ document.getElementById("gallery-carousel-1").innerHTML = images.slice(0, midInd
             // initialize Scripts   
             initializeScripts();  
             // Load other treks at the bottom
-            loadOtherTreks(trekId);
-
+         //   loadOtherTreks(trekId);
+             loadOtherTreks(data._id);
         
     } catch (error) {
       console.error("Error loading trek details:", error);
@@ -920,23 +925,43 @@ document.getElementById("gallery-carousel-1").innerHTML = images.slice(0, midInd
         
         container.innerHTML = treks
             .filter(trek => trek.id !== currentTrekId && trek.status === 'active')
-            .map(trek => `
+            // .map(trek => `
+            //     <div class="trek-block-one">
+            //         <div class="inner-box">
+            //             <div class="image-box">
+
+                           
+            //                 <a href="javascript:void(0)" onclick="fetchTrekDetails('${trek.id}')"><img src="${trek.image || 'images/resource/gallery-2.jpg'}" alt="${trek.title}"></a>
+            //                 <div class="info">
+            //                    <span class="i-block"><i class="icon far fa-clock"></i> ${trek.duration || '1 Day'}</span> 
+                                  
+            //                   </div>
+            //             </div>
+            //             <div class="lower-content">
+            //                 <h4><a href="javascript:void(0)" onclick="fetchTrekDetails('${trek.id}')">${trek.title}</a></h4>
+            //             </div>
+            //             <div class="bottom-box clearfix">
+            //                 <div class="more-link"><a href="javascript:void(0)" onclick="fetchTrekDetails('${trek.id}')" class="theme-btn"><span>View Details</span></a></div>
+            //             </div>
+            //         </div>
+            //     </div>`).join('');
+             .map(trek => `
                 <div class="trek-block-one">
                     <div class="inner-box">
                         <div class="image-box">
 
                            
-                            <a href="javascript:void(0)" onclick="fetchTrekDetails('${trek.id}')"><img src="${trek.image || 'images/resource/gallery-2.jpg'}" alt="${trek.title}"></a>
+                            <a href="javascript:void(0)" onclick="fetchTrekDetailsBySlug('${trek.slug}')"><img src="${trek.image || 'images/resource/gallery-2.jpg'}" alt="${trek.title}"></a>
                             <div class="info">
                                <span class="i-block"><i class="icon far fa-clock"></i> ${trek.duration || '1 Day'}</span> 
-                                  
-                              </div>
+                                 
+                            </div>
                         </div>
                         <div class="lower-content">
-                            <h4><a href="javascript:void(0)" onclick="fetchTrekDetails('${trek.id}')">${trek.title}</a></h4>
+                            <h4><a href="javascript:void(0)" onclick="fetchTrekDetailsBySlug('${trek.slug}')">${trek.title}</a></h4>
                         </div>
                         <div class="bottom-box clearfix">
-                            <div class="more-link"><a href="javascript:void(0)" onclick="fetchTrekDetails('${trek.id}')" class="theme-btn"><span>View Details</span></a></div>
+                            <div class="more-link"><a href="javascript:void(0)" onclick="fetchTrekDetailsBySlug('${trek.slug}')" class="theme-btn"><span>View Details</span></a></div>
                         </div>
                     </div>
                 </div>`).join('');

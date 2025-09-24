@@ -397,7 +397,7 @@
                             <div class="acc-btn">How do I stay updated on upcoming trips? <i class="fa-regular fa-angle-down"></i></div>
                             <div class="acc-content">
                                 <div class="content">
-<ul style="list-style-type: none; padding-left: 0;">
+                                <ul style="list-style-type: none; padding-left: 0;">
                                <li style="display: flex; align-items: flex-start; margin-bottom: 15px; color: #2E2E2E; font-size: 16px;">
                                     <span style="display: block; width: 20px; height: 20px; background: url(../images/icons/check-icon.png); margin-right: 12px; flex-shrink: 0; position: relative; top: 3px;"></span>
                                   <span>  Follow us on social media, WhatsApp, and our website for the latest updates, upcoming trips, and special discounts!
@@ -646,15 +646,17 @@
 
         document.addEventListener("DOMContentLoaded", async () => {
             const urlParams = new URLSearchParams(window.location.search);
-            const tourId = urlParams.get("id");
-
-            if (!tourId) {
-                alert("Tour ID is missing. Please ensure the URL contains a valid ID.");
+           
+           
+           // const tourId = urlParams.get("id");
+              const tourSlug = urlParams.get("slug");
+            if (!tourSlug) {
+                alert("tourSlug ID is missing. Please ensure the URL contains a valid ID.");
                 return;
             }
 
             try {
-                const response = await fetchTourById(tourId);
+                const response = await fetchTourBySlug(tourSlug);
 
                 if (!response || !response.success) {
                     throw new Error(response?.message || "Failed to fetch tour details from API");
@@ -920,7 +922,7 @@
                 initializeScripts();
 
                 // Load Other Tours
-                await loadOtherTours(tourId);
+                await loadOtherTours(data._id);
 
             } catch (error) {
                 console.error("Error loading tour details:", error);
@@ -978,7 +980,7 @@
                         <div class="inner-box">
                             <div class="image-box">
                                 <div class="image">
-                                    <a href="javascript:void(0)" onclick="fetchTourDetails('${tour.id}')">
+                                    <a href="javascript:void(0)" onclick="fetchTourDetailsBySlug('${tour.slug}')">
                                         <img src="${tour.image || 'images/resource/gallery-2.jpg'}" alt="${tour.title}">
                                     </a>
                                 </div>
@@ -988,11 +990,11 @@
                                 </div>
                             </div>
                             <div class="lower-content">
-                                <h4><a href="javascript:void(0)" onclick="fetchTourDetails('${tour.id}')">${tour.title}</a></h4>
+                                <h4><a href="javascript:void(0)" onclick="fetchTourDetailsBySlug('${tour.slug}')">${tour.title}</a></h4>
                             </div>
                             <div class="bottom-box clearfix">
                                 <div class="more-link">
-                                    <a href="javascript:void(0)" onclick="fetchTourDetails('${tour.id}')" class="theme-btn"><span>View Details</span></a>
+                                    <a href="javascript:void(0)" onclick="fetchTourDetailsBySlug('${tour.slug}')" class="theme-btn"><span>View Details</span></a>
                                 </div>
                             </div>
                         </div>
