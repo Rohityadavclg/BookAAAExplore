@@ -645,11 +645,10 @@
         });
 
         document.addEventListener("DOMContentLoaded", async () => {
-            const urlParams = new URLSearchParams(window.location.search);
-           
-           
-           // const tourId = urlParams.get("id");
-              const tourSlug = urlParams.get("slug");
+            //     const urlParams = new URLSearchParams(window.location.search);
+            //  // const tourId = urlParams.get("id");
+            //   const tourSlug = urlParams.get("slug");
+             const tourSlug = window.location.hash.substring(1);
             if (!tourSlug) {
                 alert("tourSlug ID is missing. Please ensure the URL contains a valid ID.");
                 return;
@@ -923,12 +922,32 @@
 
                 // Load Other Tours
                 await loadOtherTours(data._id);
-
+          history.replaceState({slug: tourSlug}, data.title, `/tour/${tourSlug}`);
             } catch (error) {
                 console.error("Error loading tour details:", error);
                 alert("Failed to load tour details. Check the console for more information.");
             }
         });
+
+          //  // Initial load
+    document.addEventListener("DOMContentLoaded", () => {
+      const tourSlug = window.location.hash.substring(1); // optional fallback
+      const pathParts = window.location.pathname.split("/");
+      const slugIndex = pathParts.indexOf("trek") + 1;
+      const initialSlug = pathParts[slugIndex] || tourSlug;
+      loadTour(initialSlug);
+    });
+
+    // Handle back/forward buttons
+    window.addEventListener("popstate", (event) => {
+      let slug = event.state?.slug;
+      if (!slug) {
+        const pathParts = window.location.pathname.split("/");
+        const slugIndex = pathParts.indexOf("trek") + 1;
+        slug = pathParts[slugIndex];
+      }
+      if (slug) loadTrek(slug);
+    });
 
         function initializeScripts() {
             // Initialize Accordion
