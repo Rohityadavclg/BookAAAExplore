@@ -321,7 +321,7 @@
                             <div class="acc-btn">How do I book a trip? <i class="fa-regular fa-angle-down"></i></div>
                             <div class="acc-content">
                                <div class="content">
- <ul style="list-style-type: none; padding-left: 0;">
+                               <ul style="list-style-type: none; padding-left: 0;">
                                <li style="display: flex; align-items: flex-start; margin-bottom: 15px; color: #2E2E2E; font-size: 16px;">
                                     <span style="display: block; width: 20px; height: 20px; background: url(../images/icons/check-icon.png); margin-right: 12px; flex-shrink: 0; position: relative; top: 3px;"></span>
                                   <span>   Call or WhatsApp us for instant assistance.
@@ -571,15 +571,9 @@
   });
 
   document.addEventListener("DOMContentLoaded", async () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    //const trekId = urlParams.get("id");
-      const trekSlug = urlParams.get("slug");
-
-    // if (!trekId) {
-      
-    //   alert("Trek ID is missing. Please ensure the URL contains a valid ID.");
-    //   return;
-    // }
+    
+     const trekSlug = window.location.hash.substring(1);
+    
     if (!trekSlug) {
       
       alert("Trek slug is missing. Please ensure the URL contains a valid slug.");
@@ -588,7 +582,7 @@
 
     try {
       
-     // const response = await fetchTrekById(trekId);
+      
       const response = await fetchTrekBySlug(trekSlug);
 
       if (!response || !response.success) {
@@ -602,11 +596,11 @@
       }
 
           
-         //console.log("baseVillageCost from API:", data.baseVillageCost);
+        
                 var bookingPriceDiv = document.querySelector(".booking_now_price");
                 if (bookingPriceDiv) {
                     bookingPriceDiv.textContent = data.baseVillageCost || "N/A";
-                  //  console.log("Updated booking_now_price textContent:", bookingPriceDiv.textContent);
+                  
                 } else {
                     console.error("booking_now_price div not found in DOM");
                 }
@@ -686,8 +680,7 @@
       // About Section
       document.getElementById("about-title").textContent = `About ${data.title || "Trek"}`;
       
-      // document.getElementById("description-container").innerHTML = `<p>${(data.description || "").replace(/\r\n/g, " ")}</p>`;
-      document.getElementById("description-container").innerHTML = (data.description || "")
+     document.getElementById("description-container").innerHTML = (data.description || "")
         .split(/\r?\n\r?\n/)  
         .map(paragraph => `<p>${paragraph.replace(/\r?\n/g, " ").trim()}</p>`) 
         .join("\n"); // Join paragraphs with a newline for clean HTML formatting
@@ -864,12 +857,11 @@ document.getElementById("gallery-carousel-1").innerHTML = images.slice(0, midInd
                     </div>
         `).join('');
 
-            // initialize Scripts   
+           
             initializeScripts();  
-            // Load other treks at the bottom
-         //   loadOtherTreks(trekId);
-             loadOtherTreks(data._id);
-        
+            
+      loadOtherTreks(data._id);
+     history.replaceState({slug: trekSlug}, data.title, `/trek/${trekSlug}`);
     } catch (error) {
       console.error("Error loading trek details:", error);
       console.log("Error Stack:", error.stack); // Log the stack trace for more details
@@ -877,7 +869,26 @@ document.getElementById("gallery-carousel-1").innerHTML = images.slice(0, midInd
     }
   });
 
-   
+    //  // Initial load
+    document.addEventListener("DOMContentLoaded", () => {
+      const trekSlug = window.location.hash.substring(1); // optional fallback
+      const pathParts = window.location.pathname.split("/");
+      const slugIndex = pathParts.indexOf("trek") + 1;
+      const initialSlug = pathParts[slugIndex] || trekSlug;
+      loadTrek(initialSlug);
+    });
+
+    // Handle back/forward buttons
+    window.addEventListener("popstate", (event) => {
+      let slug = event.state?.slug;
+      if (!slug) {
+        const pathParts = window.location.pathname.split("/");
+        const slugIndex = pathParts.indexOf("trek") + 1;
+        slug = pathParts[slugIndex];
+      }
+      if (slug) loadTrek(slug);
+    });
+
   function initializeScripts() {
         // Re-init itinerary accordion if it exists
         if ($.fn.accordion) {
@@ -925,26 +936,7 @@ document.getElementById("gallery-carousel-1").innerHTML = images.slice(0, midInd
         
         container.innerHTML = treks
             .filter(trek => trek.id !== currentTrekId && trek.status === 'active')
-            // .map(trek => `
-            //     <div class="trek-block-one">
-            //         <div class="inner-box">
-            //             <div class="image-box">
-
-                           
-            //                 <a href="javascript:void(0)" onclick="fetchTrekDetails('${trek.id}')"><img src="${trek.image || 'images/resource/gallery-2.jpg'}" alt="${trek.title}"></a>
-            //                 <div class="info">
-            //                    <span class="i-block"><i class="icon far fa-clock"></i> ${trek.duration || '1 Day'}</span> 
-                                  
-            //                   </div>
-            //             </div>
-            //             <div class="lower-content">
-            //                 <h4><a href="javascript:void(0)" onclick="fetchTrekDetails('${trek.id}')">${trek.title}</a></h4>
-            //             </div>
-            //             <div class="bottom-box clearfix">
-            //                 <div class="more-link"><a href="javascript:void(0)" onclick="fetchTrekDetails('${trek.id}')" class="theme-btn"><span>View Details</span></a></div>
-            //             </div>
-            //         </div>
-            //     </div>`).join('');
+           
              .map(trek => `
                 <div class="trek-block-one">
                     <div class="inner-box">

@@ -1,16 +1,10 @@
-//const BASE_URL = 'http://localhost:5000'; 
+ 
 const BASE_URL='https://ksnezqtepd.us-east-1.awsapprunner.com';
-// actual base url 
+//const BASE_URL='https://api.bookaaaexplore.com'; need to implement later
 
 
 
-function toSlug(name) {
-  return name
-    .toLowerCase()
-    .replace(/\s+/g, '-')  
-    .replace(/[^a-z0-9-]/g, '')  
-    .replace(/-+/g, '-'); 
-}
+ 
 
 async function fetchAllTreks() {
   try {
@@ -127,7 +121,12 @@ async function fetchTrekDetailsBySlug(trekSlug) {
   try {
     const result = await fetchTrekBySlug(trekSlug);
     if (result && result.success) {
-      window.location.href = `trek.html?slug=${trekSlug}`;
+      //privious code 
+     // window.location.href = `trek.html?slug=${trekSlug}`;
+      window.location.href = `trek.html#${trekSlug}`;
+      setTimeout(() => {
+        window.location.reload();
+      }, 100);
     } else {
       alert('Trek not found or an error occurred.');
     }
@@ -155,7 +154,11 @@ async function fetchTourDetailsBySlug(tourSlug) {
   try {
     const result = await fetchTourBySlug(tourSlug);
     if (result && result.success) {
-      window.location.href = `tour.html?slug=${tourSlug}`;
+   // window.location.href = `tour.html?slug=${tourSlug}`;
+    window.location.href = `tour.html#${tourSlug}`;
+      setTimeout(() => {
+        window.location.reload();
+      }, 100);
     } else {
       alert('Tour not found or an error occurred.');
     }
